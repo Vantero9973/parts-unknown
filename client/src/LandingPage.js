@@ -1,4 +1,4 @@
-export default function LandingPage() {
+export default function LandingPage({ blogs }) {
   return (
     <>
       <div
@@ -27,12 +27,32 @@ export default function LandingPage() {
           height: "80vh",
           float: "left",
           backgroundImage:
-            "url(https://blog.depositphotos.com/wp-content/uploads/2017/07/Soothing-nature-backgrounds-2.jpg)",
+            "url(https://www.lonelyplanet.com/_next/image?url=https%3A%2F%2Flp-cms-production.imgix.net%2F2021-10%2Fhonolulu-beach-GettyImages-482135181.jpg%3Fauto%3Dformat%26fm%3Davif&w=1920&q=75)",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
         }}
-      />
+      >
+        {blogs.map((blog) => {
+          return (
+            <p
+              style={{
+                color: "white",
+                display: "flex",
+                alignItems: "flex-end",
+                height: "80vh",
+                width: "25vw",
+                fontFamily: "Roboto, sans-serif",
+                fontSize: "36px",
+                fontWeight: "bold",
+                webkitTextStroke: "1px black",
+              }}
+            >
+              {blog.title}
+            </p>
+          );
+        })}
+      </div>
       <div
         style={{
           width: "33.33%",

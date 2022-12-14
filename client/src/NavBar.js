@@ -51,6 +51,7 @@ export default function NavBar() {
             </li>
             <li>
               <a
+                href="/stories"
                 style={{ fontSize: "16px" }}
                 className="btn btn-ghost normal-case"
               >
