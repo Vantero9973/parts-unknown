@@ -13,7 +13,7 @@ export default function NavBar() {
         style={{
           display: "flex",
           justifyContent: "space-between",
-          padding: "20px",
+          padding: "10px",
         }}
       >
         <div>
@@ -60,6 +60,7 @@ export default function NavBar() {
             </li>
             <li>
               <a
+                href="/forum"
                 style={{ fontSize: "16px" }}
                 className="btn btn-ghost normal-case"
               >

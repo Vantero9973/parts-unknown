@@ -28,6 +28,9 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_14_012650) do
     t.string "date"
     t.string "image"
     t.integer "likes"
+    t.string "read_time"
+    t.string "category_one"
+    t.string "category_two"
     t.integer "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -70,6 +73,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_14_012650) do
   end
 
   create_table "forums", force: :cascade do |t|
+    t.string "country_name"
+    t.string "flag"
     t.integer "user_id", null: false
     t.integer "country_id", null: false
     t.datetime "created_at", null: false
@@ -83,6 +88,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_14_012650) do
     t.string "body"
     t.string "date"
     t.integer "likes"
+    t.string "topic"
     t.integer "forum_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

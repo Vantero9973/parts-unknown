@@ -5,6 +5,7 @@ import NavBar from "./NavBar";
 import LandingPage from "./LandingPage";
 import DestinationsPage from "./DestinationsPage";
 import BlogPage from "./BlogPage";
+import ForumPage from "./ForumPage";
 
 function App() {
   const [blogs, setBlogs] = useState([]);
@@ -22,9 +23,10 @@ function App() {
       <NavBar />
       <div style={{ minHeight: "92vh", background: "#1C1C1E" }}>
         <Routes>
-          <Route path="/" element={<LandingPage blogs={blogs} />} />
+          <Route path="/" element={<LandingPage />} />
           <Route path="/destinations" element={<DestinationsPage />} />
           <Route path="/stories" element={<BlogPage blogs={blogs} />} />
+          <Route path="/forum" element={<ForumPage />} />
         </Routes>
       </div>
     </>

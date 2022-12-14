@@ -5,6 +5,7 @@ class CreatePosts < ActiveRecord::Migration[7.0]
       t.string :body
       t.string :date
       t.integer :likes
+      t.string :topic
       t.references :forum, null: false, foreign_key: true
 
       t.timestamps
