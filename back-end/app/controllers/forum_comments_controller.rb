@@ -1,0 +1,2 @@
+class ForumCommentsController < ApplicationController
+end
