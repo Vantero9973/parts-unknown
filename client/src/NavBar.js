@@ -6,7 +6,6 @@ export default function NavBar() {
     <div
       style={{
         background: "#1C1C1E",
-        height: "8vh",
       }}
     >
       <div

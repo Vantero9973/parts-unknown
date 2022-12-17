@@ -6,7 +6,7 @@ class PostsController < ApplicationController
     end
 
     def show
-        post = Post.where(forum_id: params[:id])
+        post = Post.where(params[:forum_id])
         if post
             render json: post
         else render json: { error: "Post not found" }, status: :not_found

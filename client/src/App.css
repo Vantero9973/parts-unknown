@@ -13,7 +13,7 @@ body {
     transition: all 0.3s ease;
 }
 
-.landingImage:hover {
+.landingImage:hover { 
     -webkit-filter: brightness(85%);
     -webkit-transition: all 1s ease;
     -moz-transition: all 1s ease;
@@ -22,19 +22,18 @@ body {
     transition: all 1s ease;
 	filter: brightness(85%);
     z-index: 900;
-    transform: scale(1.01);
+    transform: scale(1.1);
 }
 
-.landingImageText {
+.landingText {
     color: white;
     font-size: 32px;
     font-weight: 600;
-    -webkit-text-stroke: 1px #2C2C2E;
     font-family: 'Roboto', sans-serif;
     width: 28vw;
     margin: 10px;
-    filter: brightness(150%);
-    -webkit-filter: brightness(150%);
+    filter: brightness(100%);
+    -webkit-filter: brightness(100%);
 }
 
 .pagination {

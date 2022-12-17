@@ -1,7 +1,7 @@
 const quizQuestions = [
   {
     question: (
-      <strong style={{ fontSize: "19px" }}>
+      <strong style={{ fontSize: "20px" }}>
         Which activity would you most like to do?
       </strong>
     ),
@@ -27,7 +27,11 @@ const quizQuestions = [
     ],
   },
   {
-    question: "Which food are you most likely to try?",
+    question: (
+      <strong style={{ fontSize: "20px" }}>
+        Which food are you most likely to try?
+      </strong>
+    ),
     answers: [
       {
         type: (
@@ -56,8 +60,11 @@ const quizQuestions = [
     ],
   },
   {
-    question:
-      "The three words you'd use to describe your ideal vacations are...",
+    question: (
+      <strong style={{ fontSize: "20px" }}>
+        The three words you'd use to describe your ideal vacations are...
+      </strong>
+    ),
     answers: [
       {
         type: "India",
@@ -100,7 +107,11 @@ const quizQuestions = [
     ],
   },
   {
-    question: "When it's time for a drink, you reach for...",
+    question: (
+      <strong style={{ fontSize: "20px" }}>
+        When it's time for a drink, you reach for...
+      </strong>
+    ),
     answers: [
       {
         type: "Maldives",
@@ -129,7 +140,11 @@ const quizQuestions = [
     ],
   },
   {
-    question: "If you had the whole day to yourself, you would roam...",
+    question: (
+      <strong style={{ fontSize: "20px" }}>
+        If you had the whole day to yourself, you would roam...
+      </strong>
+    ),
     answers: [
       {
         type: (

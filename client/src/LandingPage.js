@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import QuizApp from "./QuizApp";
 import BlogImages from "./BlogImages";
-import SearchIcon from "@mui/icons-material/Search";
+import AutosuggestPage from "./AutosuggestPage";
 
 export default function LandingPage() {
   const [blogs, setBlogs] = useState([]);
@@ -19,6 +19,17 @@ export default function LandingPage() {
   return (
     <div>
       <div>
+        <div
+          style={{
+            position: "absolute",
+            marginTop: "35vh",
+            marginLeft: "30vw",
+            zIndex: "1000",
+            fontSize: "32px",
+          }}
+        >
+          <AutosuggestPage />
+        </div>
         <BlogImages />
       </div>
       <div
@@ -26,13 +37,24 @@ export default function LandingPage() {
       >
         <div
           style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
             background: "#1C1C1E",
-            padding: "5vh",
-            width: "50vw",
+            width: "100vw",
           }}
         >
-          <QuizApp />
+          <div
+            style={{
+              width: "50vw",
+            }}
+          >
+            <QuizApp style={{ height: "50vh" }} />
+          </div>
         </div>
+      </div>
+      <div style={{ height: "100vh" }}>
+        <h2>hello</h2>
       </div>
     </div>
   );

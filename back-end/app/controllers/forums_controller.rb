@@ -6,7 +6,7 @@ class ForumsController < ApplicationController
     end
 
     def show
-        forum = Forum.find(params[:id])
+        forum = Forum.where(country_id: params[:id])
         if forum
             render json: forum
         else render json: { error: "Forum not found" }, status: :not_found

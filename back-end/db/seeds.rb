@@ -242,23 +242,7 @@ puts "Done seeding users..."
 puts "Seeding blogs..."
 
 things_to_know_before_traveling_to_hawaii = Blog.create!(title: "12 Things to Know Before Traveling to Hawaii", 
-body: "1. Decide the best time to go
-You can visit Hawaii anytime – the weather is agreeable year-round. It may be a bit rainier in winter and a bit hotter in summer, but there are no extremes because cooling trade winds blow throughout the year.
-Although winter (mid-December through mid-April) is the busiest tourist season, that has more to do with the climate elsewhere, as many tourists are snowbirds escaping cold weather back home. Crowds of families take summer vacations from June through August, and rooms are scarce and prices can spike around holidays, especially Thanksgiving, Christmas, New Year’s and spring break/Easter.
-For the budget-conscious, the slowest times are mid-September through mid-November and the weeks from just after Easter until Memorial Day at the end of May, and you’re more likely to find good deals then on accommodations and airfare. Surfers will find the largest waves in winter, while optimal windsurfing conditions are during summer. Whale-watching tours usually depart between January and March only. 
-2. You'll need to make some reservations in advance
-Although Hawaii’s hang-loose attitude extends to most facets of life – including making extensive plans in advance –  you might want to book ahead in a couple of instances. For top Honolulu restaurants popular with residents, reserve a table before you arrive in the islands. The free tickets for the boat to the USS Arizona Memorial at Pearl Harbor are scooped up quickly. Reserve online up to 60 days before your visit.
-3. Respect Hawaiian culture
-Evolving from ancient Polynesian traditions, Hawaiian culture was attacked and suppressed in the two centuries after the arrival of British colonizer Captain Cook in 1778. But beginning with the Hawaiian Renaissance in the 1970s, a rebirth of Native Hawaiian cultural and artistic traditions has taken hold.
-Across the islands, both Hawaiian culture–focused charter schools and public schools' Hawaiian-language immersion programs are popular, and traditional arts are experiencing a revival. Ancient heiau (temples) and fishponds are being restored, native forests replanted and endangered birds bred and released back into the wild. 
-Today Hawaiian culture is about much more than just melodic place names and luau shows. Being Hawaiian is an important part of the identity of the islands, reflected in ways both large and small, from the inclusion of Hawaiian words in everyday speech to the embrace of concepts of respect and inclusion. Although few island residents can agree on what shape the Hawaiian sovereignty movement should take, its grassroots political activism is increasingly part of the local dialogue.
-A female in silhouette as the sun sets over the beach holds up her hand in a hang loose sign or 'shaka'
-Don't be afraid to liberally wave the shaka © Adventuring MJ / Shutterstock
-Dos and don'ts in Hawaii
-Good manners in Hawaii revolve around respect and awareness.
-Do use aloha (hello/goodbye and the concept of love and fellowship) and mahalo (thank you). Liberally wave the shaka (Hawaii’s hand greeting sign).
-Do try to correctly pronounce Hawaiian place names and words. Even if you fail, the attempt is appreciated. If you aren’t sure how to say it, ask. Even long names aren’t that hard with a little practice.
-Don’t refer to Maui, Kauaʻi, Molokaʻi, Lanaʻi and Hawaiʻi (the Big Island) as 'outer islands' – it's Oʻahu-centric. They’re called 'Neighbor Islands.'
+body: "1. Decide the best time to go You can visit Hawaii anytime – the weather is agreeable year-round. It may be a bit rainier in winter and a bit hotter in summer, but there are no extremes because cooling trade winds blow throughout the year. Although winter (mid-December through mid-April) is the busiest tourist season, that has more to do with the climate elsewhere, as many tourists are snowbirds escaping cold weather back home. Crowds of families take summer vacations from June through August, and rooms are scarce and prices can spike around holidays, especially Thanksgiving, Christmas, New Year’s and spring break/Easter. For the budget-conscious, the slowest times are mid-September through mid-November and the weeks from just after Easter until Memorial Day at the end of May, and you’re more likely to find good deals then on accommodations and airfare. Surfers will find the largest waves in winter, while optimal windsurfing conditions are during summer. Whale-watching tours usually depart between January and March only. 2. You'll need to make some reservations in advance Although Hawaii’s hang-loose attitude extends to most facets of life – including making extensive plans in advance –  you might want to book ahead in a couple of instances. For top Honolulu restaurants popular with residents, reserve a table before you arrive in the islands. The free tickets for the boat to the USS Arizona Memorial at Pearl Harbor are scooped up quickly. Reserve online up to 60 days before your visit. 3. Respect Hawaiian culture Evolving from ancient Polynesian traditions, Hawaiian culture was attacked and suppressed in the two centuries after the arrival of British colonizer Captain Cook in 1778. But beginning with the Hawaiian Renaissance in the 1970s, a rebirth of Native Hawaiian cultural and artistic traditions has taken hold. Across the islands, both Hawaiian culture–focused charter schools and public schools' Hawaiian-language immersion programs are popular, and traditional arts are experiencing a revival. Ancient heiau (temples) and fishponds are being restored, native forests replanted and endangered birds bred and released back into the wild. Today Hawaiian culture is about much more than just melodic place names and luau shows. Being Hawaiian is an important part of the identity of the islands, reflected in ways both large and small, from the inclusion of Hawaiian words in everyday speech to the embrace of concepts of respect and inclusion. Although few island residents can agree on what shape the Hawaiian sovereignty movement should take, its grassroots political activism is increasingly part of the local dialogue. A female in silhouette as the sun sets over the beach holds up her hand in a hang loose sign or 'shaka' Don't be afraid to liberally wave the shaka © Adventuring MJ / Shutterstock Dos and don'ts in Hawaii Good manners in Hawaii revolve around respect and awareness. Do use aloha (hello/goodbye and the concept of love and fellowship) and mahalo (thank you). Liberally wave the shaka (Hawaii’s hand greeting sign). Do try to correctly pronounce Hawaiian place names and words. Even if you fail, the attempt is appreciated. If you aren’t sure how to say it, ask. Even long names aren’t that hard with a little practice. Don’t refer to Maui, Kauaʻi, Molokaʻi, Lanaʻi and Hawaiʻi (the Big Island) as 'outer islands' – it's Oʻahu-centric. They’re called 'Neighbor Islands.'
 Don’t try to speak pidgin – unless you’re really good at it.
 Do ask permission before you pick fruit or flowers from trees on private property.
 Don’t be pushy. You’ll get what you want (this time), but you’ll get no aloha with it.
@@ -373,116 +357,85 @@ user_id: alex.id)
 
 unforgettable_hikes_around_the_world = Blog.create!(title: "12 unforgettable hikes around the world", 
 body: "Hiking is about so much more than exercise, pleasant scenery or getting from A to B.
-
 Putting one foot in front of the other for hours, days or even weeks on end creates a special sense of connection to a place and its landscapes.
-
 At Lonely Planet, we’ve chronicled the world’s most unforgettable hiking journeys in our Epic Hikes series, covering Epic Hikes of the World, Epic Hikes of the Americas, Epic Hikes of Europe and Epic Hikes of Australia & New Zealand. In case you haven’t noticed, we love an epic journey, and this selection of 12 globe-spanning hikes should get you in the mood to dust off those hiking boots and hit a trail – wherever you find yourself on the globe.
-
 Squeeze every moment out of your next vacation with tips and tricks from Lonely Planet in our weekly newsletter delivered to your inbox.
 A man sits on a volcanic rock in Iceland, resting during a hike. 
 Head to Hornstrandir, Iceland to explore these northern peninsulas © kanyhun / Imazins / Getty Images/ImaZinS RF
 Hornstrandir, Iceland
 Iceland at its best
 Start/end at Bolungarvík or Ísafjörður; variable distance; more info
-
 If it weren’t so hard to get to, the protected reserve of Hornstrandir would be Iceland’s most popular hiking expanse. Like little lobster claws nipping at the Arctic Circle, the northernmost peninsulas of Iceland’s Westfjords are brutally lonely – save for colonies of cawing guillemots and the occasional Arctic fox. In summer (early July to mid-August) the preserve is blanketed in a glittering green carpet as travelers walk from cairn to cairn. For the full experience, take the ferry from the townships of Bolungarvík or Ísafjörður up to the glacially carved fjord Veiðileysufjörður, and spend four or five days hiking up to Hornvík and the bird cliffs at Hornbjarg before venturing down the mountain pass to Hloduvík and on to the cluster of abandoned cottages at Hesteyri to wait for the return ferry. 
-
 A women hiker on a rocky shoreline in the Akamas Peninsula, Cyprus
 Explore the rocky shoreline of Cyprus on an epic coastal hike © Getty Images / iStockphoto / ZinaidaSopina
 Cyprus, from coast to coast 
 A coastal journey 
 Start at Cape Greco, finish at Akamas Peninsula; 250km (155 miles); more info
-
 Forming part of the much longer (think 10,000km/6214-mile) European Long Distance Route E4, the Cyprus Coast-to-Coast offers a more digestible slice of adventure – and is the perfect way to take in the best of the country. You can walk in either direction, but going east to west means you start with a sunrise gazing over the Mediterranean Sea at Cape Greco, and end with a blistering sunset on the Akamas Peninsula. The walking takes in yawning bays, harbor towns – replete with freshly caught seafood to snack on along the way – as well as traditional villages. At Troödos National Forest Park, look out for the Cypriot golden oak tree; Mt Olympus stands at the heart of the volcanic center of the Troödos Mountains. Birdlife along the way is a real highlight, as is reaching the lighthouse at the end of this unforgettable hike. 
-
 A female hiker with a large backpack hikes along a coast. 
 Follow the Fisherman’s Trail in Portugal to the “End of the World” © hansslegers / Getty Images
 Fisherman’s Trail, Portugal 
 See the “End of the World”
 Start at São Torpes, finish at Lagos; 226km (140 miles); more info
-
 The Atlantic is your constant companion on the Rota Vicentina, a 13-stage trail that teeters along the cliff tops of Portugal’s wild southwest coast. Bookended by the coastal towns of Sines (in the north) and Lagos (in the south), the trail dives straight into the Parque Natural do Sudoeste Alentejano e Costa Vicentina, a nature park protecting the secluded dune-backed beaches, cork-oak forests, jagged, stratified cliffs and rock formations that define this remote, little-visited swathe of the Algarve. Sleepy fishing villages, castle-topped towns and surf resorts dish up a mix of respite, culture and action en route. The highlight? Watching the sunset from the vertiginous cliffs of Cabo de São Vicente, Portugal’s southwesternmost point, nicknamed the “End of the World” by the great explorers that once set sail from its shores.
-
 Woman sitting on a rock and admiring Mount Fitz Roy, a rocky Patagonian range. 
 A short but incredible hike in Patagonia © Judyta Jastrzebska / Shutterstock
 Laguna de los Tres, Los Glaciares, Argentina
 A Patagonian epic 
 Start/end at El Chaltén; 14 miles (22km); more info
-
 Hikers visiting Patagonia’s Torres del Paine often add on an expedition to the national park of Los Glaciares, which offers equally stunning scenery, not to mention a wealth of day hikes and multi-day treks. This 14-mile (22km) hike is one of the classics, carrying you deep into the mountains of the Fitz Roy range.
-
 The trail’s name – the Lagoon of Three – refers to the trio of mountains that lie in wait at the end of the trail: Cerro Fitz Roy, Aguja Poincenot and Torre, all rising like rocky guardians around the lakeshore. It’s a long but rewarding day hike, with the added bonus that you get to sleep in a proper bed and get a good meal at the end of the day: the town of El Chaltén has plenty of accommodation options for hikers.
-
 Valley view with villages and mountains at sunrise. View from Adam's peak.
 You won't regret a hike up Adam's Peak in Sri Lanka © Dudarev Mikhail / Shutterstock
 Adam’s Peak, Sri Lanka
 Stairs leading to sunrise magic 
 Start/end at Dalhousie; 9 miles (14km) round trip; more info
-
 In world terms, this conical Sri Lankan mountain isn’t all that high at only 7360ft (2243m) – but don’t let its size fool you. It’s a punishing climb, favored by pilgrims who come to see the Sri Pada, or sacred footprint, said to have been left by either Buddha, Shiva or Adam, depending on which religion you happen to belong to.
-
 There are six possible routes to the top, and the one most often used by trekkers is the Hatton Trail, a steep uphill slog involving numerous stairs cut into the mountain. To get there in time for sunrise requires both an early start and a hand from the weather gods: Sri Lanka’s jungly terrain means the peak is (unfortunately) often enveloped in clouds. Yet with luck, at the top you’ll have a memorable view encompassing the island’s west, south and east coasts.
-
 Hikers trek along a stone path in the Japanese mountains. 
 Tateyama-Kurobe Alpine Route takes you through incredible scenery © Hachi888 / Shutterstock
 Tateyama-Kamikōchi hike, Japan 
 A Japanese classic
 Start at Murodo, end at Kamikōchi; 40 miles (65km); more info
-
 The classic hike covering the length of Japan’s North Alps takes around seven days in the most spectacular alpine scenery the country has to offer. This hike starts at Murodo (8040ft/2450m), the high point on the enthralling Tateyama-Kurobe Alpine Route, which links the western and eastern sides of the North Alps with a series of cable cars, buses, trolley buses through tunnels and a walk over the Kurobe Dam.
-
 Climb the sacred peak of Tateyama (9890ft/3015m), then head south to climb spear-like Yarigatake (10,430ft/3180m) and Oku-Hotaka-dake (10,470ft/3190m), before dropping into the remote resort village of Kamikōchi (4920ft/1500m). Mountain huts with bedding and meals along the way mean you can take minimal gear; you’ll also find a number of camping areas. In the four days between Tateyama and Yarigatake you’ll likely see fewer people than on one Tokyo rush-hour subway carriage.
-
 Small Berber homes are hidden within a mountain range. 
 Explore Mt Toubkal on an epic hike © soren-asher / Getty Images
 Mt Toubkal, Morocco
 Explore North Africa’s highest peak
 Start/end at Imlil; 45 miles (72km)
-
 The apex of the Atlas range, 13,671ft (4167m) Mt Toubkal is also the highest peak in all of North Africa. You can get up and down the mountain in two days if summiting is all that matters – though making a longer circuit not only helps with acclimatization, but also offers a greater insight into local Berber culture.
-
 From the Imlil valley, you’ll make a clockwise loop via walnut groves and cherry orchards, high passes and boulder fields, mud-brick houses and neat green terraces, wandering shepherds and wind-wizened juniper trees. The final ascent from the Neltner refuge is a stiff but steady clamber up scree, rewarded by views across a starkly spectacular landscape that the hardy Berber have made their own.
-
 A gorilla in Bwindi Impenetrable Forest National Park, Uganda, Africa
 Explore Bwindi Impenetrable Forest National Park in Uganda in search of gorillas © Jonathon Gregson / Lonely Planet
 Gorilla tracking in Bwindi, Uganda
 A hike in search of incredible creatures
 Start/end depends on the gorilla family being tracked, but treks usually depart from park headquarters; various distances; habituation-experience permits cost $1500 per person; more info
-
 The total population of mountain gorillas is tiny: fewer than 900 are believed to survive in the Virunga Mountains straddling DR Congo, Rwanda and Uganda, and in the last country’s Bwindi Impenetrable Forest. Whacking up through the lush, dense vegetation of Bwindi to locate one of the habituated family groups is not for softies: it’s steep, it’s muddy, it’s overgrown, and it can be wet, cold, hot – or all three in one day. Until recently, limited numbers of permits costing $600 per person allowed visitors to spend up to one hour with a family (if you can find them). But you can now join rangers habituating new groups, and enjoy gorilla company for several hours.
-
 A pier goes out into the water. 
 See the pier on the Rakiura Track in Stewart Island © slyellow / Shutterstock
 Rakiura Track, Stewart Island, New Zealand
 A Great Walk to see birdlife 
 Start at Lee Bay, end at Fern Gully (or the reverse); 20 miles (32 km); more info
-
 Stewart Island’s kiwis (the southern brown kiwi) may be extra large, but that doesn’t mean that they’re any easier to spot. You’ll have to wait until dusk, then head for Ocean Beach in the Glory Cove Scenic Reserve, giving the protected sea lions a wide berth. Since you’ll need a permit to be there after 6pm, it’s worth joining a guided tour.
-
 Yet the Rakiura Great Walk on Stewart Island offers almost-certain sightings of lots of New Zealand birdlife, including kaka parrots, bellbirds, tui, fantails, little blue penguins and an abundance of wading birds. The 20-mile (32 km) circuit starts near the Rakiura National Park visitor center on the east coast of this island, which sits just below the South Island. The walk typically takes three days; you’ll need to book huts in advance.
-
 A close-up of an arctic fox walking toward the camera. 
 See an Arctic fox on a journey along the Arctic Circle Trail © Nicram Sabod / Shutterstock
 Arctic Circle Trail, Greenland 
 An Arctic journey 
 Start at Kangerlussuaq, finish at Sisimiut; 100 miles (160km); seven to 10 days; more info
-
 At the northern edge of the planet, Greenland’s Arctic Circle Trail reaches across a landscape devoid of towns and cars: this is the domain of reindeer, musk oxen and Arctic foxes. Hikers will find nine free-to-use huts along the way; between each stop, you’ll take in solitary views of serene lakes, rushing streams and domed mountains. While most hikers tackle the trail in the summer to take advantage of the midnight sun, a winter excursion has its own charms: uninterrupted views of the ethereal Northern Lights and the chance to travel by dogsled. If you’d like to add a little extra adventure, continue past Kangerlussuaq to Russell Glacier, which flows from the Greenland ice sheet.
-
 Ruins of an ancient maya pyramid (La Danta) deep in the Guatamalan jungle
 Head deep in the Guatamalan jungle to see La Danta © Raphael Rivest/Shutterstock
 El Mirador, Guatemala
 Find ancient history in the jungle 
 Start/finish at Carmelita; 25 miles (40km); five to six days; guided tours only
-
 The dense jungles in Guatemala are filled with overgrown Mayan ruins and archaeological sites. During a five- or six-day guided trek through this region, hikers will be challenged when tackling the unique rainforest terrain and camping beneath the canopy. Howler monkeys, tropical birds and possibly jaguars can be spotted as hikers explore sites including El Mirador as they learn more about the Maya civilization. While the hiking is relatively flat and the trails are well maintained, the jungle always presents unexpected obstacles to overcome. Hiking can last for upward of eight hours each day, not including climbing up and down all the stone ruins – so only those in excellent shape should attempt this tough but thrilling expedition.
-
 Dune fence and sea oats on the dunes at Pensacola Beach, Florida on Gulf Islands National Seashore.
 Start a hike on the Gulf Islands National Seashore to follow the Florida National Scenic Trail © Colin D. Young / Shutterstock
 Florida National Scenic Trail, Florida, USA 
 See Florida’s wild side
 Start/end at either Big Cypress National Preserve or Fort Pickens, Gulf Islands National Seashore; 1300 miles (2090km) 
-
 Far from fairy-tale castles or friendly mice, explore the alternative Sunshine State: that is, its estimable wild side. The Florida National Scenic Trail (about three-quarters complete) begins in the Panhandle, on the crunchy-white, turquoise-lapped beaches of the Gulf Islands National Seashore near Pensacola. From here, it wiggles east and south, via salt marshes, crystal-clear springs, lakes, prairies, old-growth forests and historic urban areas. It finishes in Big Cypress National Preserve, bordering the Everglades, amid a lush swampland of bright bromeliads and giant ferns. This semi-tropical state is incredibly bio-diverse, and most of the trail is also a wildlife corridor, protecting both common and rare species. Possible sightings include black bears, deer, otters, alligators, gopher tortoises and sea turtles. A plethora of birds, too: the crested caracara and red-cockaded woodpecker are particularly sought-after species.", 
 description: "Hiking creates a connection to a place and its landscapes. Here are 12 incredible walks from around the world to inspire you.", 
 date: "Dec 6, 2022", 
@@ -493,11 +446,334 @@ category_one: "HIKING",
 category_two: "ACTIVITIES", 
 user_id: alex.id)
 
+how_to_get_around_in_zurich = Blog.create!(title: "How to get around in Zurich", 
+body: "Despite being Switzerland’s largest city, Zürich is a compact place with many pedestrian areas, making it ripe for exploration on foot. However, as befits a Swiss metropolis, its public transport network is highly organized and runs like clockwork.
+Here's our guide to getting around Zürich, whether by S-Bahn train, tram, bus, ferry, bicycle or scooter, a seamlessly interconnected network which will take you from the cobbled hills of the Altstadt (Old Town) to the popular nightlife zone of Züri West to the city’s local mountain Uetliberg.
+Get local insight on destinations all over the world with our weekly newsletter delivered to your inbox.
+Travel like a local on an electric tram
+Zürich has had electric trams since the late-19th century, and today’s modern incarnations are the most visible symbols of the city’s efficient public transport system.
+Clean, spacious and extremely regular, they serve most parts of central Zürich, from the nightspots and cultural venues of Zürich West to the shopping district around Bahnhofstrasse (the opera house on Lake Zürich’s right bank) and even out to the airport (though it’s quicker to get there on the S-Bahn).
+And where trams don’t venture – for example down the quaysides along the lake – buses fill in, making for a highly connected network, all coordinated and ticketed by the Zürich Transport Association (ZVV).
+Zurich Main Railway Station with underground level. The image shows a S-Bahn service with several passengers get in to the train.
+Swift and punctual service is provided by the comprehensive S-Bahn network © Getty Images
+Ride the S-Bahn to Uetliberg
+For longer journeys in and around Zürich, swift and punctual service is provided by the comprehensive S-Bahn network, which has been expanded four times since its launch in 1990.
+From the Hauptbahnhof (main train station), S-Bahn trains leave for destinations including Schaffhausen and the Rheinfall, the pretty medieval village of Rapperswil at the southern end of Lake Zürich (to which you could ride the ferry instead, if you have the time) and the culture-packed city of Winterthur.
+For an easy day trip, jump on the S10 for Uetliberg, Zürich’s so-called local mountain, and within half an hour you’ll be strolling through nature at an altitude of 871m (2858ft), overlooking the city down below.
+Tour Lake Zürich by boat
+Zürich hugs the northern end of its eponymous lake and is divided in two by the Limmat River. Both waterways add hugely to the city’s identity, lifestyle and navigability, not to mention its picture-postcard appearance.
+Get your bearings by hopping on one of the ferries run by the Lake Zürich Navigation Company (ZSG), which offers river cruises – round trips to destinations around the lake – as well as so-called 'unique cruises', which let you enjoy a fondue, a burger or even a silent disco as you sail.
+Two young ladies ride bicycles through a town square in Zurich, the capital of Switzerland. Other people walk along the paths passing shops.
+Zürich is a pretty cycle-friendly city © Getty Images
+Pedal through the city on a free bike
+Zürich is pretty cycle-friendly already, though the city authorities are aiming to make it even more so with their Velo Strategy 2030, a master plan involving building new bike lanes, riverside cycle paths and parking stations throughout the city.
+If you don’t have your own bike, Züri Rollt can lend you one for free with a returnable deposit of 20chf. The company has two pick-up points, at the Hauptbahnhof and at Pestalozziwiese. Choose your bike (or e-bike, available for a small fee) and head off to explore the city on two wheels.
+For a lovely day trip, cycle all the way to Baden on the path alongside the Limmat River – a pleasant, mostly flat 28km (92-mile) route with multiple picnic spots – before putting yourself and your bike on the train back to Zürich.
+A woman checks out an e-scooter on her phone in Zurich
+Attach your phone to an electric scooter and zip about the city © Getty Images / iStockphoto
+Zip through Züri on an electric scooter
+Zürich has fully embraced the electric-scooter trend. Multiple companies, including Voi, Bolt and Lime, offer on-street scooter hire.
+Track down a free-floating scooter (you’ll see them seemingly abandoned all over the place) on your chosen provider’s app, then scan it, attach your phone to the holder, and you’re free to zip about the city as you please. It’s a convenient way to get from A to B, if a little pricey for regular use.
+The small and famous Polybahn connects Zurich Central with the University Zurich. The Polybahn was built in 1886 and the travel distance takes only 176 meters.
+The little red funicular known as the Polybahn is a Zürich icon © Getty Images
+Hop on the Polybahn for a city panorama
+Founded in 1886, the little red funicular known as the Polybahn is a Zürich icon (and essentially a way for students to avoid walking up a hill). It takes a little more than a minute and a half to ascend from the Limmatquai to the Polyterrasse at ETH Zürich, the famed Swiss Federal Institute of Technology.
+The view from the top takes in the streets of Niederdorf, the Limmat River and the Old Town over the other side, along with Zürich’s twin churches, the Fraumünster and Grossmünster.
+Accessible transportation in Zürich
+Zürich’s public transport network is generally well adapted for people with reduced mobility, with lowerable-floor buses, barrier-free stations and step-free trams and S-Bahn trains. Ticket machines are adapted for the visually impaired, while stations and platforms have raised white safety lines.
+All ferries on Lake Zürich are wheelchair accessible (though not the river boats) and most have disabled passenger toilets. The Polybahn is not adapted for wheelchair users. Full details of accessible travel in Zürich are available on the ZVV website.
+For more information, see Lonely Planet’s Accessible Travel Resources page.
+Transport passes
+The city’s public-transport overlord, the Zürich Transport Association (ZVV), offers an integrated ticketing system across all forms of transport in Zürich, including the Polybahn and scheduled ZSG boat services (but excluding the unique cruises).
+Single and multiple tickets can be bought on the smartphone app, online or at ticket machines and are valid on any form of public transport within the selected zone. The 24-hour ticket offers the best value for a whole day of travel (fares vary depending on the zones required).
+If you’re planning on visiting more than a couple of the city’s museums, it may make sense to buy a Zürich Card, provided by Zürich Tourism and available to buy from ticket machines. Valid for 24 or 72 hours, it includes entrance to many museums and second-class travel across the public transport network, plus various discounts and offers. Don’t forget to validate your Zürich Card at a ticket machine before you use it for the first time.", 
+description: "With electric trams, free bicycles and scenic ferries, Zürich is a pleasure to get around. Here are our top tips for navigating the Swiss city.", 
+date: "Dec 7, 2022", 
+image: "https://www.lonelyplanet.com/_next/image?url=https%3A%2F%2Flp-cms-production.imgix.net%2F2022-12%2FSwitzerland-iStock-627760498-RFC.jpeg%3Fauto%3Dformat%26fm%3Davif&w=1920&q=75", 
+likes: 41, 
+read_time: "5 min read", 
+category_one: "DESTINATION PRACTICALITIES", 
+category_two: "ACCESSIBLE TRAVEL", 
+user_id: alex.id)
+
+montanas_best_winter_activities = Blog.create!(title: "Montana's best winter activities - that aren't all skiing", 
+body: "Winter in Montana is a harsh but magical season. A winter hush descends upon a landscape so cold that even sound seems frozen. But for those well equipped and with a certain level of experience, Montana offers incredible ways to get out and explore its stunningly beautiful mountain terrain.
+
+Whitefish and the surrounding Flathead Valley is unbeatable for almost every kind of winter activity, as is the Gallatin Valley between Big Sky and West Yellowstone. For pristine backcountry skiing and snowmobiling, plus access to Yellowstone National Park, remote Cooke City is a great in-the-know destination.
+
+Explore the planet's most surprising adventures with our weekly newsletter delivered to your inbox.
+1. Snowshoe, ski and spot wolves in Yellowstone National Park
+Winter is many people's favorite season to visit Yellowstone National Park. There are almost no crowds, the geysers are at their steamiest and the frozen landscapes are simply stunning.
+
+Yellowstone National Park has two main areas to visit in winter. From West Yellowstone, snowcoach tours shuttle to Old Faithful, from where you can make ski or snowshoe excursions around the park's geyser basins, before a hot chocolate and overnight at the cozy Snow Lodge.
+
+Further north, the park entrance at Gardiner and its road to Cooke City are the only ones open to cars during winter. This opens up a host of snowshoe and cross-country ski trailheads around the Mammoth region, some of which are served by snowcoach drops.
+
+Planning Tip: The wildlife spotting in Yellowstone is legendary in winter because it's easier to spot animals against the white background. For an unforgettable opportunity to lock eyes with a Yellowstone wolf, sign up for a wildlife-spotting trip with an expert local company like Yellowstone Wolf Tracker.
+
+Four people ride on two snowmobiles on a trail through thick snow and woodland in Montana
+Travel through Montana's winter scenery on a snowmobile © Per Breiehagen / Getty Images
+2. Snowmobile the Targhee or Flathead National Forests
+It may not be the most environmentally friendly activity (with access to places like Yellowstone National Park long mired in controversy), but if you are a confident rider, there's no more exciting way to traverse Montana's epic scenery than on a snowmobile.
+
+Cooke City is one of the most remote towns in Montana, with only one access road in winter (through Yellowstone National Park), but once you get there, the snowmobiling is incredible. Rentals and guides are available in town, and groomed Forest Service roads climb to passes that offer astonishing views of the powder-filled Beartooth Mountains.
+
+As the gateway for winter trips into Yellowstone, West Yellowstone is also well set up for snowmobilers, who can choose from hundreds of miles of spectacular trails in the nearby Targhee National Forest.
+
+Other must-ride locations include the 250 miles of trails at Lolo Pass in the Bitterroot Mountains southwest of Missoula, or the Flathead National Forest near Glacier National Park, where you can rent snowmobiles or join a tour with Swan Mountain Snowmobiling.
+
+3. Watch the curious sport of skijoring
+Combine Montana's cowboy heritage with its Norwegian immigrant history and you get skijoring, in which a skier is towed by a horse over a series of jumps and through slaloms at speeds of up to 40mph. It's the kind of sport that feels like it was invented during a night of heavy drinking. Expect high adrenaline and some slightly silly action.
+
+Planning Tip: For spectators the best action is to be found at Whitefish's World Skijoring Invitational in January or at West Yellowstone's National Championship in February. Alternatively, try Big Sky's Best of the West competition in the same month or the skijoring finals held during Red Lodge's Winter Fest in early March.
+
+A smiling woman in ski gear comes down a hill covered with deep snow in the backcountry in Montana
+Get out in the Montana backcountry for an unforgettable skiing adventure © Noah Clayton / Getty Images
+4. Ski untrammeled slopes from a backcountry yurt or hut
+Montana has some mind-blowing backcountry skiing, but it's the kind of terrain reserved for experienced skiers, and it doesn't come cheap. That said, it's an unforgettable experience to ski powder-filled slopes all day, only to return to your private wilderness accommodations miles from civilization.
+
+Several companies offer backcountry accommodations and guides. You can base yourself in cozy yurts with Yurtski in the Swan Mountains, with Big Sky Backcountry Guides in the Bitterroot Mountains or with Beartooth Powder Guides in Cooke City. All offer a range of avalanche and backcountry skiing courses, which are a wise investment.
+
+Hellroaring Powder Guides has both unguided and guided backcountry skiing from their hut in the Centennial Mountains, 25 miles from West Yellowstone.
+
+Great Northern Powder Guides in the Whitefish region offers the only Cat skiing in the state, using their 14-person cabin as a base for incredible, pristine descents.
+
+Planning Tip: The cheapest way to do some gentler cross-country backcountry skiing is to hire a Forest Service Cabin. For $65 you can get a basic cabin for four, though you'll need to chop wood and pack in all your food.
+
+5. Learn how to mush on a dog sled trip
+It's hard to think of a more romantic way to traverse Montana's snow-draped winter forests and valleys than in a dog-powered sled. Apart from the thrill of the scenery and learning how to mush, getting to interact with the dogs is a highlight in itself.
+
+Several outfitters offer hands-on dog sledding trips. In western Montana, try Base Camp Bigfork in the Flathead Valley, Winter Woods Dog Sled Tours outside Whitefish or nearby Dog Sled Adventures. Closer to Bozeman, check out Yellowstone Dog Sled Adventures in the southern Gallatin Valley or Spirit of the North Dog Sled Adventures in Big Sky.
+
+Two cyclists on fat bikes with wide tires pause to look across a snowy landscape in Montana
+Ride over Montana's winter terrain on a fat bike © Jordan Siemens / Getty Images
+6. Try out fat biking on the Whitefish Trail
+A fat bike is essentially a mountain bike equipped with chunky double-width tires for riding on packed snow. The increasingly popular sport extends the biking season, opens up whole swatches of winter terrain to non-skiers and allows you to push your riding. Don't worry about wiping out – the snow will cushion your fall.
+
+The 22-mile Whitefish Trail is one of the best places for snow biking in the state. The trailside Whitefish Bike Retreat, 9 miles west of Whitefish, offers fat bike rentals, groomed trail access and accommodations, plus lots of trail advice and occasional three-day fat biking clinics.
+
+Montana's big sky will take your breath away
+7. Ski the Going-to-the-Sun Road in Glacier National Park
+Montana has an almost unlimited choice of Nordic trails across the state. West Yellowstone, Bozeman, Big Sky, Missoula, Red Lodge and Great Falls all offer Nordic ski centers with plentiful groomed trails. In Whitefish, try the Glacier Nordic Center or Big Mountain Nordic Trails, the latter best suited to more experienced skiers.
+
+For something special, visit Glacier National Park in winter. Most park roads and accommodations close in winter, but you can ski or snowshoe from Lake McDonald Lodge near Apgar on the western side of the park, or along the Going-to-the-Sun Road from St Mary on the eastern side. Remote wilderness trails lead into the park from Polebridge ranger station and Marias Pass.", 
+description: "Winter in Montana is a harsh but magical season. Here are the best things to do in Big Sky Country everything seems frozen.", 
+date: "Dec 6, 2022", 
+image: "https://www.lonelyplanet.com/_next/image?url=https%3A%2F%2Flp-cms-production.imgix.net%2F2021-12%2FGettyImages-936374092.jpg%3Fauto%3Dformat%26fm%3Davif&w=1920&q=75", 
+likes: 23, 
+read_time: "6 min read", 
+category_one: "ACTIVITIES", 
+category_two: "SKIING", 
+user_id: alex.id)
+
+five_of_the_best_roadtrips_in_argentina = Blog.create!(title: "5 of the best road trips in Argentina", 
+body: "With its vast open spaces, dramatic and diverse scenery and endless highways, Argentina is an ideal place for a road trip.
+
+Hiring a car allows you to escape the crowds, explore at your own pace and visit remote areas that would otherwise be out of reach. Although Argentina’s main highways are generally paved, you can expect gravel and potholes on many minor roads, particularly in the south, though this just adds to the adventure. Roads off the beaten track are best tackled in spring or summer, avoiding the bitter cold and snows of the South American winter.
+
+For Argentina's most rugged routes, you'll need a 4WD, but there are also plenty of laid-back day trips on sealed roads visiting historic sites, vineyards and viewpoints in some of the most scenic parts of the country.
+
+Whether you’re looking for legendary routes such as the Pan-American Highway or little-known back roads through the wilds, Argentina has you covered. Here are five of our favorite road trips.
+
+Scout new ways to explore the planet's wildest places with our weekly newsletter delivered to your inbox.
+
+1. Ruta 40
+Best route for epic adventure
+Cabo Virgenes–La Quiaca; 5224km (3246 miles); allow 3–5 weeks
+
+Argentina’s answer to Route 66, Ruta 40 is one of the world’s longest roads, stretching almost the entire length of Argentina. Also known as RN40, Ruta Nacional Cuarenta or simply La Cuarenta (“The Forty”), this epic highway starts in the far south in Cabo Virgenes, a windswept settlement on the Strait of Magellan, and finishes in the extreme northwest in the town of La Quiaca, which sits at a breathless 3442m (11,293ft) above sea level on the Bolivian border.
+
+Between these two outposts, the highway traces the Andes, passing through 11 Argentinian provinces and scores of stunning landscapes, from vast canyons and rugged mountain passes to temperate rainforests and lush valleys cloaked in vineyards.
+
+The quietest, and perhaps most atmospheric, section of the road runs from El Calafate, a touristy hub for outdoor activities on the edge of Parque Nacional Los Glaciares, to the city of Bariloche in the Argentinian Lake District. For most of this leg of the journey, you'll largely have the road to yourself, with snowy Andean peaks to the west and the seemingly endless Patagonian steppe to the east.
+
+Planning tip: The route is best attempted by experienced motorists in the spring or summer. Ruta 40 is now mostly paved, but it's useful to have a 4WD, particularly if you plan to explore some of the gravel roads (known locally as ripio) that branch off into remote areas of Patagonia.
+
+Empty road leading to Chalten, Patagonia
+You'll have the roads to yourself on some stretches of the route © Dmitry Pichugin / 500px
+2. The Pan-American Highway
+Best long-distance road trip
+Mendoza–Ushuaia; 3300km (2051 miles); allow 2–4 weeks
+
+A network of interconnected routes snaking right down through the Americas from northern Alaska to Tierra del Fuego, the 3000km (19,000-mile) Pan-American Highway is, quite simply, the world’s most epic road trip. But there's no need to follow the entire route – the southernmost section in Argentina is a highly memorable drive that takes in many of the country’s highlights.
+
+The route starts in Mendoza province, the heart of the country’s famed wine industry, before heading east to the bright lights of the capital, Buenos Aires. Beyond the sprawling suburbs, the highway continues south, skirting the fertile grasslands of the Pampas, tracing the Atlantic coast, and then arrowing through sparsely populated Patagonia.
+
+When you reach the far south, cut into Chile and take a ferry across the Strait of Magellan (this short hop is one of just two stretches of the Pan-American Highway that cannot be driven, alongside the Darién Gap dividing Panama from Colombia). It’s then a relatively short drive to the city of Ushuaia, where ubiquitous signs let you know you’ve reached 'El Fin del Mundo' (The End of the World).
+
+Planning tip: Although the Argentinian section of the Pan-American Highway can be driven year-round, the bitterly cold, snowy and windy winters in southern Patagonia and Tierra del Fuego mean a summer or spring journey is the best bet. It’s also important to make sure your car rental agreement and insurance allow you to cross into Chile (you may have to pay an extra fee for this).
+
+A dusty car sits on an unpaved highway surrounded by the red sands of a desert landscape
+Most roads in Argentina are paved, but a 4WD is recommended on some routes © Angelo D'Amico / Getty Images
+3. Cuesta del Obispo route
+Best for mountain views
+Salta–Cachi; 160km (99 miles); allow 1–2 days
+
+This drive from the charming city of Salta to the tranquil town of Cachi showcases the dramatic mountain landscapes of Argentina’s northwest. Heading southwest from Salta along RP33 – a largely paved provincial road – the route travels through the sunny Calchaquí Valley region, which is carpeted with high-altitude vineyards and dotted with clusters of attractive adobe houses.
+
+The journey then continues over a precipitous mountain pass known as the Cuesta del Obispo (“Bishop’s Slope”), which features a dizzying series of switchback turns, before dropping into Parque Nacional Los Cardones, named for the tall cacti that stud this arid area.
+
+Planning tip: Check the weather forecast before setting out along the Cuesta del Obispo route, as heavy rain can make it impassable. Although you can head back to Salta the same day, it’s well worth spending the night in beautiful Cachi, which is encircled by snowy peaks and set within striking distance of several wineries. Take time to relax and enjoy a few glasses of the region’s signature torrontés – an aromatic, peach-fragranced white wine – while soaking up the views.
+
+A city lit up at night with car headlights making the roads glow
+The city of Córdoba is the gateway to historical encounters in the surrounding province © roberto bowyer / Getty Images
+4. Camino de la Historia
+Best historic drive
+Córdoba–Cerro Colorado; 170km (106 miles); allow 2–3 days
+
+Often overlooked by travelers, Córdoba province provides some fascinating insights into the history of the indigenous peoples who originally inhabited this area, as well as the Spanish colonists who came later. Start in the city of Córdoba, founded in 1573 and known for its rich cultural scene.
+
+The first section of the RN9 highway has been dubbed the Camino de la Historia ('Historical Route'), and it follows the colonial-era Camino Real del Perú (“Royal Road of Peru”), which once ran from Lima to Buenos Aires via the legendary silver mines of Potosí in present-day Bolivia.
+
+On the way, you'll pass the evocative estancias (ranches) of Jesús María and Santa Catalina, which were built by Jesuit missionaries, who had a devastating impact on the area's indigenous inhabitants in the 17th and 18th centuries. Centered on striking whitewashed churches, the estancias – listed as Unesco World Heritage sites – offer museums and guided tours that lead visitors through this complicated period in Argentinian history.
+
+At the end of the Camino de la Historia, you'll reach a collection of caves and mountain slopes covered with beautiful petroglyphs near the pretty village of Cerro Colorado. Created up to 1000 years ago, these ancient artworks depict humans and animals, scenes from everyday life, and abstract shapes and figures, providing a snapshot of a lost world.
+
+People looking over the lakes of Nahuel Huapi National Park
+The Ruta de los Siete Lagos takes in natural wonders such as Nahuel Huapi National Park © Tetyana Dotsenko / Shutterstock
+5. Ruta de los Siete Lagos
+Best scenic drive
+San Martín de los Andes–Villa La Angostura; 110km (68 miles); allow 1–2 days
+
+Gorgeous landscapes reminiscent of the Alps, numerous options for side trips, plenty of places to grab a bite to eat or stay the night – with perks like this, a leisurely drive along the Ruta de los Siete Lagos (“Seven Lakes Route”) is hard to beat.
+
+Connecting the tourist hubs of San Martín de los Andes and Villa La Angostura, the drive follows Ruta 40 through two national parks – Lanín and Nahuel Huapi – taking in a particularly picturesque swathe of the Argentinian Lake District.
+
+As you’d expect given the name, the highlights of the route are the seven eponymous lagos, which are lined with beaches, surrounded by dense forests and watched over by snowy mountains and volcanoes. All have crystal-clear waters that are ideal for swimming, kayaking or stand-up paddle boarding, though it may be hard to tear yourself away from the sublime views.
+
+Planning tip: Snow can block off parts of the road in winter, so the Ruta de los Siete Lagos is best driven in the spring, summer or early fall.", 
+description: "With its vast open spaces, dramatic scenery and endless highways, Argentina is an ideal place to hit the road. Here are our top routes for epic drives.", 
+date: "Dec 4, 2022", 
+image: "https://www.lonelyplanet.com/_next/image?url=https%3A%2F%2Flp-cms-production.imgix.net%2F2022-11%2FArgentina-Mendoza-HolgerMette-GettyImages-608621278-RFE.jpg%3Fauto%3Dformat%26fm%3Davif&w=1920&q=75", 
+likes: 65, 
+read_time: "7 min read", 
+category_one: "ROAD TRIPS", 
+category_two: "DESTINATION PRACTICALITIES", 
+user_id: alex.id)
+
+the_eleven_best_places_to_visit_in_switzerland = Blog.create!(title: "The 11 best places to visit in Switzerland", 
+body: "Nowhere is perfect, but, let’s face it, Switzerland gets pretty darned close.
+
+The Alps ripple across 60% of the country, and the landscapes and towns look like they have been dreamed up by a particularly imaginative child. We’re talking glacier-capped peaks, crash-bang waterfalls, turreted castles of the fairy-tale kind and lakes in the most surreal shade of turquoise blue. Red trains curl up mountains to improbable heights, and clanging cowbells ring out across hilly meadows that you can skip down with Heidi-like glee.
+
+Even the culture-filled cities have magnificent backdrops of vineyards, lakes or rivers, and the mountains are never more than a whisper away. As natural beauty goes, Switzerland is off the charts. It's also a joy to travel around, whether by train, bus or on a scenic road trip. Here are the best places to visit in Switzerland that will make your trip one to remember.
+
+Get trusted guidance to the world's most breathtaking experiences delivered to your inbox weekly with our email newsletter.
+1. Jungfrau region
+Best place to experience the mountains
+
+The idyllic Jungfrau region is the icing on the Alpine cake of Switzerland’s Bernese Oberland. Sky-high peaks, glaciers and thundering falls elicit gasps of wonder wherever you go. Grazing the 4000m (13,123ft) mark are Switzerland’s 'big three': Eiger (Ogre), Mönch (Monk) and Jungfrau (Virgin), enshrined in mountaineering legend.
+
+Take a once-in-a-lifetime ride up to the everlasting snow at Europe’s highest train station, 3454m (11,332ft) Jungfraujoch. Hike, ski, sled and zip-line among mountains of myth in Grindelwald, enjoy waterfalls galore in Lauterbrunnen and tackle every kind of extreme sport imaginable in Interlaken (skydiving, ice climbing, glacial bungee jumping – you name it). The Jungfrau region is the great outdoors on a blockbuster scale.
+
+Planning Tip: Rush this region and you’ll regret it. Allow a week or more to dive in deep.
+
+A city old town with a turquoise river running through it
+Bern and its historic Old Town are beautiful from all angles © BAHDANOVICH ALENA / Shutterstock
+2. Bern
+Best city for medieval flair
+
+Bern often pops up in those I-can’t-believe-it’s-the-capital trivia questions, but frankly, Switzerland’s first city deserves more love. The cobbled, flag-bedecked medieval Old Town is a Unesco World Heritage treat, with 6km (3.7 miles) of covered arcades, cellar shops and bars, fantastical folk figures topping 16th-century fountains, and the eye-grabbing Zytglogge. Framed by wooded hills and split in two by the turquoise Aare River, this red-roofed city looks good from pretty much every angle. It’s pure storybook stuff for kids, too, with its giant who snacks on children (the Kindlifresserbrunnen) and resident bears.
+
+Sight-wise, you’ll be drawn to big-hitters like the Einstein-Haus (where the genius developed his theory of relativity), the Kunsthaus (with its outstanding fine arts collection) and Renzo Piano’s wavy Zentrum Paul Klee (Bern’s answer to the Guggenheim). But in summer, the action’s on the water, with swimming, tubing, rafting and paddleboarding along the Aare River.
+
+3. Lake Geneva
+Best place for romance, vines and castles
+
+In Switzerland’s western crook, crescent-shaped Lake Geneva (Lac Léman to Francophones) is a joy to behold, with its mountain backdrop, spirit-lifting views, vineyards and shoreline necklaced with handsome cities and castle-crowned towns.
+
+Marked by its rainbow-kissed Jet d’Eau fountain and Mont Blanc peeping up on the horizon, Geneva wraps around the lake’s southern shore. The worldly city makes an excellent launchpad for exploring, with big-hitting museums and galleries to absorb, botanical gardens to stroll, lidos to swim at, Old Town cafes to hang out in and bright-yellow mouettes ferrying locals across the water – surely one of the world’s most scenic commutes.
+
+Planning Tip: But don’t stop there. It’s a quick boat or train hop to Lausanne, which can culturally give Geneva a run for its money, especially with its Plateforme 10 arts district, the lovely terraced vineyards of Lavaux (a Unesco World Heritage site) and flower-draped Montreux, host to one of the world’s most famous jazz festivals, with the picture-perfect Château de Chillon right on its doorstep.
+
+Man on a rock next to a lake with a reflection of Matterhorn at dawn in Switzerland
+The Matterhorn is an icon of Switzerland © wilpunt / Getty Images
+4. Zermatt
+Best place for outdoor activities
+
+No peak has more pulling power than the 4478m (14,692ft) Matterhorn, a terrific gnarled fang of rock that flings up above the seductive, timber chalet-filled Alpine resort of Zermatt. It's Switzerland’s mountain icon, so beloved by the nation that it inspired the pyramid shape of Toblerone chocolate.
+
+Zermatt is more than a one-mountain wonder. Climbers have been rocking up here since the mid-19th-century, and it’s still a magnet for challenging summit ascents today. Otherwise, come to hike, ski and gaze over a sea of glaciers and 4000m (13,123ft) peaks at Matterhorn Glacier Paradise. 
+
+5. Swiss National Park 
+Best place for nature lovers
+
+Switzerland has just one national park? Yes, we know it’s a shocker, but trust us, it’s a good one. Snuggled away in a remote corner of the country’s southeast on the border with Italy, the 172-sq-km (66-sq-mile) Swiss National Park is the Alps in overdrive: a nature-gone-wild spectacle of high moors, forests, wildflower-freckled pastures, waterfalls, jewel-colored lakes and mountains as high as the sky, where ibex, chamois, marmots, deer and golden eagles roam and fly free.
+
+Planning Tip: Start off on the right foot with the inside scoop on walking trails and ranger-led guided hikes at the visitor center in Zernez.
+
+A sunny day at Piazza Collegiate in Bellinzona, Switzerland
+Get a taste of the good life in Switzerland's Bellinzona © Keitma / Shutterstock
+6. Bellinzona
+Best place for la dolce vita
+
+With medieval castles rising high and the Alps rearing beyond, good-looking Bellinzona is a taste of the best of Italy's best food and culture in Switzerland. You’ll find a generous splash of Italian flair in its historic center, woven with flower-draped alleys, Renaissance churches and cafe-rimmed piazzas that brim with life, laughter, clinking glasses and the out-of-tune toll of countless campaniles. 
+
+Planning Tip: Top of any wish list is seeing the castles, among them hilltop Castelgrande, which can be drawn out into a full day’s activity (bring water and comfortable shoes). 
+
+7. Jura Mountains and Lac de Neuchâtel 
+Best place for a remote road trip 
+
+In the dark forested hills along the French-Swiss border, the Jura Mountains are a natural wonder. This peaceful region has a beauty all its own: meadows of green, ancient forests, rocky outcrops overlooking a trio of lakes against an Alpine backdrop and slow-paced villages and valleys little changed in centuries. 
+
+Begin with a road trip. Kick off at the Jura Vaudois Nature Park for hikes with dress-circle views of Lake Geneva and Gruyère cheese tastings at rustic Alpine huts. Swing north to Lac de Joux, the watchmaking village of Le Sentier, and Vallorbe, honeycombed with Switzerland’s biggest (and most impressive) limestone caves.
+
+Tag on a trip to Lac de Neuchâtel and you can bathe in the thermal waters of Yverdon-les-Bains, tiptoe off the map in the lushly rolling Val-de-Travers (birthplace of absinthe) and the crescent-moon canyon of Creux du Van. Cultured Neuchâtel is a fitting climax, with its fantasy of a lavishly turreted château.
+
+Cow licks hiker on rural road in Appenzell, Switzerland
+Roam far off the beaten track in northeastern Switzerland © Cavan Images / Getty Images
+8. Appenzell and northeastern Switzerland
+Best place for family adventures
+
+Northeastern Switzerland might not have the in-your-face drama of higher realms of the Alps, but it nevertheless delights in its own serene, deeply rural way, with dairy country unraveling to meet the mountains and half-timbered, gaily muralled towns all fit for a postcard. This pocket-sized region is perfect for a family vacation with a hit of culture and gentle adventure.
+
+Begin in St Gallen, with a spin round its World Heritage Stiftsbibliothek (Abbey Library), a literary marvel and a feast of rococo art and architecture. Move on to folksy, ridiculously pretty Appenzell, popping into the Schaukäserei to sample regional cheeses.
+
+Muscling further south into the Alps, head on up to Säntis at 2501m (8205ft) for views embracing six countries and then go to Werdenberg, a tiny speck of a medieval hamlet, home to Switzerland’s oldest timber chalets.
+
+Planning Tip: Close by is Vaduz, Liechtenstein’s princely, castle-topped capital on the banks of the Rhine.
+
+9. Lake Lucerne
+Best place for lakeside romance
+
+Reclining on the shores of its glittering namesake lake, Lucerne is a walkable, medieval dream of a city that has a magic you can’t quite put your finger on. It will grab you when you are strolling along the promenade as the sun sets in a blaze of gold and pinks or as you cruise across its waters to mountains of myth: 2132m (6995ft) Mt Pilatus, where Wagner raved about the Alpine panorama and Queen Victoria trotted on horseback, and 1797m (5896ft) Rigi, with a light so sublime Turner painted it in three different moods.
+
+The little city punches far above its weight culturally, with its iconic medieval Kapellbrücke bridge leaping across the Reuss River and the Jean Nouvel–designed KKL arts center and Sammlung Rosengart harboring a prized private collection of Picassos. Ambling past the belle époque hotels lining its shores, the same views that captivated Goethe, Queen Victoria and Wagner in the 19th century will hold you in their thrall.
+
+Planning Tip: With more time on your hands, you can really get out on the lake. Cruise across fjord-like, mountain-rimmed Lake Uri for a taste of Switzerland’s geographical and spiritual heartland. Boats ply the glassy turquoise waters to Rütli, birthplace of the Swiss nation.
+
+Woman sitting on a bench next to the Rhine River in Basel, Switzerland
+Basel is one of Switzerland's most forward-thinking cities © Andrea Ambrosino / Getty Images
+10. Basel
+Best place for art lovers
+
+Popularity wise, poor old Basel barely gets a look. But that’s a mistake. Straddling the Rhine, this city has everything going for it: world-class art in some of the country’s best galleries, a hot food scene, avant-garde buildings bearing the hallmark of Pritzker Prize–winning architects and an upbeat cafe culture.
+
+Allow several days for a satisfying romp of the center, where must-sees include the Kunstmuseum and its fine arts collection, the Renzo Piano-designed Fondation Beyeler and the Frank Gehry-designed Vitra Design Museum.
+
+Planning Tip: Basel endears itself most to those who look beyond the trophy sights, with sundown drinks by the river or a wild swim in the Rhine. Rent a Wickelfisch (a fish-shaped waterproof bag) at the tourist office, strip to your swimming suit and go with the flow, floating downstream past the city’s landmarks.
+
+11. Zürich
+Best place for urban culture
+
+Regularly landing at the top in quality-of-living surveys, urban dynamo Zürich never seems to miss a beat: from cool waterside bars on the banks of the Limmat River to its alley-woven Old Town, where the twin-spired Romanesque Grossmünster shines with Augusto Giacometti’s rainbow of stained glass. Le Corbusier’s boldly colored architectural creations and the edgily post-industrial Züri-West neighborhood notch Zürich's culture cred up even further.
+
+Planning Tip: In mid-August, Zürich throws one of Switzerland’s wildest parties: the techno-pumping Street Parade.", 
+description: "Be enchanted by fairy-tale towns and reach dazzling Alpline heights, here are the best places to visit in Switzerland.", 
+date: "Dec 1, 2022", 
+image: "https://www.lonelyplanet.com/_next/image?url=https%3A%2F%2Flp-cms-production.imgix.net%2F2022-08%2Fjungfrau-switzerland-GettyImages-140328606.jpg%3Fauto%3Dformat%26fm%3Davif&w=1920&q=75", 
+likes: 55, 
+read_time: "8 min read", 
+category_one: "TIPS AND ADVICE", 
+category_two: "DESTINATION PRACTICALITIES", 
+user_id: alex.id)
+
 puts "Done seeding blogs..."
 
 puts "Seeding forums..."
 
 japan_forum = Forum.create!(country_name: "Japan", flag: "https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/1200px-Flag_of_Japan.svg.png", user_id: alex.id, country_id: japan.id)
+thailand_forum = Forum.create!(country_name: "Thailand", flag: "https://cdn.britannica.com/38/4038-004-111388C2/Flag-Thailand.jpg", user_id: alex.id, country_id: thailand.id)
 
 puts "Done seeding forums..."
 
@@ -577,5 +853,14 @@ date: "Dec 15, 2022",
 likes: 20, 
 topic: "Osaka",
 forum_id: japan_forum.id)
+
+Post.create!(title: "Patpong Market", 
+body: "Does anyone have any idea if the Patpong night markets have reopened or will be reopening?
+Pls advise
+Thank you", 
+date: "Dec 16, 2022", 
+likes: 22, 
+topic: "Bangkok",
+forum_id: thailand_forum.id)
 
 puts "Done seeding posts..."
