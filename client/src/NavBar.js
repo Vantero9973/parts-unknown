@@ -1,4 +1,4 @@
-import { keyframes } from "@emotion/react";
+// import { keyframes } from "@emotion/react";
 import PublicIcon from "@mui/icons-material/Public";
 
 export default function NavBar() {
@@ -27,11 +27,6 @@ export default function NavBar() {
             className="btn btn-ghost normal-case text-xl"
           >
             Parts
-            {/* <img
-              style={{ height: "40px", width: "40px", padding: "5px" }}
-              src="https://www.freepnglogos.com/uploads/globe-png/file-blank-globe-svg-wikimedia-commons-40.png"
-              alt="logo"
-            /> */}
             <PublicIcon
               style={{ height: "50px", width: "50px", padding: "5px" }}
             />

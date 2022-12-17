@@ -1,8 +1,12 @@
 import { useState, useEffect } from "react";
+import { useParams, useNavigate } from "react-router-dom";
 
 export default function ForumPage() {
   const [forums, setForums] = useState([]);
   const [posts, setPosts] = useState([]);
+  const [postsLink, setPostsLink] = useState([]);
+  const { id } = useParams();
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetch("http://localhost:3000/forums")
@@ -19,6 +23,14 @@ export default function ForumPage() {
         setPosts(data);
       });
   }, []);
+
+  useEffect(() => {
+    fetch(`http://localhost:3000/posts/${id}`)
+      .then((res) => res.json())
+      .then((data) => {
+        setPostsLink(data);
+      });
+  }, [id]);
 
   return (
     <>
@@ -38,7 +50,7 @@ export default function ForumPage() {
               <img
                 src={forum.flag}
                 alt="flag"
-                style={{ maxHeight: "100px", maxWidth: "100px" }}
+                style={{ maxHeight: "50px", maxWidth: "100px" }}
               />
             </div>
           );
@@ -68,7 +80,7 @@ export default function ForumPage() {
               alignItems: "center",
               fontSize: "16px",
               width: "20vw",
-              height: "5vh",
+              height: "2vh",
             }}
           >
             Forum
@@ -103,7 +115,7 @@ export default function ForumPage() {
                 width: "50vw",
                 background: "#dadada",
                 color: "#2C2C2E",
-                padding: "10px",
+                padding: "5px",
               }}
             >
               <tr
@@ -124,6 +136,7 @@ export default function ForumPage() {
                   fontSize: "16px",
                   width: "60vw",
                 }}
+                onClick={() => navigate(`/post/${post.id}`)}
               >
                 {post.title}
               </tr>

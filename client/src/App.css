@@ -7,24 +7,60 @@ body {
 }
 
 .landingImage {
-    -webkit-filter: brightness(75%);
-	-moz-filter: brightness(75%);
-	-o-filter: brightness(75%);
-	-ms-filter: brightness(75%);
-	filter: brightness(75%);
+    -webkit-filter: brightness(70%);
+	filter: brightness(70%);
     z-index: 900;
+    transition: all 0.3s ease;
 }
 
 .landingImage:hover {
-    -webkit-filter: brightness(100%);
+    -webkit-filter: brightness(85%);
     -webkit-transition: all 1s ease;
     -moz-transition: all 1s ease;
     -o-transition: all 1s ease;
     -ms-transition: all 1s ease;
     transition: all 1s ease;
-	-moz-filter: brightness(100%);
-	-o-filter: brightness(100%);
-	-ms-filter: brightness(100%);
-	filter: brightness(100%);
+	filter: brightness(85%);
     z-index: 900;
+    transform: scale(1.01);
 }
+
+.landingImageText {
+    color: white;
+    font-size: 32px;
+    font-weight: 600;
+    -webkit-text-stroke: 1px #2C2C2E;
+    font-family: 'Roboto', sans-serif;
+    width: 28vw;
+    margin: 10px;
+    filter: brightness(150%);
+    -webkit-filter: brightness(150%);
+}
+
+.pagination {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+  
+  .pagination button {
+    width: 40px;
+    height: 40px;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 16px;
+    margin: 0 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: transparent;
+    color: #dadada;
+    border-color: #dadada;
+  }
+  
+  .pagination button.active {
+    font-weight: 900;
+    background: #1C1C1E;
+    color: #dadada;
+  }

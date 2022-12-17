@@ -79,7 +79,7 @@ export default function DestinationsPage() {
                       background: "#2C2C2E",
                       borderColor: "#dadada",
                       color: "#dadada",
-                      borderRadius: "20px",
+                      borderRadius: "10px",
                       display: "flex",
                       flexWrap: "wrap",
                     }}

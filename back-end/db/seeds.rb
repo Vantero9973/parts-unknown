@@ -16,7 +16,7 @@ puts "Seeding countries..."
 
 afghanistan = Country.create!(name: "Afghanistan", continent_id: asia.id)
 armenia = Country.create!(name: "Armenia", continent_id: asia.id)
-azerbaijan = Country.create!(name: "azerbaijan", continent_id: asia.id)
+azerbaijan = Country.create!(name: "Azerbaijan", continent_id: asia.id)
 bahrain = Country.create!(name: "Bahrain", continent_id: asia.id)
 bangladesh = Country.create!(name: "Bangladesh", continent_id: asia.id)
 bhutan = Country.create!(name: "Bhutan", continent_id: asia.id)
@@ -371,7 +371,7 @@ category_one: "DESTINATION PRACTICALITIES",
 category_two: "ACTIVITIES", 
 user_id: alex.id)
 
-unforgettable_hikes_around_the_world = Blog.create!(title: "10 places to escape the cold and find winter sun in Europe", 
+unforgettable_hikes_around_the_world = Blog.create!(title: "12 unforgettable hikes around the world", 
 body: "Hiking is about so much more than exercise, pleasant scenery or getting from A to B.
 
 Putting one foot in front of the other for hours, days or even weeks on end creates a special sense of connection to a place and its landscapes.
@@ -555,6 +555,27 @@ Let me know your other must-eats also!",
 date: "Dec 13, 2022", 
 likes: 15, 
 topic: "Japan",
+forum_id: japan_forum.id)
+
+Post.create!(title: "First time to Osaka!", 
+body: "Hey folks, have bought a flight to Osaka around mid Feb 2023. Understand that is still winter season. Will be staying for about 11 days.
+
+1) Do I need to bring winter clothings like the full set, gloves, scarf, thick jacket, coats etc.. so just a jacket suffice?
+
+2) My flight arrives after 9pm and by the time I pass through immigration and baggage, it could possibly be close to 10pm. And I get overwhelmed easily and may be confused with the train lines and ticketing system. Woild it be better for me to stay overnight at the airport hotel, or still continue to make my way to Osaka station? I intend to stay a hotel connected to the station.
+
+3) in layman terms, what does JR Pass and Icacao card and others provides for me in terms of transport? I know I googled but tbh I'm still very much confused! Should I get all the cards?
+
+4) should I base in Osaka first or Kyoto? And considering I would want to visit nearby cities too for day trips. Any recommendations for cities?
+
+5) in terms of food expenses (and the occasional entrance fees for sights) is budget of 10000 Yen per day sufficient?
+
+Many thanks! Am so excited about this trip because after years and years of dreaming to go Japan, I finally can realized it. :)
+
+", 
+date: "Dec 15, 2022", 
+likes: 20, 
+topic: "Osaka",
 forum_id: japan_forum.id)
 
 puts "Done seeding posts..."
