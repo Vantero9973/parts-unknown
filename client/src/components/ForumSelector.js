@@ -27,7 +27,7 @@ export default function ForumSelector({ countries }) {
         {countries.map((country) => {
           return (
             <table>
-              <tr onClick={() => navigate(`/forum/${country.id}`)}>
+              <tr onClick={() => navigate(`/forums/${country.id}`)}>
                 {country.name}
               </tr>
             </table>

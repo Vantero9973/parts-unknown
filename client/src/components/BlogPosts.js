@@ -1,3 +1,5 @@
+import React, { useState, useEffect } from "react";
+import { useParams, useNavigate } from "react-router-dom";
 import Box from "@mui/material/Box";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
@@ -7,6 +9,19 @@ import "aos/dist/aos.css";
 AOS.init();
 
 export default function BlogPosts({ blogs }) {
+  const [blogPosts, setBlogPosts] = useState();
+
+  const { id } = useParams();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    fetch(`http://localhost:3000/blogs/${id}`)
+      .then((res) => res.json())
+      .then((data) => {
+        setBlogPosts(data);
+      });
+  }, [id]);
+
   return (
     <div>
       {blogs.map((blog) => {
@@ -57,7 +72,9 @@ export default function BlogPosts({ blogs }) {
                     margin: "10px",
                     color: "#dadada",
                     fontWeight: "bold",
+                    cursor: "pointer",
                   }}
+                  onClick={() => navigate(`/blogs/${blog.id}`)}
                 >
                   {blog.title}
                 </Typography>

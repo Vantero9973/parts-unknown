@@ -22,7 +22,7 @@ export default function BlogImages() {
           <span
             style={{
               color: "white",
-              fontSize: "36px",
+              fontSize: "30px",
               fontWeight: "600",
               fontFamily: "'Roboto', sans-serif",
               width: "28vw",
@@ -42,7 +42,7 @@ export default function BlogImages() {
               margin: "10px",
             }}
           >
-            <a href="/stories" style={{ zIndex: "3" }}>
+            <a href="/blogs/1" style={{ zIndex: "3" }}>
               <ArrowForwardIcon
                 className="arrowIcon"
                 style={{
@@ -67,7 +67,7 @@ export default function BlogImages() {
           <span
             style={{
               color: "white",
-              fontSize: "36px",
+              fontSize: "30px",
               fontWeight: "600",
               fontFamily: "'Roboto', sans-serif",
               width: "28vw",
@@ -87,7 +87,7 @@ export default function BlogImages() {
               margin: "10px",
             }}
           >
-            <a href="/stories" style={{ zIndex: "3" }}>
+            <a href="/blogs/2" style={{ zIndex: "3" }}>
               <ArrowForwardIcon
                 style={{
                   height: "60px",
@@ -111,7 +111,7 @@ export default function BlogImages() {
           <span
             style={{
               color: "white",
-              fontSize: "36px",
+              fontSize: "30px",
               fontWeight: "600",
               fontFamily: "'Roboto', sans-serif",
               width: "28vw",
@@ -131,7 +131,7 @@ export default function BlogImages() {
               margin: "10px",
             }}
           >
-            <a href="/stories" style={{ zIndex: "3" }}>
+            <a href="/blogs/3" style={{ zIndex: "3" }}>
               <ArrowForwardIcon
                 style={{
                   height: "60px",
@@ -153,14 +153,13 @@ export default function BlogImages() {
           }}
         >
           <a
-            href="/stories"
+            href="/blogs/1"
             className="landingImage"
             style={{
               width: "33.33vw",
               height: "80vh",
               float: "left",
-              backgroundImage:
-                "url(https://www.lonelyplanet.com/_next/image?url=https%3A%2F%2Flp-cms-production.imgix.net%2F2021-10%2Fhonolulu-beach-GettyImages-482135181.jpg%3Fauto%3Dformat%26fm%3Davif&w=1920&q=75)",
+              backgroundImage: "url(https://i.imgur.com/jSRAr67.jpg)",
               backgroundSize: "cover",
               backgroundRepeat: "no-repeat",
               backgroundPosition: "center",
@@ -177,14 +176,13 @@ export default function BlogImages() {
           }}
         >
           <a
-            href="/stories"
+            href="/blogs/2"
             className="landingImage"
             style={{
               width: "33.33vw",
               height: "80vh",
               float: "left",
-              backgroundImage:
-                "url(https://www.lonelyplanet.com/_next/image?url=https%3A%2F%2Flp-cms-production.imgix.net%2F2022-12%2FItaly-Sicily-Taormina-Sun_Shine-shutterstock_1760426138-RFC.jpg%3Fauto%3Dformat%26fm%3Davif&w=3840&q=75)",
+              backgroundImage: "url(https://i.imgur.com/7ypXu71.jpg)",
               backgroundSize: "cover",
               backgroundRepeat: "no-repeat",
               backgroundPosition: "center",
@@ -201,14 +199,13 @@ export default function BlogImages() {
           }}
         >
           <a
-            href="/stories"
+            href="/blogs/3"
             className="landingImage"
             style={{
               width: "33.33vw",
               height: "80vh",
               float: "left",
-              backgroundImage:
-                "url(https://www.lonelyplanet.com/_next/image?url=https%3A%2F%2Flp-cms-production.imgix.net%2F2022-01%2FIceland-Westfjord-Jan-Jerman-shutterstock_1879846174-RFC.jpg%3Fauto%3Dformat%26fm%3Davif&w=3840&q=75)",
+              backgroundImage: "url(https://i.imgur.com/V6BnBy6.jpg)",
               backgroundSize: "cover",
               backgroundRepeat: "no-repeat",
               backgroundPosition: "center",

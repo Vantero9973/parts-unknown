@@ -12,226 +12,491 @@ puts "Done seeding continents..."
 
 puts "Seeding countries..."
 
-#Asia
-
 afghanistan = Country.create!(name: "Afghanistan", continent_id: asia.id)
+albania = Country.create!(name: "Albania", continent_id: europe.id)
+algeria = Country.create!(name: "Algeria", continent_id: africa.id)
+andorra = Country.create!(name: "Andorra", continent_id: europe.id)
+angola = Country.create!(name: "Angola", continent_id: africa.id)
+antigua_barbuda = Country.create!(name: "Antigua and Barbuda", continent_id: north_america.id)
+argentina = Country.create!(name: "Argentina", continent_id: south_america.id)
 armenia = Country.create!(name: "Armenia", continent_id: asia.id)
+australia = Country.create!(name: "Australia", continent_id: oceania.id)
+austria = Country.create!(name: "Austria", continent_id: europe.id)
 azerbaijan = Country.create!(name: "Azerbaijan", continent_id: asia.id)
+bahamas = Country.create!(name: "Bahamas", continent_id: north_america.id)
 bahrain = Country.create!(name: "Bahrain", continent_id: asia.id)
 bangladesh = Country.create!(name: "Bangladesh", continent_id: asia.id)
+barbados = Country.create!(name: "Barbados", continent_id: north_america.id)
+belarus = Country.create!(name: "Belarus", continent_id: europe.id)
+belgium = Country.create!(name: "Belgium", continent_id: europe.id)
+belize = Country.create!(name: "Belize", continent_id: north_america.id)
+benin = Country.create!(name: "Benin", continent_id: africa.id)
 bhutan = Country.create!(name: "Bhutan", continent_id: asia.id)
+bolivia = Country.create!(name: "Bolivia", continent_id: south_america.id)
+bosnia_herzegovina = Country.create!(name: "Bosnia and Herzegovina", continent_id: europe.id)
+botswana = Country.create!(name: "Botswana", continent_id: africa.id)
+brazil = Country.create!(name: "Brazil", continent_id: south_america.id)
 brunei = Country.create!(name: "Brunei", continent_id: asia.id)
+bulgaria = Country.create!(name: "Bulgaria", continent_id: europe.id)
+burkina_faso = Country.create!(name: "Burkina Faso", continent_id: africa.id)
+burundi = Country.create!(name: "Burundi", continent_id: africa.id)
+cote_d_ivoire = Country.create!(name: " Côte d'Ivoire", continent_id: africa.id)
+cabo_verde = Country.create!(name: "Cabo Verde", continent_id: africa.id)
 cambodia = Country.create!(name: "Cambodia", continent_id: asia.id)
+cameroon = Country.create!(name: "Cameroon", continent_id: africa.id)
+canada = Country.create!(name: "Canada", continent_id: north_america.id)
+central_africa_republic = Country.create!(name: "Central Africa Republic", continent_id: africa.id)
+chad = Country.create!(name: "Chad", continent_id: africa.id)
+chile = Country.create!(name: "Chile", continent_id: south_america.id)
 china = Country.create!(name: "China", continent_id: asia.id)
+colombia = Country.create!(name: "Colombia", continent_id: south_america.id)
+comoros = Country.create!(name: "Comoros", continent_id: africa.id)
+congo = Country.create!(name: "Congo", continent_id: africa.id)
+costa_rica = Country.create!(name: "Costa Rica", continent_id: north_america.id)
+croatia = Country.create!(name: "Croatia", continent_id: europe.id)
+cuba = Country.create!(name: "Cuba", continent_id: north_america.id)
 cyprus = Country.create!(name: "Cyprus", continent_id: asia.id)
+czech_republic = Country.create!(name: "Czech Republic", continent_id: europe.id)
+democratic_republic_of_the_congo = Country.create!(name: "Democratic Republic of the Congo", continent_id: africa.id)
+denmark = Country.create!(name: "Denmark", continent_id: europe.id)
+djibouti = Country.create!(name: "Djibouti", continent_id: africa.id)
+dominica = Country.create!(name: "Dominica", continent_id: north_america.id)
+dominican_republic = Country.create!(name: "Dominican Republic", continent_id: north_america.id)
+ecuador = Country.create!(name: "Ecuador", continent_id: south_america.id)
+egypt = Country.create!(name: "Egypt", continent_id: africa.id)
+el_salvador = Country.create!(name: "El Salvador", continent_id: north_america.id)
+equatorial_guinea = Country.create!(name: "Equatorial Guinea", continent_id: africa.id)
+eritrea = Country.create!(name: "Eritrea", continent_id: africa.id)
+estonia = Country.create!(name: "Estonia", continent_id: europe.id)
+eswatini = Country.create!(name: "Eswatini", continent_id: africa.id)
+ethiopia = Country.create!(name: "Ethiopia", continent_id: africa.id)
+fiji = Country.create!(name: "Fiji", continent_id: oceania.id)
+finland = Country.create!(name: "Finland", continent_id: europe.id)
+france = Country.create!(name: "France", continent_id: europe.id)
+gabon = Country.create!(name: "Gabon", continent_id: africa.id)
+gambia = Country.create!(name: "Gambia", continent_id: africa.id)
 georgia = Country.create!(name: "Georgia", continent_id: asia.id)
+germany = Country.create!(name: "Germany", continent_id: europe.id)
+ghana = Country.create!(name: "Ghana", continent_id: africa.id)
+greece = Country.create!(name: "Greece", continent_id: europe.id)
+grenada = Country.create!(name: "Grenada", continent_id: north_america.id)
+guatemala = Country.create!(name: "Guatemala", continent_id: north_america.id)
+guinea = Country.create!(name: "Guinea", continent_id: africa.id)
+guinea_bissau = Country.create!(name: "Guinea Bissau", continent_id: africa.id)
+guyana = Country.create!(name: "Guyana", continent_id: south_america.id)
+haiti = Country.create!(name: "Haiti", continent_id: north_america.id)
+holy_see = Country.create!(name: "Holy See", continent_id: europe.id)
+honduras = Country.create!(name: "Honduras", continent_id: north_america.id)
+hungary = Country.create!(name: "Hungary", continent_id: europe.id)
+iceland = Country.create!(name: "Iceland", continent_id: europe.id)
 india = Country.create!(name: "India", continent_id: asia.id)
 indonesia = Country.create!(name: "Indonesia", continent_id: asia.id)
 iran = Country.create!(name: "Iran", continent_id: asia.id)
 iraq = Country.create!(name: "Iraq", continent_id: asia.id)
+ireland = Country.create!(name: "Ireland", continent_id: europe.id)
 israel = Country.create!(name: "Israel", continent_id: asia.id)
+italy = Country.create!(name: "Italy", continent_id: europe.id)
+jamaica = Country.create!(name: "Jamaica", continent_id: north_america.id)
 japan = Country.create!(name: "Japan", continent_id: asia.id)
 jordan = Country.create!(name: "Jordan", continent_id: asia.id)
 kazakhstan = Country.create!(name: "Kazakhstan", continent_id: asia.id)
+kenya = Country.create!(name: "Kenya", continent_id: africa.id)
+kiribati = Country.create!(name: "Kiribati", continent_id: oceania.id)
 kuwait = Country.create!(name: "Kuwait", continent_id: asia.id)
 kyrgyzstan = Country.create!(name: "Kyrgyzstan", continent_id: asia.id)
 laos = Country.create!(name: "Laos", continent_id: asia.id)
-lebanon = Country.create!(name: "Lebanon", continent_id: asia.id)
-malaysia = Country.create!(name: "Malaysia", continent_id: asia.id)
-maldives = Country.create!(name: "Maldives", continent_id: asia.id)
-mongolia = Country.create!(name: "Mongolia", continent_id: asia.id)
-myanmar = Country.create!(name: "Myanmar", continent_id: asia.id)
-nepal = Country.create!(name: "Nepal", continent_id: asia.id)
-north_korea = Country.create!(name: "North Korea", continent_id: asia.id)
-oman = Country.create!(name: "Oman", continent_id: asia.id)
-pakistan = Country.create!(name: "Pakistan", continent_id: asia.id)
-palestine = Country.create!(name: "Palestine", continent_id: asia.id)
-philippines = Country.create!(name: "Philippines", continent_id: asia.id)
-qatar = Country.create!(name: "Qatar", continent_id: asia.id)
-saudi_arabia = Country.create!(name: "Saudi Arabia", continent_id: asia.id)
-singapore = Country.create!(name: "Singapore", continent_id: asia.id)
-south_korea = Country.create!(name: "South Korea", continent_id: asia.id)
-sri_lanka = Country.create!(name: "Sri Lanka", continent_id: asia.id)
-syria = Country.create!(name: "Syria", continent_id: asia.id)
-tajikistan = Country.create!(name: "Tajikistan", continent_id: asia.id)
-thailand = Country.create!(name: "Thailand", continent_id: asia.id)
-timor_leste = Country.create!(name: "Timor-Leste", continent_id: asia.id)
-turkey = Country.create!(name: "Turkey", continent_id: asia.id)
-turkmenistan = Country.create!(name: "Turkmenistan", continent_id: asia.id)
-uae = Country.create!(name: "United Arab Emirates", continent_id: asia.id)
-uzbekistan = Country.create!(name: "Uzbekistan", continent_id: asia.id)
-vietnam = Country.create!(name: "Vietnam", continent_id: asia.id)
-yemen = Country.create!(name: "Yemen", continent_id: asia.id)
-
-#North America
-
-antigua_barbuda = Country.create!(name: "Antigua and Barbuda", continent_id: north_america.id)
-bahamas = Country.create!(name: "Bahamas", continent_id: north_america.id)
-barbados = Country.create!(name: "Barbados", continent_id: north_america.id)
-belize = Country.create!(name: "Belize", continent_id: north_america.id)
-canada = Country.create!(name: "Canada", continent_id: north_america.id)
-costa_rica = Country.create!(name: "Costa Rica", continent_id: north_america.id)
-cuba = Country.create!(name: "Cuba", continent_id: north_america.id)
-dominica = Country.create!(name: "Dominica", continent_id: north_america.id)
-dominican_republic = Country.create!(name: "Dominican Republic", continent_id: north_america.id)
-el_salvador = Country.create!(name: "El Salvador", continent_id: north_america.id)
-grenada = Country.create!(name: "Grenada", continent_id: north_america.id)
-guatemala = Country.create!(name: "Guatemala", continent_id: north_america.id)
-haiti = Country.create!(name: "Haiti", continent_id: north_america.id)
-honduras = Country.create!(name: "Honduras", continent_id: north_america.id)
-jamaica = Country.create!(name: "Jamaica", continent_id: north_america.id)
-mexico = Country.create!(name: "Mexico", continent_id: north_america.id)
-nicaragua = Country.create!(name: "Nicaragua", continent_id: north_america.id)
-panama = Country.create!(name: "Panama", continent_id: north_america.id)
-saint_kitts_nevis = Country.create!(name: "Saint Kitts and Nevis", continent_id: north_america.id)
-saint_lucia = Country.create!(name: "Saint Lucia", continent_id: north_america.id)
-saint_vincent_grenadines = Country.create!(name: "Saint Vincent and the Grenadines", continent_id: north_america.id)
-trinidad_tobago = Country.create!(name: "Trinidad and Tobago", continent_id: north_america.id)
-usa = Country.create!(name: "United States of America", continent_id: north_america.id)
-
-#South America
-
-argentina = Country.create!(name: "Argentina", continent_id: south_america.id)
-bolivia = Country.create!(name: "Bolivia", continent_id: south_america.id)
-brazil = Country.create!(name: "Brazil", continent_id: south_america.id)
-chile = Country.create!(name: "Chile", continent_id: south_america.id)
-colombia = Country.create!(name: "Colombia", continent_id: south_america.id)
-ecuador = Country.create!(name: "Ecuador", continent_id: south_america.id)
-falkland_islands = Country.create!(name: "Falkland Islands", continent_id: south_america.id)
-french_guiana = Country.create!(name: "French Guiana", continent_id: south_america.id)
-guyana = Country.create!(name: "Guyana", continent_id: south_america.id)
-paraguay = Country.create!(name: "Paraguay", continent_id: south_america.id)
-peru = Country.create!(name: "Peru", continent_id: south_america.id)
-suriname = Country.create!(name: "Suriname", continent_id: south_america.id)
-uruguay = Country.create!(name: "Uruguay", continent_id: south_america.id)
-venezuela = Country.create!(name: "Venezuela", continent_id: south_america.id)
-
-#Europe
-
-albania = Country.create!(name: "Albania", continent_id: europe.id)
-andorra = Country.create!(name: "Andorra", continent_id: europe.id)
-austria = Country.create!(name: "Austria", continent_id: europe.id)
-belarus = Country.create!(name: "Belarus", continent_id: europe.id)
-belgium = Country.create!(name: "Belgium", continent_id: europe.id)
-bosnia_herzegovina = Country.create!(name: "Bosnia and Herzegovina", continent_id: europe.id)
-bulgaria = Country.create!(name: "Bulgaria", continent_id: europe.id)
-croatia = Country.create!(name: "Croatia", continent_id: europe.id)
-czech_republic = Country.create!(name: "Czech Republic", continent_id: europe.id)
-denmark = Country.create!(name: "Denmark", continent_id: europe.id)
-estonia = Country.create!(name: "Estonia", continent_id: europe.id)
-finland = Country.create!(name: "Finland", continent_id: europe.id)
-france = Country.create!(name: "France", continent_id: europe.id)
-germany = Country.create!(name: "Germany", continent_id: europe.id)
-greece = Country.create!(name: "Greece", continent_id: europe.id)
-holy_see = Country.create!(name: "Holy See", continent_id: europe.id)
-hungary = Country.create!(name: "Hungary", continent_id: europe.id)
-iceland = Country.create!(name: "Iceland", continent_id: europe.id)
-ireland = Country.create!(name: "Ireland", continent_id: europe.id)
-italy = Country.create!(name: "Italy", continent_id: europe.id)
 latvia = Country.create!(name: "Latvia", continent_id: europe.id)
-liechtenstein = Country.create!(name: "Liechtenstein", continent_id: europe.id)
-lithuania = Country.create!(name: "Lithuania", continent_id: europe.id)
-luxembourg = Country.create!(name: "Luxembourg", continent_id: europe.id)
-malta = Country.create!(name: "Malta", continent_id: europe.id)
-moldova = Country.create!(name: "Moldova", continent_id: europe.id)
-monaco = Country.create!(name: "Monaco", continent_id: europe.id)
-montenegro = Country.create!(name: "Montenegro", continent_id: europe.id)
-netherlands = Country.create!(name: "Netherlands", continent_id: europe.id)
-north_macedonia = Country.create!(name: "North Macedonia", continent_id: europe.id)
-norway = Country.create!(name: "Norway", continent_id: europe.id)
-poland = Country.create!(name: "Poland", continent_id: europe.id)
-portugal = Country.create!(name: "Portugal", continent_id: europe.id)
-romania = Country.create!(name: "Romania", continent_id: europe.id)
-russia = Country.create!(name: "Russia", continent_id: europe.id)
-san_marino = Country.create!(name: "San Marino", continent_id: europe.id)
-serbia = Country.create!(name: "Serbia", continent_id: europe.id)
-slovakia = Country.create!(name: "Slovakia", continent_id: europe.id)
-slovenia = Country.create!(name: "Slovenia", continent_id: europe.id)
-spain = Country.create!(name: "Spain", continent_id: europe.id)
-sweden = Country.create!(name: "Sweden", continent_id: europe.id)
-switzerland = Country.create!(name: "Switzerland", continent_id: europe.id)
-ukraine = Country.create!(name: "Ukraine", continent_id: europe.id)
-united_kingdom = Country.create!(name: "United Kingdom", continent_id: europe.id)
-
-#Australia and Oceania
-
-australia = Country.create!(name: "Australia", continent_id: oceania.id)
-fiji = Country.create!(name: "Fiji", continent_id: oceania.id)
-kiribati = Country.create!(name: "Kiribati", continent_id: oceania.id)
-marshall_islands = Country.create!(name: "Marshall Islands", continent_id: oceania.id)
-micronesia = Country.create!(name: "Micronesia", continent_id: oceania.id)
-nauru = Country.create!(name: "Nauru", continent_id: oceania.id)
-new_zealand = Country.create!(name: "New Zealand", continent_id: oceania.id)
-palau = Country.create!(name: "Palau", continent_id: oceania.id)
-papua_new_guinea = Country.create!(name: "Papua New Guinea", continent_id: oceania.id)
-samoa = Country.create!(name: "Samoa", continent_id: oceania.id)
-solomon_islands = Country.create!(name: "Solomon Islands", continent_id: oceania.id)
-tonga = Country.create!(name: "Tonga", continent_id: oceania.id)
-tuvalu = Country.create!(name: "Tuvalu", continent_id: oceania.id)
-vanuatu = Country.create!(name: "Vanuatu", continent_id: oceania.id)
-
-#Africa
-
-algeria = Country.create!(name: "Algeria", continent_id: africa.id)
-angola = Country.create!(name: "Angola", continent_id: africa.id)
-benin = Country.create!(name: "Benin", continent_id: africa.id)
-botswana = Country.create!(name: "Botswana", continent_id: africa.id)
-burkina_faso = Country.create!(name: "Burkina Faso", continent_id: africa.id)
-burundi = Country.create!(name: "Burundi", continent_id: africa.id)
-cabo_verde = Country.create!(name: "Cabo Verde", continent_id: africa.id)
-cameroon = Country.create!(name: "Cameroon", continent_id: africa.id)
-central_africa_republic = Country.create!(name: "Central Africa Republic", continent_id: africa.id)
-chad = Country.create!(name: "Chad", continent_id: africa.id)
-comoros = Country.create!(name: "Comoros", continent_id: africa.id)
-congo = Country.create!(name: "Congo", continent_id: africa.id)
-cote_d_ivoire = Country.create!(name: " Côte d'Ivoire", continent_id: africa.id)
-djibouti = Country.create!(name: "Djibouti", continent_id: africa.id)
-dr_congo = Country.create!(name: "Democratic Republic of the Congo", continent_id: africa.id)
-egypt = Country.create!(name: "Egypt", continent_id: africa.id)
-equatorial_guinea = Country.create!(name: "Equatorial Guinea", continent_id: africa.id)
-eritrea = Country.create!(name: "Eritrea", continent_id: africa.id)
-eswatini = Country.create!(name: "Eswatini", continent_id: africa.id)
-ethiopia = Country.create!(name: "Ethiopia", continent_id: africa.id)
-gabon = Country.create!(name: "Gabon", continent_id: africa.id)
-gambia = Country.create!(name: "Gambia", continent_id: africa.id)
-ghana = Country.create!(name: "Ghana", continent_id: africa.id)
-guinea = Country.create!(name: "Guinea", continent_id: africa.id)
-guinea_bissau = Country.create!(name: "Guinea Bissau", continent_id: africa.id)
-kenya = Country.create!(name: "Kenya", continent_id: africa.id)
+lebanon = Country.create!(name: "Lebanon", continent_id: asia.id)
 lesotho = Country.create!(name: "Lesotho", continent_id: africa.id)
 liberia = Country.create!(name: "Liberia", continent_id: africa.id)
 libya = Country.create!(name: "Libya", continent_id: africa.id)
+liechtenstein = Country.create!(name: "Liechtenstein", continent_id: europe.id)
+lithuania = Country.create!(name: "Lithuania", continent_id: europe.id)
+luxembourg = Country.create!(name: "Luxembourg", continent_id: europe.id)
 madagascar = Country.create!(name: "Madagascar", continent_id: africa.id)
 malawi = Country.create!(name: "Malawi", continent_id: africa.id)
+malaysia = Country.create!(name: "Malaysia", continent_id: asia.id)
+maldives = Country.create!(name: "Maldives", continent_id: asia.id)
 mali = Country.create!(name: "Mali", continent_id: africa.id)
+malta = Country.create!(name: "Malta", continent_id: europe.id)
+marshall_islands = Country.create!(name: "Marshall Islands", continent_id: oceania.id)
 mauritania = Country.create!(name: "Mauritania", continent_id: africa.id)
 mauritius = Country.create!(name: "Mauritius", continent_id: africa.id)
+mexico = Country.create!(name: "Mexico", continent_id: north_america.id)
+micronesia = Country.create!(name: "Micronesia", continent_id: oceania.id)
+moldova = Country.create!(name: "Moldova", continent_id: europe.id)
+monaco = Country.create!(name: "Monaco", continent_id: europe.id)
+mongolia = Country.create!(name: "Mongolia", continent_id: asia.id)
+montenegro = Country.create!(name: "Montenegro", continent_id: europe.id)
 morocco = Country.create!(name: "Morocco", continent_id: africa.id)
 mozambique = Country.create!(name: "Mozambique", continent_id: africa.id)
+myanmar = Country.create!(name: "Myanmar", continent_id: asia.id)
 namibia = Country.create!(name: "Namibia", continent_id: africa.id)
+nauru = Country.create!(name: "Nauru", continent_id: oceania.id)
+nepal = Country.create!(name: "Nepal", continent_id: asia.id)
+netherlands = Country.create!(name: "Netherlands", continent_id: europe.id)
+new_zealand = Country.create!(name: "New Zealand", continent_id: oceania.id)
+nicaragua = Country.create!(name: "Nicaragua", continent_id: north_america.id)
 niger = Country.create!(name: "Niger", continent_id: africa.id)
 nigeria = Country.create!(name: "Nigeria", continent_id: africa.id)
+north_korea = Country.create!(name: "North Korea", continent_id: asia.id)
+north_macedonia = Country.create!(name: "North Macedonia", continent_id: europe.id)
+norway = Country.create!(name: "Norway", continent_id: europe.id)
+oman = Country.create!(name: "Oman", continent_id: asia.id)
+pakistan = Country.create!(name: "Pakistan", continent_id: asia.id)
+palau = Country.create!(name: "Palau", continent_id: oceania.id)
+palestine = Country.create!(name: "Palestine", continent_id: asia.id)
+panama = Country.create!(name: "Panama", continent_id: north_america.id)
+papua_new_guinea = Country.create!(name: "Papua New Guinea", continent_id: oceania.id)
+paraguay = Country.create!(name: "Paraguay", continent_id: south_america.id)
+peru = Country.create!(name: "Peru", continent_id: south_america.id)
+philippines = Country.create!(name: "Philippines", continent_id: asia.id)
+poland = Country.create!(name: "Poland", continent_id: europe.id)
+portugal = Country.create!(name: "Portugal", continent_id: europe.id)
+qatar = Country.create!(name: "Qatar", continent_id: asia.id)
+romania = Country.create!(name: "Romania", continent_id: europe.id)
+russia = Country.create!(name: "Russia", continent_id: europe.id)
 rwanda = Country.create!(name: "Rwanda", continent_id: africa.id)
+saint_kitts_nevis = Country.create!(name: "Saint Kitts and Nevis", continent_id: north_america.id)
+saint_lucia = Country.create!(name: "Saint Lucia", continent_id: north_america.id)
+saint_vincent_grenadines = Country.create!(name: "Saint Vincent and the Grenadines", continent_id: north_america.id)
+samoa = Country.create!(name: "Samoa", continent_id: oceania.id)
+san_marino = Country.create!(name: "San Marino", continent_id: europe.id)
 sao_tome_principe = Country.create!(name: "Sao Tome and Principe", continent_id: africa.id)
+saudi_arabia = Country.create!(name: "Saudi Arabia", continent_id: asia.id)
 senegal = Country.create!(name: "Senegal", continent_id: africa.id)
+serbia = Country.create!(name: "Serbia", continent_id: europe.id)
 seychelles = Country.create!(name: "Seychelles", continent_id: africa.id)
 sierra_leone = Country.create!(name: "Sierra Leone", continent_id: africa.id)
+singapore = Country.create!(name: "Singapore", continent_id: asia.id)
+slovakia = Country.create!(name: "Slovakia", continent_id: europe.id)
+slovenia = Country.create!(name: "Slovenia", continent_id: europe.id)
+solomon_islands = Country.create!(name: "Solomon Islands", continent_id: oceania.id)
 somalia = Country.create!(name: "Somalia", continent_id: africa.id)
 south_africa = Country.create!(name: "South Africa", continent_id: africa.id)
+south_korea = Country.create!(name: "South Korea", continent_id: asia.id)
 south_sudan = Country.create!(name: "South Sudan", continent_id: africa.id)
+spain = Country.create!(name: "Spain", continent_id: europe.id)
+sri_lanka = Country.create!(name: "Sri Lanka", continent_id: asia.id)
 sudan = Country.create!(name: "Sudan", continent_id: africa.id)
+suriname = Country.create!(name: "Suriname", continent_id: south_america.id)
+sweden = Country.create!(name: "Sweden", continent_id: europe.id)
+switzerland = Country.create!(name: "Switzerland", continent_id: europe.id)
+syria = Country.create!(name: "Syria", continent_id: asia.id)
+tajikistan = Country.create!(name: "Tajikistan", continent_id: asia.id)
 tanzania = Country.create!(name: "Tanzania", continent_id: africa.id)
+thailand = Country.create!(name: "Thailand", continent_id: asia.id)
+timor_leste = Country.create!(name: "Timor-Leste", continent_id: asia.id)
 togo = Country.create!(name: "Togo", continent_id: africa.id)
+tonga = Country.create!(name: "Tonga", continent_id: oceania.id)
+trinidad_tobago = Country.create!(name: "Trinidad and Tobago", continent_id: north_america.id)
 tunisia = Country.create!(name: "Tunisia", continent_id: africa.id)
+turkey = Country.create!(name: "Turkey", continent_id: asia.id)
+turkmenistan = Country.create!(name: "Turkmenistan", continent_id: asia.id)
+tuvalu = Country.create!(name: "Tuvalu", continent_id: oceania.id)
 uganda = Country.create!(name: "Uganda", continent_id: africa.id)
+ukraine = Country.create!(name: "Ukraine", continent_id: europe.id)
+united_arab_emirates = Country.create!(name: "United Arab Emirates", continent_id: asia.id)
+united_kingdom = Country.create!(name: "United Kingdom", continent_id: europe.id)
+united_states_of_america = Country.create!(name: "United States of America", continent_id: north_america.id)
+uruguay = Country.create!(name: "Uruguay", continent_id: south_america.id)
+uzbekistan = Country.create!(name: "Uzbekistan", continent_id: asia.id)
+vanuatu = Country.create!(name: "Vanuatu", continent_id: oceania.id)
+venezuela = Country.create!(name: "Venezuela", continent_id: south_america.id)
+vietnam = Country.create!(name: "Vietnam", continent_id: asia.id)
+yemen = Country.create!(name: "Yemen", continent_id: asia.id)
 zambia = Country.create!(name: "Zambia", continent_id: africa.id)
 zimbabwe = Country.create!(name: "Zimbabwe", continent_id: africa.id)
 
-#Antarctica
-
-antarctica = Country.create!(name: "Antarctica", continent_id: africa.id)
-
 puts "Done seeding countries..."
+
+puts "Seeding forums..."
+
+afghanistan_forum = Forum.create!(country_name: "Afghanistan", flag: "https://cdn.britannica.com/40/5340-004-B25ED5CF/Flag-Afghanistan.jpg", user_id: alex.id, country_id: afghanistan.id)
+albania_forum = Forum.create!(country_name: "Albania", flag: "https://cdn.britannica.com/00/6200-004-42B7690E/Flag-Albania.jpg", user_id: alex.id, country_id: albania.id)
+algeria_forum = Forum.create!(country_name: "Algeria", flag: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Flag_of_Algeria.svg/1200px-Flag_of_Algeria.svg.png", user_id: alex.id, country_id: algeria.id)
+andorra_forum = Forum.create!(country_name: "Andorra", flag: "https://cdn.britannica.com/83/5583-050-2F48FD32/Flag-Andorra.jpg", user_id: alex.id, country_id: andorra.id)
+angola_forum = Forum.create!(country_name: "Angola", flag: "https://cdn.britannica.com/12/4212-004-EBD6B5B2/Flag-Angola.jpg", user_id: alex.id, country_id: angola.id)
+antigua_barbuda_forum = Forum.create!(country_name: "Antigua and Barbuda", flag: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Flag_of_Antigua_and_Barbuda.svg/800px-Flag_of_Antigua_and_Barbuda.svg.png", user_id: alex.id, country_id: antigua_barbuda.id)
+argentina_forum = Forum.create!(country_name: "Argentina", flag: "https://cdn.britannica.com/69/5869-004-7D75CD05/Flag-Argentina.jpg", user_id: alex.id, country_id: argentina.id)
+armenia_forum = Forum.create!(country_name: "Armenia", flag: "https://www.worldatlas.com/img/flag/am-flag.jpg", user_id: alex.id, country_id: armenia.id)
+australia_forum = Forum.create!(country_name: "Australia", flag: "https://cdn.britannica.com/78/6078-004-77AF7322/Flag-Australia.jpg", user_id: alex.id, country_id: australia.id)
+austria_forum = Forum.create!(country_name: "Austria", flag: "https://cdn.britannica.com/73/6073-004-B0B9EBEE/Flag-Austria.jpg", user_id: alex.id, country_id: austria.id)
+azerbaijan_forum = Forum.create!(country_name: "Azerbaijan", flag: "https://cdn.britannica.com/14/4714-004-959E7B43/Flag-Azerbaijan.jpg", user_id: alex.id, country_id: azerbaijan.id)
+bahamas_forum = Forum.create!(country_name: "Bahamas", flag: "https://cdn.britannica.com/06/5106-004-B8EE9FD3/Flag-of-The-Bahamas.jpg", user_id: alex.id, country_id: bahamas.id)
+bahrain_forum = Forum.create!(country_name: "Bahrain", flag: "https://cdn.britannica.com/27/70827-050-8D001288/Bahraini-flag-2002.jpg", user_id: alex.id, country_id: bahrain.id)
+bangladesh_forum = Forum.create!(country_name: "Bangladesh", flag: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Flag_of_Bangladesh.svg/1200px-Flag_of_Bangladesh.svg.png", user_id: alex.id, country_id: bangladesh.id)
+barbados_forum = Forum.create!(country_name: "Barbados", flag: "https://cdn.britannica.com/08/5108-004-FD58C8EF/Flag-Barbados.jpg", user_id: alex.id, country_id: barbados.id)
+belarus_forum = Forum.create!(country_name: "Belarus", flag: "https://cdn.britannica.com/01/6401-004-FAEACB4E/Flag-Belarus.jpg", user_id: alex.id, country_id: belarus.id)
+belgium_forum = Forum.create!(country_name: "Belgium", flag: "https://cdn.britannica.com/08/6408-004-405E272F/Flag-Belgium.jpg", user_id: alex.id, country_id: belgium.id)
+belize_forum = Forum.create!(country_name: "Belize", flag: "https://cdn.britannica.com/07/7207-004-A82842C0/Flag-Belize.jpg", user_id: alex.id, country_id: belize.id)
+benin_forum = Forum.create!(country_name: "Benin", flag: "https://upload.wikimedia.org/wikipedia/commons/0/0a/Flag_of_Benin.svg", user_id: alex.id, country_id: benin.id)
+bhutan_forum = Forum.create!(country_name: "Bhutan", flag: "https://cdn.britannica.com/79/6479-004-BDDD1FE1/flag-dragon-image-Bhutan-design.jpg", user_id: alex.id, country_id: bhutan.id)
+bolivia_forum = Forum.create!(country_name: "Bolivia", flag: "https://cdn.britannica.com/54/6754-004-AE3C4294/Flag-Bolivia.jpg", user_id: alex.id, country_id: bolivia.id)
+bosnia_herzegovina_forum = Forum.create!(country_name: "Bosnia and Herzegovina", flag: "https://cdn.britannica.com/02/6202-004-5E2B285D/Flag-Bosnia-and-Herzegovina.jpg", user_id: alex.id, country_id: bosnia_herzegovina.id)
+botswana_forum = Forum.create!(country_name: "Botswana", flag: "https://cdn.britannica.com/15/4215-004-F844A05D/Flag-Botswana.jpg", user_id: alex.id, country_id: botswana.id)
+brazil_forum = Forum.create!(country_name: "Brazil", flag: "https://cdn.britannica.com/47/6847-004-7D668BB0/Flag-Brazil.jpg", user_id: alex.id, country_id: brazil.id)
+brunei_forum = Forum.create!(country_name: "Brunei", flag: "https://cdn.britannica.com/24/4024-050-7385D7F2/Flag-Brunei.jpg", user_id: alex.id, country_id: brunei.id)
+bulgaria_forum = Forum.create!(country_name: "Bulgaria", flag: "https://cdn.britannica.com/04/6204-004-DC5CFE4F/Flag-Bulgaria.jpg", user_id: alex.id, country_id: bulgaria.id)
+burkina_faso_forum = Forum.create!(country_name: "Burkina Faso", flag: "https://cdn.britannica.com/40/5040-050-1735B7DC/Flag-Burkina-Faso.jpg", user_id: alex.id, country_id: burkina_faso.id)
+burundi_forum = Forum.create!(country_name: "Burundi", flag: "https://cdn.britannica.com/77/7177-004-9D72922D/Flag-Burundi.jpg", user_id: alex.id, country_id: burundi.id)
+cote_d_ivoire_forum = Forum.create!(country_name: "Côte d'Ivoire", flag: "https://cdn.britannica.com/48/5048-004-EA370A21/Flag-Cote-dIvoire.jpg", user_id: alex.id, country_id: cote_d_ivoire.id)
+cabo_verde_forum = Forum.create!(country_name: "Cabo Verde", flag: "https://cdn.britannica.com/44/5044-050-2530FC16/Flag-Cabo-Verde.jpg", user_id: alex.id, country_id: cabo_verde.id)
+cambodia_forum = Forum.create!(country_name: "Cambodia", flag: "https://cdn.britannica.com/27/4027-004-B57F84E9/Flag-Cambodia.jpg", user_id: alex.id, country_id: cambodia.id)
+cameroon_forum = Forum.create!(country_name: "Cameroon", flag: "https://cdn.britannica.com/42/5042-004-7FF4ACCA/Flag-Cameroon.jpg", user_id: alex.id, country_id: cameroon.id)
+canada_forum = Forum.create!(country_name: "Canada", flag: "https://cdn.britannica.com/68/7068-004-7848FEB4/Flag-Canada.jpg", user_id: alex.id, country_id: canada.id)
+central_african_republic_forum = Forum.create!(country_name: "Central African Republic", flag: "https://cdn.britannica.com/80/7180-004-8AFA2B44/Flag-Central-African-Republic.jpg", user_id: alex.id, country_id: central_africa_republic.id)
+chad_forum = Forum.create!(country_name: "Chad", flag: "https://cdn.britannica.com/46/5046-004-CA99DA45/Flag-Chad.jpg", user_id: alex.id, country_id: chad.id)
+chile_forum = Forum.create!(country_name: "Chile", flag: "https://cdn.britannica.com/85/7485-004-00B07230/Flag-Chile.jpg", user_id: alex.id, country_id: chile.id)
+china_forum = Forum.create!(country_name: "China", flag: "https://cdn.britannica.com/90/7490-004-BAD4AA72/Flag-China.jpg", user_id: alex.id, country_id: china.id)
+colombia_forum = Forum.create!(country_name: "Colombia", flag: "https://cdn.britannica.com/68/7668-004-08492AB7/Flag-Colombia.jpg", user_id: alex.id, country_id: colombia.id)
+comoros_forum = Forum.create!(country_name: "Comoros", flag: "https://cdn.britannica.com/40/7740-050-C43A463A/Flag-Comoros.jpg", user_id: alex.id, country_id: comoros.id)
+congo_forum = Forum.create!(country_name: "Congo", flag: "https://cdn.britannica.com/82/7182-004-2F057893/Flag-Republic-of-the-Congo.jpg", user_id: alex.id, country_id: congo.id)
+costa_rica_forum = Forum.create!(country_name: "Costa Rica", flag: "https://cdn.britannica.com/25/7225-004-65F33B16/Flag-Costa-Rica.jpg", user_id: alex.id, country_id: costa_rica.id)
+croatia_forum = Forum.create!(country_name: "Croatia", flag: "https://cdn.britannica.com/06/6206-004-14730C28/Flag-Croatia.jpg", user_id: alex.id, country_id: croatia.id)
+cuba_forum = Forum.create!(country_name: "Cuba", flag: "https://cdn.britannica.com/10/5110-004-38075E57/Flag-Cuba.jpg", user_id: alex.id, country_id: cuba.id)
+cyprus_forum = Forum.create!(country_name: "Cyprus", flag: "https://cdn.britannica.com/83/7883-004-D09910C5/Flag-Cyprus.jpg", user_id: alex.id, country_id: cyprus.id)
+czech_republic_forum = Forum.create!(country_name: "Czech Republic", flag: "https://cdn.britannica.com/86/7886-004-323985BD/Flag-Czech-Republic.jpg", user_id: alex.id, country_id: czech_republic.id)
+democratic_republic_of_the_congo_forum = Forum.create!(country_name: "Democratic Republic of the Congo", flag: "https://cdn.britannica.com/94/7194-004-5FA84A72/Flag-Democratic-Republic-of-the-Congo.jpg", user_id: alex.id, country_id: democratic_republic_of_the_congo.id)
+denmark_forum = Forum.create!(country_name: "Denmark", flag: "https://cdn.britannica.com/07/8007-004-8CF0B1A9/Flag-Denmark.jpg", user_id: alex.id, country_id: denmark.id)
+djibouti_forum = Forum.create!(country_name: "Djibouti", flag: "https://cdn.britannica.com/06/06-004-29FFD888/Flag-Djibouti.jpg", user_id: alex.id, country_id: djibouti.id)
+dominica_forum = Forum.create!(country_name: "Dominica", flag: "https://cdn.britannica.com/12/5112-004-58893CEE/Flag-Dominica.jpg", user_id: alex.id, country_id: dominica.id)
+dominican_republic_forum = Forum.create!(country_name: "Dominican Republic", flag: "https://cdn.britannica.com/14/5114-004-C9B99800/Flag-Dominican-Republic.jpg", user_id: alex.id, country_id: dominican_republic.id)
+ecuador_forum = Forum.create!(country_name: "Ecuador", flag: "https://cdn.britannica.com/49/149-004-986E1BD8/flag-design-similarities-Ecuador-Colombia-flags-Venezuela.jpg", user_id: alex.id, country_id: ecuador.id)
+egypt_forum = Forum.create!(country_name: "Egypt", flag: "https://cdn.britannica.com/85/185-004-1EA59040/Flag-Egypt.jpg", user_id: alex.id, country_id: egypt.id)
+el_salvador_forum = Forum.create!(country_name: "El Salvador", flag: "https://cdn.britannica.com/10/7210-004-65DAD2F0/Flag-El-Salvador.jpg", user_id: alex.id, country_id: el_salvador.id)
+equatorial_guinea_forum = Forum.create!(country_name: "Equatorial Guinea", flag: "https://cdn.britannica.com/50/5050-004-EB18953A/Flag-Equatorial-Guinea.jpg", user_id: alex.id, country_id: equatorial_guinea.id)
+eritrea_forum = Forum.create!(country_name: "Eritrea", flag: "https://cdn.britannica.com/09/09-004-63D8C33D/Flag-Eritrea.jpg", user_id: alex.id, country_id: eritrea.id)
+estonia_forum = Forum.create!(country_name: "Estonia", flag: "https://cdn.britannica.com/46/6246-004-865DA579/Flag-Estonia.jpg", user_id: alex.id, country_id: estonia.id)
+eswatini_forum = Forum.create!(country_name: "Eswatini", flag: "https://cdn.britannica.com/29/4229-050-BED17BAD/Flag-Eswatini.jpg", user_id: alex.id, country_id: eswatini.id)
+ethiopia_forum = Forum.create!(country_name: "Ethiopia", flag: "https://cdn.britannica.com/12/12-004-A40EEB6F/Flag-Ethiopia.jpg", user_id: alex.id, country_id: ethiopia.id)
+fiji_forum = Forum.create!(country_name: "Fiji", flag: "https://cdn.britannica.com/86/3286-050-F16637E1/Flag-Fiji.jpg", user_id: alex.id, country_id: fiji.id)
+finland_forum = Forum.create!(country_name: "Finland", flag: "https://cdn.britannica.com/79/579-004-0EA4217C/Flag-Finland.jpg", user_id: alex.id, country_id: finland.id)
+france_forum = Forum.create!(country_name: "France", flag: "https://cdn.britannica.com/82/682-050-8AA3D6A6/Flag-France.jpg", user_id: alex.id, country_id: france.id)
+gabon_forum = Forum.create!(country_name: "Gabon", flag: "https://cdn.britannica.com/85/7185-004-EBE5DBE5/Flag-Gabon.jpg", user_id: alex.id, country_id: gabon.id)
+gambia_forum = Forum.create!(country_name: "Gambia", flag: "https://cdn.britannica.com/52/5052-004-C6FC398B/Flag-of-The-Gambia.jpg", user_id: alex.id, country_id: gambia.id)
+georgia_forum = Forum.create!(country_name: "Georgia", flag: "https://cdn.britannica.com/17/4717-050-0B745462/Flag-Republic-of-Georgia.jpg", user_id: alex.id, country_id: georgia.id)
+germany_forum = Forum.create!(country_name: "Germany", flag: "https://cdn.britannica.com/97/897-004-232BDF01/Flag-Germany.jpg", user_id: alex.id, country_id: germany.id)
+ghana_forum = Forum.create!(country_name: "Ghana", flag: "https://cdn.britannica.com/54/5054-004-A09ABCDF/Flag-Ghana.jpg", user_id: alex.id, country_id: ghana.id)
+greece_forum = Forum.create!(country_name: "Greece", flag: "https://cdn.britannica.com/49/1049-004-AE4BAD3E/Flag-Greece.jpg", user_id: alex.id, country_id: greece.id)
+grenada_forum = Forum.create!(country_name: "Grenada", flag: "https://cdn.britannica.com/16/5116-004-E693F50C/Flag-Grenada.jpg", user_id: alex.id, country_id: grenada.id)
+guatemala_forum = Forum.create!(country_name: "Guatemala", flag: "https://cdn.britannica.com/13/7213-004-FFC58C1D/Flag-Guatemala.jpg", user_id: alex.id, country_id: guatemala.id)
+guinea_forum = Forum.create!(country_name: "Guinea", flag: "https://cdn.britannica.com/56/5056-004-0E251CE7/Flag-Guinea.jpg", user_id: alex.id, country_id: guinea.id)
+guinea_bissau_forum = Forum.create!(country_name: "Guinea Bissau", flag: "https://cdn.britannica.com/58/5058-004-49C2D897/Flag-Guinea-Bissau.jpg", user_id: alex.id, country_id: guinea_bissau.id)
+guyana_forum = Forum.create!(country_name: "Guyana", flag: "https://cdn.britannica.com/06/1106-004-F6772F48/Flag-Guyana.jpg", user_id: alex.id, country_id: guyana.id)
+haiti_forum = Forum.create!(country_name: "Haiti", flag: "https://cdn.britannica.com/18/5118-004-9C769B82/Flag-Haiti.jpg", user_id: alex.id, country_id: haiti.id)
+holy_see_forum = Forum.create!(country_name: "Holy See", flag: "https://cdn.britannica.com/92/4892-004-9426D0CD/Flag-Vatican-City-exception-rule-European-flag.jpg", user_id: alex.id, country_id: holy_see.id)
+honduras_forum = Forum.create!(country_name: "Honduras", flag: "https://cdn.britannica.com/16/7216-004-F1400CA0/Flag-Honduras.jpg", user_id: alex.id, country_id: honduras.id)
+hungary_forum = Forum.create!(country_name: "Hungary", flag: "https://cdn.britannica.com/55/1455-004-5897143C/Flag-Hungary.jpg", user_id: alex.id, country_id: hungary.id)
+iceland_forum = Forum.create!(country_name: "Iceland", flag: "https://cdn.britannica.com/85/1485-004-94C3DEDA/Flag-Iceland.jpg", user_id: alex.id, country_id: iceland.id)
+india_forum = Forum.create!(country_name: "India", flag: "https://cdn.britannica.com/97/1597-004-05816F4E/Flag-India.jpg", user_id: alex.id, country_id: india.id)
+indonesia_forum = Forum.create!(country_name: "Indonesia", flag: "https://cdn.britannica.com/48/1648-004-A33B72D8/Flag-Indonesia.jpg", user_id: alex.id, country_id: indonesia.id)
+iran_forum = Forum.create!(country_name: "Iran", flag: "https://cdn.britannica.com/22/1722-004-EAD033D8/Flag-Iran.jpg", user_id: alex.id, country_id: iran.id)
+iraq_forum = Forum.create!(country_name: "Iraq", flag: "https://cdn.britannica.com/28/1728-004-EBF4B6FF/Flag-Iraq.jpg", user_id: alex.id, country_id: iraq.id)
+ireland_forum = Forum.create!(country_name: "Ireland", flag: "https://cdn.britannica.com/33/1733-004-5BA407D6/FLAG-Ireland.jpg", user_id: alex.id, country_id: ireland.id)
+israel_forum = Forum.create!(country_name: "Israel", flag: "https://cdn.britannica.com/53/1753-004-03582EDA/Flag-Israel.jpg", user_id: alex.id, country_id: israel.id)
+italy_forum = Forum.create!(country_name: "Italy", flag: "https://cdn.britannica.com/59/1759-004-F4175463/Flag-Italy.jpg", user_id: alex.id, country_id: italy.id)
+jamaica_forum = Forum.create!(country_name: "Jamaica", flag: "https://cdn.britannica.com/20/5120-004-3E9D869E/Flag-Jamaica.jpg", user_id: alex.id, country_id: jamaica.id)
+japan_forum = Forum.create!(country_name: "Japan", flag: "https://cdn.britannica.com/91/1791-004-DA3579A5/Flag-Japan.jpg", user_id: alex.id, country_id: japan.id)
+jordan_forum = Forum.create!(country_name: "Jordan", flag: "https://cdn.britannica.com/40/1840-004-718BA773/Flag-Jordan.jpg", user_id: alex.id, country_id: jordan.id)
+kazakhstan_forum = Forum.create!(country_name: "Kazakhstan", flag: "https://cdn.britannica.com/39/7239-004-1BEC6C20/Flag-Kazakhstan.jpg", user_id: alex.id, country_id: kazakhstan.id)
+kenya_forum = Forum.create!(country_name: "Kenya", flag: "https://cdn.britannica.com/15/15-004-B5D6BF80/Flag-Kenya.jpg", user_id: alex.id, country_id: kenya.id)
+kiribati_forum = Forum.create!(country_name: "Kiribati", flag: "https://cdn.britannica.com/88/3288-050-DB8EB516/Flag-Kiribati.jpg", user_id: alex.id, country_id: kiribati.id)
+kuwait_forum = Forum.create!(country_name: "Kuwait", flag: "https://cdn.britannica.com/70/5770-004-A99DD01D/Flag-Kuwait.jpg", user_id: alex.id, country_id: kuwait.id)
+kyrgyzstan_forum = Forum.create!(country_name: "Kyrgyzstan", flag: "https://cdn.britannica.com/41/7241-004-8C3C72DB/Flag-Kyrgyzstan.jpg", user_id: alex.id, country_id: kyrgyzstan.id)
+laos_forum = Forum.create!(country_name: "Laos", flag: "https://cdn.britannica.com/29/4029-004-D7D8C514/Flag-Laos.jpg", user_id: alex.id, country_id: laos.id)
+latvia_forum = Forum.create!(country_name: "Latvia", flag: "https://cdn.britannica.com/49/6249-004-D8906A92/Flag-Latvia.jpg", user_id: alex.id, country_id: latvia.id)
+lebanon_forum = Forum.create!(country_name: "Lebanon", flag: "https://cdn.britannica.com/73/2073-004-E54934AE/Flag-Lebanon.jpg", user_id: alex.id, country_id: lebanon.id)
+lesotho_forum = Forum.create!(country_name: "Lesotho", flag: "https://cdn.britannica.com/18/4218-004-3F1FD768/Lesotho-flag-colours-design-countries-sub-Saharan-African.jpg", user_id: alex.id, country_id: lesotho.id)
+liberia_forum = Forum.create!(country_name: "Liberia", flag: "https://cdn.britannica.com/60/5060-004-F0C9CBBF/Flag-Liberia.jpg", user_id: alex.id, country_id: liberia.id)
+libya_forum = Forum.create!(country_name: "Libya", flag: "https://cdn.britannica.com/37/3037-004-1C8F9958/Flag-Libya.jpg", user_id: alex.id, country_id: libya.id)
+liechtenstein_forum = Forum.create!(country_name: "Liechtenstein", flag: "https://cdn.britannica.com/02/2102-050-2976AFDD/Flag-Liechtenstein.jpg", user_id: alex.id, country_id: liechtenstein.id)
+lithuania_forum = Forum.create!(country_name: "Lithuania", flag: "https://cdn.britannica.com/52/6252-004-88DCF537/Flag-Lithuania.jpg", user_id: alex.id, country_id: lithuania.id)
+luxembourg_forum = Forum.create!(country_name: "Luxembourg", flag: "https://cdn.britannica.com/23/2223-004-AE86DC5A/Flag-Luxembourg.jpg", user_id: alex.id, country_id: luxembourg.id)
+madagascar_forum = Forum.create!(country_name: "Madagascar", flag: "https://cdn.britannica.com/46/2246-004-17A6E838/Flag-Madagascar.jpg", user_id: alex.id, country_id: madagascar.id)
+malawi_forum = Forum.create!(country_name: "Malawi", flag: "https://cdn.britannica.com/21/4221-004-93C8B4EC/Flag-Malawi.jpg", user_id: alex.id, country_id: malawi.id)
+malaysia_forum = Forum.create!(country_name: "Malaysia", flag: "https://cdn.britannica.com/31/4031-004-82B0F3A9/Flag-Malaysia.jpg", user_id: alex.id, country_id: malaysia.id)
+maldives_forum = Forum.create!(country_name: "Maldives", flag: "https://cdn.britannica.com/80/2280-004-E003C02B/Flag-Maldives.jpg", user_id: alex.id, country_id: maldives.id)
+mali_forum = Forum.create!(country_name: "Mali", flag: "https://cdn.britannica.com/62/5062-004-B45A3B5A/Flag-Mali.jpg", user_id: alex.id, country_id: mali.id)
+malta_forum = Forum.create!(country_name: "Malta", flag: "https://cdn.britannica.com/86/2286-004-51ACEA26/Flag-Malta.jpg", user_id: alex.id, country_id: malta.id)
+marshall_islands_forum = Forum.create!(country_name: "Marshall Islands", flag: "https://cdn.britannica.com/90/3290-050-16A4798B/Flag-of-Marshall-Islands.jpg", user_id: alex.id, country_id: marshall_islands.id)
+mauritania_forum = Forum.create!(country_name: "Mauritania", flag: "https://cdn.britannica.com/64/5064-004-FEF780F0/Flag-Mauritania.jpg", user_id: alex.id, country_id: mauritania.id)
+mauritius_forum = Forum.create!(country_name: "Mauritius", flag: "https://cdn.britannica.com/11/2411-050-02A79B72/Flag-Mauritius.jpg", user_id: alex.id, country_id: mauritius.id)
+mexico_forum = Forum.create!(country_name: "Mexico", flag: "https://cdn.britannica.com/73/2573-050-C825CE68/Flag-Mexico.jpg", user_id: alex.id, country_id: mexico.id)
+micronesia_forum = Forum.create!(country_name: "Micronesia", flag: "https://cdn.britannica.com/92/3292-050-44E9DB74/Flag-Federated-States-of-Micronesia.jpg", user_id: alex.id, country_id: micronesia.id)
+moldova_forum = Forum.create!(country_name: "Moldova", flag: "https://cdn.britannica.com/10/6210-050-63378AC3/Flag-Moldova.jpg", user_id: alex.id, country_id: moldova.id)
+monaco_forum = Forum.create!(country_name: "Monaco", flag: "https://cdn.britannica.com/50/2750-050-688E6E49/Flag-Monaco.jpg", user_id: alex.id, country_id: monaco.id)
+mongolia_forum = Forum.create!(country_name: "Mongolia", flag: "https://cdn.britannica.com/56/2756-004-54509464/Flag-Mongolia.jpg", user_id: alex.id, country_id: mongolia.id)
+montenegro_forum = Forum.create!(country_name: "Montenegro", flag: "https://cdn.britannica.com/41/94841-004-BF5101EA/flag-Montenegro.jpg", user_id: alex.id, country_id: montenegro.id)
+morocco_forum = Forum.create!(country_name: "Morocco", flag: "https://cdn.britannica.com/39/3039-004-52B064C7/Flag-Morocco.jpg", user_id: alex.id, country_id: morocco.id)
+mozambique_forum = Forum.create!(country_name: "Mozambique", flag: "https://cdn.britannica.com/23/4223-004-76407A84/Flag-Mozambique.jpg", user_id: alex.id, country_id: mozambique.id)
+myanmar_forum = Forum.create!(country_name: "Myanmar", flag: "https://cdn.britannica.com/34/4034-004-B478631E/Flag-Myanmar.jpg", user_id: alex.id, country_id: myanmar.id)
+namibia_forum = Forum.create!(country_name: "Namibia", flag: "https://cdn.britannica.com/25/4225-004-E2FF6664/Flag-Namibia.jpg", user_id: alex.id, country_id: namibia.id)
+nauru_forum = Forum.create!(country_name: "Nauru", flag: "https://cdn.britannica.com/94/3294-004-8145A150/Flag-Nauru.jpg", user_id: alex.id, country_id: nauru.id)
+nepal_forum = Forum.create!(country_name: "Nepal", flag: "https://cdn.britannica.com/70/2970-004-717C4223/Flag-Nepal.jpg", user_id: alex.id, country_id: nepal.id)
+netherlands_forum = Forum.create!(country_name: "Netherlands", flag: "https://cdn.britannica.com/82/2982-004-84A2A71E/flag-prototype-Netherlands-countries-European-flags.jpg", user_id: alex.id, country_id: netherlands.id)
+new_zealand_forum = Forum.create!(country_name: "New Zealand", flag: "https://cdn.britannica.com/17/3017-004-DCC13F9D/Flag-New-Zealand.jpg", user_id: alex.id, country_id: new_zealand.id)
+nicaragua_forum = Forum.create!(country_name: "Nicaragua", flag: "https://cdn.britannica.com/19/7219-004-8AB96369/Flag-Nicaragua.jpg", user_id: alex.id, country_id: nicaragua.id)
+niger_forum = Forum.create!(country_name: "Niger", flag: "https://cdn.britannica.com/66/5066-004-3EABCB3F/Flag-Niger.jpg", user_id: alex.id, country_id: niger.id)
+nigeria_forum = Forum.create!(country_name: "Nigeria", flag: "https://cdn.britannica.com/68/5068-004-72A3F250/Flag-Nigeria.jpg", user_id: alex.id, country_id: nigeria.id)
+north_korea_forum = Forum.create!(country_name: "North Korea", flag: "https://cdn.britannica.com/47/1947-004-44F4E790/Flag-North-Korea.jpg", user_id: alex.id, country_id: north_korea.id)
+north_macedonia_forum = Forum.create!(country_name: "North Macedonia", flag: "https://cdn.britannica.com/08/6208-004-61460B40/Flag-North-Macedonia.jpg", user_id: alex.id, country_id: north_macedonia.id)
+norway_forum = Forum.create!(country_name: "Norway", flag: "https://cdn.britannica.com/01/3101-004-506325BB/Flag-Norway.jpg", user_id: alex.id, country_id: norway.id)
+oman_forum = Forum.create!(country_name: "Oman", flag: "https://cdn.britannica.com/73/5773-004-F7C13E3D/Flag-Oman.jpg", user_id: alex.id, country_id: oman.id)
+pakistan_forum = Forum.create!(country_name: "Pakistan", flag: "https://cdn.britannica.com/46/3346-004-D3BDE016/flag-symbolism-Pakistan-design-Islamic.jpg", user_id: alex.id, country_id: pakistan.id)
+palau_forum = Forum.create!(country_name: "Palau", flag: "https://cdn.britannica.com/49/3349-050-D1D56792/Flag-Palau.jpg", user_id: alex.id, country_id: palau.id)
+palestine_forum = Forum.create!(country_name: "Palestine", flag: "https://cdn.britannica.com/74/84674-004-C0E414EA/Flag-Palestinian-Authority-Palestine.jpg", user_id: alex.id, country_id: palestine.id)
+panama_forum = Forum.create!(country_name: "Panama", flag: "https://cdn.britannica.com/22/7222-004-D49C5703/Flag-Panama.jpg", user_id: alex.id, country_id: panama.id)
+papua_new_guinea_forum = Forum.create!(country_name: "Papua New Guinea", flag: "https://cdn.britannica.com/96/3296-004-0D1BEB9A/Flag-Papua-New-Guinea.jpg", user_id: alex.id, country_id: papua_new_guinea.id)
+paraguay_forum = Forum.create!(country_name: "Paraguay", flag: "https://cdn.britannica.com/77/3377-004-6AA46F6E/Flag-Paraguay.jpg", user_id: alex.id, country_id: paraguay.id)
+peru_forum = Forum.create!(country_name: "Peru", flag: "https://cdn.britannica.com/48/3448-004-33B5D198/Flag-Peru.jpg", user_id: alex.id, country_id: peru.id)
+philippines_forum = Forum.create!(country_name: "Philippines", flag: "https://cdn.britannica.com/73/3473-004-6E573BFA/Flag-Philippines.jpg", user_id: alex.id, country_id: philippines.id)
+poland_forum = Forum.create!(country_name: "Poland", flag: "https://cdn.britannica.com/52/3552-004-83ABA964/Flag-Poland.jpg", user_id: alex.id, country_id: poland.id)
+portugal_forum = Forum.create!(country_name: "Portugal", flag: "https://cdn.britannica.com/88/3588-004-E0E45339/Flag-Portugal.jpg", user_id: alex.id, country_id: portugal.id)
+qatar_forum = Forum.create!(country_name: "Qatar", flag: "https://cdn.britannica.com/76/5776-050-74220DEB/Flag-Qatar.jpg", user_id: alex.id, country_id: qatar.id)
+romania_forum = Forum.create!(country_name: "Romania", flag: "https://cdn.britannica.com/13/6213-004-2CA88DF6/Flag-Romania.jpg", user_id: alex.id, country_id: romania.id)
+russia_forum = Forum.create!(country_name: "Russia", flag: "https://cdn.britannica.com/42/3842-004-F47B77BC/Flag-Russia.jpg", user_id: alex.id, country_id: russia.id)
+rwanda_forum = Forum.create!(country_name: "Rwanda", flag: "https://cdn.britannica.com/88/7188-004-9C64B8F7/Flag-Rwanda.jpg", user_id: alex.id, country_id: rwanda.id)
+saint_kitts_nevis_forum = Forum.create!(country_name: "Saint Kitts and Nevis", flag: "https://cdn.britannica.com/22/5122-050-9813E394/Flag-Saint-Kitts-and-Nevis.jpg", user_id: alex.id, country_id: saint_kitts_nevis.id)
+saint_lucia_forum = Forum.create!(country_name: "Saint Lucia", flag: "https://cdn.britannica.com/24/5124-050-8F6BCAC8/Flag-Saint-Lucia.jpg", user_id: alex.id, country_id: saint_lucia.id)
+saint_vincent_grenadines_forum = Forum.create!(country_name: "Saint Vincent and the Grenadines", flag: "https://cdn.britannica.com/26/5126-004-9669F8B6/Flag-Saint-Vincent-and-the-Grenadines.jpg", user_id: alex.id, country_id: saint_vincent_grenadines.id)
+samoa_forum = Forum.create!(country_name: "Samoa", flag: "https://cdn.britannica.com/08/3308-050-9DB345F2/Flag-Samoa.jpg", user_id: alex.id, country_id: samoa.id)
+san_marino_forum = Forum.create!(country_name: "San Marino", flag: "https://cdn.britannica.com/07/4207-050-78A7C297/flag-one-few-San-Marino-Europe-design.jpg", user_id: alex.id, country_id: san_marino.id)
+sao_tome_principe_forum = Forum.create!(country_name: "Sao Tome and Principe", flag: "https://cdn.britannica.com/91/7191-050-DDF8DC1F/Flag-Sao-Tome-and-Principe.jpg", user_id: alex.id, country_id: sao_tome_principe.id)
+saudi_arabia_forum = Forum.create!(country_name: "Saudi Arabia", flag: "https://cdn.britannica.com/79/5779-004-DC479508/Flag-Saudi-Arabia.jpg", user_id: alex.id, country_id: saudi_arabia.id)
+senegal_forum = Forum.create!(country_name: "Senegal", flag: "https://cdn.britannica.com/70/5070-004-2963C5E1/Flag-Senegal.jpg", user_id: alex.id, country_id: senegal.id)
+serbia_forum = Forum.create!(country_name: "Serbia", flag: "https://cdn.britannica.com/39/94839-004-EEB20F36/Flag-Serbia.jpg", user_id: alex.id, country_id: serbia.id)
+seychelles_forum = Forum.create!(country_name: "Seychelles", flag: "https://cdn.britannica.com/93/4093-050-E48CBA8F/Flag-Seychelles.jpg", user_id: alex.id, country_id: seychelles.id)
+sierra_leone_forum = Forum.create!(country_name: "Sierra Leone", flag: "https://cdn.britannica.com/72/5072-004-B35C4877/Flag-Sierra-Leone.jpg", user_id: alex.id, country_id: sierra_leone.id)
+singapore_forum = Forum.create!(country_name: "Singapore", flag: "https://cdn.britannica.com/36/4036-050-37052A78/Flag-Singapore.jpg", user_id: alex.id, country_id: singapore.id)
+slovakia_forum = Forum.create!(country_name: "Slovakia", flag: "https://cdn.britannica.com/88/7888-004-FD4BC606/Flag-Slovakia.jpg", user_id: alex.id, country_id: slovakia.id)
+slovenia_forum = Forum.create!(country_name: "Slovenia", flag: "https://cdn.britannica.com/15/6215-004-B8508AEB/Flag-Slovenia.jpg", user_id: alex.id, country_id: slovenia.id)
+solomon_islands_forum = Forum.create!(country_name: "Solomon Islands", flag: "https://cdn.britannica.com/98/3298-004-5CE240EE/Flag-Solomon-Islands.jpg", user_id: alex.id, country_id: solomon_islands.id)
+somalia_forum = Forum.create!(country_name: "Somalia", flag: "https://cdn.britannica.com/18/18-004-43399622/Flag-Somalia.jpg", user_id: alex.id, country_id: somalia.id)
+south_africa_forum = Forum.create!(country_name: "South Africa", flag: "https://cdn.britannica.com/27/4227-004-32423B42/Flag-South-Africa.jpg", user_id: alex.id, country_id: south_africa.id)
+south_korea_forum = Forum.create!(country_name: "South Korea", flag: "https://cdn.britannica.com/49/1949-004-8818300C/Flag-South-Korea.jpg", user_id: alex.id, country_id: south_korea.id)
+south_sudan_forum = Forum.create!(country_name: "South Sudan", flag: "https://cdn.britannica.com/37/150637-004-5D1F2321/Bandera-de-Sudan-del-Sur.jpg", user_id: alex.id, country_id: south_sudan.id)
+spain_forum = Forum.create!(country_name: "Spain", flag: "https://cdn.britannica.com/36/4336-004-6BD81071/Flag-Spain.jpg", user_id: alex.id, country_id: spain.id)
+sri_lanka_forum = Forum.create!(country_name: "Sri Lanka", flag: "https://cdn.britannica.com/13/4413-004-3277D2EF/Flag-Sri-Lanka.jpg", user_id: alex.id, country_id: sri_lanka.id)
+sudan_forum = Forum.create!(country_name: "Sudan", flag: "https://cdn.britannica.com/96/4496-004-278A6211/Flag-Sudan.jpg", user_id: alex.id, country_id: sudan.id)
+suriname_forum = Forum.create!(country_name: "Suriname", flag: "https://cdn.britannica.com/20/4520-050-BEC08B7F/Flag-Suriname.jpg", user_id: alex.id, country_id: suriname.id)
+sweden_forum = Forum.create!(country_name: "Sweden", flag: "https://cdn.britannica.com/30/4530-004-1CF17E9C/Flag-Sweden.jpg", user_id: alex.id, country_id: sweden.id)
+switzerland_forum = Forum.create!(country_name: "Switzerland", flag: "https://cdn.britannica.com/43/4543-050-5A18E5A3/Flag-Switzerland.jpg", user_id: alex.id, country_id: switzerland.id)
+syria_forum = Forum.create!(country_name: "Syria", flag: "https://cdn.britannica.com/50/4550-004-7B368E09/Flag-Syria.jpg", user_id: alex.id, country_id: syria.id)
+tajikistan_forum = Forum.create!(country_name: "Tajikistan", flag: "https://cdn.britannica.com/43/7243-004-0BD9009E/Flag-Tajikistan.jpg", user_id: alex.id, country_id: tajikistan.id)
+tanzania_forum = Forum.create!(country_name: "Tanzania", flag: "https://cdn.britannica.com/20/20-004-EB20A026/Flag-Tanzania.jpg", user_id: alex.id, country_id: tanzania.id)
+thailand_forum = Forum.create!(country_name: "Thailand", flag: "https://cdn.britannica.com/38/4038-004-111388C2/Flag-Thailand.jpg", user_id: alex.id, country_id: thailand.id)
+timor_leste_forum = Forum.create!(country_name: "Timor-Leste", flag: "https://cdn.britannica.com/60/72760-004-1BBBBFBE/Flag-of-East-Timor.jpg", user_id: alex.id, country_id: timor_leste.id)
+togo_forum = Forum.create!(country_name: "Togo", flag: "https://cdn.britannica.com/74/5074-004-744DD873/Flag-Togo.jpg", user_id: alex.id, country_id: togo.id)
+tonga_forum = Forum.create!(country_name: "Tonga", flag: "https://cdn.britannica.com/01/3301-004-9C2F4D65/Flag-Tonga.jpg", user_id: alex.id, country_id: tonga.id)
+trinidad_tobago_forum = Forum.create!(country_name: "Trinidad and Tobago", flag: "https://cdn.britannica.com/28/5128-004-2809EB66/Flag-Trinidad-and-Tobago.jpg", user_id: alex.id, country_id: trinidad_tobago.id)
+tunisia_forum = Forum.create!(country_name: "Tunisia", flag: "https://cdn.britannica.com/41/3041-004-F1D6DEFC/Flag-Tunisia.jpg", user_id: alex.id, country_id: tunisia.id)
+turkey_forum = Forum.create!(country_name: "Turkey", flag: "https://cdn.britannica.com/82/4782-004-4119489D/Flag-Turkey.jpg", user_id: alex.id, country_id: turkey.id)
+turkmenistan_forum = Forum.create!(country_name: "Turkmenistan", flag: "https://cdn.britannica.com/45/7245-004-C60925FE/Flag-Turkmenistan.jpg", user_id: alex.id, country_id: turkmenistan.id)
+tuvalu_forum = Forum.create!(country_name: "Tuvalu", flag: "https://cdn.britannica.com/03/3303-050-D72C968A/Flag-Tuvalu.jpg", user_id: alex.id, country_id: tuvalu.id)
+uganda_forum = Forum.create!(country_name: "Uganda", flag: "https://cdn.britannica.com/22/22-004-0165975D/Flag-Uganda.jpg", user_id: alex.id, country_id: uganda.id)
+ukraine_forum = Forum.create!(country_name: "Ukraine", flag: "https://cdn.britannica.com/14/4814-004-7C0DF1BB/Flag-Ukraine.jpg", user_id: alex.id, country_id: ukraine.id)
+united_arab_emirates_forum = Forum.create!(country_name: "United Arab Emirates", flag: "https://cdn.britannica.com/82/5782-004-BD7056FF/Flag-United-Arab-Emirates.jpg", user_id: alex.id, country_id: united_arab_emirates.id)
+united_kingdom_forum = Forum.create!(country_name: "United Kingdom", flag: "https://cdn.britannica.com/25/4825-004-F1975B92/Flag-United-Kingdom.jpg", user_id: alex.id, country_id: united_kingdom.id)
+united_states_of_america_forum = Forum.create!(country_name: "United States of America", flag: "https://cdn.britannica.com/79/4479-050-6EF87027/flag-Stars-and-Stripes-May-1-1795.jpg", user_id: alex.id, country_id: united_states_of_america.id)
+uruguay_forum = Forum.create!(country_name: "Uruguay", flag: "https://cdn.britannica.com/74/4874-004-50846A53/Flag-Uruguay.jpg", user_id: alex.id, country_id: uruguay.id)
+uzbekistan_forum = Forum.create!(country_name: "Uzbekistan", flag: "https://cdn.britannica.com/47/7247-004-44F420D7/Flag-Uzbekistan.jpg", user_id: alex.id, country_id: uzbekistan.id)
+vanuatu_forum = Forum.create!(country_name: "Vanuatu", flag: "https://cdn.britannica.com/05/3305-050-94F53891/Flag-Vanuatu.jpg", user_id: alex.id, country_id: vanuatu.id)
+venezuela_forum = Forum.create!(country_name: "Venezuela", flag: "https://cdn.britannica.com/04/4904-004-EBEFDE35/Flag-Venezuela.jpg", user_id: alex.id, country_id: venezuela.id)
+vietnam_forum = Forum.create!(country_name: "Vietnam", flag: "https://cdn.britannica.com/41/4041-004-D051B135/Flag-Vietnam.jpg", user_id: alex.id, country_id: vietnam.id)
+yemen_forum = Forum.create!(country_name: "Yemen", flag: "https://cdn.britannica.com/85/5785-004-B65441FA/Flag-Yemen.jpg", user_id: alex.id, country_id: yemen.id)
+zambia_forum = Forum.create!(country_name: "Zambia", flag: "https://cdn.britannica.com/31/4231-004-F1DBFAE7/Flag-Zambia.jpg", user_id: alex.id, country_id: zambia.id)
+zimbabwe_forum = Forum.create!(country_name: "Zimbabwe", flag: "https://cdn.britannica.com/33/4233-050-3A1705E7/Flag-Zimbabwe.jpg", user_id: alex.id, country_id: zimbabwe.id)
+
+puts "Done seeding forums..."
+
+puts "Seeding posts..."
+
+Post.create!(title: "Transportation", 
+body: "I live in a suburb in the US where I drive to everywhere. Trying to understand passes/options for transportation is overwhelming.
+There will be 6-8 of us. From the Narita airport I think it's cheaper to hire a minivan vs purchasing train tickets.
+A week in Tokyo, then a week in Kyoto. Based on someone's suggestion, we decided to stay in Kyoto and take day trips to Osaka vs packing/unpacking and checking in/out.
+While in Tokyo, we will do the usual site seeing activities, a day trip to DisneySea, a day trip to Hakone.
+While in Kyoto, a few day trips to Osaka, a day trip to Nara, a day trip to Ghibli Park in Nagoya.
+We haven't decided but may depart from Osaka because it's slightly higher than purchasing tickets for the shinkansen from Kyoto to Narita airport. Or should I get a pass?
+I can use advices on what transportation passes/tickets to purchase. I'm getting confused with when to use JR or Shinkansen. Thank you.", 
+date: "Dec 13, 2022", 
+likes: 8, 
+topic: "Japan",
+forum_id: japan_forum.id)
+
+Post.create!(title: "Best day trip from Tokyo on Jan 1st", 
+body: "Hi everyone,
+considering that it will be a festive day, what would you suggest to do as a day trip from Tokyo on January 1st?
+Kamakura + Enoshima? Nikko? Should I expect big crowds? I was thinking about one of these two destinations but I really can't decide so any suggestion is more than welcomed!
+Thank you!", 
+date: "Dec 14, 2022", 
+likes: 6, 
+topic: "Japan",
+forum_id: japan_forum.id)
+
+Post.create!(title: "Foodie Advice!?", 
+body: "Making a list of all the specific food items I need to try at least once while I am there!
+Are there any I should have in one city over another? Between Osaka, Kyoto, Tokyo!
+Takoyaki - Osaka
+Okonomiyaki
+Kushikatsu
+Udon
+Soba - Kyoto for NYE
+SUSHI!!!
+Tonkatsu
+Gyukatsu
+Ramen
+Yakiniku
+Yakitori
+Sukiyaki
+Unagi (eel)
+Oturo (fatty tuna)
+Tamagoyaki (rolled omelette)
+Taiyaki (fishy with red bean)
+Butaman (pork buns @ Horai 551)
+Tempura!
+MATCHA
+Japanese curry
+Kobe beef
+A5
+Let me know your other must-eats also!", 
+date: "Dec 13, 2022", 
+likes: 15, 
+topic: "Japan",
+forum_id: japan_forum.id)
+
+Post.create!(title: "First time to Osaka!", 
+body: "Hey folks, have bought a flight to Osaka around mid Feb 2023. Understand that is still winter season. Will be staying for about 11 days.
+
+1) Do I need to bring winter clothings like the full set, gloves, scarf, thick jacket, coats etc.. so just a jacket suffice?
+
+2) My flight arrives after 9pm and by the time I pass through immigration and baggage, it could possibly be close to 10pm. And I get overwhelmed easily and may be confused with the train lines and ticketing system. Woild it be better for me to stay overnight at the airport hotel, or still continue to make my way to Osaka station? I intend to stay a hotel connected to the station.
+
+3) in layman terms, what does JR Pass and Icacao card and others provides for me in terms of transport? I know I googled but tbh I'm still very much confused! Should I get all the cards?
+
+4) should I base in Osaka first or Kyoto? And considering I would want to visit nearby cities too for day trips. Any recommendations for cities?
+
+5) in terms of food expenses (and the occasional entrance fees for sights) is budget of 10000 Yen per day sufficient?
+
+Many thanks! Am so excited about this trip because after years and years of dreaming to go Japan, I finally can realized it. :)
+
+", 
+date: "Dec 15, 2022", 
+likes: 20, 
+topic: "Osaka",
+forum_id: japan_forum.id)
+
+Post.create!(title: "Patpong Market", 
+body: "Does anyone have any idea if the Patpong night markets have reopened or will be reopening?
+Pls advise
+Thank you", 
+date: "Dec 16, 2022", 
+likes: 22, 
+topic: "Bangkok",
+forum_id: thailand_forum.id)
+
+puts "Done seeding posts..."
 
 puts "Seeding users..."
 
@@ -242,7 +507,11 @@ puts "Done seeding users..."
 puts "Seeding blogs..."
 
 things_to_know_before_traveling_to_hawaii = Blog.create!(title: "12 Things to Know Before Traveling to Hawaii", 
-body: "1. Decide the best time to go You can visit Hawaii anytime – the weather is agreeable year-round. It may be a bit rainier in winter and a bit hotter in summer, but there are no extremes because cooling trade winds blow throughout the year. Although winter (mid-December through mid-April) is the busiest tourist season, that has more to do with the climate elsewhere, as many tourists are snowbirds escaping cold weather back home. Crowds of families take summer vacations from June through August, and rooms are scarce and prices can spike around holidays, especially Thanksgiving, Christmas, New Year’s and spring break/Easter. For the budget-conscious, the slowest times are mid-September through mid-November and the weeks from just after Easter until Memorial Day at the end of May, and you’re more likely to find good deals then on accommodations and airfare. Surfers will find the largest waves in winter, while optimal windsurfing conditions are during summer. Whale-watching tours usually depart between January and March only. 2. You'll need to make some reservations in advance Although Hawaii’s hang-loose attitude extends to most facets of life – including making extensive plans in advance –  you might want to book ahead in a couple of instances. For top Honolulu restaurants popular with residents, reserve a table before you arrive in the islands. The free tickets for the boat to the USS Arizona Memorial at Pearl Harbor are scooped up quickly. Reserve online up to 60 days before your visit. 3. Respect Hawaiian culture Evolving from ancient Polynesian traditions, Hawaiian culture was attacked and suppressed in the two centuries after the arrival of British colonizer Captain Cook in 1778. But beginning with the Hawaiian Renaissance in the 1970s, a rebirth of Native Hawaiian cultural and artistic traditions has taken hold. Across the islands, both Hawaiian culture–focused charter schools and public schools' Hawaiian-language immersion programs are popular, and traditional arts are experiencing a revival. Ancient heiau (temples) and fishponds are being restored, native forests replanted and endangered birds bred and released back into the wild. Today Hawaiian culture is about much more than just melodic place names and luau shows. Being Hawaiian is an important part of the identity of the islands, reflected in ways both large and small, from the inclusion of Hawaiian words in everyday speech to the embrace of concepts of respect and inclusion. Although few island residents can agree on what shape the Hawaiian sovereignty movement should take, its grassroots political activism is increasingly part of the local dialogue. A female in silhouette as the sun sets over the beach holds up her hand in a hang loose sign or 'shaka' Don't be afraid to liberally wave the shaka © Adventuring MJ / Shutterstock Dos and don'ts in Hawaii Good manners in Hawaii revolve around respect and awareness. Do use aloha (hello/goodbye and the concept of love and fellowship) and mahalo (thank you). Liberally wave the shaka (Hawaii’s hand greeting sign). Do try to correctly pronounce Hawaiian place names and words. Even if you fail, the attempt is appreciated. If you aren’t sure how to say it, ask. Even long names aren’t that hard with a little practice. Don’t refer to Maui, Kauaʻi, Molokaʻi, Lanaʻi and Hawaiʻi (the Big Island) as 'outer islands' – it's Oʻahu-centric. They’re called 'Neighbor Islands.'
+body: "1. Decide the best time to go You can visit Hawaii anytime – the weather is agreeable year-round. It may be a bit rainier in winter and a bit hotter in summer, but there are no extremes because cooling trade winds blow throughout the year.
+\n
+Although winter (mid-December through mid-April) is the busiest tourist season, that has more to do with the climate elsewhere, as many tourists are snowbirds escaping cold weather back home. Crowds of families take summer vacations from June through August, and rooms are scarce and prices can spike around holidays, especially Thanksgiving, Christmas, New Year’s and spring break/Easter.
+\n
+For the budget-conscious, the slowest times are mid-September through mid-November and the weeks from just after Easter until Memorial Day at the end of May, and you’re more likely to find good deals then on accommodations and airfare. Surfers will find the largest waves in winter, while optimal windsurfing conditions are during summer. Whale-watching tours usually depart between January and March only. 2. You'll need to make some reservations in advance Although Hawaii’s hang-loose attitude extends to most facets of life – including making extensive plans in advance –  you might want to book ahead in a couple of instances. For top Honolulu restaurants popular with residents, reserve a table before you arrive in the islands. The free tickets for the boat to the USS Arizona Memorial at Pearl Harbor are scooped up quickly. Reserve online up to 60 days before your visit. 3. Respect Hawaiian culture Evolving from ancient Polynesian traditions, Hawaiian culture was attacked and suppressed in the two centuries after the arrival of British colonizer Captain Cook in 1778. But beginning with the Hawaiian Renaissance in the 1970s, a rebirth of Native Hawaiian cultural and artistic traditions has taken hold. Across the islands, both Hawaiian culture–focused charter schools and public schools' Hawaiian-language immersion programs are popular, and traditional arts are experiencing a revival. Ancient heiau (temples) and fishponds are being restored, native forests replanted and endangered birds bred and released back into the wild. Today Hawaiian culture is about much more than just melodic place names and luau shows. Being Hawaiian is an important part of the identity of the islands, reflected in ways both large and small, from the inclusion of Hawaiian words in everyday speech to the embrace of concepts of respect and inclusion. Although few island residents can agree on what shape the Hawaiian sovereignty movement should take, its grassroots political activism is increasingly part of the local dialogue. A female in silhouette as the sun sets over the beach holds up her hand in a hang loose sign or 'shaka' Don't be afraid to liberally wave the shaka © Adventuring MJ / Shutterstock Dos and don'ts in Hawaii Good manners in Hawaii revolve around respect and awareness. Do use aloha (hello/goodbye and the concept of love and fellowship) and mahalo (thank you). Liberally wave the shaka (Hawaii’s hand greeting sign). Do try to correctly pronounce Hawaiian place names and words. Even if you fail, the attempt is appreciated. If you aren’t sure how to say it, ask. Even long names aren’t that hard with a little practice. Don’t refer to Maui, Kauaʻi, Molokaʻi, Lanaʻi and Hawaiʻi (the Big Island) as 'outer islands' – it's Oʻahu-centric. They’re called 'Neighbor Islands.'
 Don’t try to speak pidgin – unless you’re really good at it.
 Do ask permission before you pick fruit or flowers from trees on private property.
 Don’t be pushy. You’ll get what you want (this time), but you’ll get no aloha with it.
@@ -277,7 +546,7 @@ Stings from box jellyfish and Portuguese man-of-war (aka bluebottles) occur in H
 Box jellyfish are often seen seven to 10 days after a full moon, when they float into Hawaii’s shallow near-shore waters, such as those at Waikiki. When this happens, some public beaches may be closed for safety. The Waikiki Aquarium has a calendar that predicts the presence of box jellyfish.", 
 description: "With top tips on planning, etiquette and health and safety, these are the key things to know before any vacation in Hawaii.", 
 date: "Dec 12, 2022", 
-image: "https://www.lonelyplanet.com/_next/image?url=https%3A%2F%2Flp-cms-production.imgix.net%2F2021-10%2Fhonolulu-beach-GettyImages-482135181.jpg%3Fauto%3Dformat%26fm%3Davif&w=1920&q=75", 
+image: "https://i.imgur.com/jSRAr67.jpg", 
 likes: 69, 
 read_time: "7 min read", 
 category_one: "DESTINATION PRACTICALITIES", 
@@ -348,7 +617,7 @@ Take to the waves, dunes and hidden coves
 Want sand dunes and hidden coves, volcanic national parks and forested mountains? How about colorful villages, tempting restaurants and watersports galore? It’s all here, all year. Tenerife and Gran Canaria are generally the warmest of the islands in winter with highs around 71°F (22°C). Lanzarote and Fuerteventura can be a little windy – which isn’t necessarily a bad thing if you’re heading there to surf. Lesser-known La Gomera, La Palma and El Hierro will feel even more off-the-radar than usual.", 
 description: "Here are the best and sunniest spots for a European winter vacation. Feel your toes thawing out already?", 
 date: "Dec 14, 2022", 
-image: "https://www.lonelyplanet.com/_next/image?url=https%3A%2F%2Flp-cms-production.imgix.net%2F2022-12%2FItaly-Sicily-Taormina-Sun_Shine-shutterstock_1760426138-RFC.jpg%3Fauto%3Dformat%26fm%3Davif&w=3840&q=75", 
+image: "https://i.imgur.com/7ypXu71.jpg", 
 likes: 34, 
 read_time: "7 min read", 
 category_one: "DESTINATION PRACTICALITIES", 
@@ -439,7 +708,7 @@ Start/end at either Big Cypress National Preserve or Fort Pickens, Gulf Islands 
 Far from fairy-tale castles or friendly mice, explore the alternative Sunshine State: that is, its estimable wild side. The Florida National Scenic Trail (about three-quarters complete) begins in the Panhandle, on the crunchy-white, turquoise-lapped beaches of the Gulf Islands National Seashore near Pensacola. From here, it wiggles east and south, via salt marshes, crystal-clear springs, lakes, prairies, old-growth forests and historic urban areas. It finishes in Big Cypress National Preserve, bordering the Everglades, amid a lush swampland of bright bromeliads and giant ferns. This semi-tropical state is incredibly bio-diverse, and most of the trail is also a wildlife corridor, protecting both common and rare species. Possible sightings include black bears, deer, otters, alligators, gopher tortoises and sea turtles. A plethora of birds, too: the crested caracara and red-cockaded woodpecker are particularly sought-after species.", 
 description: "Hiking creates a connection to a place and its landscapes. Here are 12 incredible walks from around the world to inspire you.", 
 date: "Dec 6, 2022", 
-image: "https://www.lonelyplanet.com/_next/image?url=https%3A%2F%2Flp-cms-production.imgix.net%2F2022-01%2FIceland-Westfjord-Jan-Jerman-shutterstock_1879846174-RFC.jpg%3Fauto%3Dformat%26fm%3Davif&w=3840&q=75", 
+image: "https://i.imgur.com/V6BnBy6.jpg", 
 likes: 78, 
 read_time: "10 min read", 
 category_one: "HIKING", 
@@ -769,98 +1038,3 @@ category_two: "DESTINATION PRACTICALITIES",
 user_id: alex.id)
 
 puts "Done seeding blogs..."
-
-puts "Seeding forums..."
-
-japan_forum = Forum.create!(country_name: "Japan", flag: "https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/1200px-Flag_of_Japan.svg.png", user_id: alex.id, country_id: japan.id)
-thailand_forum = Forum.create!(country_name: "Thailand", flag: "https://cdn.britannica.com/38/4038-004-111388C2/Flag-Thailand.jpg", user_id: alex.id, country_id: thailand.id)
-
-puts "Done seeding forums..."
-
-puts "Seeding posts..."
-
-Post.create!(title: "Transportation", 
-body: "I live in a suburb in the US where I drive to everywhere. Trying to understand passes/options for transportation is overwhelming.
-There will be 6-8 of us. From the Narita airport I think it's cheaper to hire a minivan vs purchasing train tickets.
-A week in Tokyo, then a week in Kyoto. Based on someone's suggestion, we decided to stay in Kyoto and take day trips to Osaka vs packing/unpacking and checking in/out.
-While in Tokyo, we will do the usual site seeing activities, a day trip to DisneySea, a day trip to Hakone.
-While in Kyoto, a few day trips to Osaka, a day trip to Nara, a day trip to Ghibli Park in Nagoya.
-We haven't decided but may depart from Osaka because it's slightly higher than purchasing tickets for the shinkansen from Kyoto to Narita airport. Or should I get a pass?
-I can use advices on what transportation passes/tickets to purchase. I'm getting confused with when to use JR or Shinkansen. Thank you.", 
-date: "Dec 13, 2022", 
-likes: 8, 
-topic: "Japan",
-forum_id: japan_forum.id)
-
-Post.create!(title: "Best day trip from Tokyo on Jan 1st", 
-body: "Hi everyone,
-considering that it will be a festive day, what would you suggest to do as a day trip from Tokyo on January 1st?
-Kamakura + Enoshima? Nikko? Should I expect big crowds? I was thinking about one of these two destinations but I really can't decide so any suggestion is more than welcomed!
-Thank you!", 
-date: "Dec 14, 2022", 
-likes: 6, 
-topic: "Japan",
-forum_id: japan_forum.id)
-
-Post.create!(title: "Foodie Advice!?", 
-body: "Making a list of all the specific food items I need to try at least once while I am there!
-Are there any I should have in one city over another? Between Osaka, Kyoto, Tokyo!
-Takoyaki - Osaka
-Okonomiyaki
-Kushikatsu
-Udon
-Soba - Kyoto for NYE
-SUSHI!!!
-Tonkatsu
-Gyukatsu
-Ramen
-Yakiniku
-Yakitori
-Sukiyaki
-Unagi (eel)
-Oturo (fatty tuna)
-Tamagoyaki (rolled omelette)
-Taiyaki (fishy with red bean)
-Butaman (pork buns @ Horai 551)
-Tempura!
-MATCHA
-Japanese curry
-Kobe beef
-A5
-Let me know your other must-eats also!", 
-date: "Dec 13, 2022", 
-likes: 15, 
-topic: "Japan",
-forum_id: japan_forum.id)
-
-Post.create!(title: "First time to Osaka!", 
-body: "Hey folks, have bought a flight to Osaka around mid Feb 2023. Understand that is still winter season. Will be staying for about 11 days.
-
-1) Do I need to bring winter clothings like the full set, gloves, scarf, thick jacket, coats etc.. so just a jacket suffice?
-
-2) My flight arrives after 9pm and by the time I pass through immigration and baggage, it could possibly be close to 10pm. And I get overwhelmed easily and may be confused with the train lines and ticketing system. Woild it be better for me to stay overnight at the airport hotel, or still continue to make my way to Osaka station? I intend to stay a hotel connected to the station.
-
-3) in layman terms, what does JR Pass and Icacao card and others provides for me in terms of transport? I know I googled but tbh I'm still very much confused! Should I get all the cards?
-
-4) should I base in Osaka first or Kyoto? And considering I would want to visit nearby cities too for day trips. Any recommendations for cities?
-
-5) in terms of food expenses (and the occasional entrance fees for sights) is budget of 10000 Yen per day sufficient?
-
-Many thanks! Am so excited about this trip because after years and years of dreaming to go Japan, I finally can realized it. :)
-
-", 
-date: "Dec 15, 2022", 
-likes: 20, 
-topic: "Osaka",
-forum_id: japan_forum.id)
-
-Post.create!(title: "Patpong Market", 
-body: "Does anyone have any idea if the Patpong night markets have reopened or will be reopening?
-Pls advise
-Thank you", 
-date: "Dec 16, 2022", 
-likes: 22, 
-topic: "Bangkok",
-forum_id: thailand_forum.id)
-
-puts "Done seeding posts..."

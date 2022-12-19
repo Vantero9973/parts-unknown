@@ -1,19 +1,20 @@
 import "./App.css";
 import { useState, useEffect } from "react";
-import { Route, Routes, useParams } from "react-router-dom";
-import NavBar from "./NavBar";
-import LandingPage from "./LandingPage";
-import DestinationsPage from "./DestinationsPage";
-import BlogPage from "./BlogPage";
-import ForumPage from "./ForumPage";
-import PostPage from "./PostPage";
-import ForumCountry from "./ForumCountry";
+import { Route, Routes } from "react-router-dom";
+import NavBar from "./components/NavBar.js";
+import LandingPage from "./components/LandingPage";
+import DestinationsPage from "./components/DestinationsPage";
+import BlogPage from "./components/BlogPage";
+import ForumPage from "./components/ForumPage";
+import PostPage from "./components/PostPage";
+import ForumCountry from "./components/ForumCountry";
+import FullBlogPost from "./components/FullBlogPost";
 
 function App() {
   const [blogs, setBlogs] = useState([]);
   const [countries, setCountries] = useState([]);
   const [search, setSearch] = useState("");
-  let { id } = useParams();
+  // let { id } = useParams();
 
   useEffect(() => {
     fetch("http://localhost:3000/blogs")
@@ -54,8 +55,9 @@ function App() {
             path="/forum"
             element={<ForumCountry countries={countries} />}
           />
-          <Route path="/forum/:id" element={<ForumPage />} />
-          <Route path="/post/:id" element={<PostPage />} />
+          <Route path="/forums/:id" element={<ForumPage />} />
+          <Route path="/posts/:id" element={<PostPage />} />
+          <Route path="/blogs/:id" element={<FullBlogPost />} />
         </Routes>
       </div>
     </>

@@ -6,7 +6,7 @@ class BlogsController < ApplicationController
     end
 
     def show
-        blog = Blog.find(params[:id])
+        blog = Blog.where(id: params[:id])
         if blog
             render json: blog
         else render json: { error: "Blog not found" }, status: :not_found

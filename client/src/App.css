@@ -7,20 +7,20 @@ body {
 }
 
 .landingImage {
-    -webkit-filter: brightness(70%);
-	filter: brightness(70%);
+    -webkit-filter: brightness(80%);
+	filter: brightness(80%);
     z-index: 900;
     transition: all 0.3s ease;
 }
 
 .landingImage:hover { 
-    -webkit-filter: brightness(85%);
+    -webkit-filter: brightness(100%);
+    filter: brightness(100%);
     -webkit-transition: all 1s ease;
     -moz-transition: all 1s ease;
     -o-transition: all 1s ease;
     -ms-transition: all 1s ease;
     transition: all 1s ease;
-	filter: brightness(85%);
     z-index: 900;
     transform: scale(1.1);
 }

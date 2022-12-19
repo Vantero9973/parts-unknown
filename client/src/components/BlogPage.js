@@ -2,7 +2,7 @@ import { useState } from "react";
 import BlogImages from "./BlogImages";
 import Search from "./Search";
 import BlogPosts from "./BlogPosts";
-import Pagination from "./Pagination";
+import Pagination from "./Pagination.js";
 
 export default function BlogPage({ blogs, setSearch }) {
   const [currentPage, setCurrentPage] = useState(1);
@@ -26,13 +26,14 @@ export default function BlogPage({ blogs, setSearch }) {
       >
         <h5
           style={{
-            width: "45vw",
+            width: "55vw",
             zIndex: "1",
-            fontSize: "70px",
+            fontSize: "75px",
             fontWeight: "bold",
             color: "white",
             textAlign: "center",
             textShadow: "#000 2px 0 3px",
+            lineHeight: "90%",
           }}
         >
           Discover story-worthy travel moments

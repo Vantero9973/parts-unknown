@@ -53,9 +53,6 @@ export default function LandingPage() {
           </div>
         </div>
       </div>
-      <div style={{ height: "100vh" }}>
-        <h2>hello</h2>
-      </div>
     </div>
   );
 }

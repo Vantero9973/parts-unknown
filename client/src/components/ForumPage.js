@@ -9,18 +9,18 @@ export default function ForumPage() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("http://localhost:3000/forums")
+    fetch(`http://localhost:3000/forums/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setForums(data);
       });
-  }, []);
+  }, [id]);
 
   useEffect(() => {
     fetch("http://localhost:3000/posts")
       .then((res) => res.json())
       .then((data) => {
-        setPosts(data);
+        setPostsLink(data);
       });
   }, []);
 
@@ -28,7 +28,7 @@ export default function ForumPage() {
     fetch(`http://localhost:3000/posts/${id}`)
       .then((res) => res.json())
       .then((data) => {
-        setPostsLink(data);
+        setPosts(data);
       });
   }, [id]);
 
@@ -38,7 +38,12 @@ export default function ForumPage() {
         {forums.map((forum) => {
           return (
             <div
-              style={{ display: "flex", justifyContent: "center", gap: "3rem" }}
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                gap: "3rem",
+              }}
             >
               <h1
                 style={{
@@ -62,6 +67,7 @@ export default function ForumPage() {
           justifyContent: "center",
           alignItems: "center",
           flexDirection: "column",
+          marginTop: "5vh",
         }}
       >
         <table
@@ -136,7 +142,7 @@ export default function ForumPage() {
                   fontSize: "16px",
                   width: "60vw",
                 }}
-                onClick={() => navigate(`/post/${post.id}`)}
+                onClick={() => navigate(`/posts/${post.id}`)}
               >
                 {post.title}
               </tr>

@@ -26,7 +26,7 @@ export default function DestinationsPage() {
     >
       <div
         style={{
-          height: "88vh",
+          height: "92vh",
           width: "30vw",
           background: "#dadada",
           display: "flex",
