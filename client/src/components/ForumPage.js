@@ -87,6 +87,7 @@ export default function ForumPage() {
               fontSize: "16px",
               width: "20vw",
               height: "2vh",
+              padding: "5px",
             }}
           >
             Forum
@@ -129,8 +130,10 @@ export default function ForumPage() {
                   display: "flex",
                   alignItems: "center",
                   fontSize: "16px",
+                  fontWeight: "bold",
                   width: "20vw",
                   height: "5vh",
+                  padding: "5px",
                 }}
               >
                 {post.topic}
@@ -140,7 +143,10 @@ export default function ForumPage() {
                   display: "flex",
                   alignItems: "center",
                   fontSize: "16px",
+                  fontWeight: "bold",
                   width: "60vw",
+                  cursor: "pointer",
+                  color: "#006699",
                 }}
                 onClick={() => navigate(`/posts/${post.id}`)}
               >
@@ -150,7 +156,7 @@ export default function ForumPage() {
                 style={{
                   display: "flex",
                   alignItems: "center",
-                  fontSize: "16px",
+                  fontSize: "14px",
                   width: "20vw",
                 }}
               >

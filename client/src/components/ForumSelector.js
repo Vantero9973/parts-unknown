@@ -14,26 +14,44 @@ export default function ForumSelector({ countries }) {
       });
   }, [id]);
 
-  {
-    return (
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
+  // const flags = (
+  //   <div>
+  //     {forums.map((forum) => {
+  //       return (
+  //         <img
+  //           src={forum.flag}
+  //           alt="flag"
+  //           style={{ maxHeight: "100px", maxWidth: "100px" }}
+  //         />
+  //       );
+  //     })}
+  //   </div>
+  // );
+
+  return (
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+      }}
+    >
+      <div>
         {countries.map((country) => {
           return (
-            <table>
-              <tr onClick={() => navigate(`/forums/${country.id}`)}>
-                {country.name}
-              </tr>
-            </table>
+            <h1
+              style={{
+                display: "flex",
+                alignItems: "flex-start",
+                cursor: "pointer",
+              }}
+              onClick={() => navigate(`/forums/${country.id}`)}
+            >
+              {country.name}
+            </h1>
           );
         })}
       </div>
-    );
-  }
+    </div>
+  );
 }

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import QuizApp from "./QuizApp";
-import BlogImages from "./BlogImages";
+import LandingPageImages from "./LandingPageImages";
 import AutosuggestPage from "./AutosuggestPage";
 
 export default function LandingPage() {
@@ -30,7 +30,7 @@ export default function LandingPage() {
         >
           <AutosuggestPage />
         </div>
-        <BlogImages />
+        <LandingPageImages />
       </div>
       <div
         style={{ width: "100vw", display: "flex", justifyContent: "center" }}

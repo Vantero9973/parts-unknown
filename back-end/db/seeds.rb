@@ -210,6 +210,12 @@ zimbabwe = Country.create!(name: "Zimbabwe", continent_id: africa.id)
 
 puts "Done seeding countries..."
 
+puts "Seeding users..."
+
+alex = User.create!(username: "alex", first_name: "Alex", last_name: "Van Vleet", password: "123", image: "placeholder.png", admin: true)
+
+puts "Done seeding users..."
+
 puts "Seeding forums..."
 
 afghanistan_forum = Forum.create!(country_name: "Afghanistan", flag: "https://cdn.britannica.com/40/5340-004-B25ED5CF/Flag-Afghanistan.jpg", user_id: alex.id, country_id: afghanistan.id)
@@ -497,12 +503,6 @@ topic: "Bangkok",
 forum_id: thailand_forum.id)
 
 puts "Done seeding posts..."
-
-puts "Seeding users..."
-
-alex = User.create!(username: "alex", password: "123", image: "placeholder.png", admin: true)
-
-puts "Done seeding users..."
 
 puts "Seeding blogs..."
 
@@ -1035,6 +1035,242 @@ likes: 55,
 read_time: "8 min read", 
 category_one: "TIPS AND ADVICE", 
 category_two: "DESTINATION PRACTICALITIES", 
+user_id: alex.id)
+
+seven_day_journey_trans_bhutan_trail = Blog.create!(title: "7-day journey on the Trans Bhutan Trail", 
+body: "Historically a pilgrimage route, the fully-restored Trans Bhutan Trail reopened to visitors in September 2022. Its 250 miles of scenic footpath will offer visitors a unique perspective of the Asian country and likely will become one of the world’s most iconic cross-country walks.
+
+To do the trek, you have to hire a guide who will lead you along this spectacular trail. We asked guide Galey Tenzin to give us an idea of what you might experience over seven days on the Trans Bhutan Trail. 
+
+best-in-travel-2023-bhutan-itinerary-intro.png
+A tour guide for more than a decade and a German-language guide for more than five years, I have explored every corner of my country of Bhutan. I have been involved in the reopening of the Trans Bhutan Trail from the first discussion of the project through restoration of the trail up to the first traversal of its 250-mile (403km) length in almost 60 years. I must say it is truly one of the best trekking destinations ever, allowing one to refresh and reconnect with nature.
+
+Snapshot-bit-2023-itinerary-bhutan.png
+Why you should trek the Trans Bhutan Trail 
+The Trans Bhutan Trail is an ancient route through the Himalayas that lets you follow in the footsteps of our ancestors. For hundreds of years, the trail was used by pilgrims, messengers, armies and traders – and until the 1960s, it was the only way to travel through and communicate with others across the country. After Bhutan initiated a process of planned development beginning in the 1960s, a national highway was constructed and the trail fell into disuse. Under the vision of the king of Bhutan, the Bhutan Canada Foundation together with the Tourism Council of Bhutan and other local partners are currently working to restore and reconnect this historic route. To mark the launch of the restored trail in September 2022, a national event had 24 scouts – one from each dzongkhag (district) and four from each thromde (city), representing the entire country – walk the length of the trail in a show of national unity. I led this scout walk for the full 250 miles, from Haa east to Trashigang. 
+
+The trail offers exposure to unique culture, multiple dialects, different religious sites and varied flora, fauna and birds – as well as a range of campsites, farm houses, hotels and unique foods. Scenic views and conversations with local people make it even more pleasant and rejuvenating. One can hike through the trail at any time of the year, with each season offering a different experience. (Note that the trail sees snowfall during the winter months, and muddy, challenging conditions in the summer monsoon season.) Visitor-friendly, the trail can be hiked in different sections, with a clear end point for each. QR-coded signposts provide links to texts and comic book–style illustrations that explain the history of each area. 
+
+A note: the itinerary outlined below should be relatively easy for those who do regular physical exercise (and no problem at all for trekkers), and moderately demanding for those who go for frequent casual walks. Consider your own physical fitness and health level: we do not recommend this itinerary if you have no experience hiking. All international hikers must be accompanied by a guide.
+
+Day 1-bit-2023-itinerary-bhutan.png
+ 
+Arrival in Paro 
+International flights serve Paro from Kathmandu, Delhi, Guwahati, Bagdogra, Dhaka, Singapore and Bangkok. Before you even step foot in Bhutan you will see what a dramatic land this is from the windows of your dragon-emblazoned Druk Air plane. As you make your descent from over the Himalayas, you’ll enjoy one of the most scenic flights (and hair-raising landings!) you’ve ever experienced.
+
+The airport is situated at an elevation of 7333ft (2235m) in a dramatic valley, and you will feel cool, clean fresh mountain air the minute you disembark from the aircraft. Your tour guide will greet you and drive you to your hotel. After a Bhutanese lunch, you’ll acclimatize to the altitude with an easy walk and tour of Paro. The National Museum once served as a watchtower (or ta dzong), originally built to defend the Rinpung Dzong during the inter-valley wars of the 17th century. A museum since 1967, it today holds a fascinating collection of art, relics, religious Thangka paintings and Bhutan’s exquisite postage stamps. Next, at the majestic Paro Dzong, you can light traditional butter lamps to bring success and safety on your journey to come. 
+
+Admire the multi-colored wooden facades, small arched windows and sloping roofs of the typically Bhutanese architecture as your guide relates the story and importance of this dzong. (Some scenes from the 1993 internationally co-produced film Little Buddha were filmed here.) A short walk back toward Paro town takes you across a cantilever bridge that offers a splendid, photogenic evening view of the dzong and ta dzong. Then it’s back to your hotel for dinner.
+
+Day 2-bit-2023-itinerary-bhutan.png
+ 
+Hike from Tsendona to Damchona
+10 miles (16 km); 7 hours; 2900ft (884m) elevation gain, 1047ft (319m) elevation loss
+
+A 10-minute drive brings you to the beginning of your Trans Bhutan Trail hike. This part of the trail connects three villages: Tsendona, where the trail begins before gently rising through rice fields; Dopshari, where you will stop for lunch; and Damchona, where you will camp overnight. Along the trail, you can take in beautiful views of the Paro Valley and its sights, as well as Kungkarpo, a sacred site for “sky burial.” Keep an eye out for mountain bikers, as this section also serves as a cycling trail – and for planes, too, as they bank overhead alongside the mountain on their final descent into Paro.
+
+Lunch will be set up at Tshering Farm House in Dopshari, where you’ll enjoy organic and traditional Bhutanese foods as well as a beautiful view of rice fields. After lunch, the trail climbs up slowly through the pine trees toward the campsite at Damchona, where apples rather than rice are the local crop, and locals rear cattle and horses. During monsoon season (June–August), count on meeting people foraging for wild chanterelle mushrooms. Upon your arrival at camp, you will be served a hot towel to clean up, followed by hot tea and dinner. When night falls and as the campfire crackles, your tour guide and trail ambassador will narrate the history of the trail.
+
+Day 3-bit-2023-itinerary-bhutan.png
+ 
+Hike from Damchona to Tsaluna
+10.75 miles (17.25 km); 6 hours; 2526ft (770m) elevation gain, 2664ft (812m) elevation loss
+
+After breakfast at camp, you’ll continue on the trail from Damchona to Tsaluna village. The trail’s rise is gradual and the path will be clear of debris thanks to the dozens of horses plying the route each day during trekking season. Tall trees and coniferous forests line the path until Jela Pass (11,575ft/3528m), where you can hoist lungdhar (prayer flags) while saying the prayer “Lha-geh lo” (“May the gods be victorious”). After Jela Pass, the trail drops gently through clusters of rhododendrons. After about 1.25 miles (2km), you will reach an open area that’s a good spot for a picnic, with views toward Pumola and other mountain ridges – and the next section of the trail. 
+
+From there, you’ll walk through a settlement called Jadingkha, then through groves of beautiful pine and oak trees until Tsaluna. Along the trail you will hear the calls of such birds as the Himalayan monal, satyr tragopan, fire-tailed myzornis and hoopoe. (Expect a bit of mud, too, as cattle rearing is prevalent in this area.) You’ll be welcomed at your campsite, surrounded by pine trees, with warm evening tea and snacks. With locals, you can try your hand at archery (Bhutan’s national sport) in the ancient manner, using a bow made of bamboo. Your trail ambassador will join you for dinner, and provide a seal to authenticate your completion of this section of the trail. Then, next to the campfire, watch (or even help) the trekking cook prepare your Bhutanese dinner, which might include red rice, ema datsi (chili with cheese), suja (butter tea), momo (steamed dumplings), buckwheat noodles and other tasty dishes. 
+
+Day 4-bit-2023-itinerary-bhutan.png
+ 
+Hike from Tsaluna to “Buddha Point”
+12.2 miles (19.65km); 9 hours; 3930ft (1198m) elevation gain, 4308ft (1313m) elevation loss
+
+Wake up to the sounds of birds chirping in the pine trees. You’ll start your day with a warm bedside tea served by the trekking crew, before packing up and taking breakfast. From the campsite, the trail ascends gradually, then drops into a steep slope lined with dense oaks. There is hardly any view on this trail – only the sounds of streams and birds. After 3 or 4 hours of walking, you will reach Pumola, where you can rest and relax near a huge stupa. Next, you’ll ascend another steep slope for another 90 minutes up to the peak of Pumola, known locally as Thaptsakha and the highest point on the Trans Bhutan Trail. Along this section, amazing views of mountain ranges, monasteries and the Thimpu Valley will open up along a route that was onced used by messengers traveling between Paro and Thimpu. (Adventurous visitors can retrace that 29-mile/48km route via the Druk Path Trek.) You will have lunch at the peak of Pumola and also offer incense as a way to pay homage to our local deities.
+
+After lunch, the trail descends through a magical landscape of open pastures where yaks graze; stop by a yak-herder’s camp to get a taste of nomadic life. As you get closer to the next section of the trail, you will get a closer view of Thimphu Valley and its famous Buddha statue. This section of the trail will end near this gigantic, 177ft(54m)-tall monument, and you won’t want to miss out on a photo opp in front of it. After so much walking, take a car to your hotel for a hot shower. Feel free to call it a night – or set out to explore small but lively Thimpu on foot.
+
+Day 5-bit-2023-itinerary-bhutan.png
+ 
+Hike from Dochula to Simtokha
+9.3 miles (15km); 7 hours; 3235ft (986m) elevation gain, 1729ft (527m) elevation loss
+
+After breakfast at your hotel, you’ll drive through from Thimphu to Punakha through the Dochula Pass – a must-visit stop for travelers. Here, colorful prayer flags line the road, with amazing, panoramic views of the snow-covered Himalayas forming a majestic backdrop against 108 chortens (Buddhist shines). After taking photos and hearing stories from your guide, you’ll get out your hiking gear and prepare for your last day on the Trans Bhutan Trail.
+
+The first hour will take you through beautiful rhododendrons and huge hemlock trees, before you drop down through a pine forest and some settlements along the way. (During the growing season from May to July, you will see farmers working their organic fields.) You’ll enjoy lunch below Hongtsho, sampling apples from local orchards as dessert. As you wind your way on to Simtokha, you will cross the same river seven different times. At the end of the hike, a trail ambassador will be waiting for you with tea, snacks and a signature for your Trail Passport to certify your completion of this leg of the journey. After driving back to Paro, you’ll check in at Ughyen Farm House, where you can experience a hot-stone bath and enjoy scrumptious local Bhutanese food. A cultural program featuring mask dances, traditional folk dances and an archery demonstration concludes a full day.
+
+Day 6-bit-2023-itinerary-bhutan.png
+ 
+Tiger’s Nest hike
+7.5 miles (12km); 7 hours; 2625ft (800m) elevation gain, 394ft (120m) elevation loss
+
+No first-time trip to Bhutan would be complete without a visit to the Tiger’s Nest. Built on a cliff some 9840ft (3000m) above sea level, this extraordinary monastery is one of the most memorable holy sites in the world. Hikers can reach the site via a trail with a natural clay surface, one wide enough for people to walk comfortably. (Note that the trail can become dusty on dry days, and muddy and slippery on wet ones, especially on segments frequented by horses.)
+
+After breakfast with suja (butter tea), you’ll head from the farm house to the Tiger’s Nest “base camp,” where you can use the facilities and buy walking sticks for your hike. (Horses and ponies are available for hire for those unable to hike.) After a 2-hour ascent, you can stop for a bit at the rest area, which has a cafeteria offering tea and food – as well as a view up to the monastery. From the cafeteria, a direct-ascent trail joins the main path after a few hundred meters, saving you backtracking. The main trail continues upward steadily, with a few shortcuts offering a (steep and often slippery) way to save some time; you’ll have excellent views of the monastery throughout.
+
+The path then enters forest again until you reach the traverse trail, which will lead you on a gentle ascent. Along the way you will pass an area where bigger groups sometimes stop for lunch, and the temple at which the former Je Khenpo (head lama) of the Bhutanese Drukpa Kagyu school of Tibetan Buddhism was born. Finally, you will reach the viewpoint, where the majestic sight of Tiger’s Nest monastery will open just in front of you. Though most people stop here for photographs, the best photo spot is about 164ft (50m) farther down, beside a short prayer wheel.
+
+Start descending by the steep concrete stairs down – very carefully, and holding on to the banister, as a misstep could be fatal. Even during the busiest part of the day from 10am to 1pm, when the stairs get jammed with tourists and Bhutanese pilgrims, remember to behave with respect since you are on sacred ground. After losing some 328ft (100m) of altitude, the stairway will lead into the gap between two cliffs below an impressive waterfall. After crossing the bridge, continue up the stairway to the right. This is the last 263ft (80m) of altitude gain before you reach your goal: the entrance to the monastery itself.
+
+Please bear in mind that before you enter, your guide will need to clear you with the guards, and you’ll need to leave your belongings in the lockers; no phones or cameras are allowed inside. What is to be seen and experienced in the monastery is beyond the scope of this article, and we will happily leave the backstory to your competent guide. We will simply reveal that while you sweated and panted on your hike up, the Guru Padmasambhava, the saint who established this place in 8th century, was brought here on the back of a flying tigress who turned out to be his spiritual consort and wife in different form (hence “Tiger’s Nest”). After your temple visit, follow the same way back down. Your lunch will be served at the cafeteria against a view of the temple and amid the sound of birdsong.
+
+After your hike, spend a few hours exploring Paro town and picking up some local products as gifts or souvenirs of Bhutan before heading to your hotel. Since this will be your last day in the country, you can have a relaxing massage and enjoy your night in comfort.
+
+Day 7: Himalayan Departure 
+Over breakfast, you’ll prepare to say goodbye to an amazing and extraordinary place. On the way to the airport, reflect on the warm-hearted people you’ve met and the lasting memories you’ve made – ones you’ll keep for a lifetime. The Bhutanese will look forward to seeing you again in this land of endless enchantments. Tashi delek!", 
+description: "Destined to become one of the world’s most iconic cross-country walks, the Trans Bhutan Trail offers visitors a unique perspective of the country.", 
+date: "Nov 15, 2022", 
+image: "https://i.imgur.com/eTKKOTN.jpg", 
+likes: 75, 
+read_time: "13 min read", 
+category_one: "BEST IN TRAVEL 2023", 
+category_two: "HIKING", 
+user_id: alex.id)
+
+thailands_top_six_train_journeys = Blog.create!(title: "Thailand's top 6 train journeys", 
+body: "It's been over a century since Thailand’s first train line – a scant 50 miles linking Bangkok and the former royal capital of Ayuthaya – was completed. Tracks have since been extended to most of the country, and while train travel has almost entirely been superseded by bus and air, scenic railway routes and sleeper trains remain one of the best ways to see the country.
+
+Even the Thai government can see the potential in railways again. There’s talk of high-speed rail lines, and Bangkok’s shiny new Bang Sue Grand Station is (allegedly) Southeast Asia’s largest rail hub.
+
+For now, Thailand’s rolling stock isn’t that advanced, but trains run by the State Railways of Thailand (SRT) are generally on time, comfortable and charming in a stuck-in-time type of way. 
+
+If you’re not in a rush, trains also offer good legroom (particularly in sleeper cars); great Thai food (either from the dining car or from vendors selling snacks between stations); gorgeous views; antique train stations; and quirky experiences (such as the route that appears to crash into a fresh market). Here are the six best train journeys in Thailand.
+
+Get trusted guidance to the world's most breathtaking experiences delivered to your inbox weekly with our email newsletter.
+The Bangkok train arriving at the Samut Sakhon Railway Market 
+For a truly novel experience, take the Bangkok train direct into Samut Sakhon Railway Market © paul sarawak / 500px
+1. Mahachai Line
+Start – Thonburi; End – Samut Songkhram; Distance – 50 miles/80km
+
+One of the best train rides in Thailand is this short, workaday commuter line. It begins near Bangkok and famously terminates smack dab in the middle of a wet market. 
+
+Start at Thonburi’s Wongwian Yai train station, just across the Chao Phraya River from Bangkok, where hourly trains go to Samut Sakhon (known by locals as Mahachai). From the window, you can peek into homes, temples and shops built just an arm’s length from the passing trains. Further on, palm trees, patchwork rice fields and marshes filled with giant elephant ear perennials and canna lilies line the route, punctuated by whistle-stop stations.
+
+The farmland evaporates as you enter Samut Sakhon. After disembarking and walking through one of the most hectic fresh markets in the country, you’ll reach a harbor clogged with water hyacinths and wooden fishing boats. 
+
+Take the ferry across to Baan Laem, where you'll board yet another train, this time for  Samut Songkhram. You’ll emerge directly into a hubbub of hectic market stalls. Between train arrivals and departures, these stalls are set up directly on the tracks and must be hurriedly cleared away when the train arrives. It’s a fantastic scene.
+
+Crowd of people walking by rail track of old railroad bridge on river Kwai. Kanchanaburi, Thailand
+Walking across the Death Railway Bridge near Kanchanaburi is a moving reminder of the horrors of war © Pavlo Vakhrushev / Getty Images
+2. Death Railway
+Start – Thonburi; End – Nam Tok; Distance – 258 miles/415km
+
+Built during the WWII Japanese occupation of Thailand, the so-called Death Railway is Thailand’s most famous – and historic – train line. Construction began in October 1942, by Allied prisoners of war (POWs) and conscripted workers armed only with basic tools and dynamite. Well over 12,000 POWs and as many as 90,000 recruited and forced laborers died due to disease, poor hygiene, lack of medical equipment and brutal treatment by camp guards. The deadliest section of railway construction was an immense rock cutting dubbed “Hellfire Pass” because of the eerie glow of their torches, visible when working at night.
+
+Given the rugged territory it passes through, this is undoubtedly the most scenic train trip in Thailand. A total of 688 bridges were built along the route; the bridge that spans the “River Kwai” near Kanchanaburi city (now referred to as the Death Railway Bridge) was, at the time, the only steel bridge built in Thailand.
+
+The trains that run the Death Railway are 3rd-class, meaning they have no air-con and mostly wooden benches (sit on the left-hand side for the best views). It’s a tourist line today, so there are stops for short visits to historical sights and a cave.
+
+Old train crossing Tha Chomphu Bridge in Lamphun Province. Old white bridge. Northern
+Wake up to stunning countryside views on the sleeper train from Bangkok to Chiang Mai © Tanes Ngamsom / Getty Images
+3. Sleeper Train to Chiang Mai
+Start – Bangkok; End – Chiang Mai; Distance – 467 miles/751km
+
+Thailand’s first long-distance train route, which links Bangkok and the northern city of Chiang Mai, is the classic Thai train journey. 
+
+The route is a great chance to try one of Thailand’s sleeper trains. They depart Bangkok starting in the afternoon, which means the majority of the journey is at night. In the morning, you’ll wake up to beautiful glimpses of the northern Thai countryside. In particular, keep your eyes peeled as the train cuts through tunnels and the rugged forest of Doi Khun Tan National Park, just south of Chiang Mai (another fascinating sight is watching railway staff unfold and make the sleeper beds).
+
+If you book a more expensive ticket, you’re likely to travel on one of the SRT’s shiny new trains. Likewise, purchase your tickets as far in advance as you can; this particular route is popular with tourists, especially backpackers.
+
+Sunrise view over Hua Hin Beach in Thailand
+Go to sleep on the train in Bangkok and wake up to the sunrise at Hua Hin on the Gulf of Thailand ©TONIMD / Getty Images
+4. Beach Train
+Start – Bangkok; End – Hua Hin; Distance – 131 miles/212km
+
+This route skirts around the Gulf of Thailand, and although sea views are rare, in Phetchaburi and Prachuap Khiri Khan Provinces, there’s some beautiful scenery, including salt flats and seemingly never-ending coconut plantations. Your destination, Hua Hin, is Thailand’s original beach escape, with a history that dates back to the 19th century.
+
+The highlight of the route is Hua Hin’s train station. Arguably the most beautiful train terminus in Thailand, this red-and-white icon was built in 1926 with a Victorian gingerbread design boasting lots of carved wood pillars and trim. Because Hua Hin owes its prosperity to the train, the station is a major source of pride, and you'll find imitations of its design all over town.
+
+The inside second class sleeper cabin of Thai new express train with bedding
+Bed linen is also provided in the second-class cabin on the overnight sleeper train to Nong Khai © Phoderstock/ Shutterstock
+5. Night Train to Laos
+Start – Bangkok; End – Thanaleng; Distance – 402 miles/648km
+
+Departing from Bangkok in the afternoon, this lauded international route crosses the Mekong River into Laos and is a great opportunity to try out Thailand’s overnight sleeper trains. In the morning, with warm sunlight streaming into your bed, you’ll pass by the tiny villages and seemingly endless rice fields that make up Thailand’s rural northeast.
+
+After a stop in Nong Khai, you’ll cross the so-called Friendship Bridge to Laos. The 15-minute ride drops you at Thanaleng (aka Dongphasay) station, meaning you’ll need to take a taxi or tuk-tuk the remaining 10 miles to the capital, Vientiane.
+
+A high-speed train linking these two destinations is in the works, with its projected completion in 2028.
+
+Eastern & Oriental Express luxury train stopping at Bangkok Railway Station 
+Recall the golden era of train travel aboard the luxurious Eastern & Oriental Express © Jiradelta / Getty Images
+6. Eastern & Oriental Express
+Start – Bangkok; End – Singapore; Distance – 1100 miles/1800km
+
+Finding the SRT dining car menu a bit lacking? Then consider a trip on the ultra-luxury Eastern & Oriental Express, a privately-operated train that links Bangkok and Singapore. Outfitted to recall the golden era of train travel, passengers on the three-night, four-day journey reside in sumptuous private cabins, although they may also find themselves spending much of their time in the Observation, Dining and Bar Cars. 
+
+The journey is all-inclusive, and non-train activities include tours and excursions in Thailand and Malaysia. The E&O runs between Bangkok and Singapore twice a month.
+
+Tips for buying train tickets in Thailand
+You can buy train tickets online via the clunky SRT website, but if you’re in Bangkok, it’s much more efficient to head directly to Hualamphong Station and purchase tickets in person. 
+Avoid touts in and around the station, who will try to redirect you to travel agencies.", 
+description: "From commuter to long-haul, third-class seats to luxury cabins, wooden benches to sleepers, the following are some of the best train trips in Thailand.", 
+date: "Nov 11, 2022", 
+image: "https://i.imgur.com/eTKKOTN.jpg", 
+likes: 86, 
+read_time: "6 min read", 
+category_one: "TOURS", 
+category_two: "ACTIVITIES", 
+user_id: alex.id)
+
+top_ten_things_to_know_before_jordan = Blog.create!(title: "Top 10 things to know before you travel to Jordan", 
+body: "Asmall country that's big on hospitality, ancient history and culture – with numerous Unesco World Heritage sites – Jordan offers endless opportunities for adventure.
+
+From afar, it’s often unfairly lumped in with regional conflict and, as such, overlooked by timid travelers. But in reality, it’s a welcoming and peaceful destination not to be missed. Don’t hesitate to book your trip, pack your bags and check out these things all first-time visitors should know before they travel to Jordan.
+
+Make the most out of every adventure with help from our weekly newsletter delivered to your inbox.
+People explore the ancient ruins of Petra, Jordan
+Even before you leave Jordan, you'll be planning your next trip back © Justin Foulkes / Lonely Planet
+Jordan is a safe place to visit
+Despite being located in a region with a history of conflict, Jordan is the 'quiet house in the noisy neighborhood,' a friendly oasis that’s open and inviting to visitors. Hospitality reigns supreme, violent crime is extremely rare, and Gallup’s 2022 Law and Order Report ranks Jordan in the top 10 for countries where people feel safe walking alone at night. While you should take the usual precautions you would anywhere – purchase travel and health insurance, don’t carry large sums of cash, keep valuables locked in a safe – fear should not be a factor in planning a trip to Jordan.
+
+Hospitality is a deeply rooted tradition
+Don’t let the 'Jordanian frown' fool you. Although you may be met with furrowed brows and what appear to be unfriendly faces, you’ll quickly learn just beyond the tough exterior of a resting frown face typically lies a fun-loving attitude and a deeply rooted tradition of hospitality that can be traced back to Bedouin culture. It’s not uncommon to be invited for tea or even a meal by shopkeepers and strangers you meet. 'Ahlan wa sahlan' (welcome), locals will say. 'Where are you from? Welcome to Jordan.'
+
+Tourist and local Bedouin guide sit on a rock in Wadi Rum, Jordan, contemplating the landscape from the mount Jebel Burdah
+Follow the local lead when greeting people you meet in Jordan © Julien Garcia / Getty Images
+When greeting someone, follow their lead
+You’ll see people of the same gender greet each other with handshakes, hugs and even multiple air kisses beside each cheek. But if you put your hand out for a shake or lean in for a hug, you may be left hanging. Out of respect for their religion and spouse, some Muslims will not touch people of a different gender unless they are related by blood. Don’t take it personally; be prepared and open to learning the local traditions. When meeting someone, you can stand, say hello, smile and then let them take the lead. If they extend a hand or lean in for a hug, you can do the same. If they keep their hands at their sides or put their right hand over their heart rather than reaching out, that’s their way of acknowledging you.
+
+It’s not always hot and sunny in Jordan
+A common misconception about Jordan is that it’s always hot, dry and sunny. While that may be the case if you visit between May and September, Jordan does have a winter season. From November to February, the country receives a great deal of cold and cloudy days, rain and even snow, sleet and hail on occasion. Temperatures can hover in the single digits Celsius during the day and drop to freezing in the night (32ºF), so if you’re traveling from mid-October to mid-March, be sure to pack a waterproof jacket and warm layers and monitor the weather. Flash floods are extremely dangerous, and even Petra is known to close during inclement weather.
+
+Bartender pours a glass of local Jordan River Shiraz with a view of Amman from Cantaloupe’s upper terrace
+You can enjoy a glass of local wine in Jordan’s larger cities © Sunny Fitzgerald / Lonely Planet
+Alcohol is legal, but heavily taxed
+If you’re in search of sundowners, you can find alcohol at a number of restaurants, bars and, of course, liquor stores in the larger cities like Amman and Aqaba, as well as Christian towns such as Madaba and Fuheis (where you’ll find Carakale, Jordan’s first and only craft beer microbrewery). St George and Jordan River also produce their own wine in the country, but be prepared to pay a pretty penny for your libations – although legal, alcohol tends to carry hefty taxes.
+
+Bear in mind that Muslim-owned properties and Islamic holidays may affect how readily alcohol is available. For example, it’s illegal to sell alcohol anywhere in the country during Ramadan (with the exception of some high-end hotels), and most camps in Wadi Rum don’t serve alcohol at all (but you can often bring your own). Call ahead to inquire on availability and any restrictions, and if you do drink, be mindful of your hosts and consume in moderation.
+
+Dress respectfully
+Jordan is a Muslim-majority country, but Christians, Jews and people of various beliefs also coexist peacefully here. There is no law requiring women to wear hijab, but there is an expectation to dress respectfully – it’s best to avoid low-cut and shoulder-baring tops, short skirts, and shorts. If you plan to visit a place of worship, both men and women must cover knees and shoulders, and women are typically expected to cover their hair, chest and neck. 
+
+But covering up doesn’t mean dressing down: Jordanians are generally quite image-conscious and well-dressed. Some restaurants even enforce a sophisticated dress code, particularly in Amman. Keep that in mind when loading up your suitcase and feel free to flaunt your personal style (respectfully) if you’ll be spending time in the capital.
+
+
+Smoking shisha and cigarettes is common
+Alcohol may be in somewhat short supply, but there is argeeleh (shisha) aplenty. For better or worse, smoking shisha is a national pastime, and you’ll find argeeleh cafes across the country. Cigarette smoking is also widely accepted – in most restaurants, cafes, hotels, homes, shops, taxis and even some hair salons. Travelers who smoke will be in good company, but the smoking culture in Jordan can prove challenging for nonsmokers and those with health conditions. When booking rooms, tours, restaurants and transportation, ask whether non-smoking options are available.
+
+Bring a reusable filtration water bottle
+Tap water is not drinkable in Jordan, and environmental education and recycling facilities are scarce. Sadly, you will see plastics and other rubbish littering the otherwise lovely landscapes. Local businesses and organizations with an eco-aware approach and plastic-free policies like those of Feynan Ecolodge, the Jordan Trail and Eco Hikers are working to teach and inspire locals and visitors with their environmental initiatives. Travelers to Jordan can be part of the solution by supporting these eco-minded businesses and carrying their own reusable filtration water bottle (such as GRAYL) and reusable utensils.
+
+Two people in traditional Jordanian dress look out over the heavily developed hillsides of Amman
+Whether you’re in the capital or the desert, you’ll find places you want to explore © Image Courtesy of Jennifer Hayes / Getty Images
+Jordan is proof that big things come in small packages
+Jordan is smaller than Portugal or the US state of Maine, but within its borders you’ll find endless adventure possibilities, ancient history and culture, nature reserves, community-based immersive experiences (such as those provided by Baraka Destinations, Engaging Cultures and Experience Jordan) and five Unesco World Heritage Sites, including the architectural wonders of Petra and the expansive deserts and towering rocks of Wadi Rum.
+
+If you’re eligible for a visa on arrival to Jordan, purchase the Jordan Pass to gain entrance to some of the best sites, castles and museums including Petra, Wadi Rum, the Temple of Hercules in Amman, the Roman ruins at Jerash and Ajloun Castle. Keep in mind that although Jordan is small in size, the terrain is varied, roads may be rough and traffic can delay your plans. Traveling to sites may take more time than you anticipate, so plan accordingly and try not to schedule every moment of your itinerary. Immerse yourself in the experiences and allow time for the unexpected. 
+
+You’re going to fall in love with Jordan
+Maybe it will be the moment you fall asleep under a blanket of stars or stand in awe of enormous ancient stones. Or perhaps it will hit you when you reach the peak of a mountain and take in the view, far away from the rush of the city. It might be the laughter and stories you share with your new Bedouin friends. Or the taste of tea brewed with sage and sugar over a campfire. It could be in the fresh mansaf (the Jordanian national dish of lamb, rice and yogurt sauce) made with love by your hosts and eaten with your hands. Or it could be when you hear the muezzin’s call to prayer while watching birds dive and swoop against a sunset sky.
+
+There will be a moment – or more likely, many moments – when the magic of Jordan seeps into your soul. Jordan will welcome you, challenge you, and it may very well change you. And you’ll find yourself making plans for your next trip before you even finish your first.", 
+description: "With top tips on safety and local etiquette, this guide can help you plan your trip to Jordan, whether you're a first-time visitor or returning for more.", 
+date: "Nov 10, 2022", 
+image: "https://i.imgur.com/27RgDRw.jpg", 
+likes: 49, 
+read_time: "7 min read", 
+category_one: "DESTINATION PRACTICALITIES", 
+category_two: "TIPS AND ADVICE", 
 user_id: alex.id)
 
 puts "Done seeding blogs..."

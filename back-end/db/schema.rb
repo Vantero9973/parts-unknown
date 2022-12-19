@@ -109,6 +109,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_14_012650) do
 
   create_table "users", force: :cascade do |t|
     t.string "username"
+    t.string "first_name"
+    t.string "last_name"
     t.string "password"
     t.string "image"
     t.boolean "admin"

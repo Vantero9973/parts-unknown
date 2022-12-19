@@ -38,6 +38,10 @@ function App() {
       blog.description.toLowerCase().includes(search.toLowerCase())
   );
 
+  const searchForumsByCountry = countries.filter((country) =>
+    country.name.toLowerCase().includes(search.toLowerCase())
+  );
+
   return (
     <>
       <NavBar />
@@ -53,7 +57,12 @@ function App() {
           />
           <Route
             path="/forum"
-            element={<ForumCountry countries={countries} />}
+            element={
+              <ForumCountry
+                countries={searchForumsByCountry}
+                setSearch={setSearch}
+              />
+            }
           />
           <Route path="/forums/:id" element={<ForumPage />} />
           <Route path="/posts/:id" element={<PostPage />} />

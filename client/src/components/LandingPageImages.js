@@ -1,6 +1,6 @@
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
-export default function BlogImages() {
+export default function LandingPageImages() {
   return (
     <>
       <div
@@ -31,7 +31,7 @@ export default function BlogImages() {
               zIndex: "3",
             }}
           >
-            Thailand's top 6 train journeys
+            12 Things to Know Before Traveling to Hawaii
           </span>
           <span
             style={{
@@ -42,7 +42,7 @@ export default function BlogImages() {
               margin: "10px",
             }}
           >
-            <a href="/blogs/9" style={{ zIndex: "3" }}>
+            <a href="/blogs/1" style={{ zIndex: "3" }}>
               <ArrowForwardIcon
                 className="arrowIcon"
                 style={{
@@ -76,7 +76,7 @@ export default function BlogImages() {
               zIndex: "3",
             }}
           >
-            Top 10 things to know before you travel to Jordan
+            10 places to escape the cold and find winter sun in Europe
           </span>
           <span
             style={{
@@ -87,7 +87,7 @@ export default function BlogImages() {
               margin: "10px",
             }}
           >
-            <a href="/blogs/10" style={{ zIndex: "3" }}>
+            <a href="/blogs/2" style={{ zIndex: "3" }}>
               <ArrowForwardIcon
                 style={{
                   height: "60px",
@@ -120,7 +120,7 @@ export default function BlogImages() {
               zIndex: "3",
             }}
           >
-            7-day journey on the Trans Bhutan Trail
+            12 unforgettable hikes around the world
           </span>
           <span
             style={{
@@ -131,7 +131,7 @@ export default function BlogImages() {
               margin: "10px",
             }}
           >
-            <a href="/blogs/8" style={{ zIndex: "3" }}>
+            <a href="/blogs/3" style={{ zIndex: "3" }}>
               <ArrowForwardIcon
                 style={{
                   height: "60px",
@@ -153,13 +153,13 @@ export default function BlogImages() {
           }}
         >
           <a
-            href="/blogs/9"
+            href="/blogs/1"
             className="landingImage"
             style={{
               width: "33.33vw",
               height: "80vh",
               float: "left",
-              backgroundImage: "url(https://i.imgur.com/w72uWIZ.jpg)",
+              backgroundImage: "url(https://i.imgur.com/jSRAr67.jpg)",
               backgroundSize: "cover",
               backgroundRepeat: "no-repeat",
               backgroundPosition: "center",
@@ -176,13 +176,13 @@ export default function BlogImages() {
           }}
         >
           <a
-            href="/blogs/10"
+            href="/blogs/2"
             className="landingImage"
             style={{
               width: "33.33vw",
               height: "80vh",
               float: "left",
-              backgroundImage: "url(https://i.imgur.com/27RgDRw.jpg)",
+              backgroundImage: "url(https://i.imgur.com/7ypXu71.jpg)",
               backgroundSize: "cover",
               backgroundRepeat: "no-repeat",
               backgroundPosition: "center",
@@ -199,13 +199,13 @@ export default function BlogImages() {
           }}
         >
           <a
-            href="/blogs/8"
+            href="/blogs/3"
             className="landingImage"
             style={{
               width: "33.33vw",
               height: "80vh",
               float: "left",
-              backgroundImage: "url(https://i.imgur.com/eTKKOTN.jpg)",
+              backgroundImage: "url(https://i.imgur.com/V6BnBy6.jpg)",
               backgroundSize: "cover",
               backgroundRepeat: "no-repeat",
               backgroundPosition: "center",
