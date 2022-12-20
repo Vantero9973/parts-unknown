@@ -1,18 +1,18 @@
-import { useState, useEffect } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+// import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function ForumSelector({ countries }) {
-  const [forums, setForums] = useState([]);
-  const { id } = useParams();
+  // const [forums, setForums] = useState([]);
+  // const { id } = useParams();
   const navigate = useNavigate();
 
-  useEffect(() => {
-    fetch(`http://localhost:3000/forums/${id}`)
-      .then((res) => res.json())
-      .then((data) => {
-        setForums(data);
-      });
-  }, [id]);
+  // useEffect(() => {
+  //   fetch(`http://localhost:3000/forums/${id}`)
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       setForums(data);
+  //     });
+  // }, [id]);
 
   // const flags = (
   //   <div>

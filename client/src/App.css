@@ -60,6 +60,7 @@ body {
   
   .pagination button.active {
     font-weight: 900;
-    background: #1C1C1E;
+    background: #2C2C2E;
     color: #dadada;
+    /* border: 1px solid #dadada; */
   }

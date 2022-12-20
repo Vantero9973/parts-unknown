@@ -10,7 +10,6 @@ function Search({ setSearch }) {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        marginTop: "10vh",
       }}
     >
       <input

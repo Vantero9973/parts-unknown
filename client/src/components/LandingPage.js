@@ -1,21 +1,8 @@
-import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
 import QuizApp from "./QuizApp";
 import LandingPageImages from "./LandingPageImages";
 import AutosuggestPage from "./AutosuggestPage";
 
 export default function LandingPage() {
-  const [blogs, setBlogs] = useState([]);
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    fetch(`http://localhost:3000/blogs`)
-      .then((res) => res.json())
-      .then((data) => {
-        setBlogs(data);
-      });
-  }, []);
-
   return (
     <div>
       <div>

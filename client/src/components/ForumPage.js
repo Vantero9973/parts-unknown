@@ -1,36 +1,33 @@
-import { useState, useEffect } from "react";
+import { useQuery } from "@tanstack/react-query";
+import Axios from "axios";
 import { useParams, useNavigate } from "react-router-dom";
 
 export default function ForumPage() {
-  const [forums, setForums] = useState([]);
-  const [posts, setPosts] = useState([]);
-  const [postsLink, setPostsLink] = useState([]);
   const { id } = useParams();
   const navigate = useNavigate();
 
-  useEffect(() => {
-    fetch(`http://localhost:3000/forums/${id}`)
-      .then((res) => res.json())
-      .then((data) => {
-        setForums(data);
-      });
-  }, [id]);
+  const { data: forums, isLoading: forumsLoading } = useQuery(["forum"], () => {
+    return Axios.get(`http://localhost:3000/forums/${id}`).then(
+      (res) => res.data
+    );
+  });
 
-  useEffect(() => {
-    fetch("http://localhost:3000/posts")
-      .then((res) => res.json())
-      .then((data) => {
-        setPostsLink(data);
-      });
-  }, []);
+  const { data: posts, isLoading: postsLoading } = useQuery(["post"], () => {
+    return Axios.get(`http://localhost:3000/posts/${id}`).then(
+      (res) => res.data
+    );
+  });
 
-  useEffect(() => {
-    fetch(`http://localhost:3000/posts/${id}`)
-      .then((res) => res.json())
-      .then((data) => {
-        setPosts(data);
-      });
-  }, [id]);
+  const { data: postsLink, isLoading: postsLinkLoading } = useQuery(
+    ["postLink"],
+    () => {
+      return Axios.get("http://localhost:3000/posts").then((res) => res.data);
+    }
+  );
+
+  if ((forumsLoading, postsLoading, postsLinkLoading)) {
+    return <h1>Loading...</h1>;
+  }
 
   return (
     <>

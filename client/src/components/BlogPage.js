@@ -4,13 +4,34 @@ import Search from "./Search";
 import BlogPosts from "./BlogPosts";
 import Pagination from "./Pagination.js";
 
-export default function BlogPage({ blogs, setSearch }) {
+export default function BlogPage({ blogs, setBlogs, setSearch }) {
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage, setPostsPerPage] = useState(5);
 
   const lastPostIndex = currentPage * postsPerPage;
   const firstPostIndex = lastPostIndex - postsPerPage;
   const currentPosts = blogs.slice(firstPostIndex, lastPostIndex);
+
+  function handleSortByLikes() {
+    const sortedData = [...blogs].sort((a, b) => {
+      return b.likes > a.likes ? 1 : -1;
+    });
+    setBlogs(sortedData);
+  }
+
+  function handleSort() {
+    const sortedData = [...blogs].sort((a, b) => {
+      return a.title > b.title ? 1 : -1;
+    });
+    setBlogs(sortedData);
+  }
+
+  function handleSortReverse() {
+    const sortedData = [...blogs].sort((a, b) => {
+      return b.title > a.title ? 1 : -1;
+    });
+    setBlogs(sortedData);
+  }
 
   return (
     <>
@@ -40,8 +61,56 @@ export default function BlogPage({ blogs, setSearch }) {
         </h5>
       </div>
       <BlogImages />
-      <div style={{ minHeight: "100vh" }}>
-        <Search setSearch={setSearch} />
+      <div
+        style={{
+          minHeight: "100vh",
+          paddingBottom: "5vh",
+        }}
+      >
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "center",
+            alignItems: "center",
+            gap: "2rem",
+            marginTop: "10vh",
+          }}
+        >
+          <Search setSearch={setSearch} />
+          <div
+            style={{
+              display: "flex",
+              alignItems: "flex-end",
+              justifyContent: "center",
+            }}
+          >
+            <div className="dropdown dropdown-hover">
+              <label
+                tabIndex={0}
+                className="btn m-1"
+                style={{ background: "#2C2C2E", display: "flex", gap: "1vh" }}
+              >
+                Sort By <div>▼</div>
+              </label>
+              <ul
+                tabIndex={0}
+                className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52"
+                style={{ background: "#2C2C2E" }}
+              >
+                <li onClick={handleSortByLikes}>
+                  <a>Most Popular</a>
+                </li>
+                <li onClick={handleSort}>
+                  <a>A-Z</a>
+                </li>
+                <li onClick={handleSortReverse}>
+                  <a>Z-A</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
         <BlogPosts blogs={currentPosts} />
         <Pagination
           totalPosts={blogs.length}

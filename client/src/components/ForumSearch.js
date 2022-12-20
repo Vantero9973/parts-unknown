@@ -19,7 +19,6 @@ export default function ForumSearch({ setSearch }) {
           border: "1px solid #dadada",
           borderRadius: "20px",
           padding: "20px",
-          marginBottom: "5vh",
         }}
         className="prompt"
         placeholder="Search Countries"

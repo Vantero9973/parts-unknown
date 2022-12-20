@@ -1,36 +1,36 @@
-import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { useQuery } from "@tanstack/react-query";
+import Axios from "axios";
 import default_avatar from "../avatar_default.png";
 
 export default function FullBlogPost() {
-  const [blogs, setBlogs] = useState();
-  const [users, setUsers] = useState();
-
   const { id } = useParams();
 
-  useEffect(() => {
-    fetch(`http://localhost:3000/blogs/${id}`)
-      .then((res) => res.json())
-      .then((data) => {
-        setBlogs(data);
-      });
-  }, [id]);
+  const { data: blogs, isLoading: blogsLoading } = useQuery(["blog"], () => {
+    return Axios.get(`http://localhost:3000/blogs/${id}`).then(
+      (res) => res.data
+    );
+  });
 
-  useEffect(() => {
-    fetch(`http://localhost:3000/users/`)
-      .then((res) => res.json())
-      .then((data) => {
-        setUsers(data);
-      });
-  }, []);
+  const { data: users, isLoading: usersLoading } = useQuery(["user"], () => {
+    return Axios.get(`http://localhost:3000/users`).then((res) => res.data);
+  });
 
-  if (!blogs) return <h2>Loading...</h2>;
+  if (usersLoading) {
+    return <h1>Loading...</h1>;
+  }
+
+  if (blogsLoading) {
+    return <h1>Loading...</h1>;
+  }
 
   const userdude = (
     <div>
       {users.map((user) => {
         return (
-          <h1 style={{ fontSize: "20px", fontWeight: "bold" }}>
+          <h1
+            style={{ fontSize: "20px", fontWeight: "bold", minWidth: "10vw" }}
+          >
             {user.first_name} {user.last_name}
           </h1>
         );
@@ -56,7 +56,9 @@ export default function FullBlogPost() {
                 display: "flex",
                 alignItems: "center",
                 flexDirection: "row",
-                gap: "15vw",
+                gap: "20vw",
+                paddingLeft: "12vw",
+                paddingRight: "12vw",
               }}
             >
               <h1 style={{ fontSize: "36px", fontWeight: "bold" }}>
@@ -66,6 +68,7 @@ export default function FullBlogPost() {
                 style={{
                   display: "flex",
                   alignItems: "center",
+                  justifyContent: "space-between",
                   flexDirection: "row",
                   gap: "1vh",
                 }}
@@ -75,10 +78,21 @@ export default function FullBlogPost() {
                   alt=""
                   style={{ height: "50px", width: "50px" }}
                 />
-                <div style={{ display: "flex", flexDirection: "column" }}>
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                  }}
+                >
                   <h1>{userdude}</h1>
                   <hr class="solid"></hr>
-                  <h1 style={{ fontSize: "16px" }}>
+                  <h1
+                    style={{
+                      fontSize: "16px",
+                      lineHeight: "100%",
+                      marginTop: "5px",
+                    }}
+                  >
                     {blog.date} • {blog.read_time}
                   </h1>
                 </div>

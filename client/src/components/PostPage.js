@@ -1,21 +1,19 @@
-import { useState, useEffect } from "react";
+import { useQuery } from "@tanstack/react-query";
+import Axios from "axios";
 import { useParams } from "react-router-dom";
 
 export default function PostPage() {
-  const [posts, setPosts] = useState();
   const { id } = useParams();
 
-  useEffect(() => {
-    fetch(`http://localhost:3000/posts/${id}`)
-      .then((res) => res.json())
-      .then((data) => {
-        setPosts(data);
-      });
-  }, [id]);
+  const { data: posts, isLoading } = useQuery(["post"], () => {
+    return Axios.get(`http://localhost:3000/posts/${id}`).then(
+      (res) => res.data
+    );
+  });
 
-  console.log(posts);
-
-  if (!posts) return <h1>Loading...</h1>;
+  if (isLoading) {
+    return <h1>Loading...</h1>;
+  }
 
   return (
     <div>

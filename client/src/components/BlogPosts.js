@@ -1,26 +1,55 @@
-import React, { useState, useEffect } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
+import { useQuery } from "@tanstack/react-query";
+import Axios from "axios";
 import Box from "@mui/material/Box";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
+import ThumbUpOffAltIcon from "@mui/icons-material/ThumbUpOffAlt";
+import ThumbUpAltIcon from "@mui/icons-material/ThumbUpAlt";
 import AOS from "aos";
 import "aos/dist/aos.css";
 AOS.init();
 
 export default function BlogPosts({ blogs }) {
-  const [blogPosts, setBlogPosts] = useState();
-
-  const { id } = useParams();
+  const [button, setButton] = useState(<ThumbUpOffAltIcon />);
   const navigate = useNavigate();
+  // const { id } = useParams();
 
-  useEffect(() => {
-    fetch(`http://localhost:3000/blogs/${id}`)
-      .then((res) => res.json())
-      .then((data) => {
-        setBlogPosts(data);
-      });
-  }, [id]);
+  function handleClick() {
+    setButton(<ThumbUpAltIcon />);
+  }
+
+  // const { data: blogLikes, isLoading } = useQuery(["blog"], () => {
+  //   return Axios.get(`http://localhost:3000/blogs/${id}`).then(
+  //     (res) => res.data
+  //   );
+  // });
+
+  // if (isLoading) {
+  //   return <h1>Loading...</h1>;
+  // }
+
+  // const likeButton = (
+  //   <div>
+  //     {blogLikes.map((blog) => {
+  //       return (
+  //         <div
+  //           style={{
+  //             display: "flex",
+  //             alignItems: "center",
+  //             gap: "5px",
+  //           }}
+  //           onClick={handleClick}
+  //         >
+  //           {button}
+  //           {blog.likes}
+  //         </div>
+  //       );
+  //     })}
+  //   </div>
+  // );
 
   return (
     <div
@@ -97,6 +126,27 @@ export default function BlogPosts({ blogs }) {
                     style={{ color: "#dadada", margin: "10px" }}
                   >
                     {blog.description}
+                  </Typography>
+                  <Typography
+                    variant="subtitle1"
+                    color="text.secondary"
+                    component="div"
+                    style={{
+                      color: "#dadada",
+                      margin: "10px",
+                    }}
+                  >
+                    <div
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        gap: "5px",
+                      }}
+                      onClick={handleClick}
+                    >
+                      {button}
+                      {blog.likes}
+                    </div>
                   </Typography>
                 </CardContent>
               </Box>

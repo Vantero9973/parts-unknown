@@ -1,6 +1,8 @@
 import "./App.css";
 import { useState, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
+// import { useQuery } from "@tanstack/react-query";
+// import Axios from "axios";
 import NavBar from "./components/NavBar.js";
 import LandingPage from "./components/LandingPage";
 import DestinationsPage from "./components/DestinationsPage";
@@ -9,12 +11,14 @@ import ForumPage from "./components/ForumPage";
 import PostPage from "./components/PostPage";
 import ForumCountry from "./components/ForumCountry";
 import FullBlogPost from "./components/FullBlogPost";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 function App() {
   const [blogs, setBlogs] = useState([]);
   const [countries, setCountries] = useState([]);
   const [search, setSearch] = useState("");
-  // let { id } = useParams();
+
+  const client = new QueryClient();
 
   useEffect(() => {
     fetch("http://localhost:3000/blogs")
@@ -23,6 +27,23 @@ function App() {
         setBlogs(data);
       });
   }, []);
+
+  // const { data: blogs, isLoading: blogsLoading } = useQuery(["blogs"], () => {
+  //   return Axios.get("http://localhost:3000/blogs").then((res) => res.data);
+  // });
+
+  // const { data: countries, isLoading: countriesLoading } = useQuery(
+  //   ["countries"],
+  //   () => {
+  //     return Axios.get("http://localhost:3000/countries").then(
+  //       (res) => res.data
+  //     );
+  //   }
+  // );
+
+  // if ((blogsLoading, countriesLoading)) {
+  //   return <h1>Loading...</h1>;
+  // }
 
   useEffect(() => {
     fetch("http://localhost:3000/countries")
@@ -43,7 +64,7 @@ function App() {
   );
 
   return (
-    <>
+    <QueryClientProvider client={client}>
       <NavBar />
       <div style={{ minHeight: "92vh", background: "#1C1C1E" }}>
         <Routes>
@@ -52,7 +73,11 @@ function App() {
           <Route
             path="/stories"
             element={
-              <BlogPage blogs={searchStoriesByName} setSearch={setSearch} />
+              <BlogPage
+                blogs={searchStoriesByName}
+                setBlogs={setBlogs}
+                setSearch={setSearch}
+              />
             }
           />
           <Route
@@ -60,6 +85,7 @@ function App() {
             element={
               <ForumCountry
                 countries={searchForumsByCountry}
+                setCountries={setCountries}
                 setSearch={setSearch}
               />
             }
@@ -69,7 +95,7 @@ function App() {
           <Route path="/blogs/:id" element={<FullBlogPost />} />
         </Routes>
       </div>
-    </>
+    </QueryClientProvider>
   );
 }
 

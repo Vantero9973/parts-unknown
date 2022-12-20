@@ -1,17 +1,16 @@
-import { useState, useEffect } from "react";
+import { useQuery } from "@tanstack/react-query";
+import Axios from "axios";
 import Map from "./Map";
 import Button from "@mui/material/Button";
 
 export default function DestinationsPage() {
-  const [countries, setCountries] = useState([]);
+  const { data: countries, isLoading } = useQuery(["country"], () => {
+    return Axios.get("http://localhost:3000/countries").then((res) => res.data);
+  });
 
-  useEffect(() => {
-    fetch("http://localhost:3000/countries")
-      .then((res) => res.json())
-      .then((data) => {
-        setCountries(data);
-      });
-  }, []);
+  if (isLoading) {
+    return <h1>Loading...</h1>;
+  }
 
   return (
     <div

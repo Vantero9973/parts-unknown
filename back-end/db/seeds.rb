@@ -40,7 +40,7 @@ brunei = Country.create!(name: "Brunei", continent_id: asia.id)
 bulgaria = Country.create!(name: "Bulgaria", continent_id: europe.id)
 burkina_faso = Country.create!(name: "Burkina Faso", continent_id: africa.id)
 burundi = Country.create!(name: "Burundi", continent_id: africa.id)
-cote_d_ivoire = Country.create!(name: " Côte d'Ivoire", continent_id: africa.id)
+cote_d_ivoire = Country.create!(name: "Côte d'Ivoire", continent_id: africa.id)
 cabo_verde = Country.create!(name: "Cabo Verde", continent_id: africa.id)
 cambodia = Country.create!(name: "Cambodia", continent_id: asia.id)
 cameroon = Country.create!(name: "Cameroon", continent_id: africa.id)
@@ -546,7 +546,7 @@ Stings from box jellyfish and Portuguese man-of-war (aka bluebottles) occur in H
 Box jellyfish are often seen seven to 10 days after a full moon, when they float into Hawaii’s shallow near-shore waters, such as those at Waikiki. When this happens, some public beaches may be closed for safety. The Waikiki Aquarium has a calendar that predicts the presence of box jellyfish.", 
 description: "With top tips on planning, etiquette and health and safety, these are the key things to know before any vacation in Hawaii.", 
 date: "Dec 12, 2022", 
-image: "https://i.imgur.com/jSRAr67.jpg", 
+image: "https://i.imgur.com/Fjuhz0F.jpg", 
 likes: 69, 
 read_time: "7 min read", 
 category_one: "DESTINATION PRACTICALITIES", 
@@ -617,7 +617,7 @@ Take to the waves, dunes and hidden coves
 Want sand dunes and hidden coves, volcanic national parks and forested mountains? How about colorful villages, tempting restaurants and watersports galore? It’s all here, all year. Tenerife and Gran Canaria are generally the warmest of the islands in winter with highs around 71°F (22°C). Lanzarote and Fuerteventura can be a little windy – which isn’t necessarily a bad thing if you’re heading there to surf. Lesser-known La Gomera, La Palma and El Hierro will feel even more off-the-radar than usual.", 
 description: "Here are the best and sunniest spots for a European winter vacation. Feel your toes thawing out already?", 
 date: "Dec 14, 2022", 
-image: "https://i.imgur.com/7ypXu71.jpg", 
+image: "https://i.imgur.com/UoECR3q.jpg", 
 likes: 34, 
 read_time: "7 min read", 
 category_one: "DESTINATION PRACTICALITIES", 
@@ -708,7 +708,7 @@ Start/end at either Big Cypress National Preserve or Fort Pickens, Gulf Islands 
 Far from fairy-tale castles or friendly mice, explore the alternative Sunshine State: that is, its estimable wild side. The Florida National Scenic Trail (about three-quarters complete) begins in the Panhandle, on the crunchy-white, turquoise-lapped beaches of the Gulf Islands National Seashore near Pensacola. From here, it wiggles east and south, via salt marshes, crystal-clear springs, lakes, prairies, old-growth forests and historic urban areas. It finishes in Big Cypress National Preserve, bordering the Everglades, amid a lush swampland of bright bromeliads and giant ferns. This semi-tropical state is incredibly bio-diverse, and most of the trail is also a wildlife corridor, protecting both common and rare species. Possible sightings include black bears, deer, otters, alligators, gopher tortoises and sea turtles. A plethora of birds, too: the crested caracara and red-cockaded woodpecker are particularly sought-after species.", 
 description: "Hiking creates a connection to a place and its landscapes. Here are 12 incredible walks from around the world to inspire you.", 
 date: "Dec 6, 2022", 
-image: "https://i.imgur.com/V6BnBy6.jpg", 
+image: "https://i.imgur.com/rOaxFXS.jpg", 
 likes: 78, 
 read_time: "10 min read", 
 category_one: "HIKING", 
@@ -758,7 +758,7 @@ Single and multiple tickets can be bought on the smartphone app, online or at ti
 If you’re planning on visiting more than a couple of the city’s museums, it may make sense to buy a Zürich Card, provided by Zürich Tourism and available to buy from ticket machines. Valid for 24 or 72 hours, it includes entrance to many museums and second-class travel across the public transport network, plus various discounts and offers. Don’t forget to validate your Zürich Card at a ticket machine before you use it for the first time.", 
 description: "With electric trams, free bicycles and scenic ferries, Zürich is a pleasure to get around. Here are our top tips for navigating the Swiss city.", 
 date: "Dec 7, 2022", 
-image: "https://www.lonelyplanet.com/_next/image?url=https%3A%2F%2Flp-cms-production.imgix.net%2F2022-12%2FSwitzerland-iStock-627760498-RFC.jpeg%3Fauto%3Dformat%26fm%3Davif&w=1920&q=75", 
+image: "https://i.imgur.com/ia9ddLw.jpg", 
 likes: 41, 
 read_time: "5 min read", 
 category_one: "DESTINATION PRACTICALITIES", 
@@ -828,7 +828,7 @@ Montana has an almost unlimited choice of Nordic trails across the state. West Y
 For something special, visit Glacier National Park in winter. Most park roads and accommodations close in winter, but you can ski or snowshoe from Lake McDonald Lodge near Apgar on the western side of the park, or along the Going-to-the-Sun Road from St Mary on the eastern side. Remote wilderness trails lead into the park from Polebridge ranger station and Marias Pass.", 
 description: "Winter in Montana is a harsh but magical season. Here are the best things to do in Big Sky Country everything seems frozen.", 
 date: "Dec 6, 2022", 
-image: "https://www.lonelyplanet.com/_next/image?url=https%3A%2F%2Flp-cms-production.imgix.net%2F2021-12%2FGettyImages-936374092.jpg%3Fauto%3Dformat%26fm%3Davif&w=1920&q=75", 
+image: "https://i.imgur.com/IiMuA08.jpg", 
 likes: 23, 
 read_time: "6 min read", 
 category_one: "ACTIVITIES", 
@@ -913,7 +913,7 @@ As you’d expect given the name, the highlights of the route are the seven epon
 Planning tip: Snow can block off parts of the road in winter, so the Ruta de los Siete Lagos is best driven in the spring, summer or early fall.", 
 description: "With its vast open spaces, dramatic scenery and endless highways, Argentina is an ideal place to hit the road. Here are our top routes for epic drives.", 
 date: "Dec 4, 2022", 
-image: "https://www.lonelyplanet.com/_next/image?url=https%3A%2F%2Flp-cms-production.imgix.net%2F2022-11%2FArgentina-Mendoza-HolgerMette-GettyImages-608621278-RFE.jpg%3Fauto%3Dformat%26fm%3Davif&w=1920&q=75", 
+image: "https://i.imgur.com/wcrhbZ8.jpg", 
 likes: 65, 
 read_time: "7 min read", 
 category_one: "ROAD TRIPS", 
@@ -1030,7 +1030,7 @@ Regularly landing at the top in quality-of-living surveys, urban dynamo Zürich 
 Planning Tip: In mid-August, Zürich throws one of Switzerland’s wildest parties: the techno-pumping Street Parade.", 
 description: "Be enchanted by fairy-tale towns and reach dazzling Alpline heights, here are the best places to visit in Switzerland.", 
 date: "Dec 1, 2022", 
-image: "https://www.lonelyplanet.com/_next/image?url=https%3A%2F%2Flp-cms-production.imgix.net%2F2022-08%2Fjungfrau-switzerland-GettyImages-140328606.jpg%3Fauto%3Dformat%26fm%3Davif&w=1920&q=75", 
+image: "https://i.imgur.com/CsV0BJS.jpg", 
 likes: 55, 
 read_time: "8 min read", 
 category_one: "TIPS AND ADVICE", 
@@ -1119,7 +1119,7 @@ Day 7: Himalayan Departure
 Over breakfast, you’ll prepare to say goodbye to an amazing and extraordinary place. On the way to the airport, reflect on the warm-hearted people you’ve met and the lasting memories you’ve made – ones you’ll keep for a lifetime. The Bhutanese will look forward to seeing you again in this land of endless enchantments. Tashi delek!", 
 description: "Destined to become one of the world’s most iconic cross-country walks, the Trans Bhutan Trail offers visitors a unique perspective of the country.", 
 date: "Nov 15, 2022", 
-image: "https://i.imgur.com/eTKKOTN.jpg", 
+image: "https://i.imgur.com/bKMkhXB.jpg", 
 likes: 75, 
 read_time: "13 min read", 
 category_one: "BEST IN TRAVEL 2023", 
@@ -1205,7 +1205,7 @@ You can buy train tickets online via the clunky SRT website, but if you’re in 
 Avoid touts in and around the station, who will try to redirect you to travel agencies.", 
 description: "From commuter to long-haul, third-class seats to luxury cabins, wooden benches to sleepers, the following are some of the best train trips in Thailand.", 
 date: "Nov 11, 2022", 
-image: "https://i.imgur.com/eTKKOTN.jpg", 
+image: "https://i.imgur.com/3Ce0cgz.jpg", 
 likes: 86, 
 read_time: "6 min read", 
 category_one: "TOURS", 
@@ -1266,7 +1266,7 @@ Maybe it will be the moment you fall asleep under a blanket of stars or stand in
 There will be a moment – or more likely, many moments – when the magic of Jordan seeps into your soul. Jordan will welcome you, challenge you, and it may very well change you. And you’ll find yourself making plans for your next trip before you even finish your first.", 
 description: "With top tips on safety and local etiquette, this guide can help you plan your trip to Jordan, whether you're a first-time visitor or returning for more.", 
 date: "Nov 10, 2022", 
-image: "https://i.imgur.com/27RgDRw.jpg", 
+image: "https://i.imgur.com/ZwNJNEC.jpg", 
 likes: 49, 
 read_time: "7 min read", 
 category_one: "DESTINATION PRACTICALITIES", 
