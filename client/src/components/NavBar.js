@@ -1,6 +1,17 @@
 import PublicIcon from "@mui/icons-material/Public";
+import Popup from "reactjs-popup";
+import Login from "./Login";
+import SignUp from "./SignUp";
 
-export default function NavBar() {
+export default function NavBar({ user, setUser }) {
+  function handleLogoutClick() {
+    fetch("http://localhost:3000/logout", { method: "DELETE" }).then((r) => {
+      if (r.ok) {
+        setUser(null);
+      }
+    });
+  }
+
   return (
     <div
       style={{
@@ -79,17 +90,26 @@ export default function NavBar() {
               tabIndex={0}
               className="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52"
             >
-              <li>
+              {/* <li>
                 <a className="justify-between">
                   Profile
                   <span className="badge">New</span>
                 </a>
+              </li> */}
+              <li>
+                <Popup trigger={<div>Login</div>} modal nested>
+                  <a>
+                    <Login user={user} setUser={setUser} />
+                  </a>
+                </Popup>
               </li>
               <li>
-                <a>Settings</a>
+                <Popup trigger={<div>Sign Up</div>} modal nested>
+                  <SignUp user={user} setUser={setUser} />
+                </Popup>
               </li>
               <li>
-                <a>Logout</a>
+                <a onClick={handleLogoutClick}>Logout</a>
               </li>
             </ul>
           </div>

@@ -34,7 +34,6 @@ export default function ForumCountry({ countries, setCountries, setSearch }) {
           justifyContent: "center",
           alignItems: "center",
           gap: "2rem",
-          marginTop: "10vh",
         }}
       >
         <ForumSearch setSearch={setSearch} />

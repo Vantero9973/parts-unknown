@@ -16,6 +16,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 function App() {
   const [blogs, setBlogs] = useState([]);
   const [countries, setCountries] = useState([]);
+  const [user, setUser] = useState(null);
   const [search, setSearch] = useState("");
 
   const client = new QueryClient();
@@ -26,6 +27,22 @@ function App() {
       .then((data) => {
         setBlogs(data);
       });
+  }, []);
+
+  useEffect(() => {
+    fetch("http://localhost:3000/countries")
+      .then((res) => res.json())
+      .then((data) => {
+        setCountries(data);
+      });
+  }, []);
+
+  useEffect(() => {
+    fetch("http://localhost:3000/me").then((r) => {
+      if (r.ok) {
+        r.json().then((user) => setUser(user));
+      }
+    });
   }, []);
 
   // const { data: blogs, isLoading: blogsLoading } = useQuery(["blogs"], () => {
@@ -45,14 +62,6 @@ function App() {
   //   return <h1>Loading...</h1>;
   // }
 
-  useEffect(() => {
-    fetch("http://localhost:3000/countries")
-      .then((res) => res.json())
-      .then((data) => {
-        setCountries(data);
-      });
-  }, []);
-
   const searchStoriesByName = blogs.filter(
     (blog) =>
       blog.title.toLowerCase().includes(search.toLowerCase()) ||
@@ -65,10 +74,10 @@ function App() {
 
   return (
     <QueryClientProvider client={client}>
-      <NavBar />
+      <NavBar user={user} setUser={setUser} />
       <div style={{ minHeight: "92vh", background: "#1C1C1E" }}>
         <Routes>
-          <Route path="/" element={<LandingPage />} />
+          <Route path="/" element={<LandingPage user={user} />} />
           <Route path="/destinations" element={<DestinationsPage />} />
           <Route
             path="/stories"

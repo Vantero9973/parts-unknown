@@ -27,6 +27,7 @@
     "react-themeable": "^1.1.0",
     "react-transition-group": "^4.4.5",
     "react-use": "^17.4.0",
+    "reactjs-popup": "^2.0.5",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

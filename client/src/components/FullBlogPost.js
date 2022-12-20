@@ -16,11 +16,7 @@ export default function FullBlogPost() {
     return Axios.get(`http://localhost:3000/users`).then((res) => res.data);
   });
 
-  if (usersLoading) {
-    return <h1>Loading...</h1>;
-  }
-
-  if (blogsLoading) {
+  if ((usersLoading, blogsLoading)) {
     return <h1>Loading...</h1>;
   }
 
