@@ -3,13 +3,16 @@ const theme = {
       position: "absolute",
       marginBottom: "10px",
     },
+
     input: {
       width: "40vw",
       height: "8vh",
+      border: "2px solid #3b3b3b",
       borderRadius: "50px",
       fontSize: "32px",
       padding: "25px",
     },
+    
     inputFocused: {
       outline: "none"
     },

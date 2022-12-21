@@ -210,6 +210,16 @@ zimbabwe = Country.create!(name: "Zimbabwe", continent_id: africa.id)
 
 puts "Done seeding countries..."
 
+puts "Seeding destinations..."
+
+amsterdam = Destination.create!(name: "Amsterdam", image: "https://upload.wikimedia.org/wikipedia/commons/b/be/KeizersgrachtReguliersgrachtAmsterdam.jpg", description: "blah", coordinates: "tbd", country_id: netherlands.id)
+
+avenue_of_the_boababs = Destination.create!(name: "Avenue of the Baobabs", image: "https://awesomeplacestovisit.com/wp-content/uploads/2020/08/Africa-Madagascar-Avenue-of-the-Baobabs-2-1024x768-1.jpg", description: "blah", coordinates: "tbd", country_id: madagascar.id)
+
+pyramids_of_giza = Destination.create!(name: "Pyramids of Giza", image: "https://cdn.mos.cms.futurecdn.net/YMa7Wx2FyjQFUjEeqa72Rm-1200-80.jpg", description: "blah", coordinates: "tbd", country_id: egypt.id)
+
+puts "Done seeding destinations..."
+
 puts "Seeding users..."
 
 alex = User.create!(username: "alex", first_name: "Alex", last_name: "Van Vleet", password: "123", image: "placeholder.png", admin: true)

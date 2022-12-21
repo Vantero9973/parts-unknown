@@ -7,7 +7,7 @@ export default function Carroussel(props) {
   });
 
   const [offsetRadius, setOffsetRadius] = useState(2);
-  const [showArrows, setShowArrows] = useState(false);
+  const [showArrows, setShowArrows] = useState(true);
   const [goToSlide, setGoToSlide] = useState(null);
   const [slides] = useState(table);
 
@@ -17,12 +17,12 @@ export default function Carroussel(props) {
   }, [props.offset, props.showArrows]);
 
   return (
-    <div style={{ margin: "-12vw" }}>
+    <div style={{ margin: "-18vw" }}>
       <Carousel
         slides={slides}
         goToSlide={goToSlide}
         offsetRadius={offsetRadius}
-        showNavigation={showArrows}
+        showArrows={showArrows}
       />
     </div>
   );
