@@ -17,6 +17,8 @@ function Result(props) {
           fontSize: "24px",
           gap: "0.5vw",
           height: "40vh",
+          background: "#2c2c2e",
+          borderRadius: "40px",
         }}
       >
         {/* <Confetti

@@ -45,6 +45,8 @@ function App() {
     });
   }, []);
 
+  console.log(user);
+
   // const { data: blogs, isLoading: blogsLoading } = useQuery(["blogs"], () => {
   //   return Axios.get("http://localhost:3000/blogs").then((res) => res.data);
   // });

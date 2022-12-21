@@ -122,7 +122,7 @@ class QuizApp extends Component {
 
   render() {
     return (
-      <div>
+      <div style={{ cursor: "pointer" }}>
         <div>
           <h2
             style={{

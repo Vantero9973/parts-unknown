@@ -1,8 +1,11 @@
 import React, { useState } from "react";
-import Popup from "reactjs-popup";
 import Button from "@mui/material/Button";
+import defaultProfilePic from "../avatar_default.png";
 
 export default function SignUp({ setUser }) {
+  const [first_name, setFirstName] = useState("");
+  const [last_name, setLastName] = useState("");
+  const [image, setImage] = useState();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [passwordConfirmation, setPasswordConfirmation] = useState("");
@@ -16,6 +19,9 @@ export default function SignUp({ setUser }) {
       },
       body: JSON.stringify({
         username,
+        first_name,
+        last_name,
+        image,
         password,
         password_confirmation: passwordConfirmation,
       }),
@@ -25,6 +31,14 @@ export default function SignUp({ setUser }) {
       }
     });
   }
+
+  //   t.string :username
+  //   t.string :first_name
+  //   t.string :last_name
+  //   t.string :password
+  //   t.string :password_digest
+  //   t.string :image
+  //   t.boolean :admin
 
   return (
     <div
@@ -56,6 +70,51 @@ export default function SignUp({ setUser }) {
           id="username"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
+        />
+        <label htmlFor="first_name" style={{ fontSize: "24px" }}>
+          First Name:
+        </label>
+        <input
+          style={{
+            width: "20vw",
+            height: "3vh",
+            fontSize: "20px",
+            padding: "1vh",
+          }}
+          type="text"
+          id="first_name"
+          value={first_name}
+          onChange={(e) => setFirstName(e.target.value)}
+        />
+        <label htmlFor="last_name" style={{ fontSize: "24px" }}>
+          Last Name:
+        </label>
+        <input
+          style={{
+            width: "20vw",
+            height: "3vh",
+            fontSize: "20px",
+            padding: "1vh",
+          }}
+          type="text"
+          id="last_name"
+          value={last_name}
+          onChange={(e) => setLastName(e.target.value)}
+        />
+        <label htmlFor="image" style={{ fontSize: "24px" }}>
+          Profile Picture:
+        </label>
+        <input
+          style={{
+            width: "20vw",
+            height: "3vh",
+            fontSize: "20px",
+            padding: "1vh",
+          }}
+          type="text"
+          id="image"
+          value={image}
+          onChange={(e) => setImage(e.target.value)}
         />
         <label htmlFor="password" style={{ fontSize: "24px" }}>
           Password:

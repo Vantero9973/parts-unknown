@@ -20,19 +20,19 @@ export default function FullBlogPost() {
     return <h1>Loading...</h1>;
   }
 
-  const userdude = (
-    <div>
-      {users.map((user) => {
-        return (
-          <h1
-            style={{ fontSize: "20px", fontWeight: "bold", minWidth: "10vw" }}
-          >
-            {user.first_name} {user.last_name}
-          </h1>
-        );
-      })}
-    </div>
-  );
+  // const userdude = (
+  //   <div>
+  //     {users.map((user) => {
+  //       return (
+  //         <h1
+  //           style={{ fontSize: "20px", fontWeight: "bold", minWidth: "10vw" }}
+  //         >
+  //           {user.first_name} {user.last_name}
+  //         </h1>
+  //       );
+  //     })}
+  //   </div>
+  // );
 
   return (
     <div>
@@ -80,7 +80,16 @@ export default function FullBlogPost() {
                     flexDirection: "column",
                   }}
                 >
-                  <h1>{userdude}</h1>
+                  {/* <h1>{userdude}</h1> */}
+                  <h1
+                    style={{
+                      fontSize: "20px",
+                      fontWeight: "bold",
+                      minWidth: "10vw",
+                    }}
+                  >
+                    Alex Van Vleet
+                  </h1>
                   <hr class="solid"></hr>
                   <h1
                     style={{
