@@ -1,7 +1,7 @@
 class DestinationsController < ApplicationController
 
     def index
-        destinations = Destination.all
+        destinations = Destination.all.sample(3)
         render json: destinations
     end
 

@@ -5,7 +5,7 @@ import ForumSearch from "./ForumSearch";
 
 export default function ForumCountry({ countries, setCountries, setSearch }) {
   const [currentPage, setCurrentPage] = useState(1);
-  const [postsPerPage, setPostsPerPage] = useState(20);
+  const [postsPerPage, setPostsPerPage] = useState(16);
 
   const lastPostIndex = currentPage * postsPerPage;
   const firstPostIndex = lastPostIndex - postsPerPage;

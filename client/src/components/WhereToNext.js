@@ -26,7 +26,7 @@ export default function WhereToNext() {
         paddingLeft: "8vw",
         paddingRight: "8vw",
         paddingTop: "5vw",
-        background: "#dadada",
+        background: "lightgray",
       }}
     >
       <div style={{ display: "flex", justifyContent: "space-between" }}>
@@ -109,7 +109,7 @@ export default function WhereToNext() {
                     marginLeft: "1vw",
                   }}
                 >
-                  {destination.name}
+                  {destination.name}, {destination.country_name}
                 </h1>
               </div>
             </div>

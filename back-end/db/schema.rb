@@ -31,6 +31,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_14_012650) do
     t.string "read_time"
     t.string "category_one"
     t.string "category_two"
+    t.string "username"
+    t.string "profile_pic"
     t.integer "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -54,6 +56,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_14_012650) do
   create_table "destinations", force: :cascade do |t|
     t.string "name"
     t.string "image"
+    t.string "country_name"
     t.string "description"
     t.string "coordinates"
     t.integer "country_id", null: false

@@ -5,6 +5,7 @@ class CreateDestinations < ActiveRecord::Migration[7.0]
       t.string :image
       t.string :description
       t.string :coordinates
+      t.string :country_name
       t.references :country, null: false, foreign_key: true
 
       t.timestamps

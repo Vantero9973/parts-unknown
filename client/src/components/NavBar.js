@@ -214,7 +214,11 @@ export default function NavBar({ user, setUser }) {
             <div className="dropdown dropdown-end">
               <label tabIndex={0} className="btn btn-ghost btn-circle">
                 <div>
-                  <img src={profPic} alt="" />
+                  <img
+                    src={user.image}
+                    alt=""
+                    style={{ borderRadius: "50% " }}
+                  />
                 </div>
               </label>
               <ul

@@ -3,7 +3,7 @@ import { GoogleMap, useJsApiLoader } from "@react-google-maps/api";
 
 const containerStyle = {
   width: "65vw",
-  height: "88vh",
+  height: "92vh",
 };
 
 const center = {

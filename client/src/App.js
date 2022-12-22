@@ -79,7 +79,7 @@ function App() {
       <NavBar user={user} setUser={setUser} />
       <div style={{ minHeight: "92vh", background: "#1C1C1E" }}>
         <Routes>
-          <Route path="/" element={<LandingPage user={user} />} />
+          <Route path="/" element={<LandingPage />} />
           <Route path="/destinations" element={<DestinationsPage />} />
           <Route
             path="/stories"
@@ -88,6 +88,7 @@ function App() {
                 blogs={searchStoriesByName}
                 setBlogs={setBlogs}
                 setSearch={setSearch}
+                user={user}
               />
             }
           />
@@ -103,7 +104,7 @@ function App() {
           />
           <Route path="/forums/:id" element={<ForumPage />} />
           <Route path="/posts/:id" element={<PostPage />} />
-          <Route path="/blogs/:id" element={<FullBlogPost />} />
+          <Route path="/blogs/:id" element={<FullBlogPost user={user} />} />
         </Routes>
       </div>
     </QueryClientProvider>

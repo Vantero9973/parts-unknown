@@ -5,7 +5,7 @@ import Carousel from "./Carousel";
 import { v4 as uuidv4 } from "uuid";
 import WhereToNext from "./WhereToNext";
 
-export default function LandingPage({ user }) {
+export default function LandingPage() {
   let slides = [
     {
       key: uuidv4(),

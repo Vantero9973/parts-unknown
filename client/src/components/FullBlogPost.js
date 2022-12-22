@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import Axios from "axios";
 import default_avatar from "../avatar_default.png";
+import { ComposableMap } from "react-simple-maps";
 
 export default function FullBlogPost() {
   const { id } = useParams();
@@ -12,11 +13,11 @@ export default function FullBlogPost() {
     );
   });
 
-  const { data: users, isLoading: usersLoading } = useQuery(["user"], () => {
-    return Axios.get(`http://localhost:3000/users`).then((res) => res.data);
-  });
+  // const { data: users, isLoading: usersLoading } = useQuery(["user"], () => {
+  //   return Axios.get(`http://localhost:3000/users`).then((res) => res.data);
+  // });
 
-  if ((usersLoading, blogsLoading)) {
+  if (blogsLoading) {
     return <h1>Loading...</h1>;
   }
 
@@ -37,6 +38,7 @@ export default function FullBlogPost() {
   return (
     <div>
       {blogs.map((blog) => {
+        console.log(blog);
         return (
           <div
             style={{
@@ -70,9 +72,9 @@ export default function FullBlogPost() {
                 }}
               >
                 <img
-                  src={default_avatar}
+                  src={blog.profile_pic}
                   alt=""
-                  style={{ height: "50px", width: "50px" }}
+                  style={{ height: "50px", width: "50px", borderRadius: "50%" }}
                 />
                 <div
                   style={{
@@ -88,7 +90,7 @@ export default function FullBlogPost() {
                       minWidth: "10vw",
                     }}
                   >
-                    Alex Van Vleet
+                    {blog.username}
                   </h1>
                   <hr class="solid"></hr>
                   <h1

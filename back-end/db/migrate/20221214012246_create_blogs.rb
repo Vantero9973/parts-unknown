@@ -10,6 +10,8 @@ class CreateBlogs < ActiveRecord::Migration[7.0]
       t.string :read_time
       t.string :category_one
       t.string :category_two
+      t.string :username
+      t.string :profile_pic
       t.references :user, null: false, foreign_key: true
 
       t.timestamps
