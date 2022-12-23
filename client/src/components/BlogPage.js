@@ -1,5 +1,5 @@
 import { useState } from "react";
-import BlogImages from "./BlogImages";
+import LandingPageImages from "./LandingPageImages";
 import Search from "./Search";
 import BlogPosts from "./BlogPosts";
 import Pagination from "./Pagination.js";
@@ -62,7 +62,7 @@ export default function BlogPage({ blogs, setBlogs, setSearch, user }) {
             Discover story-worthy travel moments
           </h5>
         </div>
-        <BlogImages />
+        <LandingPageImages />
         <div
           style={{
             minHeight: "100vh",
@@ -153,7 +153,7 @@ export default function BlogPage({ blogs, setBlogs, setSearch, user }) {
             Discover story-worthy travel moments
           </h5>
         </div>
-        <BlogImages />
+        <LandingPageImages />
         <div
           style={{
             minHeight: "100vh",

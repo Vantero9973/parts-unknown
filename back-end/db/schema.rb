@@ -47,6 +47,9 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_14_012650) do
 
   create_table "countries", force: :cascade do |t|
     t.string "name"
+    t.string "lat"
+    t.string "lng"
+    t.integer "zoom"
     t.integer "continent_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

@@ -1,6 +1,3 @@
-// import { useQuery } from "@tanstack/react-query";
-// import Axios from "axios";
-import { useState, useEffect } from "react";
 import PublicIcon from "@mui/icons-material/Public";
 import Popup from "reactjs-popup";
 import Login from "./Login";
@@ -15,28 +12,6 @@ export default function NavBar({ user, setUser }) {
       }
     });
   }
-
-  // const { data: users, isLoading } = useQuery(["user"], () => {
-  //   return Axios.get(`http://localhost:3000/users`).then((res) => res.data);
-  // });
-
-  // if (isLoading) {
-  //   return <h1>Loading...</h1>;
-  // }
-
-  // const profPic = (
-  //   <div>
-  //     {users.map((user) => {
-  //       return (
-  //         <img
-  //           src={user.image}
-  //           alt=""
-  //           style={{ border: "1px solid", borderRadius: "50%" }}
-  //         />
-  //       );
-  //     })}
-  //   </div>
-  // );
 
   if (!user) {
     return (
@@ -66,7 +41,7 @@ export default function NavBar({ user, setUser }) {
               <PublicIcon
                 style={{ height: "50px", width: "50px", padding: "5px" }}
               />
-              Unknown
+              Undefined
             </a>
           </div>
           <div style={{ display: "flex", alignItems: "center" }}>
@@ -170,7 +145,7 @@ export default function NavBar({ user, setUser }) {
               <PublicIcon
                 style={{ height: "50px", width: "50px", padding: "5px" }}
               />
-              Unknown
+              Undefined
             </a>
           </div>
           <div style={{ display: "flex", alignItems: "center" }}>

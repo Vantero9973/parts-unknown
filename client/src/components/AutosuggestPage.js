@@ -1,8 +1,9 @@
 import React from "react";
 import Autosuggest from "react-autosuggest";
 import theme from "./theme.jsx";
+import { useNavigate } from "react-router-dom";
 
-const countries = [
+const countriesList = [
   { name: "Afghanistan", code: "AF" },
   { name: "Albania", code: "AL" },
   { name: "Algeria", code: "DZ" },
@@ -211,7 +212,7 @@ const getSuggestions = (value) => {
 
   return inputLength === 0
     ? []
-    : countries.filter(
+    : countriesList.filter(
         (lang) => lang.name.toLowerCase().slice(0, inputLength) === inputValue
       );
 };

@@ -1,8 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import Axios from "axios";
-import default_avatar from "../avatar_default.png";
-import { ComposableMap } from "react-simple-maps";
 
 export default function FullBlogPost() {
   const { id } = useParams();

@@ -6,7 +6,7 @@ class DestinationsController < ApplicationController
     end
 
     def show
-        destination = Destination.find(params[:id])
+        destination = Destination.where(country_id: params[:id])
         if destination
             render json: destination
         else render json: { error: "Destination not found" }, status: :not_found

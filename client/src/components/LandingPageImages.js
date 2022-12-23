@@ -1,219 +1,112 @@
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import { useQuery } from "@tanstack/react-query";
+import Axios from "axios";
+import { useParams, useNavigate } from "react-router-dom";
 
 export default function LandingPageImages() {
+  const navigate = useNavigate();
+  const { id } = useParams();
+
+  const { data: landingImages, isLoading } = useQuery(["landingImage"], () => {
+    return Axios.get("http://localhost:3000/landingimages").then(
+      (res) => res.data
+    );
+  });
+
+  if (isLoading) {
+    return <h1>Loading...</h1>;
+  }
+
   return (
-    <>
-      <div
-        style={{
-          height: "80vh",
-          position: "absolute",
-        }}
-      >
-        <div
-          style={{
-            height: "80vh",
-            width: "33.33%",
-            display: "flex",
-            alignItems: "flex-end",
-            fontFamily: "'Roboto', sans-serif",
-            float: "left",
-          }}
-        >
-          <span
-            style={{
-              color: "white",
-              fontSize: "30px",
-              fontWeight: "600",
-              fontFamily: "'Roboto', sans-serif",
-              width: "28vw",
-              margin: "10px",
-              textShadow: "#000 1px 0 5px",
-              zIndex: "3",
-            }}
-          >
-            12 Things to Know Before Traveling to Hawaii
-          </span>
-          <span
-            style={{
-              display: "flex",
-              justifyContent: "right",
-              color: "white",
-              width: "5vw",
-              margin: "10px",
-            }}
-          >
-            <a href="/blogs/1" style={{ zIndex: "3" }}>
-              <ArrowForwardIcon
-                className="arrowIcon"
+    <div style={{ display: "flex" }}>
+      {landingImages.map((landingImage) => {
+        return (
+          <>
+            <div style={{ height: "80vh", overflow: "hidden" }}>
+              <div
                 style={{
-                  height: "60px",
-                  width: "60px",
-                  fontWeight: "bolder",
+                  display: "flex",
+                  height: "80vh",
+                  width: "33.33vw",
+                  position: "absolute",
                 }}
-              />
-            </a>
-          </span>
-        </div>
-        <div
-          style={{
-            height: "80vh",
-            width: "33.33%",
-            display: "flex",
-            alignItems: "flex-end",
-            fontFamily: "'Roboto', sans-serif",
-            float: "left",
-          }}
-        >
-          <span
-            style={{
-              color: "white",
-              fontSize: "30px",
-              fontWeight: "600",
-              fontFamily: "'Roboto', sans-serif",
-              width: "28vw",
-              margin: "10px",
-              textShadow: "#000 1px 0 5px",
-              zIndex: "3",
-            }}
-          >
-            10 places to escape the cold and find winter sun in Europe
-          </span>
-          <span
-            style={{
-              display: "flex",
-              justifyContent: "right",
-              color: "white",
-              width: "5vw",
-              margin: "10px",
-            }}
-          >
-            <a href="/blogs/2" style={{ zIndex: "3" }}>
-              <ArrowForwardIcon
+              >
+                <div
+                  style={{
+                    height: "80vh",
+                    width: "33.33vw",
+                    display: "flex",
+                    alignItems: "flex-end",
+                    fontFamily: "'Roboto', sans-serif",
+                    float: "left",
+                  }}
+                >
+                  <span
+                    style={{
+                      color: "white",
+                      fontSize: "30px",
+                      fontWeight: "600",
+                      fontFamily: "'Roboto', sans-serif",
+                      width: "28vw",
+                      margin: "10px",
+                      textShadow: "#000 1px 0 5px",
+                      zIndex: "3",
+                    }}
+                  >
+                    {landingImage.title}
+                  </span>
+                  <span
+                    style={{
+                      display: "flex",
+                      justifyContent: "right",
+                      color: "white",
+                      width: "5vw",
+                      margin: "10px",
+                    }}
+                  >
+                    <div
+                      onClick={() => navigate(`/blogs/${landingImage.id}`)}
+                      style={{ zIndex: "3" }}
+                    >
+                      <ArrowForwardIcon
+                        className="arrowIcon"
+                        style={{
+                          height: "60px",
+                          width: "60px",
+                          fontWeight: "bolder",
+                        }}
+                      />
+                    </div>
+                  </span>
+                </div>
+              </div>
+              <div
                 style={{
-                  height: "60px",
-                  width: "60px",
-                  fontWeight: "bolder",
+                  height: "80vh",
+                  width: "33.33vw",
+                  float: "left",
+                  overflow: "hidden",
                 }}
-              />
-            </a>
-          </span>
-        </div>
-        <div
-          style={{
-            height: "80vh",
-            width: "33.33%",
-            display: "flex",
-            alignItems: "flex-end",
-            fontFamily: "'Roboto', sans-serif",
-            float: "left",
-          }}
-        >
-          <span
-            style={{
-              color: "white",
-              fontSize: "30px",
-              fontWeight: "600",
-              fontFamily: "'Roboto', sans-serif",
-              width: "28vw",
-              margin: "10px",
-              textShadow: "#000 1px 0 5px",
-              zIndex: "3",
-            }}
-          >
-            12 unforgettable hikes around the world
-          </span>
-          <span
-            style={{
-              display: "flex",
-              justifyContent: "right",
-              color: "white",
-              width: "5vw",
-              margin: "10px",
-            }}
-          >
-            <a href="/blogs/3" style={{ zIndex: "3" }}>
-              <ArrowForwardIcon
-                style={{
-                  height: "60px",
-                  width: "60px",
-                  fontWeight: "bolder",
-                }}
-              />
-            </a>
-          </span>
-        </div>
-      </div>
-      <div style={{ height: "80vh", overflow: "hidden" }}>
-        <div
-          style={{
-            height: "80vh",
-            width: "33.33vw",
-            float: "left",
-            overflow: "hidden",
-          }}
-        >
-          <a
-            href="/blogs/1"
-            className="landingImage"
-            style={{
-              width: "33.33vw",
-              height: "80vh",
-              float: "left",
-              backgroundImage: "url(https://i.imgur.com/Fjuhz0F.jpg)",
-              backgroundSize: "cover",
-              backgroundRepeat: "no-repeat",
-              backgroundPosition: "center",
-              overflow: "hidden",
-            }}
-          />
-        </div>
-        <div
-          style={{
-            height: "80vh",
-            width: "33.33vw",
-            float: "left",
-            overflow: "hidden",
-          }}
-        >
-          <a
-            href="/blogs/2"
-            className="landingImage"
-            style={{
-              width: "33.33vw",
-              height: "80vh",
-              float: "left",
-              backgroundImage: "url(https://i.imgur.com/UoECR3q.jpg)",
-              backgroundSize: "cover",
-              backgroundRepeat: "no-repeat",
-              backgroundPosition: "center",
-              overflow: "hidden",
-            }}
-          />
-        </div>
-        <div
-          style={{
-            height: "80vh",
-            width: "33.33vw",
-            float: "left",
-            overflow: "hidden",
-          }}
-        >
-          <a
-            href="/blogs/3"
-            className="landingImage"
-            style={{
-              width: "33.33vw",
-              height: "80vh",
-              float: "left",
-              backgroundImage: "url(https://i.imgur.com/rOaxFXS.jpg)",
-              backgroundSize: "cover",
-              backgroundRepeat: "no-repeat",
-              backgroundPosition: "center",
-              overflow: "hidden",
-            }}
-          />
-        </div>
-      </div>
-    </>
+              >
+                <a
+                  href="/blogs/1"
+                  className="landingImage"
+                  style={{
+                    width: "33.33vw",
+                    height: "80vh",
+                    float: "left",
+                    backgroundImage: `url(${landingImage.image})`,
+                    backgroundSize: "cover",
+                    backgroundRepeat: "no-repeat",
+                    backgroundPosition: "center",
+                    overflow: "hidden",
+                  }}
+                />
+              </div>
+            </div>
+          </>
+        );
+      })}
+    </div>
   );
 }

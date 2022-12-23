@@ -1,48 +1,70 @@
-import React from "react";
-import { GoogleMap, useJsApiLoader } from "@react-google-maps/api";
+import { React, useCallback, useState, useEffect, useRef } from "react";
+import {
+  useGoogleMap,
+  GoogleMap,
+  useJsApiLoader,
+} from "@react-google-maps/api";
 
 const containerStyle = {
   width: "65vw",
-  height: "92vh",
+  height: "88vh",
 };
 
-const center = {
-  lat: 55.1946494,
-  lng: 30.2061324,
-};
-
-export default function Map() {
+export default function Map({ lat, lng, zoom }) {
   const { isLoaded } = useJsApiLoader({
     id: "google-map-script",
     googleMapsApiKey: "AIzaSyB0X5bEYC39FEogQ0gYvs_0Grn0P2iF6Bg",
   });
 
-  const [map, setMap] = React.useState(null);
+  const [map, setMap] = useState(null);
 
-  //   const onLoad = React.useCallback(function callback(map) {
-  //     // This is just an example of getting and using the map instance!!! don't just blindly copy!
-  //     const bounds = new window.google.maps.LatLngBounds(center);
-  //     map.fitBounds(bounds);
+  let center = {
+    lat: parseInt(lat),
+    lng: parseInt(lng),
+  };
 
-  //     setMap(map);
-  //   }, []);
+  // const mapRef = useRef(null);
+  // useEffect(() => {
+  //   setTimeout(() => mapRef.current?.panTo(nebraska), 3000);
+  // }, []);
 
-  const onUnmount = React.useCallback(function callback(map) {
+  // const onLoad = useCallback(function callback(map) {
+  //   // This is just an example of getting and using the map instance!!! don't just blindly copy!
+  //   const bounds = new window.google.maps.LatLngBounds(center);
+  //   map.fitBounds(bounds);
+
+  //   setMap(map);
+  // }, []);
+
+  const onUnmount = useCallback(function callback(map) {
     setMap(null);
   }, []);
 
   return isLoaded ? (
-    <GoogleMap
-      mapContainerStyle={containerStyle}
-      center={center}
-      zoom={4}
-      //   onLoad={onLoad}
-      onUnmount={onUnmount}
-    >
-      {/* Child components, such as markers, info windows, etc. */}
-      <></>
-    </GoogleMap>
+    <>
+      <GoogleMap
+        mapContainerStyle={containerStyle}
+        center={center}
+        zoom={zoom}
+        // onLoad={onLoad}
+        onUnmount={onUnmount}
+        // ref={mapRef}
+      >
+        {/* Child components, such as markers, info windows, etc. */}
+        {/* <Testing /> */}
+        <></>
+      </GoogleMap>
+      {/* <button onClick={() => map.panTo({ lat: 40, lng: -100 })}>Pan</button> */}
+    </>
   ) : (
     <></>
   );
 }
+
+// function Testing() {
+//   const mapuse = useGoogleMap();
+//   useEffect(() => {
+//     setTimeout(() => mapuse.panTo(nebraska), 3000);
+//   }, []);
+//   return <></>;
+// }

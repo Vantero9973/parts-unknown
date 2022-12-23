@@ -1,16 +1,56 @@
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import Axios from "axios";
 import Map from "./Map";
-import Button from "@mui/material/Button";
+import InputLabel from "@mui/material/InputLabel";
+import MenuItem from "@mui/material/MenuItem";
+import FormControl from "@mui/material/FormControl";
+import Select from "@mui/material/Select";
 
 export default function DestinationsPage() {
-  const { data: countries, isLoading } = useQuery(["country"], () => {
-    return Axios.get("http://localhost:3000/countries").then((res) => res.data);
-  });
+  const [filteredContinent, setFilteredContinent] = useState([]);
+  const [continent, setContinent] = useState("");
+  const [age, setAge] = useState("");
 
-  if (isLoading) {
+  const navigate = useNavigate();
+
+  const { data: countries, isLoading: countriesLoading } = useQuery(
+    ["country"],
+    () => {
+      return Axios.get("http://localhost:3000/countries").then(
+        (res) => res.data
+      );
+    }
+  );
+
+  const { data: continents, isLoading: continentsLoading } = useQuery(
+    ["continent"],
+    () => {
+      return Axios.get("http://localhost:3000/continents").then(
+        (res) => res.data
+      );
+    }
+  );
+
+  const handleChange = (e) => {
+    setContinent(e.target.value);
+  };
+
+  const handleContinentClick = (id) => {
+    const filteredCountries = countries.filter(
+      (country) => country.continent_id === id
+    );
+    setFilteredContinent(filteredCountries);
+  };
+
+  if (countriesLoading || continentsLoading) {
     return <h1>Loading...</h1>;
   }
+
+  const lat = 55.526;
+  const lng = 20.2551;
+  const zoom = 4;
 
   return (
     <div
@@ -25,11 +65,12 @@ export default function DestinationsPage() {
     >
       <div
         style={{
-          height: "92vh",
+          height: "88vh",
           width: "30vw",
-          background: "#dadada",
+          background: "#2c2c2e",
           display: "flex",
           justifyContent: "center",
+          borderRadius: "20px",
         }}
       >
         <div
@@ -39,59 +80,98 @@ export default function DestinationsPage() {
             justifyContent: "center",
           }}
         >
+          <div>
+            <FormControl
+              variant="filled"
+              sx={{
+                m: 2,
+                width: "28vw",
+                background: "#dadada",
+                borderRadius: "10px",
+                color: "#1c1c1e",
+              }}
+            >
+              <InputLabel
+                id="demo-simple-select-filled-label"
+                style={{ fontSize: "20px", color: "#1c1c1e" }}
+              >
+                Select Continent
+              </InputLabel>
+              <Select
+                labelId="demo-simple-select-filled-label"
+                id="demo-simple-select-filled"
+                value={continent}
+                onChange={handleChange}
+              >
+                {continents?.map((continent) => (
+                  <MenuItem
+                    value={continent.name}
+                    style={{
+                      color: "#1c1c1e",
+                    }}
+                    onClick={() => handleContinentClick(continent.id)}
+                  >
+                    {continent.name}
+                  </MenuItem>
+                ))}
+              </Select>
+            </FormControl>
+          </div>
           <div
+            class="overflow-scroll"
             style={{
-              background: "#2C2C2E",
-              width: "28vw",
-              height: "5vh",
-              fontSize: "24px",
-              textAlign: "center",
-              margin: "20px",
               display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
+              flexDirection: "column",
+              justifyContent: "left",
+              alignItems: "flex-start",
+              width: "20vw",
+              height: "78vh",
+              background: "#2c2c2e",
+              marginBottom: "2vh",
             }}
           >
-            <h1>Country Name...</h1>
-          </div>
-          {countries.map((country) => {
-            return (
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-              >
-                <div
-                  style={{
-                    display: "flex",
-                    flexWrap: "wrap",
-                    height: "fit-content",
-                    width: "fit-content",
-                    margin: "5px",
-                  }}
-                >
-                  <Button
-                    variant="outlined"
+            {filteredContinent.length > 0 &&
+              filteredContinent.map((country) => {
+                return (
+                  <div
                     style={{
-                      background: "#2C2C2E",
-                      borderColor: "#dadada",
-                      color: "#dadada",
-                      borderRadius: "10px",
                       display: "flex",
-                      flexWrap: "wrap",
+                      justifyContent: "center",
+                      alignItems: "center",
                     }}
                   >
-                    {country.name}
-                  </Button>
-                </div>
-              </div>
-            );
-          })}
+                    <div
+                      style={{
+                        display: "flex",
+                        flexWrap: "wrap",
+                        height: "fit-content",
+                        width: "fit-content",
+                        margin: "3px",
+                      }}
+                    >
+                      <li
+                        className="countryList"
+                        variant="outlined"
+                        style={{
+                          display: "flex",
+                          color: "#dadada",
+                          width: "15vw",
+                          fontSize: "18px",
+                          paddingLeft: "10px",
+                          cursor: "pointer",
+                        }}
+                        onClick={() => navigate(`/countries/${country.id}`)}
+                      >
+                        {country.name}
+                      </li>
+                    </div>
+                  </div>
+                );
+              })}
+          </div>
         </div>
       </div>
-      <Map />
+      <Map lat={lat} lng={lng} zoom={zoom} />
     </div>
   );
 }

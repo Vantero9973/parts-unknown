@@ -64,3 +64,9 @@ body {
     color: #dadada;
     /* border: 1px solid #dadada; */
   }
+
+  .countryList:hover {
+    background: #1c1c1e;
+    font-weight: bold;
+    border-radius: 10px;
+  }

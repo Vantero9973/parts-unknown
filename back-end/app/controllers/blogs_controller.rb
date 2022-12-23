@@ -5,6 +5,11 @@ class BlogsController < ApplicationController
         render json: blogs
     end
 
+    def landing_images
+        blogs = Blog.all.sample(3)
+        render json: blogs
+    end
+
     def show
         blog = Blog.where(id: params[:id])
         if blog

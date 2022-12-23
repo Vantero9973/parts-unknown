@@ -11,6 +11,7 @@ import ForumPage from "./components/ForumPage";
 import PostPage from "./components/PostPage";
 import ForumCountry from "./components/ForumCountry";
 import FullBlogPost from "./components/FullBlogPost";
+import CountryPage from "./components/CountryPage";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 function App() {
@@ -45,8 +46,6 @@ function App() {
     });
   }, []);
 
-  console.log(user);
-
   // const { data: blogs, isLoading: blogsLoading } = useQuery(["blogs"], () => {
   //   return Axios.get("http://localhost:3000/blogs").then((res) => res.data);
   // });
@@ -76,8 +75,8 @@ function App() {
 
   return (
     <QueryClientProvider client={client}>
-      <NavBar user={user} setUser={setUser} />
-      <div style={{ minHeight: "92vh", background: "#1C1C1E" }}>
+      <div style={{ minHeight: "100vh", background: "#1C1C1E" }}>
+        <NavBar user={user} setUser={setUser} />
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/destinations" element={<DestinationsPage />} />
@@ -102,6 +101,7 @@ function App() {
               />
             }
           />
+          <Route path="/countries/:id" element={<CountryPage />} />
           <Route path="/forums/:id" element={<ForumPage />} />
           <Route path="/posts/:id" element={<PostPage />} />
           <Route path="/blogs/:id" element={<FullBlogPost user={user} />} />

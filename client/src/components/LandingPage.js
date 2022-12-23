@@ -63,7 +63,7 @@ export default function LandingPage() {
           }}
         >
           <div style={{ width: "50vw", marginTop: "65vh" }}>
-            <Carousel slides={slides} showArrows={true} />
+            <Carousel slides={slides} />
           </div>
         </div>
       </div>
