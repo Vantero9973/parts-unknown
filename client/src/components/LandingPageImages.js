@@ -74,6 +74,7 @@ export default function LandingPageImages() {
                           height: "60px",
                           width: "60px",
                           fontWeight: "bolder",
+                          cursor: "pointer",
                         }}
                       />
                     </div>
@@ -89,7 +90,7 @@ export default function LandingPageImages() {
                 }}
               >
                 <a
-                  href="/blogs/1"
+                  onClick={() => navigate(`/blogs/${landingImage.id}`)}
                   className="landingImage"
                   style={{
                     width: "33.33vw",
@@ -100,6 +101,7 @@ export default function LandingPageImages() {
                     backgroundRepeat: "no-repeat",
                     backgroundPosition: "center",
                     overflow: "hidden",
+                    cursor: "pointer",
                   }}
                 />
               </div>

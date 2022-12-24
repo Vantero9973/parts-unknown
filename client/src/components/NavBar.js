@@ -18,6 +18,7 @@ export default function NavBar({ user, setUser }) {
       <div
         style={{
           background: "#1C1C1E",
+          borderBottom: "1px solid #3c3c3e",
         }}
       >
         <div
@@ -122,6 +123,7 @@ export default function NavBar({ user, setUser }) {
       <div
         style={{
           background: "#1C1C1E",
+          borderBottom: "1px solid #3c3c3e",
         }}
       >
         <div
