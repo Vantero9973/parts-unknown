@@ -6,7 +6,7 @@ class ContinentsController < ApplicationController
     end
 
     def show
-        continent = Continent.find(params[:id])
+        continent = Continent.where(id: params[:id])
         if continent
             render json: continent
         else render json: { error: "Continent not found" }, status: :not_found

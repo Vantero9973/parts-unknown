@@ -1,16 +1,36 @@
-import { React, useCallback, useState, useEffect, useRef } from "react";
-import {
-  useGoogleMap,
-  GoogleMap,
-  useJsApiLoader,
-} from "@react-google-maps/api";
+import { React, useCallback, useState } from "react";
+import { GoogleMap, useJsApiLoader, Marker } from "@react-google-maps/api";
 
 const containerStyle = {
   width: "65vw",
   height: "88vh",
 };
 
-export default function Map({ lat, lng, zoom }) {
+export default function Map({
+  lat,
+  lng,
+  zoom,
+  markerLat,
+  markerLng,
+  markerTwoLat,
+  markerTwoLng,
+  markerThreeLat,
+  markerThreeLng,
+  markerFourLat,
+  markerFourLng,
+  markerFiveLat,
+  markerFiveLng,
+  markerSixLat,
+  markerSixLng,
+  markerSevenLat,
+  markerSevenLng,
+  markerEightLat,
+  markerEightLng,
+  markerNineLat,
+  markerNineLng,
+  markerTenLat,
+  markerTenLng,
+}) {
   const { isLoaded } = useJsApiLoader({
     id: "google-map-script",
     googleMapsApiKey: "AIzaSyB0X5bEYC39FEogQ0gYvs_0Grn0P2iF6Bg",
@@ -50,6 +70,66 @@ export default function Map({ lat, lng, zoom }) {
         onUnmount={onUnmount}
         // ref={mapRef}
       >
+        <Marker
+          position={{
+            lat: markerLat,
+            lng: markerLng,
+          }}
+        />
+        <Marker
+          position={{
+            lat: markerTwoLat,
+            lng: markerTwoLng,
+          }}
+        />
+        <Marker
+          position={{
+            lat: markerThreeLat,
+            lng: markerThreeLng,
+          }}
+        />
+        <Marker
+          position={{
+            lat: markerFourLat,
+            lng: markerFourLng,
+          }}
+        />
+        <Marker
+          position={{
+            lat: markerFiveLat,
+            lng: markerFiveLng,
+          }}
+        />
+        <Marker
+          position={{
+            lat: markerSixLat,
+            lng: markerSixLng,
+          }}
+        />
+        <Marker
+          position={{
+            lat: markerSevenLat,
+            lng: markerSevenLng,
+          }}
+        />
+        <Marker
+          position={{
+            lat: markerEightLat,
+            lng: markerEightLng,
+          }}
+        />
+        <Marker
+          position={{
+            lat: markerNineLat,
+            lng: markerNineLng,
+          }}
+        />
+        <Marker
+          position={{
+            lat: markerTenLat,
+            lng: markerTenLng,
+          }}
+        />
         {/* Child components, such as markers, info windows, etc. */}
         {/* <Testing /> */}
         <></>

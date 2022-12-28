@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import Axios from "axios";
@@ -9,12 +10,22 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 
 export default function CountryPage() {
+  const [markerCoordinates, setMarkerCoordinates] = useState([]);
   const { id } = useParams();
 
   const { data: destinations, isLoading: destinationsLoading } = useQuery(
     ["destination"],
     () => {
       return Axios.get(`http://localhost:3000/destinations/${id}`).then(
+        (res) => res.data
+      );
+    }
+  );
+
+  const { data: coordinates, isLoading: coordinatesLoading } = useQuery(
+    ["coordinate"],
+    () => {
+      return Axios.get(`http://localhost:3000/destinations`).then(
         (res) => res.data
       );
     }
@@ -29,19 +40,51 @@ export default function CountryPage() {
     }
   );
 
-  //   const { data: forums, isLoading: forumsLoading } = useQuery(["forum"], () => {
-  //     return Axios.get(`http://localhost:3000/forums/${id}`).then(
-  //       (res) => res.data
-  //     );
-  //   });
-
-  if (destinationsLoading || countriesLoading) {
+  if (destinationsLoading || countriesLoading || coordinatesLoading) {
     return <h1>Loading...</h1>;
   }
+
+  //   function setMarkers() {
+  //     {
+  //       coordinates.map((coordinate) => {
+  //         return coordinate.lat;
+  //       });
+  //     }
+  //   }
 
   const lat = countries.lat;
   const lng = countries.lng;
   const zoom = countries.zoom;
+
+  const markerLat = destinations[0]?.lat;
+  const markerLng = destinations[0]?.lng;
+
+  const markerTwoLat = destinations[1]?.lat;
+  const markerTwoLng = destinations[1]?.lng;
+
+  const markerThreeLat = destinations[2]?.lat;
+  const markerThreeLng = destinations[2]?.lng;
+
+  const markerFourLat = destinations[3]?.lat;
+  const markerFourLng = destinations[3]?.lng;
+
+  const markerFiveLat = destinations[4]?.lat;
+  const markerFiveLng = destinations[4]?.lng;
+
+  const markerSixLat = destinations[5]?.lat;
+  const markerSixLng = destinations[5]?.lng;
+
+  const markerSevenLat = destinations[6]?.lat;
+  const markerSevenLng = destinations[6]?.lng;
+
+  const markerEightLat = destinations[7]?.lat;
+  const markerEightLng = destinations[7]?.lng;
+
+  const markerNineLat = destinations[8]?.lat;
+  const markerNineLng = destinations[8]?.lng;
+
+  const markerTenLat = destinations[9]?.lat;
+  const markerTenLng = destinations[9]?.lng;
 
   return (
     <div style={{ display: "flex", gap: "1rem", padding: "1vw" }}>
@@ -113,7 +156,31 @@ export default function CountryPage() {
           );
         })}
       </div>
-      <Map lat={lat} lng={lng} zoom={zoom} />
+      <Map
+        lat={lat}
+        lng={lng}
+        zoom={zoom}
+        markerLat={markerLat}
+        markerLng={markerLng}
+        markerTwoLat={markerTwoLat}
+        markerTwoLng={markerTwoLng}
+        markerThreeLat={markerThreeLat}
+        markerThreeLng={markerThreeLng}
+        markerFourLat={markerFourLat}
+        markerFourLng={markerFourLng}
+        markerFiveLat={markerFiveLat}
+        markerFiveLng={markerFiveLng}
+        markerSixLat={markerSixLat}
+        markerSixLng={markerSixLng}
+        markerSevenLat={markerSevenLat}
+        markerSevenLng={markerSevenLng}
+        markerEightLat={markerEightLat}
+        markerEightLng={markerEightLng}
+        markerNineLat={markerNineLat}
+        markerNineLng={markerNineLng}
+        markerTenLat={markerTenLat}
+        markerTenLng={markerTenLng}
+      />
     </div>
   );
 }

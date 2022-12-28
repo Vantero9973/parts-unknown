@@ -1,8 +1,6 @@
 import "./App.css";
 import { useState, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
-// import { useQuery } from "@tanstack/react-query";
-// import Axios from "axios";
 import NavBar from "./components/NavBar.js";
 import LandingPage from "./components/LandingPage";
 import DestinationsPage from "./components/DestinationsPage";
@@ -12,7 +10,10 @@ import PostPage from "./components/PostPage";
 import ForumCountry from "./components/ForumCountry";
 import FullBlogPost from "./components/FullBlogPost";
 import CountryPage from "./components/CountryPage";
+import ShopPage from "./components/ShopPage";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+// import { useQuery } from "@tanstack/react-query";
+// import Axios from "axios";
 
 function App() {
   const [blogs, setBlogs] = useState([]);
@@ -101,6 +102,7 @@ function App() {
               />
             }
           />
+          <Route path="/shop" element={<ShopPage />} />
           <Route path="/countries/:id" element={<CountryPage />} />
           <Route path="/forums/:id" element={<ForumPage />} />
           <Route path="/posts/:id" element={<PostPage />} />

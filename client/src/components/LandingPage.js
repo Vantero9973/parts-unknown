@@ -4,8 +4,14 @@ import AutosuggestPage from "./AutosuggestPage";
 import Carousel from "./Carousel";
 import { v4 as uuidv4 } from "uuid";
 import WhereToNext from "./WhereToNext";
+import { useQuery } from "@tanstack/react-query";
+import Axios from "axios";
 
 export default function LandingPage() {
+  const { data: countries, isLoading } = useQuery(["country"], () => {
+    return Axios.get("http://localhost:3000/countries").then((res) => res.data);
+  });
+
   let slides = [
     {
       key: uuidv4(),
@@ -33,6 +39,10 @@ export default function LandingPage() {
     },
   ];
 
+  if (isLoading) {
+    return <h1>Loading...</h1>;
+  }
+
   return (
     <div style={{ minHeight: "150vh" }}>
       <div>
@@ -45,7 +55,7 @@ export default function LandingPage() {
             fontSize: "32px",
           }}
         >
-          <AutosuggestPage />
+          <AutosuggestPage countries={countries} />
         </div>
         <LandingPageImages />
       </div>

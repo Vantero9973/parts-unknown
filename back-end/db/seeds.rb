@@ -1,11 +1,11 @@
 puts "Seeding continents..."
 
-africa = Continent.create!(name: "Africa", lat: "-8.7832", lng: "34.5085", zoom: 4)
-asia = Continent.create!(name: "Asia", lat: "34.0479", lng: "100.6197", zoom: 4)
-europe = Continent.create!(name: "Europe", lat: "54.5260", lng: "15.2551", zoom: 4)
-north_america = Continent.create!(name: "North America", lat: "47.1164", lng: "-101.2996", zoom: 4)
+africa = Continent.create!(name: "Africa", lat: "0.7832", lng: "25.5085", zoom: 3)
+asia = Continent.create!(name: "Asia", lat: "45.0479", lng: "100.6197", zoom: 3)
+europe = Continent.create!(name: "Europe", lat: "56.5260", lng: "15.2551", zoom: 4)
+north_america = Continent.create!(name: "North America", lat: "47.1164", lng: "-101.2996", zoom: 3)
 oceania = Continent.create!(name: "Oceania", lat: "-22.7359", lng: "140.0188", zoom: 4)
-south_america = Continent.create!(name: "South America", lat: "-8.7832", lng: "-55.4915", zoom: 4)
+south_america = Continent.create!(name: "South America", lat: "-25.7832", lng: "-55.4915", zoom: 3)
 
 puts "Done seeding continents..."
 
@@ -153,295 +153,294 @@ philippines = Country.create!(name: "Philippines", lat: "12.8797", lng: "121.774
 poland = Country.create!(name: "Poland", lat: "51.9194", lng: "19.1451", zoom: 6, continent_id: europe.id)
 portugal = Country.create!(name: "Portugal", lat: "39.3999", lng: "-8.2245", zoom: 6, continent_id: europe.id)
 qatar = Country.create!(name: "Qatar", lat: "25.3548", lng: "51.1839", zoom: 7, continent_id: asia.id)
-romania = Country.create!(name: "Romania", continent_id: europe.id)
-russia = Country.create!(name: "Russia", continent_id: europe.id)
-rwanda = Country.create!(name: "Rwanda", continent_id: africa.id)
-saint_kitts_nevis = Country.create!(name: "Saint Kitts and Nevis", continent_id: north_america.id)
-saint_lucia = Country.create!(name: "Saint Lucia", continent_id: north_america.id)
-saint_vincent_grenadines = Country.create!(name: "Saint Vincent and the Grenadines", continent_id: north_america.id)
-samoa = Country.create!(name: "Samoa", continent_id: oceania.id)
-san_marino = Country.create!(name: "San Marino", continent_id: europe.id)
-sao_tome_principe = Country.create!(name: "Sao Tome and Principe", continent_id: africa.id)
-saudi_arabia = Country.create!(name: "Saudi Arabia", continent_id: asia.id)
-senegal = Country.create!(name: "Senegal", continent_id: africa.id)
-serbia = Country.create!(name: "Serbia", continent_id: europe.id)
-seychelles = Country.create!(name: "Seychelles", continent_id: africa.id)
-sierra_leone = Country.create!(name: "Sierra Leone", continent_id: africa.id)
-singapore = Country.create!(name: "Singapore", continent_id: asia.id)
-slovakia = Country.create!(name: "Slovakia", continent_id: europe.id)
-slovenia = Country.create!(name: "Slovenia", continent_id: europe.id)
-solomon_islands = Country.create!(name: "Solomon Islands", continent_id: oceania.id)
-somalia = Country.create!(name: "Somalia", continent_id: africa.id)
-south_africa = Country.create!(name: "South Africa", continent_id: africa.id)
-south_korea = Country.create!(name: "South Korea", continent_id: asia.id)
-south_sudan = Country.create!(name: "South Sudan", continent_id: africa.id)
-spain = Country.create!(name: "Spain", continent_id: europe.id)
-sri_lanka = Country.create!(name: "Sri Lanka", continent_id: asia.id)
-sudan = Country.create!(name: "Sudan", continent_id: africa.id)
-suriname = Country.create!(name: "Suriname", continent_id: south_america.id)
-sweden = Country.create!(name: "Sweden", continent_id: europe.id)
-switzerland = Country.create!(name: "Switzerland", continent_id: europe.id)
-syria = Country.create!(name: "Syria", continent_id: asia.id)
-tajikistan = Country.create!(name: "Tajikistan", continent_id: asia.id)
-tanzania = Country.create!(name: "Tanzania", continent_id: africa.id)
-thailand = Country.create!(name: "Thailand", continent_id: asia.id)
-timor_leste = Country.create!(name: "Timor-Leste", continent_id: asia.id)
-togo = Country.create!(name: "Togo", continent_id: africa.id)
-tonga = Country.create!(name: "Tonga", continent_id: oceania.id)
-trinidad_tobago = Country.create!(name: "Trinidad and Tobago", continent_id: north_america.id)
-tunisia = Country.create!(name: "Tunisia", continent_id: africa.id)
-turkey = Country.create!(name: "Turkey", continent_id: asia.id)
-turkmenistan = Country.create!(name: "Turkmenistan", continent_id: asia.id)
-tuvalu = Country.create!(name: "Tuvalu", continent_id: oceania.id)
-uganda = Country.create!(name: "Uganda", continent_id: africa.id)
-ukraine = Country.create!(name: "Ukraine", continent_id: europe.id)
-united_arab_emirates = Country.create!(name: "United Arab Emirates", continent_id: asia.id)
-united_kingdom = Country.create!(name: "United Kingdom", continent_id: europe.id)
-united_states_of_america = Country.create!(name: "United States of America", continent_id: north_america.id)
-uruguay = Country.create!(name: "Uruguay", continent_id: south_america.id)
-uzbekistan = Country.create!(name: "Uzbekistan", continent_id: asia.id)
-vanuatu = Country.create!(name: "Vanuatu", continent_id: oceania.id)
-venezuela = Country.create!(name: "Venezuela", continent_id: south_america.id)
-vietnam = Country.create!(name: "Vietnam", continent_id: asia.id)
-yemen = Country.create!(name: "Yemen", continent_id: asia.id)
-zambia = Country.create!(name: "Zambia", continent_id: africa.id)
-zimbabwe = Country.create!(name: "Zimbabwe", continent_id: africa.id)
+romania = Country.create!(name: "Romania", lat: "45.9432", lng: "24.9668", zoom: 6, continent_id: europe.id)
+russia = Country.create!(name: "Russia", lat: "61.5240", lng: "105.3188", zoom: 3, continent_id: europe.id)
+rwanda = Country.create!(name: "Rwanda", lat: "-1.9403", lng: "29.8739", zoom: 7, continent_id: africa.id)
+saint_kitts_nevis = Country.create!(name: "Saint Kitts and Nevis", lat: "17.3578", lng: "-62.7830", zoom: 8, continent_id: north_america.id)
+saint_lucia = Country.create!(name: "Saint Lucia", lat: "13.9094", lng: "-60.9789", zoom: 8, continent_id: north_america.id)
+saint_vincent_grenadines = Country.create!(name: "Saint Vincent and the Grenadines", lat: "12.9843", lng: "-61.2872", zoom: 8, continent_id: north_america.id)
+samoa = Country.create!(name: "Samoa", lat: "-13.7590", lng: "-172.1046", zoom: 8, continent_id: oceania.id)
+san_marino = Country.create!(name: "San Marino", lat: "43.9424", lng: "12.4578", zoom: 8, continent_id: europe.id)
+sao_tome_principe = Country.create!(name: "Sao Tome and Principe", lat: "0.1864", lng: "6.6131", zoom: 8, continent_id: africa.id)
+saudi_arabia = Country.create!(name: "Saudi Arabia", lat: "23.8859", lng: "45.0792", zoom: 5, continent_id: asia.id)
+senegal = Country.create!(name: "Senegal", lat: "14.4974", lng: "-14.4524", zoom: 6, continent_id: africa.id)
+serbia = Country.create!(name: "Serbia", lat: "44.0165", lng: "21.0059", zoom: 7, continent_id: europe.id)
+seychelles = Country.create!(name: "Seychelles", lat: "-4.6796", lng: "55.4920", zoom: 7, continent_id: africa.id)
+sierra_leone = Country.create!(name: "Sierra Leone", lat: "8.4606", lng: "-11.7799", zoom: 7, continent_id: africa.id)
+singapore = Country.create!(name: "Singapore", lat: "1.3521", lng: "103.8198", zoom: 8, continent_id: asia.id)
+slovakia = Country.create!(name: "Slovakia", lat: "48.6690", lng: "19.6990", zoom: 7, continent_id: europe.id)
+slovenia = Country.create!(name: "Slovenia", lat: "46.1512", lng: "14.9955", zoom: 7, continent_id: europe.id)
+solomon_islands = Country.create!(name: "Solomon Islands", lat: "-9.6457", lng: "160.1562", zoom: 7, continent_id: oceania.id)
+somalia = Country.create!(name: "Somalia", lat: "5.1521", lng: "46.1996", zoom: 6, continent_id: africa.id)
+south_africa = Country.create!(name: "South Africa", lat: "-30.5595", lng: "22.9375", zoom: 5, continent_id: africa.id)
+south_korea = Country.create!(name: "South Korea", lat: "35.9078", lng: "127.7669", zoom: 6, continent_id: asia.id)
+south_sudan = Country.create!(name: "South Sudan", lat: "6.8770", lng: "31.3070", zoom: 6, continent_id: africa.id)
+spain = Country.create!(name: "Spain", lat: "40.4637", lng: "-3.7492", zoom: 6, continent_id: europe.id)
+sri_lanka = Country.create!(name: "Sri Lanka", lat: "7.8731", lng: "80.7718", zoom: 7, continent_id: asia.id)
+sudan = Country.create!(name: "Sudan", lat: "12.8628", lng: "30.2176", zoom: 5, continent_id: africa.id)
+suriname = Country.create!(name: "Suriname", lat: "3.9193", lng: "-56.0278", zoom: 6, continent_id: south_america.id)
+sweden = Country.create!(name: "Sweden", lat: "62.7282", lng: "18.6435", zoom: 5, continent_id: europe.id)
+switzerland = Country.create!(name: "Switzerland", lat: "46.8182", lng: "8.2275", zoom: 7, continent_id: europe.id)
+syria = Country.create!(name: "Syria", lat: "34.8021", lng: "38.9968", zoom: 6, continent_id: asia.id)
+tajikistan = Country.create!(name: "Tajikistan", lat: "38.8610", lng: "71.2761", zoom: 6, continent_id: asia.id)
+tanzania = Country.create!(name: "Tanzania", lat: "-6.3690", lng: "34.8888", zoom: 6, continent_id: africa.id)
+thailand = Country.create!(name: "Thailand", lat: "15.8700", lng: "100.9925", zoom: 6, continent_id: asia.id)
+timor_leste = Country.create!(name: "Timor-Leste", lat: "-8.8742", lng: "125.7275", zoom: 7, continent_id: asia.id)
+togo = Country.create!(name: "Togo", lat: "8.6195", lng: "0.8248", zoom: 6, continent_id: africa.id)
+tonga = Country.create!(name: "Tonga", lat: "-21.1790", lng: "-175.1982", zoom: 8, continent_id: oceania.id)
+trinidad_tobago = Country.create!(name: "Trinidad and Tobago", lat: "10.6918", lng: "-61.2225", zoom: 7, continent_id: north_america.id)
+tunisia = Country.create!(name: "Tunisia", lat: "33.8869", lng: "9.5375", zoom: 6, continent_id: africa.id)
+turkey = Country.create!(name: "Turkey", lat: "38.9637", lng: "35.2433", zoom: 6, continent_id: asia.id)
+turkmenistan = Country.create!(name: "Turkmenistan", lat: "38.9697", lng: "59.5563", zoom: 6, continent_id: asia.id)
+tuvalu = Country.create!(name: "Tuvalu", lat: "-7.1095", lng: "177.6493", zoom: 8, continent_id: oceania.id)
+uganda = Country.create!(name: "Uganda", lat: "1.3733", lng: "32.2903", zoom: 6, continent_id: africa.id)
+ukraine = Country.create!(name: "Ukraine", lat: "48.3794", lng: "31.1656", zoom: 6, continent_id: europe.id)
+united_arab_emirates = Country.create!(name: "United Arab Emirates", lat: "23.4241", lng: "53.8478", zoom: 6, continent_id: asia.id)
+united_kingdom = Country.create!(name: "United Kingdom", lat: "55.3781", lng: "-3.4360", zoom: 6, continent_id: europe.id)
+united_states_of_america = Country.create!(name: "United States of America", lat: "37.0902", lng: "-95.7129", zoom: 4, continent_id: north_america.id)
+uruguay = Country.create!(name: "Uruguay", lat: "-32.5228", lng: "-55.7658", zoom: 6, continent_id: south_america.id)
+uzbekistan = Country.create!(name: "Uzbekistan", lat: "41.3775", lng: "64.5853", zoom: 6, continent_id: asia.id)
+vanuatu = Country.create!(name: "Vanuatu", lat: "-15.3767", lng: "166.9592", zoom: 7, continent_id: oceania.id)
+venezuela = Country.create!(name: "Venezuela", lat: "6.4238", lng: "-66.5897", zoom: 6, continent_id: south_america.id)
+vietnam = Country.create!(name: "Vietnam", lat: "16.0583", lng: "108.2772", zoom: 6, continent_id: asia.id)
+yemen = Country.create!(name: "Yemen", lat: "15.5527", lng: "48.5164", zoom: 6, continent_id: asia.id)
+zambia = Country.create!(name: "Zambia", lat: "-13.1339", lng: "27.8493", zoom: 6, continent_id: africa.id)
+zimbabwe = Country.create!(name: "Zimbabwe", lat: "-19.0154", lng: "29.1549", zoom: 6, continent_id: africa.id)
 
 puts "Done seeding countries..."
 
 puts "Seeding destinations..."
 
-kyoto = Destination.create!(name: "Kyoto", country_name: "Japan", image: "https://www.neverendingvoyage.com/wp-content/uploads/2019/09/kyoto-japan-26.jpg", country_id: japan.id )
-tokyo = Destination.create!(name: "Tokyo", country_name: "Japan", image: "https://www.travelandleisure.com/thmb/VscfMXHNO6uBpaX2cuIW1q2ZtA8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/tokyo-japan-TOKYOTG0621-52012ff551dc46c4a87ac8e3151307a4.jpg", country_id: japan.id)
-sapporo = Destination.create!(name: "Sapporo", country_name: "Japan", image: "https://www.jetstar.com/_/media/inspiration-hub/article-images/19dec/best-skis-hokkaido/hero_japan_sapporo_skiing.jpg?rev=4d57f7158ba9400ba21716645d52bdcb&w=1050&rc=1&cw=1050&ch=590&cx=55&cy=0&hash=9342D14EF9DF82C17DEDE93E9AFA4FA30F3DFA10", country_id: japan.id)
-okinawa = Destination.create!(name: "Okinawa", country_name: "Japan", image: "https://cdn.audleytravel.com/3601/2573/79/15979501-aharen-beach-okinawa-japan.jpg", country_id: japan.id)
-tsushima = Destination.create!(name: "Tsushima Island", country_name: "Japan", image: "https://www.videogameschronicle.com/files/2021/01/2413C941-AFC0-4A1B-83B6-7A7D1C13C9FC-scaled.jpeg", country_id: japan.id)
+kyoto = Destination.create!(name: "Kyoto", country_name: "Japan", image: "https://www.neverendingvoyage.com/wp-content/uploads/2019/09/kyoto-japan-26.jpg", lat: 35.0116, lng: 135.7681, country_id: japan.id )
+tokyo = Destination.create!(name: "Tokyo", country_name: "Japan", image: "https://www.travelandleisure.com/thmb/VscfMXHNO6uBpaX2cuIW1q2ZtA8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/tokyo-japan-TOKYOTG0621-52012ff551dc46c4a87ac8e3151307a4.jpg", lat: 35.6762, lng: 139.6503, country_id: japan.id)
+sapporo = Destination.create!(name: "Sapporo", country_name: "Japan", image: "https://www.jetstar.com/_/media/inspiration-hub/article-images/19dec/best-skis-hokkaido/hero_japan_sapporo_skiing.jpg?rev=4d57f7158ba9400ba21716645d52bdcb&w=1050&rc=1&cw=1050&ch=590&cx=55&cy=0&hash=9342D14EF9DF82C17DEDE93E9AFA4FA30F3DFA10", lat: 43.0618, lng: 141.3545, country_id: japan.id)
+okinawa = Destination.create!(name: "Okinawa", country_name: "Japan", image: "https://cdn.audleytravel.com/3601/2573/79/15979501-aharen-beach-okinawa-japan.jpg", lat: 26.3344, lng: 127.8056, country_id: japan.id)
+tsushima = Destination.create!(name: "Tsushima Island", country_name: "Japan", image: "https://www.videogameschronicle.com/files/2021/01/2413C941-AFC0-4A1B-83B6-7A7D1C13C9FC-scaled.jpeg", lat: 34.2028, lng: 129.2875, country_id: japan.id)
 
 #China
 
-great_wall_of_china = Destination.create!(name: "Great Wall of China", country_name: "China", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/The_Great_Wall_of_China_at_Jinshanling-edit.jpg/1200px-The_Great_Wall_of_China_at_Jinshanling-edit.jpg", country_id: china.id)
-terracotta_army = Destination.create!(name: "Terracotta Army", country_name: "China", image: "https://www.archaeology.wiki/wp-content/uploads/2022/03/Terracotta_army_2.jpg", country_id: china.id)
+great_wall_of_china = Destination.create!(name: "Great Wall of China", country_name: "China", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/The_Great_Wall_of_China_at_Jinshanling-edit.jpg/1200px-The_Great_Wall_of_China_at_Jinshanling-edit.jpg", lat: 40.4319, lng: 116.5704, country_id: china.id)
+terracotta_army = Destination.create!(name: "Terracotta Army", country_name: "China", image: "https://www.archaeology.wiki/wp-content/uploads/2022/03/Terracotta_army_2.jpg", lat: 34.3841, lng: 109.2785, country_id: china.id)
 
 #United States
 
-denver = Destination.create!(name: "Denver, CO", country_name: "USA", image: "https://i.natgeofe.com/n/2f26e117-08d9-4364-a76b-817421bfc5d6/denver-travel_4x3.jpg", country_id: united_states_of_america.id)
-moab = Destination.create!(name: "Moab, UT", country_name: "USA", image: "https://www.discovermoab.com/wp-content/uploads/2022/02/arches.jpg", country_id: united_states_of_america.id)
-chicago = Destination.create!(name: "Chicago, IL", country_name: "USA", image: "https://www.travelandleisure.com/thmb/wwUPgdpCUuD5sAPFLQf4YasjH0M=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/chicago-illinois-CHITG0221-e448062fc5164da0bba639f9857987f6.jpg", country_id: united_states_of_america.id)
-new_york_city = Destination.create!(name: "New York City, NY", country_name: "USA", image: "https://media.cntraveler.com/photos/63483e15ef943eff59de603a/master/pass/New%20York%20City_GettyImages-1347979016.jpg", country_id: united_states_of_america.id)
-oahu = Destination.create!(name: "Oahu, HI", country_name: "USA", image: "https://cdn.britannica.com/44/91844-050-F248F634/beach-Waikiki-Honolulu-Oahu-Hawaii.jpg", country_id: united_states_of_america.id)
-los_angeles = Destination.create!(name: "Los Angeles, CA", country_name: "USA", image: "https://a.travel-assets.com/findyours-php/viewfinder/images/res70/475000/475457-Los-Angeles.jpg", country_id: united_states_of_america.id)
-san_francisco = Destination.create!(name: "San Francisco, CA", country_name: "USA", image: "https://cdn.travelpulse.com/images/d3a9edf4-a957-df11-b491-006073e71405/e864929d-127a-4caf-9a15-7f9cd45160f0/630x355.jpg", country_id: united_states_of_america.id)
-portland = Destination.create!(name: "Portland, OR", country_name: "USA", image: "https://www.themanual.com/wp-content/uploads/sites/9/2021/04/portland-oregon-travel-city-guide.jpg?p=1", country_id: united_states_of_america.id)
-jackson = Destination.create!(name: "Jackson, WY", country_name: "USA", image: "https://www.bostonmagazine.com/wp-content/uploads/sites/2/2021/11/style_traveler-1.jpg", country_id: united_states_of_america.id)
+denver = Destination.create!(name: "Denver, CO", country_name: "USA", image: "https://i.natgeofe.com/n/2f26e117-08d9-4364-a76b-817421bfc5d6/denver-travel_4x3.jpg", lat: 39.7392, lng: -104.9903, country_id: united_states_of_america.id)
+moab = Destination.create!(name: "Moab, UT", country_name: "USA", image: "https://www.discovermoab.com/wp-content/uploads/2022/02/arches.jpg", lat: 38.5733, lng: -109.5498, country_id: united_states_of_america.id)
+chicago = Destination.create!(name: "Chicago, IL", country_name: "USA", image: "https://www.travelandleisure.com/thmb/wwUPgdpCUuD5sAPFLQf4YasjH0M=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/chicago-illinois-CHITG0221-e448062fc5164da0bba639f9857987f6.jpg", lat: 41.8781, lng: -87.6298, country_id: united_states_of_america.id)
+new_york_city = Destination.create!(name: "New York City, NY", country_name: "USA", image: "https://media.cntraveler.com/photos/63483e15ef943eff59de603a/master/pass/New%20York%20City_GettyImages-1347979016.jpg", lat: 40.7128, lng: -74.0060, country_id: united_states_of_america.id)
+oahu = Destination.create!(name: "Oahu, HI", country_name: "USA", image: "https://cdn.britannica.com/44/91844-050-F248F634/beach-Waikiki-Honolulu-Oahu-Hawaii.jpg", lat: 21.4389, lng: -158.0001, country_id: united_states_of_america.id)
+los_angeles = Destination.create!(name: "Los Angeles, CA", country_name: "USA", image: "https://a.travel-assets.com/findyours-php/viewfinder/images/res70/475000/475457-Los-Angeles.jpg", lat: 34.0522, lng: -118.2437, country_id: united_states_of_america.id)
+san_francisco = Destination.create!(name: "San Francisco, CA", country_name: "USA", image: "https://cdn.travelpulse.com/images/d3a9edf4-a957-df11-b491-006073e71405/e864929d-127a-4caf-9a15-7f9cd45160f0/630x355.jpg", lat: 37.736582, lng: -122.444944, country_id: united_states_of_america.id)
+portland = Destination.create!(name: "Portland, OR", country_name: "USA", image: "https://www.themanual.com/wp-content/uploads/sites/9/2021/04/portland-oregon-travel-city-guide.jpg?p=1", lat: 45.5152, lng: -122.6784, country_id: united_states_of_america.id)
+jackson = Destination.create!(name: "Jackson, WY", country_name: "USA", image: "https://www.bostonmagazine.com/wp-content/uploads/sites/2/2021/11/style_traveler-1.jpg", lat: 43.4799, lng: -110.7624, country_id: united_states_of_america.id)
 
 #Spain
 
-barcelona = Destination.create!(name: "Barcelona", country_name: "Spain", image: "https://cdn.vox-cdn.com/thumbor/TW6wbTfkQCpkFXIqYHte2heEZxI=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/16013556/shutterstock_785442694.jpg", country_id: spain.id)
-valencia = Destination.create!(name: "Valencia", country_name: "Spain", image: "https://a.cdn-hotels.com/gdcs/production78/d854/b66ba664-ec2f-47b3-92bc-63ff4480ff53.jpg", country_id: spain.id)
-madrid = Destination.create!(name: "Madrid", country_name: "Spain", image: "https://www.travelandleisure.com/thmb/2I1sDNmheYfpBUu1vI5kvZWPVBQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/madrid-spain-city-landscape-WELLSPENTMADRID1221-4b8d575977a745b8b0da3416d1764355.jpg", country_id: spain.id)
-le_concha = Destination.create!(name: "Le Concha", country_name: "Spain", image: "https://www.worldbeachguide.com/photos/la-concha-san-sebastian.jpg", country_id: spain.id)
-ibiza = Destination.create!(name: "Ibiza", country_name: "Spain", image: "https://media-cdn.tripadvisor.com/media/photo-c/1280x250/14/10/2e/a4/ibiza.jpg", country_id: spain.id)
+barcelona = Destination.create!(name: "Barcelona", country_name: "Spain", image: "https://cdn.vox-cdn.com/thumbor/TW6wbTfkQCpkFXIqYHte2heEZxI=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/16013556/shutterstock_785442694.jpg", lat: 41.3874, lng: 2.1686, country_id: spain.id)
+valencia = Destination.create!(name: "Valencia", country_name: "Spain", image: "https://a.cdn-hotels.com/gdcs/production78/d854/b66ba664-ec2f-47b3-92bc-63ff4480ff53.jpg", lat: 39.4699, lng: -0.3763, country_id: spain.id)
+madrid = Destination.create!(name: "Madrid", country_name: "Spain", image: "https://www.travelandleisure.com/thmb/2I1sDNmheYfpBUu1vI5kvZWPVBQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/madrid-spain-city-landscape-WELLSPENTMADRID1221-4b8d575977a745b8b0da3416d1764355.jpg", lat: 40.4168, lng: -3.7038, country_id: spain.id)
+le_concha = Destination.create!(name: "Le Concha", country_name: "Spain", image: "https://www.worldbeachguide.com/photos/la-concha-san-sebastian.jpg", lat: 43.3186, lng: -1.9860, country_id: spain.id)
+ibiza = Destination.create!(name: "Ibiza", country_name: "Spain", image: "https://media-cdn.tripadvisor.com/media/photo-c/1280x250/14/10/2e/a4/ibiza.jpg", lat: 38.9828, lng: 1.401588, country_id: spain.id)
 
 #France
 
-paris = Destination.create!(name: "Paris", country_name: "France", image: "https://i.natgeofe.com/n/41db9fb7-93e6-4d40-8838-71db6d0b057f/02_Europe_square.jpg", country_id: france.id)
-cote_d_azur = Destination.create!(name: "Côte d'Azur", country_name: "France", image: "https://media.cntraveler.com/photos/5d40639da616db0008403cef/master/w_3810,h_2540,c_limit/Monaco_GettyImages-177779735.jpg", country_id: france.id)
-charmonix = Destination.create!(name: "Chamonix-Mont-Blanc", country_name: "France", image: "https://a.cdn-hotels.com/gdcs/production64/d660/912c7882-cd32-4512-9360-2690bcad6074.jpg?impolicy=fcrop&w=800&h=533&q=medium", country_id: france.id)
-biarritz = Destination.create!(name: "Biarritz", country_name: "France", image: "https://www.tripsavvy.com/thmb/nGjiDVwnS9sQwRIRbkrggnuqpgE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-1055764342-a8614331da2e4d01af6b8c0b5754a9a3.jpg", country_id: france.id)
-provence = Destination.create!(name: "Provence", country_name: "France", image: "https://www.lelongweekend.com/wp-content/uploads/2021/07/DSC04162-1-scaled.jpg", country_id: france.id)
+paris = Destination.create!(name: "Paris", country_name: "France", image: "https://i.natgeofe.com/n/41db9fb7-93e6-4d40-8838-71db6d0b057f/02_Europe_square.jpg", lat: 48.8566, lng: 2.3522, country_id: france.id)
+cote_d_azur = Destination.create!(name: "Côte d'Azur", country_name: "France", image: "https://media.cntraveler.com/photos/5d40639da616db0008403cef/master/w_3810,h_2540,c_limit/Monaco_GettyImages-177779735.jpg", lat: 43.9352, lng: 6.0679, country_id: france.id)
+charmonix = Destination.create!(name: "Chamonix-Mont-Blanc", country_name: "France", image: "https://a.cdn-hotels.com/gdcs/production64/d660/912c7882-cd32-4512-9360-2690bcad6074.jpg?impolicy=fcrop&w=800&h=533&q=medium", lat: 45.9237, lng: 6.8694, country_id: france.id)
+biarritz = Destination.create!(name: "Biarritz", country_name: "France", image: "https://www.tripsavvy.com/thmb/nGjiDVwnS9sQwRIRbkrggnuqpgE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-1055764342-a8614331da2e4d01af6b8c0b5754a9a3.jpg", lat: 43.4832, lng: -1.5586, country_id: france.id)
+provence = Destination.create!(name: "Provence", country_name: "France", image: "https://www.lelongweekend.com/wp-content/uploads/2021/07/DSC04162-1-scaled.jpg", lat: 44.0145, lng: 6.2116, country_id: france.id)
 
 #Ireland
 
-cliffs_of_moher = Destination.create!(name: "Cliffs of Moher", country_name: "Ireland", image: "https://www.travelandleisure.com/thmb/sfXuVqMMLP-imISvIMB_4gd7eHY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/cliffs-of-moher-landscape-county-clare-ireland-MOHER0321-40a02114170148b884bab2e7ac90f895.jpg", country_id: ireland.id)
-dublin = Destination.create!(name: "Dublin", country_name: "Ireland", image: "https://www.travelandleisure.com/thmb/IGxfbwkS5Q-ODIUfZIuNy9FtmBM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/dublin-ireland-DUBLINTG0721-e1066115faf74b958a7b1d792ba13c1c.jpg", country_id: ireland.id)
-ring_of_kerry = Destination.create!(name: "Ring of Kerry", country_name: "Ireland", image: "https://s27363.pcdn.co/wp-content/uploads/2020/05/Ring-of-Kerry-Ireland.jpg.optimal.jpg", country_id: ireland.id)
+cliffs_of_moher = Destination.create!(name: "Cliffs of Moher", country_name: "Ireland", image: "https://www.travelandleisure.com/thmb/sfXuVqMMLP-imISvIMB_4gd7eHY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/cliffs-of-moher-landscape-county-clare-ireland-MOHER0321-40a02114170148b884bab2e7ac90f895.jpg", lat: 52.9715, lng: -9.4309, country_id: ireland.id)
+dublin = Destination.create!(name: "Dublin", country_name: "Ireland", image: "https://www.travelandleisure.com/thmb/IGxfbwkS5Q-ODIUfZIuNy9FtmBM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/dublin-ireland-DUBLINTG0721-e1066115faf74b958a7b1d792ba13c1c.jpg", lat: 53.3498, lng: -6.2603, country_id: ireland.id)
+ring_of_kerry = Destination.create!(name: "Ring of Kerry", country_name: "Ireland", image: "https://s27363.pcdn.co/wp-content/uploads/2020/05/Ring-of-Kerry-Ireland.jpg.optimal.jpg", lat: 51.9427, lng: -9.9172, country_id: ireland.id)
 
 #Norway
 
-geirangerfjord = Destination.create!(name: "Geirangerfjord", country_name: "Norway", image: "http://res.cloudinary.com/simpleview/image/upload/v1450117455/clients/norway/unesco-geirangerfjord-skagefla-waterfall-2-1_6cc6a64a-a204-432e-8753-01ef2080f24e.jpg", country_id: norway.id)
-jotunheimen = Destination.create!(name: "Jotunheimen", country_name: "Norway", image: "https://nationalparks-15bc7.kxcdn.com/images/parks/jotunheimen/Jotunheimen%20National%20Park.jpg", country_id: norway.id)
-bergen = Destination.create!(name: "Bergen", country_name: "Norway", image: "https://a.cdn-hotels.com/gdcs/production157/d661/0dcf4a5f-3f9f-410e-b5ce-ec9b9f856c52.jpg", country_id: norway.id)
-oslo = Destination.create!(name: "Oslo", country_name: "Norway", image: "https://a.cdn-hotels.com/gdcs/production71/d226/39f9230c-24f4-4697-a382-1ee5b30872c0.jpg", country_id: norway.id)
-tromso = Destination.create!(name: "Tromsø", country_name: "Norway", image: "https://www.visittromso.no/sites/cb_tromso/files/styles/slide_large/public/2200x1200_NordlysTroms%C3%B8Sentrum_Vegard%20Stien.jpg?h=cb1d9225&itok=9BCxJ3Mr", country_id: norway.id)
+geirangerfjord = Destination.create!(name: "Geirangerfjord", country_name: "Norway", image: "http://res.cloudinary.com/simpleview/image/upload/v1450117455/clients/norway/unesco-geirangerfjord-skagefla-waterfall-2-1_6cc6a64a-a204-432e-8753-01ef2080f24e.jpg", lat: 62.1015, lng: 7.0941, country_id: norway.id)
+jotunheimen = Destination.create!(name: "Jotunheimen", country_name: "Norway", image: "https://nationalparks-15bc7.kxcdn.com/images/parks/jotunheimen/Jotunheimen%20National%20Park.jpg", lat: 61.6333, lng: 8.3000, country_id: norway.id)
+bergen = Destination.create!(name: "Bergen", country_name: "Norway", image: "https://a.cdn-hotels.com/gdcs/production157/d661/0dcf4a5f-3f9f-410e-b5ce-ec9b9f856c52.jpg", lat: 60.3913, lng: 5.3221, country_id: norway.id)
+oslo = Destination.create!(name: "Oslo", country_name: "Norway", image: "https://a.cdn-hotels.com/gdcs/production71/d226/39f9230c-24f4-4697-a382-1ee5b30872c0.jpg", lat: 59.9139, lng: 10.7522, country_id: norway.id)
+tromso = Destination.create!(name: "Tromsø", country_name: "Norway", image: "https://www.visittromso.no/sites/cb_tromso/files/styles/slide_large/public/2200x1200_NordlysTroms%C3%B8Sentrum_Vegard%20Stien.jpg?h=cb1d9225&itok=9BCxJ3Mr", lat: 69.6492, lng: 18.9553, country_id: norway.id)
 
 
 #Sweden
 
-stockholm = Destination.create!(name: "Stockholm", country_name: "Sweden", image: "https://media.timeout.com/images/105171709/image.jpg", country_id: sweden.id)
+stockholm = Destination.create!(name: "Stockholm", country_name: "Sweden", image: "https://media.timeout.com/images/105171709/image.jpg", lat: 60.1282, lng: 18.6435, country_id: sweden.id)
 
 #Iceland
 
-blue_lagoon = Destination.create!(name: "Blue Lagoon", country_name: "Iceland", image: "https://hekla.com/blog/wp-content/uploads/2019/03/blue-Lagoon-post-2.jpg", country_id: iceland.id)
-reynisfjara = Destination.create!(name: "Reynisfjara Black Sand Beach", country_name: "Iceland", image: "https://cdn.nordicvisitor.com/images/1/iceland/summer/reynisfjara_black_sand_beach.jpg", country_id: iceland.id)
+blue_lagoon = Destination.create!(name: "Blue Lagoon", country_name: "Iceland", image: "https://hekla.com/blog/wp-content/uploads/2019/03/blue-Lagoon-post-2.jpg", lat: 63.8797, lng: -22.4486, country_id: iceland.id)
+reynisfjara = Destination.create!(name: "Reynisfjara Black Sand Beach", country_name: "Iceland", image: "https://cdn.nordicvisitor.com/images/1/iceland/summer/reynisfjara_black_sand_beach.jpg", lat: 63.4057, lng: -19.0716, country_id: iceland.id)
 
 #Finland
 
-helsinki = Destination.create!(name: "Helsinki", country_name: "Finland", image: "https://a.cdn-hotels.com/gdcs/production0/d1589/6d9eed40-c31d-11e8-9739-0242ac110006.jpg", country_id: finland.id)
+helsinki = Destination.create!(name: "Helsinki", country_name: "Finland", image: "https://a.cdn-hotels.com/gdcs/production0/d1589/6d9eed40-c31d-11e8-9739-0242ac110006.jpg", lat: 60.1699, lng: 24.9384, country_id: finland.id)
 
 #Austria
 
-vienna = Destination.create!(name: "Vienna", country_name: "Austria", image: "https://www.travelandleisure.com/thmb/zFpjulihpXjpUV7gKNHzydvJANA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/vienna-austria-VIENNATG0621-ecb0ee926c2d49c4bce610db594f7405.jpg", country_id: austria.id)
-hallstatt = Destination.create!(name: "Hallstatt", country_name: "Austria", image: "https://upload.travelawaits.com/ta/uploads/2021/04/8c9fb74e59d34c4a6689455a553758c9fb7.jpg", country_id: austria.id)
-kitzbuheler_horn = Destination.create!(name: "Kitzbüheler Horn", country_name: "Austria", image: "https://www.skiresort.info/typo3temp/_processed_/a2/2c/cc/cb/1040db4938.jpg", country_id: austria.id)
+vienna = Destination.create!(name: "Vienna", country_name: "Austria", image: "https://www.travelandleisure.com/thmb/zFpjulihpXjpUV7gKNHzydvJANA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/vienna-austria-VIENNATG0621-ecb0ee926c2d49c4bce610db594f7405.jpg", lat: 48.2082, lng: 16.3738, country_id: austria.id)
+hallstatt = Destination.create!(name: "Hallstatt", country_name: "Austria", image: "https://upload.travelawaits.com/ta/uploads/2021/04/8c9fb74e59d34c4a6689455a553758c9fb7.jpg", lat: 47.5622, lng: 13.6493, country_id: austria.id)
+kitzbuheler_horn = Destination.create!(name: "Kitzbüheler Horn", country_name: "Austria", image: "https://www.skiresort.info/typo3temp/_processed_/a2/2c/cc/cb/1040db4938.jpg", lat: 47.4667, lng: 12.4167, country_id: austria.id)
 
 #Germany
 
-berlin = Destination.create!(name: "Berlin", country_name: "Germany", image: "https://cdn.getyourguide.com/img/location/6f156967bc6d6563.jpeg/99.jpg", country_id: germany.id)
-munich = Destination.create!(name: "Munich", country_name: "Germany", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Stadtbild_M%C3%BCnchen.jpg/1200px-Stadtbild_M%C3%BCnchen.jpg", country_id: germany.id)
-cologne_cathedral = Destination.create!(name: "Cologne Cathedral", country_name: "Germany", image: "https://cdn.theculturetrip.com/wp-content/uploads/2017/09/shutterstock_374295496.jpg", country_id: germany.id)
-hamburg = Destination.create!(name: "Hamburg", country_name: "Germany", image: "https://a.cdn-hotels.com/gdcs/production57/d830/70f985c4-c6b3-4700-a11f-e7289de58ae5.jpg", country_id: germany.id)
+berlin = Destination.create!(name: "Berlin", country_name: "Germany", image: "https://cdn.getyourguide.com/img/location/6f156967bc6d6563.jpeg/99.jpg", lat: 52.5200, lng: 13.4050, country_id: germany.id)
+munich = Destination.create!(name: "Munich", country_name: "Germany", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Stadtbild_M%C3%BCnchen.jpg/1200px-Stadtbild_M%C3%BCnchen.jpg", lat: 48.1351, lng: 11.5820, country_id: germany.id)
+cologne_cathedral = Destination.create!(name: "Cologne Cathedral", country_name: "Germany", image: "https://cdn.theculturetrip.com/wp-content/uploads/2017/09/shutterstock_374295496.jpg", lat: 50.9413, lng: 6.9583, country_id: germany.id)
+hamburg = Destination.create!(name: "Hamburg", country_name: "Germany", image: "https://a.cdn-hotels.com/gdcs/production57/d830/70f985c4-c6b3-4700-a11f-e7289de58ae5.jpg", lat: 53.5488, lng: 9.9872, country_id: germany.id)
 
 #Italy
 
-rome = Destination.create!(name: "Rome", country_name: "Italy", image: "https://rome.com/wp-content/uploads/2017/04/London-Bridge-and-Big-Ben-at-Night-1-1-2.jpg", country_id: italy.id)
-florence = Destination.create!(name: "Florence", country_name: "Italy", image: "https://media.timeout.com/images/105879414/image.jpg", country_id: italy.id)
-venice = Destination.create!(name: "Venice", country_name: "Italy", image: "https://cdn.britannica.com/62/153462-050-3D4F41AF/Grand-Canal-Venice.jpg", country_id: italy.id)
-leaning_tower = Destination.create!(name: "Leaning Tower of Pisa", country_name: "Italy", image: "https://www.thoughtco.com/thmb/zlvu5Ci1rPgaoXmmbsNN3YJz8eA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/towers-Pisa-522003327-58d9cb3b5f9b58468357d3a7.jpg", country_id: italy.id)
-vatican_city = Destination.create!(name: "Vatican City", country_name: "Italy", image: "https://www.andantetravels.com/media/3955/vatican-city-with-st-peters-basilica.jpg", country_id: italy.id)
-amalfi_coast = Destination.create!(name: "Amalfi Coast", country_name: "Italy", image: "https://www.travelandleisure.com/thmb/n149x4IEv7uTFUHqaE2tQT8PInQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/header-positano-AMALFI0622-39a49349a2c145e6b3df85f884cf3217.jpg", country_id: italy.id)
-pantheon = Destination.create!(name: "Pantheon", country_name: "Italy", image: "https://monolithicdome.com/vault/img/2021/07/20/60f708d73c0d975e795f679e/rome-italy-pantheon-exterior-complete-marino.huge.jpg", country_id: italy.id)
-pompeii = Destination.create!(name: "Pompeii", country_name: "Italy", image: "https://images.squarespace-cdn.com/content/v1/53172b1be4b0cc8a5401db4a/1614175570723-YV7WLEQ5IXX6W5SAORM5/pompeii-along-dusty-roads-4.jpg?format=2500w", country_id: italy.id)
-valley_of_temples = Destination.create!(name: "Valley of Temples", country_name: "Italy", image: "https://www.coopculture.it/shared/coopculture/immagini/valle-dei-templi-tempio.jpg", country_id: italy.id)
+rome = Destination.create!(name: "Rome", country_name: "Italy", image: "https://rome.com/wp-content/uploads/2017/04/London-Bridge-and-Big-Ben-at-Night-1-1-2.jpg", lat: 41.9028, lng: 12.4964, country_id: italy.id)
+florence = Destination.create!(name: "Florence", country_name: "Italy", image: "https://media.timeout.com/images/105879414/image.jpg", lat: 43.7696, lng: 11.2558, country_id: italy.id)
+venice = Destination.create!(name: "Venice", country_name: "Italy", image: "https://cdn.britannica.com/62/153462-050-3D4F41AF/Grand-Canal-Venice.jpg", lat: 45.4408, lng: 12.3155, country_id: italy.id)
+leaning_tower = Destination.create!(name: "Leaning Tower of Pisa", country_name: "Italy", image: "https://www.thoughtco.com/thmb/zlvu5Ci1rPgaoXmmbsNN3YJz8eA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/towers-Pisa-522003327-58d9cb3b5f9b58468357d3a7.jpg", lat: 43.7230, lng: 10.3966, country_id: italy.id)
+amalfi_coast = Destination.create!(name: "Amalfi Coast", country_name: "Italy", image: "https://www.travelandleisure.com/thmb/n149x4IEv7uTFUHqaE2tQT8PInQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/header-positano-AMALFI0622-39a49349a2c145e6b3df85f884cf3217.jpg", lat: 40.6333, lng: 14.6029, country_id: italy.id)
+pantheon = Destination.create!(name: "Pantheon", country_name: "Italy", image: "https://monolithicdome.com/vault/img/2021/07/20/60f708d73c0d975e795f679e/rome-italy-pantheon-exterior-complete-marino.huge.jpg", lat: 41.8986, lng: 12.4769, country_id: italy.id)
+pompeii = Destination.create!(name: "Pompeii", country_name: "Italy", image: "https://images.squarespace-cdn.com/content/v1/53172b1be4b0cc8a5401db4a/1614175570723-YV7WLEQ5IXX6W5SAORM5/pompeii-along-dusty-roads-4.jpg?format=2500w", lat: 40.7462, lng: 14.4989, country_id: italy.id)
+valley_of_temples = Destination.create!(name: "Valley of Temples", country_name: "Italy", image: "https://www.coopculture.it/shared/coopculture/immagini/valle-dei-templi-tempio.jpg", lat: 37.2924, lng: 13.5937, country_id: italy.id)
 
 #Greece
 
-athens = Destination.create!(name: "Athens", country_name: "Greece", image: "https://cdn.britannica.com/66/102266-050-FBDEFCA1/acropolis-city-state-Greece-Athens.jpg", country_id: greece.id)
-santorini = Destination.create!(name: "Santorini", country_name: "Greece", image: "https://a.cdn-hotels.com/gdcs/production18/d1838/041ae6b1-0a88-4c22-a648-53a22dd4a006.jpg", country_id: greece.id)
-mykonos = Destination.create!(name: "Mykonos", country_name: "Greece", image: "https://www.travellens.co/content/images/2022/03/Mykonos.jpg", country_id: greece.id)
+athens = Destination.create!(name: "Athens", country_name: "Greece", image: "https://cdn.britannica.com/66/102266-050-FBDEFCA1/acropolis-city-state-Greece-Athens.jpg", lat: 37.9838, lng: 23.7275, country_id: greece.id)
+santorini = Destination.create!(name: "Santorini", country_name: "Greece", image: "https://a.cdn-hotels.com/gdcs/production18/d1838/041ae6b1-0a88-4c22-a648-53a22dd4a006.jpg", lat: 36.3932, lng: 25.4615, country_id: greece.id)
+mykonos = Destination.create!(name: "Mykonos", country_name: "Greece", image: "https://www.travellens.co/content/images/2022/03/Mykonos.jpg", lat: 37.4415, lng: 25.3667, country_id: greece.id)
 
 #Turkey
 
-cappadocia = Destination.create!(name: "Cappadocia", country_name: "Turkey", image: "https://assets3.thrillist.com/v1/image/3109501/1200x630/flatten;crop_down;webp=auto;jpeg_quality=70", country_id: turkey.id)
+cappadocia = Destination.create!(name: "Cappadocia", country_name: "Turkey", image: "https://assets3.thrillist.com/v1/image/3109501/1200x630/flatten;crop_down;webp=auto;jpeg_quality=70", lat: 38.3535, lng: 35.0911, country_id: turkey.id)
 
 #Netherlands
 
-amsterdam = Destination.create!(name: "Amsterdam", country_name: "Netherlands", image: "https://upload.wikimedia.org/wikipedia/commons/b/be/KeizersgrachtReguliersgrachtAmsterdam.jpg", country_id: netherlands.id)
+amsterdam = Destination.create!(name: "Amsterdam", country_name: "Netherlands", image: "https://upload.wikimedia.org/wikipedia/commons/b/be/KeizersgrachtReguliersgrachtAmsterdam.jpg", lat: 52.3676, lng: 4.9041, country_id: netherlands.id)
 
 #Poland
 
-warsaw = Destination.create!(name: "Warsaw", country_name: "Poland", image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/33/fa/d2/warsaw.jpg?w=700&h=500&s=1", country_id: poland.id)
-krakow = Destination.create!(name: "Krakow", country_name: "Poland", image: "https://lp-cms-production.imgix.net/image_browser/krakow-main-square-GettyRF_530609539.jpg", country_id: poland.id)
+warsaw = Destination.create!(name: "Warsaw", country_name: "Poland", image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/33/fa/d2/warsaw.jpg?w=700&h=500&s=1", lat: 52.2297, lng: 21.0122, country_id: poland.id)
+krakow = Destination.create!(name: "Krakow", country_name: "Poland", image: "https://lp-cms-production.imgix.net/image_browser/krakow-main-square-GettyRF_530609539.jpg", lat: 50.0647, lng: 19.9450, country_id: poland.id)
 
 #Romania
 
-bran_castle = Destination.create!(name: "Bran Castle", country_name: "Romania", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Castelul_Bran2.jpg/1200px-Castelul_Bran2.jpg", country_id: romania.id)
+bran_castle = Destination.create!(name: "Bran Castle", country_name: "Romania", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Castelul_Bran2.jpg/1200px-Castelul_Bran2.jpg", lat: 45.5149, lng: 25.3672, country_id: romania.id)
 
 #Czech Republic
 
-prague = Destination.create!(name: "Prague", country_name: "Czech Republic", image: "https://cdn.britannica.com/21/177921-050-4529CD59/Charles-Bridge-Vltava-River-Prague.jpg", country_id: czech_republic.id)
+prague = Destination.create!(name: "Prague", country_name: "Czech Republic", image: "https://cdn.britannica.com/21/177921-050-4529CD59/Charles-Bridge-Vltava-River-Prague.jpg", lat: 50.0755, lng: 14.4378, country_id: czech_republic.id)
 
 #United Kingdom
 
-stonehenge = Destination.create!(name: "Stonehenge", country_name: "United Kingdom", image: "https://upload.wikimedia.org/wikipedia/commons/3/3c/Stonehenge2007_07_30.jpg", country_id: united_kingdom.id)
-london = Destination.create!(name: "London", country_name: "United Kingdom", image: "https://images.contentstack.io/v3/assets/blt00454ccee8f8fe6b/bltf5fca6a3eec4d180/6139d40bec680b43eb02a9ee/US_London_UK_Header.jpg?width=1680&quality=70&auto=webp", country_id: united_kingdom.id)
-isle_of_man = Destination.create!(name: "Isle of Man", country_name: "United Kingdom", image: "https://static.nationalgeographic.co.uk/files/styles/image_3200/public/cycling_0.jpg?w=1600&h=900", country_id: united_kingdom.id)
-glasgow = Destination.create!(name: "Glasgow", country_name: "United Kingdom", image: "https://img.delicious.com.au/MzilNPOR/del/2018/12/on-the-go-in-glasgow-98211-2.jpg", country_id: united_kingdom.id)
-manchester = Destination.create!(name: "Manchester", country_name: "United Kingdom", image: "https://cdn.britannica.com/42/116342-050-5AC41785/Manchester-Eng.jpg", country_id: united_kingdom.id)
-wales = Destination.create!(name: "Wales", country_name: "United Kingdom", image: "https://cdn.britannica.com/35/94735-050-4E7CACDF/Conwy-Castle-River-Wales.jpg", country_id: united_kingdom.id)
+stonehenge = Destination.create!(name: "Stonehenge", country_name: "United Kingdom", image: "https://upload.wikimedia.org/wikipedia/commons/3/3c/Stonehenge2007_07_30.jpg", lat: 51.1789, lng: -1.8262, country_id: united_kingdom.id)
+london = Destination.create!(name: "London", country_name: "United Kingdom", image: "https://images.contentstack.io/v3/assets/blt00454ccee8f8fe6b/bltf5fca6a3eec4d180/6139d40bec680b43eb02a9ee/US_London_UK_Header.jpg?width=1680&quality=70&auto=webp", lat: 51.5072, lng: -0.1276, country_id: united_kingdom.id)
+isle_of_man = Destination.create!(name: "Isle of Man", country_name: "United Kingdom", image: "https://static.nationalgeographic.co.uk/files/styles/image_3200/public/cycling_0.jpg?w=1600&h=900", lat: 54.2361, lng: -4.5481, country_id: united_kingdom.id)
+glasgow = Destination.create!(name: "Glasgow", country_name: "United Kingdom", image: "https://img.delicious.com.au/MzilNPOR/del/2018/12/on-the-go-in-glasgow-98211-2.jpg", lat: 55.8642, lng: -4.2518, country_id: united_kingdom.id)
+manchester = Destination.create!(name: "Manchester", country_name: "United Kingdom", image: "https://cdn.britannica.com/42/116342-050-5AC41785/Manchester-Eng.jpg", lat: 53.4808, lng: -2.2426, country_id: united_kingdom.id)
+wales = Destination.create!(name: "Wales", country_name: "United Kingdom", image: "https://cdn.britannica.com/35/94735-050-4E7CACDF/Conwy-Castle-River-Wales.jpg", lat: 52.1307, lng: -3.7837, country_id: united_kingdom.id)
 
 #Australia
 
-sydney = Destination.create!(name: "Sydney", country_name: "Australia", image: "https://www.travelandleisure.com/thmb/6JVbKFFtu7AeQu5rHioeDpcPxko=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/sydney-australia-SYDNEYTG0621-2dcacc38417541f689e293d397da9eaf.jpg", country_id: australia.id)
-great_barrier_reef = Destination.create!(name: "Great Barrier Reef", country_name: "Australia", image: "https://media.cntraveler.com/photos/5e270f847a47880008257cbe/5:4/w_2500,h_2000,c_limit/ReefSuites-GreatBarrierReef-2020-4.jpg", country_id: australia.id)
-melbourne = Destination.create!(name: "Melbourne", country_name: "Australia", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Melburnian_Skyline.jpg/1200px-Melburnian_Skyline.jpg", country_id: australia.id)
-daintree = Destination.create!(name: "Daintree Rainforest", country_name: "Australia", image: "https://theblondeabroad.com/wp-content/uploads/2018/08/Daintree.jpg", country_id: australia.id)
-kangaroo_island = Destination.create!(name: "Kangaroo Island", country_name: "Australia", image: "https://mybestplace.com/uploads/2021/08/Kangaroo-Island-Australia-SOCIAL.jpg", country_id: australia.id)
-tasmania = Destination.create!(name: "Tasmania", country_name: "Australia", image: "https://lp-cms-production.imgix.net/2019-06/6478bf63ea17597bb03104eef02ededc-tasmania.jpg", country_id: australia.id)
-uluru_kata = Destination.create!(name: "Uluru-Kata Tjuta National Park", country_name: "Australia", image: "https://www.worldatlas.com/upload/fa/1c/c8/uluru-or-ayers-rock-uluru-kata-tjuta-national-park-northern-territory-australia-photodigitaal-nl.jpg", country_id: australia.id)
+sydney = Destination.create!(name: "Sydney", country_name: "Australia", image: "https://www.travelandleisure.com/thmb/6JVbKFFtu7AeQu5rHioeDpcPxko=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/sydney-australia-SYDNEYTG0621-2dcacc38417541f689e293d397da9eaf.jpg", lat: -33.8688, lng: 151.2093, country_id: australia.id)
+great_barrier_reef = Destination.create!(name: "Great Barrier Reef", country_name: "Australia", image: "https://media.cntraveler.com/photos/5e270f847a47880008257cbe/5:4/w_2500,h_2000,c_limit/ReefSuites-GreatBarrierReef-2020-4.jpg", lat: -18.2871, lng: 147.6992, country_id: australia.id)
+melbourne = Destination.create!(name: "Melbourne", country_name: "Australia", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Melburnian_Skyline.jpg/1200px-Melburnian_Skyline.jpg", lat: -37.8136, lng: 144.9631, country_id: australia.id)
+daintree = Destination.create!(name: "Daintree Rainforest", country_name: "Australia", image: "https://theblondeabroad.com/wp-content/uploads/2018/08/Daintree.jpg", lat: -16.1700, lng: 145.4185, country_id: australia.id)
+kangaroo_island = Destination.create!(name: "Kangaroo Island", country_name: "Australia", image: "https://mybestplace.com/uploads/2021/08/Kangaroo-Island-Australia-SOCIAL.jpg", lat: -35.7752, lng: 137.2142, country_id: australia.id)
+tasmania = Destination.create!(name: "Tasmania", country_name: "Australia", image: "https://lp-cms-production.imgix.net/2019-06/6478bf63ea17597bb03104eef02ededc-tasmania.jpg", lat: -42.0409, lng: 146.8087, country_id: australia.id)
+uluru_kata = Destination.create!(name: "Uluru-Kata Tjuta National Park", country_name: "Australia", image: "https://www.worldatlas.com/upload/fa/1c/c8/uluru-or-ayers-rock-uluru-kata-tjuta-national-park-northern-territory-australia-photodigitaal-nl.jpg", lat: -25.3438, lng: 131.0347, country_id: australia.id)
 
 #South Africa
 
-kruger = Destination.create!(name: "Kruger National Park", country_name: "South Africa", image: "https://cdn.kimkim.com/files/a/content_articles/featured_photos/22d8dd5c4ae3a3626e0cf30b0cc97e48bc14c72d/big-5b902d4507219d542102a964d62a091b.jpg", country_id: south_africa.id)
-cape_town = Destination.create!(name: "Cape Town", country_name: "South Africa", image: "https://cdn.britannica.com/42/126842-050-0803BC41/Sea-Point-Cape-Town-SAf.jpg", country_id: south_africa.id)
-kalahari = Destination.create!(name: "Kalahari", country_name: "South Africa", image: "https://www.worldatlas.com/r/w1200/upload/a0/43/3b/shutterstock-796510987.jpg", country_id: south_africa.id)
+kruger = Destination.create!(name: "Kruger National Park", country_name: "South Africa", image: "https://cdn.kimkim.com/files/a/content_articles/featured_photos/22d8dd5c4ae3a3626e0cf30b0cc97e48bc14c72d/big-5b902d4507219d542102a964d62a091b.jpg", lat: -23.9884, lng: 31.5547, country_id: south_africa.id)
+cape_town = Destination.create!(name: "Cape Town", country_name: "South Africa", image: "https://cdn.britannica.com/42/126842-050-0803BC41/Sea-Point-Cape-Town-SAf.jpg", lat: -33.9249, lng: 18.4241, country_id: south_africa.id)
+kalahari = Destination.create!(name: "Kalahari", country_name: "South Africa", image: "https://www.worldatlas.com/r/w1200/upload/a0/43/3b/shutterstock-796510987.jpg", lat: -25.5920, lng: 21.0937, country_id: south_africa.id)
 
 #Madagascar
 
-ile_sainte_marie = Destination.create!(name: "Ile Sainte Marie", country_name: "Madagascar", image: "https://www.naturalworldsafaris.com/media/3265/nws-st-madagascar-ile-sainte-marie-aerial.jpg", country_id: madagascar.id)
-avenue_of_the_boababs = Destination.create!(name: "Avenue of the Baobabs", country_name: "Madagascar", image: "https://awesomeplacestovisit.com/wp-content/uploads/2020/08/Africa-Madagascar-Avenue-of-the-Baobabs-2-1024x768-1.jpg", country_id: madagascar.id)
-ranomafana = Destination.create!(name: "Ranomafana National Park", country_name: "Madagascar", image: "https://travellersworldwide.com/wp-content/uploads/2021/07/shutterstock_1084027373.jpg", country_id: madagascar.id)
+ile_sainte_marie = Destination.create!(name: "Ile Sainte Marie", country_name: "Madagascar", image: "https://www.naturalworldsafaris.com/media/3265/nws-st-madagascar-ile-sainte-marie-aerial.jpg", lat: -16.8944, lng: 49.9059, country_id: madagascar.id)
+avenue_of_the_boababs = Destination.create!(name: "Avenue of the Baobabs", country_name: "Madagascar", image: "https://awesomeplacestovisit.com/wp-content/uploads/2020/08/Africa-Madagascar-Avenue-of-the-Baobabs-2-1024x768-1.jpg", lat: -20.2505, lng: 44.4197, country_id: madagascar.id)
+ranomafana = Destination.create!(name: "Ranomafana National Park", country_name: "Madagascar", image: "https://travellersworldwide.com/wp-content/uploads/2021/07/shutterstock_1084027373.jpg", lat: -21.2599, lng: 47.4515, country_id: madagascar.id)
 
 #Egypt
 
-pyramids_of_giza = Destination.create!(name: "Pyramids of Giza", country_name: "Egypt", image: "https://cdn.mos.cms.futurecdn.net/YMa7Wx2FyjQFUjEeqa72Rm-1200-80.jpg", country_id: egypt.id)
-aswan = Destination.create!(name: "Aswan", country_name: "Egypt", image: "https://www.ahstatic.com/photos/1666_sw_00_p_1024x768.jpg", country_id: egypt.id)
-abu_simbel = Destination.create!(name: "Abu Simbel", country_name: "Egypt", image: "https://cdn.britannica.com/49/189749-050-EDADDEC0/Great-Temple-of-Ramses-II-temples-larger.jpg", country_id: egypt.id)
-red_sea = Destination.create!(name: "Red Sea", country_name: "Egypt", image: "http://cdn.cnn.com/cnnnext/dam/assets/200611101955-01-egypt-dahab.jpg", country_id: egypt.id)
+pyramids_of_giza = Destination.create!(name: "Pyramids of Giza", country_name: "Egypt", image: "https://cdn.mos.cms.futurecdn.net/YMa7Wx2FyjQFUjEeqa72Rm-1200-80.jpg", lat: 29.9792, lng: 31.1342, country_id: egypt.id)
+aswan = Destination.create!(name: "Aswan", country_name: "Egypt", image: "https://www.ahstatic.com/photos/1666_sw_00_p_1024x768.jpg", lat: 24.0889, lng: 32.8998, country_id: egypt.id)
+abu_simbel = Destination.create!(name: "Abu Simbel", country_name: "Egypt", image: "https://cdn.britannica.com/49/189749-050-EDADDEC0/Great-Temple-of-Ramses-II-temples-larger.jpg", lat: 22.3372, lng: 31.6258, country_id: egypt.id)
+red_sea = Destination.create!(name: "Red Sea", country_name: "Egypt", image: "http://cdn.cnn.com/cnnnext/dam/assets/200611101955-01-egypt-dahab.jpg", lat: 20.2802, lng: 38.5126, country_id: egypt.id)
 
 #Kenya
 
-maasai_mara = Destination.create!(name: "Maasai Mara National Reserve", country_name: "Kenya", image: "https://www.planetware.com/photos-large/KEN/kenya-Maasai-mara.jpg", country_id: kenya.id)
+maasai_mara = Destination.create!(name: "Maasai Mara National Reserve", country_name: "Kenya", image: "https://www.planetware.com/photos-large/KEN/kenya-Maasai-mara.jpg", lat: -1.4937, lng: 35.1446, country_id: kenya.id)
 
 #Philippines
 
-white_beach = Destination.create!(name: "White Beach", country_name: "Philippines", image: "https://a.cdn-hotels.com/gdcs/production5/d320/a0c5a994-d99a-4278-a1b1-8a3b652461ac.jpg", country_id: philippines.id)
-manila = Destination.create!(name: "Manila", country_name: "Philippines", image: "https://res.klook.com/image/upload/fl_lossy.progressive,w_800,c_fill,q_85/Manila1-1125x624_biy6ej.png", country_id: philippines.id)
-chocolate_hills = Destination.create!(name: "Chocolate Hills", country_name: "Philippines", image: "https://upload.wikimedia.org/wikipedia/commons/2/28/Chocolate_Hills_overview.JPG", country_id: philippines.id)
-batad = Destination.create!(name: "Batad Rice Terraces", country_name: "Philippines", image: "https://afar.brightspotcdn.com/dims4/default/fef1c0c/2147483647/strip/false/crop/800x450+0+25/resize/1200x675!/quality/90/?url=https%3A%2F%2Fafar-media-production-web.s3.amazonaws.com%2Fbrightspot%2F71%2F28%2Fc189a543b31f45e031b2171cc55f%2Foriginal-ifugao-rha-29-5018-20tony-20waltham-age.jpg", country_id: philippines.id)
-palawan = Destination.create!(name: "Palawan", country_name: "Philippines", image: "https://media.cntraveler.com/photos/5668630dc3c9e01555a4d421/master/pass/palawan-philippines-coron-cr-alamy.jpg", country_id: philippines.id)
-hanging_bridge = Destination.create!(name: "Hanging Bridge", country_name: "Philippines", image: "https://youimg1.tripcdn.com/target/100i1f000001gp1svE8FF.jpg?proc=source%2Ftrip", country_id: philippines.id)
-sugba_lagoon = Destination.create!(name: "Sugba Lagoon", country_name: "Philippines", image: "https://uploads-ssl.webflow.com/576fd5a8f192527e50a4b95c/5e3bed2d529ab1ebe6703091_visiting%20sugba%20lagoon%20in%20siargao.jpg", country_id: philippines.id)
+white_beach = Destination.create!(name: "White Beach", country_name: "Philippines", image: "https://a.cdn-hotels.com/gdcs/production5/d320/a0c5a994-d99a-4278-a1b1-8a3b652461ac.jpg", lat: 11.9524, lng: 121.9296, country_id: philippines.id)
+manila = Destination.create!(name: "Manila", country_name: "Philippines", image: "https://res.klook.com/image/upload/fl_lossy.progressive,w_800,c_fill,q_85/Manila1-1125x624_biy6ej.png", lat: 14.5995, lng: 120.9842, country_id: philippines.id)
+chocolate_hills = Destination.create!(name: "Chocolate Hills", country_name: "Philippines", image: "https://upload.wikimedia.org/wikipedia/commons/2/28/Chocolate_Hills_overview.JPG", lat: 9.8297, lng: 124.1397, country_id: philippines.id)
+batad = Destination.create!(name: "Batad Rice Terraces", country_name: "Philippines", image: "https://afar.brightspotcdn.com/dims4/default/fef1c0c/2147483647/strip/false/crop/800x450+0+25/resize/1200x675!/quality/90/?url=https%3A%2F%2Fafar-media-production-web.s3.amazonaws.com%2Fbrightspot%2F71%2F28%2Fc189a543b31f45e031b2171cc55f%2Foriginal-ifugao-rha-29-5018-20tony-20waltham-age.jpg", lat: 11.4170, lng: 123.1127, country_id: philippines.id)
+palawan = Destination.create!(name: "Palawan", country_name: "Philippines", image: "https://media.cntraveler.com/photos/5668630dc3c9e01555a4d421/master/pass/palawan-philippines-coron-cr-alamy.jpg", lat: 9.8349, lng: 118.7384, country_id: philippines.id)
+sugba_lagoon = Destination.create!(name: "Sugba Lagoon", country_name: "Philippines", image: "https://uploads-ssl.webflow.com/576fd5a8f192527e50a4b95c/5e3bed2d529ab1ebe6703091_visiting%20sugba%20lagoon%20in%20siargao.jpg", lat: 9.9065, lng: 125.9003, country_id: philippines.id)
 
 #Thailand
 
-railay_beach = Destination.create!(name: "Railay Beach", country_name: "Thailand", image: "https://lp-cms-production.imgix.net/2019-06/128074626_high.jpg", country_id: thailand.id)
-koh_phi_phi = Destination.create!(name: "Koh Phi Phi", country_name: "Thailand", image: "https://theworldtravelguy.com/wp-content/uploads/2022/09/DJI_0858_1200.jpg", country_id: thailand.id)
-bangkok = Destination.create!(name: "Bangkok", country_name: "Thailand", image: "https://imageio.forbes.com/specials-images/imageserve/62baf0bb91f8ba58ef4a638a/Sunrise-with-Grand-Palace-of-Bangkok--Thailand/960x0.jpg?format=jpg&width=960", country_id: thailand.id)
-chaing_mai = Destination.create!(name: "Chaing Mai", country_name: "Thailand", image: "https://a.cdn-hotels.com/gdcs/production9/d679/184d7edf-5c3a-470c-8529-b0085d6d5b0e.jpg?impolicy=fcrop&w=800&h=533&q=medium", country_id: thailand.id)
-pai = Destination.create!(name: "Pai", country_name: "Thailand", image: "https://www.nomadasaurus.com/wp-content/uploads/2019/04/Things-To-Do-In-Pai-Thailand.jpg", country_id: thailand.id)
-koh_samui = Destination.create!(name: "Koh Samui", country_name: "Thailand", image: "https://a.cdn-hotels.com/gdcs/production152/d1240/fc640491-6c35-45a9-a649-3c176d63d94c.jpg", country_id: thailand.id)
-tonsai_beach = Destination.create!(name: "Tonsai Beach", country_name: "Thailand", image: "https://www.adventureinyou.com/wp-content/uploads/2016/05/everything-need-to-know-Ton-Sai_LEAD.jpg", country_id: thailand.id)
-khao_sok = Destination.create!(name: "Khao Sok National Park", country_name: "Thailand", image: "https://www.placesofjuma.com/khao-sok-national-park/khao-sok-thailand-2/", country_id: thailand.id)
+railay_beach = Destination.create!(name: "Railay Beach", country_name: "Thailand", image: "https://lp-cms-production.imgix.net/2019-06/128074626_high.jpg", lat: 8.0117, lng: 98.8378, country_id: thailand.id)
+koh_phi_phi = Destination.create!(name: "Koh Phi Phi", country_name: "Thailand", image: "https://theworldtravelguy.com/wp-content/uploads/2022/09/DJI_0858_1200.jpg", lat: 7.7407, lng: 98.7784, country_id: thailand.id)
+bangkok = Destination.create!(name: "Bangkok", country_name: "Thailand", image: "https://imageio.forbes.com/specials-images/imageserve/62baf0bb91f8ba58ef4a638a/Sunrise-with-Grand-Palace-of-Bangkok--Thailand/960x0.jpg?format=jpg&width=960", lat: 13.7563, lng: 100.5018, country_id: thailand.id)
+chaing_mai = Destination.create!(name: "Chaing Mai", country_name: "Thailand", image: "https://a.cdn-hotels.com/gdcs/production9/d679/184d7edf-5c3a-470c-8529-b0085d6d5b0e.jpg?impolicy=fcrop&w=800&h=533&q=medium", lat: 18.7883, lng: 98.9853, country_id: thailand.id)
+pai = Destination.create!(name: "Pai", country_name: "Thailand", image: "https://www.nomadasaurus.com/wp-content/uploads/2019/04/Things-To-Do-In-Pai-Thailand.jpg", lat: 19.3582, lng: 98.4405, country_id: thailand.id)
+koh_samui = Destination.create!(name: "Koh Samui", country_name: "Thailand", image: "https://a.cdn-hotels.com/gdcs/production152/d1240/fc640491-6c35-45a9-a649-3c176d63d94c.jpg", lat: 9.5120, lng: 100.0136, country_id: thailand.id)
+tonsai_beach = Destination.create!(name: "Tonsai Beach", country_name: "Thailand", image: "https://www.adventureinyou.com/wp-content/uploads/2016/05/everything-need-to-know-Ton-Sai_LEAD.jpg", lat: 8.0117, lng: 98.8378, country_id: thailand.id)
+khao_sok = Destination.create!(name: "Khao Sok National Park", country_name: "Thailand", image: "https://www.placesofjuma.com/khao-sok-national-park/khao-sok-thailand-2/", lat: 8.9873, lng: 98.6294, country_id: thailand.id)
 
 #Vietnam
 
-halong_bay = Destination.create!(name: "Halong Bay", country_name: "Vietnam", image: "https://lp-cms-production.imgix.net/features/2019/04/HalongBay-aa0f7e71a1db.jpg", country_id: vietnam.id)
-sapa = Destination.create!(name: "Sapa", country_name: "Vietnam", image: "https://www.remotelands.com/storage/media/1533/conversions/b161005160-banner-size.jpg", country_id: vietnam.id)
-hanoi = Destination.create!(name: "Hanoi", country_name: "Vietnam", image: "https://i.natgeofe.com/n/39181071-db55-488f-bd54-707759ad924e/river-hanoi-vietnam.jpg?w=2520&h=1610", country_id: vietnam.id)
-cu_chi_tunnels = Destination.create!(name: "Cu Chi Tunnels", country_name: "Vietnam", image: "https://www.traveltalktours.com/wp-content/uploads/2021/12/shutterstock_1186953112-1024x678.jpg", country_id: vietnam.id)
-ba_be_national_park = Destination.create!(name: "Ba Be National Park", country_name: "Vietnam", image: "https://www.babenationalpark.com.vn/UserFiles/image/Travel%20Blog/3-day-trip-to-Ban-Gioc-Waterfall-and-Ba-Be-Lake.jpg", country_id: vietnam.id)
-ha_giang = Destination.create!(name: "Ha Giang", country_name: "Vietnam", image: "https://amotravel.com/wp-content/uploads/2016/06/ha-giang.jpg", country_id: vietnam.id)
+halong_bay = Destination.create!(name: "Halong Bay", country_name: "Vietnam", image: "https://lp-cms-production.imgix.net/features/2019/04/HalongBay-aa0f7e71a1db.jpg", lat: 20.9101, lng: 107.1839, country_id: vietnam.id)
+sapa = Destination.create!(name: "Sapa", country_name: "Vietnam", image: "https://www.remotelands.com/storage/media/1533/conversions/b161005160-banner-size.jpg", lat: 22.3364, lng: 103.8438, country_id: vietnam.id)
+hanoi = Destination.create!(name: "Hanoi", country_name: "Vietnam", image: "https://i.natgeofe.com/n/39181071-db55-488f-bd54-707759ad924e/river-hanoi-vietnam.jpg?w=2520&h=1610", lat: 21.0278, lng: 105.8342, country_id: vietnam.id)
+cu_chi_tunnels = Destination.create!(name: "Cu Chi Tunnels", country_name: "Vietnam", image: "https://www.traveltalktours.com/wp-content/uploads/2021/12/shutterstock_1186953112-1024x678.jpg", lat: 11.1427, lng: 106.4623, country_id: vietnam.id)
+ba_be_national_park = Destination.create!(name: "Ba Be National Park", country_name: "Vietnam", image: "https://www.babenationalpark.com.vn/UserFiles/image/Travel%20Blog/3-day-trip-to-Ban-Gioc-Waterfall-and-Ba-Be-Lake.jpg", lat: 22.3963, lng: 105.6157, country_id: vietnam.id)
+ha_giang = Destination.create!(name: "Ha Giang", country_name: "Vietnam", image: "https://amotravel.com/wp-content/uploads/2016/06/ha-giang.jpg", lat: 22.8026, lng: 104.9784, country_id: vietnam.id)
+son_doong = Destination.create!(name: "Son Doong Cave", country_name: "Vietnam", image: "https://lp-cms-production.imgix.net/features/2019/05/Son-Doong-Cave-Ryan-Deboodt-8e2574f9767f.jpg", lat: 17.4348, lng: 106.2997, country_id: vietnam.id)
 
 #Indonesia
 
-bali = Destination.create!(name: "Bali", country_name: "Indonesia", image: "https://imageio.forbes.com/specials-images/imageserve/675172642/pura-ulun-danu-bratan-temple-in-Bali-/960x0.jpg?format=jpg&width=960", country_id: indonesia.id)
-borobudur =Destination.create!(name: "Borobudur", country_name: "Indonesia", image: "https://lp-cms-production.imgix.net/2019-06/f4024c571e5e09ce5e4049bc181500b1-borobudur-temple.jpg?sharp=10&vib=20&w=1200&auto=compress&fit=crop&fm=auto&h=800", country_id: indonesia.id)
-gili_islands = Destination.create!(name: "Gili Islands", country_name: "Indonesia", image: "https://onestep4ward.com/wp-content/uploads/2020/12/gili-meno-statues.jpg", country_id: indonesia.id)
-komodo = Destination.create!(name: "Komodo National Park", country_name: "Indonesia", image: "https://upload.wikimedia.org/wikipedia/commons/3/3a/Komodo_dragon_at_Komodo_National_Park.jpg", country_id: indonesia.id)
-sacred_monkey_forest = Destination.create!(name: "Sacred Monkey Forest", country_name: "Indonesia", image: "https://a.cdn-hotels.com/gdcs/production86/d1161/aef215bb-15a0-4003-8467-98a47bcac4d3.jpg", country_id: indonesia.id)
-mount_bromo = Destination.create!(name: "Mount Bromo", country_name: "Indonesia", image: "https://theworldtravelguy.com/wp-content/uploads/2021/04/EDIT02_1200.jpg", country_id: indonesia.id)
-raja_ampat = Destination.create!(name: "Raja Ampat", country_name: "Indonesia", image: "https://www.zubludiving.com/images/Indonesia/West-Papua/Raja-Ampat/Raja-Ampat-Wayag-Diving.jpg", country_id: indonesia.id)
+bali = Destination.create!(name: "Bali", country_name: "Indonesia", image: "https://imageio.forbes.com/specials-images/imageserve/675172642/pura-ulun-danu-bratan-temple-in-Bali-/960x0.jpg?format=jpg&width=960", lat: -8.4095, lng: 115.1889, country_id: indonesia.id)
+borobudur =Destination.create!(name: "Borobudur", country_name: "Indonesia", image: "https://lp-cms-production.imgix.net/2019-06/f4024c571e5e09ce5e4049bc181500b1-borobudur-temple.jpg?sharp=10&vib=20&w=1200&auto=compress&fit=crop&fm=auto&h=800", lat: -7.6079, lng: 110.2038, country_id: indonesia.id)
+gili_islands = Destination.create!(name: "Gili Islands", country_name: "Indonesia", image: "https://onestep4ward.com/wp-content/uploads/2020/12/gili-meno-statues.jpg", lat: -8.359045, lng: 116.081284, country_id: indonesia.id)
+komodo = Destination.create!(name: "Komodo National Park", country_name: "Indonesia", image: "https://upload.wikimedia.org/wikipedia/commons/3/3a/Komodo_dragon_at_Komodo_National_Park.jpg", lat: -8.5277, lng: 119.4833, country_id: indonesia.id)
+sacred_monkey_forest = Destination.create!(name: "Sacred Monkey Forest", country_name: "Indonesia", image: "https://a.cdn-hotels.com/gdcs/production86/d1161/aef215bb-15a0-4003-8467-98a47bcac4d3.jpg", lat: -8.5194, lng: 115.2606, country_id: indonesia.id)
+mount_bromo = Destination.create!(name: "Mount Bromo", country_name: "Indonesia", image: "https://theworldtravelguy.com/wp-content/uploads/2021/04/EDIT02_1200.jpg", lat: -7.9425, lng: 112.9530, country_id: indonesia.id)
+raja_ampat = Destination.create!(name: "Raja Ampat", country_name: "Indonesia", image: "https://www.zubludiving.com/images/Indonesia/West-Papua/Raja-Ampat/Raja-Ampat-Wayag-Diving.jpg", lat: -1.0915, lng: 130.8779, country_id: indonesia.id)
 
 #Singapore
 
-marina_bay_sands = Destination.create!(name: "Marina Bay Sands", country_name: "Singapore", image: "https://resources.thomascook.in/images/holidays/sightSeeing/MarinabaySand850.jpg", country_id: singapore.id)
+marina_bay_sands = Destination.create!(name: "Marina Bay Sands", country_name: "Singapore", image: "https://resources.thomascook.in/images/holidays/sightSeeing/MarinabaySand850.jpg", lat: 1.2838, lng: 103.8591, country_id: singapore.id)
 
 #Georgia
 
-tbilisi = Destination.create!(name: "Tbilisi", country_name: "Georgia", image: "https://static01.nyt.com/images/2018/06/17/travel/17hours1/merlin_138493119_dc17f17f-96a2-4487-a9ea-214914926374-superJumbo.jpg", country_id: georgia.id)
+tbilisi = Destination.create!(name: "Tbilisi", country_name: "Georgia", image: "https://static01.nyt.com/images/2018/06/17/travel/17hours1/merlin_138493119_dc17f17f-96a2-4487-a9ea-214914926374-superJumbo.jpg", lat: 41.7151, lng: 44.8271, country_id: georgia.id)
 
 #South Korea
 
-changdeokgung_palace = Destination.create!(name: "Changdeokgung Palace", country_name: "South Korea", image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/19/5e/41/entrance.jpg?w=1200&h=-1&s=1", country_id: south_korea.id)
-busan = Destination.create!(name: "Busan", country_name: "South Korea", image: "https://a.cdn-hotels.com/gdcs/production144/d559/b4aff5a2-1af3-454f-8cce-97ba6ec44b34.jpg", country_id: south_korea.id)
-seoraksan = Destination.create!(name: "Seoraksan National Park", country_name: "South Korea", image: "https://upload.wikimedia.org/wikipedia/commons/0/01/Dinosaur_Ridge_of_Seoraksan.jpg", country_id: south_korea.id)
-jeju = Destination.create!(name: "Jeju Island", country_name: "South Korea", image: "https://cdn.new7wonders.com/app/uploads/sites/4/2016/09/044-Seongsan-Ilchulbong-and-Hallasan-1920x1227.jpg", country_id: south_korea.id)
+changdeokgung_palace = Destination.create!(name: "Changdeokgung Palace", country_name: "South Korea", image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/19/5e/41/entrance.jpg?w=1200&h=-1&s=1", lat: 37.5799, lng: 126.9912, country_id: south_korea.id)
+busan = Destination.create!(name: "Busan", country_name: "South Korea", image: "https://a.cdn-hotels.com/gdcs/production144/d559/b4aff5a2-1af3-454f-8cce-97ba6ec44b34.jpg", lat: 35.1796, lng: 129.0756, country_id: south_korea.id)
+seoraksan = Destination.create!(name: "Seoraksan National Park", country_name: "South Korea", image: "https://upload.wikimedia.org/wikipedia/commons/0/01/Dinosaur_Ridge_of_Seoraksan.jpg", lat: 38.1196, lng: 128.4656, country_id: south_korea.id)
+jeju = Destination.create!(name: "Jeju Island", country_name: "South Korea", image: "https://cdn.new7wonders.com/app/uploads/sites/4/2016/09/044-Seongsan-Ilchulbong-and-Hallasan-1920x1227.jpg", lat: 33.4890, lng: 126.4983, country_id: south_korea.id)
 
 #India
 
-taj_mahal = Destination.create!(name: "Taj Mahal", country_name: "India", image: "https://cdn.britannica.com/86/170586-050-AB7FEFAE/Taj-Mahal-Agra-India.jpg", country_id: india.id)
-varanasi = Destination.create!(name: "Varanasi", country_name: "India", image: "https://cdn.britannica.com/08/153508-050-2A9EAD76/Ganges-River-Varanasi-Uttar-Pradesh-India.jpg", country_id: india.id)
-mumbai = Destination.create!(name: "Mumbai", country_name: "India", image: "https://www.andbeyond.com/wp-content/uploads/sites/5/Chhatrapati-Shivaji-Terminus-railway-station-mumbai.jpg", country_id: india.id)
+taj_mahal = Destination.create!(name: "Taj Mahal", country_name: "India", image: "https://cdn.britannica.com/86/170586-050-AB7FEFAE/Taj-Mahal-Agra-India.jpg", lat: 27.1751, lng: 78.0421, country_id: india.id)
+varanasi = Destination.create!(name: "Varanasi", country_name: "India", image: "https://cdn.britannica.com/08/153508-050-2A9EAD76/Ganges-River-Varanasi-Uttar-Pradesh-India.jpg", lat: 25.3176, lng: 82.9739, country_id: india.id)
+mumbai = Destination.create!(name: "Mumbai", country_name: "India", image: "https://www.andbeyond.com/wp-content/uploads/sites/5/Chhatrapati-Shivaji-Terminus-railway-station-mumbai.jpg", lat: 19.0760, lng: 72.8777, country_id: india.id)
 
 #Sri Lanka
 
-yala = Destination.create!(name: "Yala National Park", country_name: "Sri Lanka", image: "https://s1.it.atcdn.net/wp-content/uploads/2018/12/yala.jpg", country_id: sri_lanka.id)
-sigiriya = Destination.create!(name: "Sigiriya Rock Fort", country_name: "Sri Lanka", image: "https://i.natgeofe.com/n/0a6facf5-2d64-4603-8a8e-b2bd5fbba709/03-sigiriya-rock.jpg", country_id: sri_lanka.id)
+yala = Destination.create!(name: "Yala National Park", country_name: "Sri Lanka", image: "https://s1.it.atcdn.net/wp-content/uploads/2018/12/yala.jpg", lat: 6.3667, lng: 81.5167, country_id: sri_lanka.id)
+sigiriya = Destination.create!(name: "Sigiriya Rock Fort", country_name: "Sri Lanka", image: "https://i.natgeofe.com/n/0a6facf5-2d64-4603-8a8e-b2bd5fbba709/03-sigiriya-rock.jpg", lat: 7.9570, lng: 80.7603, country_id: sri_lanka.id)
 
 #Myanmar
 
-bagan = Destination.create!(name: "Bagan", country_name: "Myanmar", image: "https://cdn.theatlantic.com/media/img/photo/2019/07/bagan/b01_127437272-1/original.jpg", country_id: myanmar.id)
-golden_rock = Destination.create!(name: "Golden Rock", country_name: "Myanmar", image: "https://img.atlasobscura.com/63iv4JWam24fEI4vussCNQws7OXvGbOzT53BmONf5j4/rt:fit/h:390/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy9hOGNj/ZWJjMy1hZjFjLTQ4/YjAtOGNiYi05YzFh/ZDY5NTczOGM2N2Iw/MDBmMzE3Y2YyZGU4/N2RfRGVwb3NpdHBo/b3Rvc181NTE2NjQy/M19sLTIwMTUuanBn.jpg", country_id: myanmar.id)
+bagan = Destination.create!(name: "Bagan", country_name: "Myanmar", image: "https://cdn.theatlantic.com/media/img/photo/2019/07/bagan/b01_127437272-1/original.jpg", lat: 21.1717, lng: 94.8585, country_id: myanmar.id)
+golden_rock = Destination.create!(name: "Golden Rock", country_name: "Myanmar", image: "https://img.atlasobscura.com/63iv4JWam24fEI4vussCNQws7OXvGbOzT53BmONf5j4/rt:fit/h:390/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy9hOGNj/ZWJjMy1hZjFjLTQ4/YjAtOGNiYi05YzFh/ZDY5NTczOGM2N2Iw/MDBmMzE3Y2YyZGU4/N2RfRGVwb3NpdHBo/b3Rvc181NTE2NjQy/M19sLTIwMTUuanBn.jpg", lat: 17.4816, lng: 97.0982, country_id: myanmar.id)
 
 #Laos
 
@@ -817,11 +816,10 @@ puts "Done seeding posts..."
 
 puts "Seeding blogs..."
 
+
 things_to_know_before_traveling_to_hawaii = Blog.create!(title: "12 Things to Know Before Traveling to Hawaii", 
-body: "1. Decide the best time to go You can visit Hawaii anytime – the weather is agreeable year-round. It may be a bit rainier in winter and a bit hotter in summer, but there are no extremes because cooling trade winds blow throughout the year.
-\n
-Although winter (mid-December through mid-April) is the busiest tourist season, that has more to do with the climate elsewhere, as many tourists are snowbirds escaping cold weather back home. Crowds of families take summer vacations from June through August, and rooms are scarce and prices can spike around holidays, especially Thanksgiving, Christmas, New Year’s and spring break/Easter.
-\n
+body: "1. Decide the best time to go You can visit Hawaii anytime – the weather is agreeable year-round. It may be a bit rainier in winter and a bit hotter in summer, but there are no extremes because cooling trade winds blow throughout the year. \n Although winter (mid-December through mid-April) is the busiest tourist season, that has more to do with the climate elsewhere, as many tourists are snowbirds escaping cold weather back home. Crowds of families take summer vacations from June through August, and rooms are scarce and prices can spike around holidays, especially Thanksgiving, Christmas, New Year’s and spring break/Easter.
+
 For the budget-conscious, the slowest times are mid-September through mid-November and the weeks from just after Easter until Memorial Day at the end of May, and you’re more likely to find good deals then on accommodations and airfare. Surfers will find the largest waves in winter, while optimal windsurfing conditions are during summer. Whale-watching tours usually depart between January and March only. 2. You'll need to make some reservations in advance Although Hawaii’s hang-loose attitude extends to most facets of life – including making extensive plans in advance –  you might want to book ahead in a couple of instances. For top Honolulu restaurants popular with residents, reserve a table before you arrive in the islands. The free tickets for the boat to the USS Arizona Memorial at Pearl Harbor are scooped up quickly. Reserve online up to 60 days before your visit. 3. Respect Hawaiian culture Evolving from ancient Polynesian traditions, Hawaiian culture was attacked and suppressed in the two centuries after the arrival of British colonizer Captain Cook in 1778. But beginning with the Hawaiian Renaissance in the 1970s, a rebirth of Native Hawaiian cultural and artistic traditions has taken hold. Across the islands, both Hawaiian culture–focused charter schools and public schools' Hawaiian-language immersion programs are popular, and traditional arts are experiencing a revival. Ancient heiau (temples) and fishponds are being restored, native forests replanted and endangered birds bred and released back into the wild. Today Hawaiian culture is about much more than just melodic place names and luau shows. Being Hawaiian is an important part of the identity of the islands, reflected in ways both large and small, from the inclusion of Hawaiian words in everyday speech to the embrace of concepts of respect and inclusion. Although few island residents can agree on what shape the Hawaiian sovereignty movement should take, its grassroots political activism is increasingly part of the local dialogue. A female in silhouette as the sun sets over the beach holds up her hand in a hang loose sign or 'shaka' Don't be afraid to liberally wave the shaka © Adventuring MJ / Shutterstock Dos and don'ts in Hawaii Good manners in Hawaii revolve around respect and awareness. Do use aloha (hello/goodbye and the concept of love and fellowship) and mahalo (thank you). Liberally wave the shaka (Hawaii’s hand greeting sign). Do try to correctly pronounce Hawaiian place names and words. Even if you fail, the attempt is appreciated. If you aren’t sure how to say it, ask. Even long names aren’t that hard with a little practice. Don’t refer to Maui, Kauaʻi, Molokaʻi, Lanaʻi and Hawaiʻi (the Big Island) as 'outer islands' – it's Oʻahu-centric. They’re called 'Neighbor Islands.'
 Don’t try to speak pidgin – unless you’re really good at it.
 Do ask permission before you pick fruit or flowers from trees on private property.

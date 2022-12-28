@@ -64,7 +64,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_14_012650) do
     t.string "image"
     t.string "country_name"
     t.string "description"
-    t.string "coordinates"
+    t.integer "lat"
+    t.integer "lng"
     t.integer "country_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

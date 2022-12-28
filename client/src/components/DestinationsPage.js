@@ -10,8 +10,12 @@ import Select from "@mui/material/Select";
 
 export default function DestinationsPage() {
   const [filteredContinent, setFilteredContinent] = useState([]);
+  const [filteredCoordinates, setFilteredCoordinates] = useState({
+    lat: "40",
+    lng: "-100",
+    zoom: 4,
+  });
   const [continent, setContinent] = useState("");
-  const [age, setAge] = useState("");
 
   const navigate = useNavigate();
 
@@ -37,20 +41,23 @@ export default function DestinationsPage() {
     setContinent(e.target.value);
   };
 
-  const handleContinentClick = (id) => {
+  const handleContinentClick = (continent) => {
     const filteredCountries = countries.filter(
-      (country) => country.continent_id === id
+      (country) => country.continent_id === continent.id
     );
     setFilteredContinent(filteredCountries);
+
+    const filteredCoor = continents.find((c) => c.id === continent.id);
+    setFilteredCoordinates(filteredCoor);
   };
 
   if (countriesLoading || continentsLoading) {
     return <h1>Loading...</h1>;
   }
 
-  const lat = 55.526;
-  const lng = 20.2551;
-  const zoom = 4;
+  const lat = filteredCoordinates.lat;
+  const lng = filteredCoordinates.lng;
+  const zoom = filteredCoordinates.zoom;
 
   return (
     <div
@@ -109,7 +116,7 @@ export default function DestinationsPage() {
                     style={{
                       color: "#1c1c1e",
                     }}
-                    onClick={() => handleContinentClick(continent.id)}
+                    onClick={() => handleContinentClick(continent)}
                   >
                     {continent.name}
                   </MenuItem>

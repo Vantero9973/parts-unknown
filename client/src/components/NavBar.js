@@ -76,6 +76,7 @@ export default function NavBar({ user, setUser }) {
               </li>
               <li>
                 <a
+                  href="/shop"
                   style={{ fontSize: "16px" }}
                   className="btn btn-ghost normal-case"
                 >
@@ -181,6 +182,7 @@ export default function NavBar({ user, setUser }) {
               </li>
               <li>
                 <a
+                  href="/shop"
                   style={{ fontSize: "16px" }}
                   className="btn btn-ghost normal-case"
                 >
