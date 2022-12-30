@@ -44,10 +44,7 @@ function AutosuggestPage() {
     setValue(newValue);
   };
 
-  const onSuggestionSelected = (
-    event,
-    { suggestion, suggestionValue, suggestionIndex, sectionIndex, method }
-  ) => {
+  const onSuggestionSelected = (event, { suggestionValue }) => {
     navigate(`/countries/${suggestionValue}`);
   };
 
@@ -69,10 +66,6 @@ function AutosuggestPage() {
     onChange,
   };
 
-  // const dbCountry = countries?.find((country) => {
-  //   country.name.toLowerCase() === countriesList.name.toLowerCase();
-  // });
-
   // Finally, render it!
   return (
     <Autosuggest
@@ -84,7 +77,6 @@ function AutosuggestPage() {
       onSuggestionSelected={onSuggestionSelected}
       renderSuggestion={renderSuggestion}
       inputProps={inputProps}
-      onSubmit={() => navigate(`/destinations`)}
     />
   );
 }

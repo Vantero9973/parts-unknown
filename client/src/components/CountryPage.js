@@ -56,6 +56,36 @@ export default function CountryPage() {
   const lng = countries.lng;
   const zoom = countries.zoom;
 
+  const markerImage = destinations[0]?.image;
+  const markerName = destinations[0]?.name;
+
+  const markerTwoImage = destinations[1]?.image;
+  const markerTwoName = destinations[1]?.name;
+
+  const markerThreeImage = destinations[2]?.image;
+  const markerThreeName = destinations[2]?.name;
+
+  const markerFourImage = destinations[3]?.image;
+  const markerFourName = destinations[3]?.name;
+
+  const markerFiveImage = destinations[4]?.image;
+  const markerFiveName = destinations[4]?.name;
+
+  const markerSixImage = destinations[5]?.image;
+  const markerSixName = destinations[5]?.name;
+
+  const markerSevenImage = destinations[6]?.image;
+  const markerSevenName = destinations[6]?.name;
+
+  const markerEightImage = destinations[7]?.image;
+  const markerEightName = destinations[7]?.name;
+
+  const markerNineImage = destinations[8]?.image;
+  const markerNineName = destinations[8]?.name;
+
+  const markerTenImage = destinations[9]?.image;
+  const markerTenName = destinations[9]?.name;
+
   const markerLat = destinations[0]?.lat;
   const markerLng = destinations[0]?.lng;
 
@@ -160,6 +190,26 @@ export default function CountryPage() {
         lat={lat}
         lng={lng}
         zoom={zoom}
+        markerName={markerName}
+        markerImage={markerImage}
+        markerTwoImage={markerTwoImage}
+        markerTwoName={markerTwoName}
+        markerThreeImage={markerThreeImage}
+        markerThreeName={markerThreeName}
+        markerFourImage={markerFourImage}
+        markerFourName={markerFourName}
+        markerFiveImage={markerFiveImage}
+        markerFiveName={markerFiveName}
+        markerSixImage={markerSixImage}
+        markerSixName={markerSixName}
+        markerSevenImage={markerSevenImage}
+        markerSevenName={markerSevenName}
+        markerEightImage={markerEightImage}
+        markerEightName={markerEightName}
+        markerNineImage={markerNineImage}
+        markerNineName={markerNineName}
+        markerTenImage={markerTenImage}
+        markerTenName={markerTenName}
         markerLat={markerLat}
         markerLng={markerLng}
         markerTwoLat={markerTwoLat}

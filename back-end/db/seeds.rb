@@ -234,6 +234,10 @@ san_francisco = Destination.create!(name: "San Francisco, CA", country_name: "US
 portland = Destination.create!(name: "Portland, OR", country_name: "USA", image: "https://www.themanual.com/wp-content/uploads/sites/9/2021/04/portland-oregon-travel-city-guide.jpg?p=1", lat: 45.5152, lng: -122.6784, country_id: united_states_of_america.id)
 jackson = Destination.create!(name: "Jackson, WY", country_name: "USA", image: "https://www.bostonmagazine.com/wp-content/uploads/sites/2/2021/11/style_traveler-1.jpg", lat: 43.4799, lng: -110.7624, country_id: united_states_of_america.id)
 
+#North Korea
+
+dont_go_here = Destination.create!(name: "Don't go here", image: "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/325/prohibited_1f6ab.png", lat: 40.3399, lng: 127.5101, country_id: north_korea.id)
+
 #Spain
 
 barcelona = Destination.create!(name: "Barcelona", country_name: "Spain", image: "https://cdn.vox-cdn.com/thumbor/TW6wbTfkQCpkFXIqYHte2heEZxI=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/16013556/shutterstock_785442694.jpg", lat: 41.3874, lng: 2.1686, country_id: spain.id)

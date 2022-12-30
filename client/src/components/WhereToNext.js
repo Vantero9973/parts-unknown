@@ -87,7 +87,7 @@ export default function WhereToNext() {
               }}
             >
               <Card
-                onClick={() => navigate("/destinations")}
+                onClick={() => navigate(`/countries/${destination.country_id}`)}
                 sx={{ width: "25vw" }}
                 style={{ borderRadius: "40px", cursor: "pointer" }}
               >

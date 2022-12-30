@@ -70,3 +70,23 @@ body {
     font-weight: bold;
     border-radius: 10px;
   }
+
+  .mapDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .mapImg {
+    max-height: 150px;
+    max-width: 150px;
+    margin-bottom: 5px;
+  }
+
+  .mapH {
+    font-size: 24px;
+    color: #1c1c1e;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+  }
