@@ -15,5 +15,6 @@ Rails.application.routes.draw do
   post "/signup", to: "users#create"
   get "/me", to: "users#show"
   get "/landingimages", to: "blogs#landing_images"
+  get "/postpage/:id", to: "posts#show_post"
   # get "/countrymap", to: "countries#show_map"
 end

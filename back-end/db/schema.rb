@@ -41,8 +41,9 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_14_012650) do
 
   create_table "continents", force: :cascade do |t|
     t.string "name"
-    t.string "lat"
-    t.string "lng"
+    t.string "image"
+    t.float "lat"
+    t.float "lng"
     t.integer "zoom"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -50,8 +51,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_14_012650) do
 
   create_table "countries", force: :cascade do |t|
     t.string "name"
-    t.string "lat"
-    t.string "lng"
+    t.float "lat"
+    t.float "lng"
     t.integer "zoom"
     t.integer "continent_id", null: false
     t.datetime "created_at", null: false
@@ -64,8 +65,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_14_012650) do
     t.string "image"
     t.string "country_name"
     t.string "description"
-    t.integer "lat"
-    t.integer "lng"
+    t.float "lat"
+    t.float "lng"
     t.integer "country_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -109,8 +110,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_14_012650) do
     t.string "name"
     t.string "image"
     t.string "description"
-    t.string "category"
-    t.integer "price"
+    t.integer "continent_id"
+    t.float "price"
     t.integer "country_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

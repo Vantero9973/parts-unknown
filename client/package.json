@@ -21,6 +21,7 @@
     "react-autosuggest": "^10.1.0",
     "react-confetti": "^6.1.0",
     "react-dom": "^18.2.0",
+    "react-horizontal-scrolling-menu": "^3.2.3",
     "react-moment": "^1.1.2",
     "react-paginate": "^8.1.4",
     "react-router-dom": "^6.4.5",

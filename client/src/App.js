@@ -11,9 +11,11 @@ import ForumCountry from "./components/ForumCountry";
 import FullBlogPost from "./components/FullBlogPost";
 import CountryPage from "./components/CountryPage";
 import ShopPage from "./components/ShopPage";
+import ContinentsShopPage from "./components/ContinentsShopPage";
+import ShopItemCard from "./components/ShopItemCard";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-// import { useQuery } from "@tanstack/react-query";
-// import Axios from "axios";
+import { useQuery } from "@tanstack/react-query";
+import Axios from "axios";
 
 function App() {
   const [blogs, setBlogs] = useState([]);
@@ -47,12 +49,19 @@ function App() {
     });
   }, []);
 
-  // const { data: blogs, isLoading: blogsLoading } = useQuery(["blogs"], () => {
+  // function getBlogs() {
   //   return Axios.get("http://localhost:3000/blogs").then((res) => res.data);
-  // });
+  // }
 
-  // const { data: countries, isLoading: countriesLoading } = useQuery(
+  // const { data, isLoading: blogsLoading } = useQuery(["blogs"], () => getBlogs());
+
+  // const { data, isLoading } = useQuery(
   //   ["countries"],
+  //   {
+  //     onSuccess: () => {
+  //       setCountries(data);
+  //     },
+  //   },
   //   () => {
   //     return Axios.get("http://localhost:3000/countries").then(
   //       (res) => res.data
@@ -60,7 +69,11 @@ function App() {
   //   }
   // );
 
-  // if ((blogsLoading, countriesLoading)) {
+  // useEffect(() => {
+  //   setCountries(data);
+  // }, [data]);
+
+  // if (isLoading) {
   //   return <h1>Loading...</h1>;
   // }
 
@@ -107,6 +120,8 @@ function App() {
           <Route path="/forums/:id" element={<ForumPage />} />
           <Route path="/posts/:id" element={<PostPage />} />
           <Route path="/blogs/:id" element={<FullBlogPost user={user} />} />
+          <Route path="/continents/:id" element={<ContinentsShopPage />} />
+          <Route path="/shop/:id" element={<ShopItemCard />} />
         </Routes>
       </div>
     </QueryClientProvider>

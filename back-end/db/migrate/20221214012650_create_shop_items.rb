@@ -4,8 +4,8 @@ class CreateShopItems < ActiveRecord::Migration[7.0]
       t.string :name
       t.string :image
       t.string :description
-      t.string :category
-      t.integer :price
+      t.integer :continent_id
+      t.float :price
       t.references :country, null: false, foreign_key: true
 
       t.timestamps

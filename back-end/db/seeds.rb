@@ -1,211 +1,211 @@
 puts "Seeding continents..."
 
-africa = Continent.create!(name: "Africa", lat: "0.7832", lng: "25.5085", zoom: 3)
-asia = Continent.create!(name: "Asia", lat: "45.0479", lng: "100.6197", zoom: 3)
-europe = Continent.create!(name: "Europe", lat: "56.5260", lng: "15.2551", zoom: 4)
-north_america = Continent.create!(name: "North America", lat: "47.1164", lng: "-101.2996", zoom: 3)
-oceania = Continent.create!(name: "Oceania", lat: "-22.7359", lng: "140.0188", zoom: 4)
-south_america = Continent.create!(name: "South America", lat: "-25.7832", lng: "-55.4915", zoom: 3)
+africa = Continent.create!(name: "Africa", image: "https://i.imgur.com/2knFh4r.jpg", lat: 0.7832, lng: 25.5085, zoom: 3)
+asia = Continent.create!(name: "Asia", image: "https://i.imgur.com/s13I6WP.jpg", lat: 45.0479, lng: 100.6197, zoom: 3)
+europe = Continent.create!(name: "Europe", image: "https://i.imgur.com/alBpbST.jpg", lat: 56.5260, lng: 15.2551, zoom: 4)
+north_america = Continent.create!(name: "North America", image: "https://i.imgur.com/LUVe3xD.jpg", lat: 47.1164, lng: -101.2996, zoom: 3)
+oceania = Continent.create!(name: "Oceania", image: "https://i.imgur.com/khDo8MI.jpg", lat: -22.7359, lng: 140.0188, zoom: 4)
+south_america = Continent.create!(name: "South America", image: "https://i.imgur.com/EKTF353.jpg", lat: -25.7832, lng: -55.4915, zoom: 3)
 
 puts "Done seeding continents..."
 
 puts "Seeding countries..."
 
-afghanistan = Country.create!(name: "Afghanistan", lat: "33.9391", lng: "67.7100", zoom: 6, continent_id: asia.id)
-albania = Country.create!(name: "Albania", lat: "41.1533", lng: "20.1683", zoom: 7, continent_id: europe.id)
-algeria = Country.create!(name: "Algeria", lat: "28.0339", lng: "1.6596", zoom: 5, continent_id: africa.id)
-andorra = Country.create!(name: "Andorra", lat: "42.5063", lng: "1.5218", zoom: 7, continent_id: europe.id)
-angola = Country.create!(name: "Angola", lat: "-11.2027", lng: "17.8739", zoom: 6, continent_id: africa.id)
-antigua_barbuda = Country.create!(name: "Antigua and Barbuda", lat: "17.0608", lng: "-61.7964", zoom: 8, continent_id: north_america.id)
-argentina = Country.create!(name: "Argentina", lat: "-38.4161", lng: "-63.6167", zoom: 4, continent_id: south_america.id)
-armenia = Country.create!(name: "Armenia", lat: "40.0691", lng: "45.0382", zoom: 8, continent_id: asia.id)
-australia = Country.create!(name: "Australia", lat: "-25.2744", lng: "133.7751", zoom: 5, continent_id: oceania.id)
-austria = Country.create!(name: "Austria", lat: "47.5162", lng: "14.5501", zoom: 7, continent_id: europe.id)
-azerbaijan = Country.create!(name: "Azerbaijan", lat: "40.1431", lng: "47.5769", zoom: 7,continent_id: asia.id)
-bahamas = Country.create!(name: "Bahamas", lat: "25.0343", lng: "-77.3963", zoom: 8, continent_id: north_america.id)
-bahrain = Country.create!(name: "Bahrain", lat: "26.0667", lng: "50.5577", zoom: 8, continent_id: asia.id)
-bangladesh = Country.create!(name: "Bangladesh", lat: "23.6850", lng: "90.3563", zoom: 7,continent_id: asia.id)
-barbados = Country.create!(name: "Barbados", lat: "13.1939", lng: "-59.5432", zoom: 8, continent_id: north_america.id)
-belarus = Country.create!(name: "Belarus", lat: "53.7098", lng: "27.9534", zoom: 6, continent_id: europe.id)
-belgium = Country.create!(name: "Belgium", lat: "50.5039", lng: "4.4699", zoom: 7, continent_id: europe.id)
-belize = Country.create!(name: "Belize", lat: "17.1899", lng: "-88.4976", zoom: 7, continent_id: north_america.id)
-benin = Country.create!(name: "Benin", lat: "9.3077", lng: "2.3158", zoom: 7, continent_id: africa.id)
-bhutan = Country.create!(name: "Bhutan", lat: "27.5142", lng: "90.4336", zoom: 7, continent_id: asia.id)
-bolivia = Country.create!(name: "Bolivia", lat: "-16.2902", lng: "-63.5887", zoom: 6, continent_id: south_america.id)
-bosnia_herzegovina = Country.create!(name: "Bosnia and Herzegovina", lat: "43.9159", lng: "17.6791", zoom: 7, continent_id: europe.id)
-botswana = Country.create!(name: "Botswana", lat: "-22.3285", lng: "24.6849", zoom: 6, continent_id: africa.id)
-brazil = Country.create!(name: "Brazil", lat: "-14.2350", lng: "-51.9253", zoom: 5, continent_id: south_america.id)
-brunei = Country.create!(name: "Brunei", lat: "4.5353", lng: "114.7277", zoom: 7, continent_id: asia.id)
-bulgaria = Country.create!(name: "Bulgaria", lat: "42.7339", lng: "25.4858", zoom: 6, continent_id: europe.id)
-burkina_faso = Country.create!(name: "Burkina Faso", lat: "12.2383", lng: "-1.5616", zoom: 7,continent_id: africa.id)
-burundi = Country.create!(name: "Burundi", lat: "-3.3731", lng: "29.9189", zoom: 7, continent_id: africa.id)
-cote_d_ivoire = Country.create!(name: "Côte d'Ivoire", lat: "7.5400", lng: "-5.5471", zoom: 7, continent_id: africa.id)
-cabo_verde = Country.create!(name: "Cabo Verde", lat: "16.5388", lng: "-23.0418", zoom: 7, continent_id: africa.id)
-cambodia = Country.create!(name: "Cambodia", lat: "12.5657", lng: "104.9910", zoom: 6, continent_id: asia.id)
-cameroon = Country.create!(name: "Cameroon", lat: "7.3697", lng: "12.3547", zoom: 6, continent_id: africa.id)
-canada = Country.create!(name: "Canada", lat: "56.1304", lng: "-106.3468", zoom: 4, continent_id: north_america.id)
-central_africa_republic = Country.create!(name: "Central Africa Republic", lat: "6.6111", lng: "20.9394", zoom: 6, continent_id: africa.id)
-chad = Country.create!(name: "Chad", lat: "15.4542", lng: "18.7322", zoom: 6, continent_id: africa.id)
-chile = Country.create!(name: "Chile", lat: "-35.6751", lng: "-71.5430", zoom: 4, continent_id: south_america.id)
-china = Country.create!(name: "China", lat: "35.8617", lng: "104.1954", zoom: 4, continent_id: asia.id)
-colombia = Country.create!(name: "Colombia", lat: "4.5709", lng: "-74.2973", zoom: 6, continent_id: south_america.id)
-comoros = Country.create!(name: "Comoros", lat: "-11.6455", lng: "43.3333", zoom: 8, continent_id: africa.id)
-congo = Country.create!(name: "Congo", lat: "-0.2280", lng: "15.8277", zoom: 6, continent_id: africa.id)
-costa_rica = Country.create!(name: "Costa Rica", lat: "9.7489", lng: "-83.7534", zoom: 7, continent_id: north_america.id)
-croatia = Country.create!(name: "Croatia", lat: "45.1000", lng: "15.2000", zoom: 7, continent_id: europe.id)
-cuba = Country.create!(name: "Cuba", lat: "21.5218", lng: "-77.7812", zoom: 6, continent_id: north_america.id)
-cyprus = Country.create!(name: "Cyprus", lat: "35.1264", lng: "33.4299", zoom: 8, continent_id: asia.id)
-czech_republic = Country.create!(name: "Czech Republic", lat: "49.8175", lng: "15.4730", zoom: 7,continent_id: europe.id)
-democratic_republic_of_the_congo = Country.create!(name: "Democratic Republic of the Congo", continent_id: africa.id)
-denmark = Country.create!(name: "Denmark", lat: "56.2639", lng: "9.5018", zoom: 7, continent_id: europe.id)
-djibouti = Country.create!(name: "Djibouti", lat: "11.8251", lng: "42.5903", zoom: 7, continent_id: africa.id)
-dominica = Country.create!(name: "Dominica", lat: "15.4150", lng: "-61.3710", zoom: 8, continent_id: north_america.id)
-dominican_republic = Country.create!(name: "Dominican Republic", lat: "18.7357", lng: "-70.1627", zoom: 7, continent_id: north_america.id)
-ecuador = Country.create!(name: "Ecuador", lat: "-1.8312", lng: "-78.1834", zoom: 7, continent_id: south_america.id)
-egypt = Country.create!(name: "Egypt", lat: "26.8206", lng: "30.8025", zoom: 6, continent_id: africa.id)
-el_salvador = Country.create!(name: "El Salvador", lat: "13.7942", lng: "-88.8965", zoom: 7, continent_id: north_america.id)
-equatorial_guinea = Country.create!(name: "Equatorial Guinea", lat: "1.6508", lng: "10.2679", zoom: 7, continent_id: africa.id)
-eritrea = Country.create!(name: "Eritrea", lat: "15.1794", lng: "39.7823", zoom: 7, continent_id: africa.id)
-estonia = Country.create!(name: "Estonia", lat: "58.5953", lng: "25.0136", zoom: 7, continent_id: europe.id)
-eswatini = Country.create!(name: "Eswatini", lat: "-26.5225", lng: "31.4659", zoom: 7, continent_id: africa.id)
-ethiopia = Country.create!(name: "Ethiopia", lat: "9.1450", lng: "40.4897", zoom: 6, continent_id: africa.id)
-fiji = Country.create!(name: "Fiji", lat: "-17.7134", lng: "178.0650", zoom: 7, continent_id: oceania.id)
-finland = Country.create!(name: "Finland", lat: "65.9241", lng: "25.7482", zoom: 5, continent_id: europe.id)
-france = Country.create!(name: "France", lat: "46.2276", lng: "2.2137", zoom: 6, continent_id: europe.id)
-gabon = Country.create!(name: "Gabon", lat: "-0.8037", lng: "11.6094", zoom: 6, continent_id: africa.id)
-gambia = Country.create!(name: "Gambia", lat: "13.4432", lng: "-15.3101", zoom: 7, continent_id: africa.id)
-georgia = Country.create!(name: "Georgia", lat: "42.3154", lng: "43.3569", zoom: 7, continent_id: asia.id)
-germany = Country.create!(name: "Germany", lat: "51.1657", lng: "10.4515", zoom: 6, continent_id: europe.id)
-ghana = Country.create!(name: "Ghana", lat: "7.9465", lng: "1.0232", zoom: 6, continent_id: africa.id)
-greece = Country.create!(name: "Greece", lat: "39.0742", lng: "21.8243", zoom: 6, continent_id: europe.id)
-grenada = Country.create!(name: "Grenada", lat: "12.1165", lng: "-61.6790", zoom: 8, continent_id: north_america.id)
-guatemala = Country.create!(name: "Guatemala", lat: "15.7835", lng: "-90.2308", zoom: 6, continent_id: north_america.id)
-guinea = Country.create!(name: "Guinea", lat: "9.9456", lng: "-11", zoom: 7, continent_id: africa.id)
-guinea_bissau = Country.create!(name: "Guinea Bissau", lat: "11.8037", lng: "-15.1804", zoom: 7, continent_id: africa.id)
-guyana = Country.create!(name: "Guyana", lat: "4.8604", lng: "-58.9302", zoom: 6, continent_id: south_america.id)
-haiti = Country.create!(name: "Haiti", lat: "18.9712", lng: "-72.2852", zoom: 7, continent_id: north_america.id)
-holy_see = Country.create!(name: "Holy See", lat: "41.903757", lng: "12.452926", zoom: 8, continent_id: europe.id)
-honduras = Country.create!(name: "Honduras", lat: "15.2000", lng: "-86.2419", zoom: 6, continent_id: north_america.id)
-hungary = Country.create!(name: "Hungary", lat: "47.1625", lng: "19.5033", zoom: 6, continent_id: europe.id)
-iceland = Country.create!(name: "Iceland", lat: "64.9631", lng: "-19.0208", zoom: 6, continent_id: europe.id)
-india = Country.create!(name: "India", lat: "20.5937", lng: "78.9629", zoom: 5, continent_id: asia.id)
-indonesia = Country.create!(name: "Indonesia", lat: "-0.7893", lng: "113.9213", zoom: 5, continent_id: asia.id)
-iran = Country.create!(name: "Iran", lat: "32.4279", lng: "53.6880", zoom: 6, continent_id: asia.id)
-iraq = Country.create!(name: "Iraq", lat: "33.2232", lng: "43.6793", zoom: 6, continent_id: asia.id)
-ireland = Country.create!(name: "Ireland", lat: "53.1424", lng: "-7.6921", zoom: 6, continent_id: europe.id)
-israel = Country.create!(name: "Israel", lat: "31.0461", lng: "34.8516", zoom: 6, continent_id: asia.id)
-italy = Country.create!(name: "Italy", lat: "41.8719", lng: "12.5674", zoom: 6, continent_id: europe.id)
-jamaica = Country.create!(name: "Jamaica", continent_id: north_america.id)
-japan = Country.create!(name: "Japan", lat: "36.2048", lng: "138.2529", zoom: 5, continent_id: asia.id)
-jordan = Country.create!(name: "Jordan", lat: "30.5852", lng: "36.2384", zoom: 6, continent_id: asia.id)
-kazakhstan = Country.create!(name: "Kazakhstan", lat: "48.0196", lng: "66.9237", zoom: 5, continent_id: asia.id)
-kenya = Country.create!(name: "Kenya", lat: "-0.0236", lng: "37.9062", zoom: 6, continent_id: africa.id)
-kiribati = Country.create!(name: "Kiribati", lat: "1.8369", lng: "-157.3768", zoom: 8, continent_id: oceania.id)
-kuwait = Country.create!(name: "Kuwait", lat: "29.3117", lng: "47.4818", zoom: 7, continent_id: asia.id)
-kyrgyzstan = Country.create!(name: "Kyrgyzstan", lat: "41.2044", lng: "74.7661", zoom: 6, continent_id: asia.id)
-laos = Country.create!(name: "Laos", lat: "19.8563", lng: "102.4955", zoom: 6, continent_id: asia.id)
-latvia = Country.create!(name: "Latvia", lat: "56.8796", lng: "24.6032", zoom: 6, continent_id: europe.id)
-lebanon = Country.create!(name: "Lebanon", lat: "33.8547", lng: "35.8623", zoom: 7, continent_id: asia.id)
-lesotho = Country.create!(name: "Lesotho", lat: "-29.6100", lng: "28.2336", zoom: 7, continent_id: africa.id)
-liberia = Country.create!(name: "Liberia", lat: "6.4281", lng: "-9.4295", zoom: 7, continent_id: africa.id)
-libya = Country.create!(name: "Libya", lat: "26.3351", lng: "17.2283", zoom: 6, continent_id: africa.id)
-liechtenstein = Country.create!(name: "Liechtenstein", lat: "47.1410", lng: "9.5209", zoom: 8, continent_id: europe.id)
-lithuania = Country.create!(name: "Lithuania", lat: "55.1694", lng: "23.8813", zoom: 6, continent_id: europe.id)
-luxembourg = Country.create!(name: "Luxembourg", lat: "49.8153", lng: "6.1296", zoom: 7, continent_id: europe.id)
-madagascar = Country.create!(name: "Madagascar", lat: "-18.7669", lng: "46.8691", zoom: 6, continent_id: africa.id)
-malawi = Country.create!(name: "Malawi", lat: "-13.2543", lng: "34.3015", zoom: 7, continent_id: africa.id)
-malaysia = Country.create!(name: "Malaysia", lat: "4.2105", lng: "101.9758", zoom: 6, continent_id: asia.id)
-maldives = Country.create!(name: "Maldives", lat: "3.2028", lng: "73.2207", zoom: 7, continent_id: asia.id)
-mali = Country.create!(name: "Mali", lat: "17.5707", lng: "-3.9962", zoom: 6, continent_id: africa.id)
-malta = Country.create!(name: "Malta", lat: "35.9375", lng: "14.3754", zoom: 8, continent_id: europe.id)
-marshall_islands = Country.create!(name: "Marshall Islands", lat: "7.1315", lng: "171.1845", zoom: 7, continent_id: oceania.id)
-mauritania = Country.create!(name: "Mauritania", lat: "21.0079", lng: "-10.9408", zoom: 6, continent_id: africa.id)
-mauritius = Country.create!(name: "Mauritius", lat: "-20.3484", lng: "57.5522", zoom: 7, continent_id: africa.id)
-mexico = Country.create!(name: "Mexico", lat: "23.6345", lng: "-102.5528", zoom: 5, continent_id: north_america.id)
-micronesia = Country.create!(name: "Micronesia", lat: "7.4256", lng: "150.5508", zoom: 6, continent_id: oceania.id)
-moldova = Country.create!(name: "Moldova", lat: "47.4116", lng: "28.3699", zoom: 7, continent_id: europe.id)
-monaco = Country.create!(name: "Monaco", lat: "43.7384", lng: "7.4246", zoom: 7, continent_id: europe.id)
-mongolia = Country.create!(name: "Mongolia", lat: "46.8625", lng: "103.8467", zoom: 6, continent_id: asia.id)
-montenegro = Country.create!(name: "Montenegro", lat: "42.7087", lng: "19.3744", zoom: 7, continent_id: europe.id)
-morocco = Country.create!(name: "Morocco", lat: "31.7917", lng: "-7.0926", zoom: 6, continent_id: africa.id)
-mozambique = Country.create!(name: "Mozambique", lat: "-18.6657", lng: "35.5296", zoom: 6, continent_id: africa.id)
-myanmar = Country.create!(name: "Myanmar", lat: "21.9162", lng: "95.9560", zoom: 5, continent_id: asia.id)
-namibia = Country.create!(name: "Namibia", lat: "-22.9576", lng: "18.4904", zoom: 6, continent_id: africa.id)
-nauru = Country.create!(name: "Nauru", lat: "-0.5228", lng: "166.9315", zoom: 8, continent_id: oceania.id)
-nepal = Country.create!(name: "Nepal", lat: "28.3949", lng: "84.1240", zoom: 6, continent_id: asia.id)
-netherlands = Country.create!(name: "Netherlands", lat: "52.1326", lng: "5.2913", zoom: 7, continent_id: europe.id)
-new_zealand = Country.create!(name: "New Zealand", lat: "-40.9006", lng: "174.8860", zoom: 6, continent_id: oceania.id)
-nicaragua = Country.create!(name: "Nicaragua", lat: "12.8654", lng: "-85.2072", zoom: 7, continent_id: north_america.id)
-niger = Country.create!(name: "Niger", lat: "17.6078", lng: "8.0817", zoom: 6, continent_id: africa.id)
-nigeria = Country.create!(name: "Nigeria", lat: "9.0820", lng: "8.6753", zoom: 6, continent_id: africa.id)
-north_korea = Country.create!(name: "North Korea", lat: "40.3399", lng: "127.5101", zoom: 6, continent_id: asia.id)
-north_macedonia = Country.create!(name: "North Macedonia", lat: "41.6086", lng: "21.7453", zoom: 7, continent_id: europe.id)
-norway = Country.create!(name: "Norway", lat: "65.4720", lng: "12.4689", zoom: 5, continent_id: europe.id)
-oman = Country.create!(name: "Oman", lat: "21.4735", lng: "55.9754", zoom: 6, continent_id: asia.id)
-pakistan = Country.create!(name: "Pakistan", lat: "30.3753", lng: "69.3451", zoom: 6, continent_id: asia.id)
-palau = Country.create!(name: "Palau", lat: "7.5150", lng: "134.5825", zoom: 8, continent_id: oceania.id)
-palestine = Country.create!(name: "Palestine", lat: "31.9522", lng: "35.2332", zoom: 6, continent_id: asia.id)
-panama = Country.create!(name: "Panama", lat: "8.5380", lng: "-80.7821", zoom: 7, continent_id: north_america.id)
-papua_new_guinea = Country.create!(name: "Papua New Guinea", lat: "-6.3150", lng: "143.9555", zoom: 6, continent_id: oceania.id)
-paraguay = Country.create!(name: "Paraguay", lat: "-23.4425", lng: "-58.4438", zoom: 6, continent_id: south_america.id)
-peru = Country.create!(name: "Peru", lat: "-9.1900", lng: "-75.0152", zoom: 5, continent_id: south_america.id)
-philippines = Country.create!(name: "Philippines", lat: "12.8797", lng: "121.7740", zoom: 6, continent_id: asia.id)
-poland = Country.create!(name: "Poland", lat: "51.9194", lng: "19.1451", zoom: 6, continent_id: europe.id)
-portugal = Country.create!(name: "Portugal", lat: "39.3999", lng: "-8.2245", zoom: 6, continent_id: europe.id)
-qatar = Country.create!(name: "Qatar", lat: "25.3548", lng: "51.1839", zoom: 7, continent_id: asia.id)
-romania = Country.create!(name: "Romania", lat: "45.9432", lng: "24.9668", zoom: 6, continent_id: europe.id)
-russia = Country.create!(name: "Russia", lat: "61.5240", lng: "105.3188", zoom: 3, continent_id: europe.id)
-rwanda = Country.create!(name: "Rwanda", lat: "-1.9403", lng: "29.8739", zoom: 7, continent_id: africa.id)
-saint_kitts_nevis = Country.create!(name: "Saint Kitts and Nevis", lat: "17.3578", lng: "-62.7830", zoom: 8, continent_id: north_america.id)
-saint_lucia = Country.create!(name: "Saint Lucia", lat: "13.9094", lng: "-60.9789", zoom: 8, continent_id: north_america.id)
-saint_vincent_grenadines = Country.create!(name: "Saint Vincent and the Grenadines", lat: "12.9843", lng: "-61.2872", zoom: 8, continent_id: north_america.id)
-samoa = Country.create!(name: "Samoa", lat: "-13.7590", lng: "-172.1046", zoom: 8, continent_id: oceania.id)
-san_marino = Country.create!(name: "San Marino", lat: "43.9424", lng: "12.4578", zoom: 8, continent_id: europe.id)
-sao_tome_principe = Country.create!(name: "Sao Tome and Principe", lat: "0.1864", lng: "6.6131", zoom: 8, continent_id: africa.id)
-saudi_arabia = Country.create!(name: "Saudi Arabia", lat: "23.8859", lng: "45.0792", zoom: 5, continent_id: asia.id)
-senegal = Country.create!(name: "Senegal", lat: "14.4974", lng: "-14.4524", zoom: 6, continent_id: africa.id)
-serbia = Country.create!(name: "Serbia", lat: "44.0165", lng: "21.0059", zoom: 7, continent_id: europe.id)
-seychelles = Country.create!(name: "Seychelles", lat: "-4.6796", lng: "55.4920", zoom: 7, continent_id: africa.id)
-sierra_leone = Country.create!(name: "Sierra Leone", lat: "8.4606", lng: "-11.7799", zoom: 7, continent_id: africa.id)
-singapore = Country.create!(name: "Singapore", lat: "1.3521", lng: "103.8198", zoom: 8, continent_id: asia.id)
-slovakia = Country.create!(name: "Slovakia", lat: "48.6690", lng: "19.6990", zoom: 7, continent_id: europe.id)
-slovenia = Country.create!(name: "Slovenia", lat: "46.1512", lng: "14.9955", zoom: 7, continent_id: europe.id)
-solomon_islands = Country.create!(name: "Solomon Islands", lat: "-9.6457", lng: "160.1562", zoom: 7, continent_id: oceania.id)
-somalia = Country.create!(name: "Somalia", lat: "5.1521", lng: "46.1996", zoom: 6, continent_id: africa.id)
-south_africa = Country.create!(name: "South Africa", lat: "-30.5595", lng: "22.9375", zoom: 5, continent_id: africa.id)
-south_korea = Country.create!(name: "South Korea", lat: "35.9078", lng: "127.7669", zoom: 6, continent_id: asia.id)
-south_sudan = Country.create!(name: "South Sudan", lat: "6.8770", lng: "31.3070", zoom: 6, continent_id: africa.id)
-spain = Country.create!(name: "Spain", lat: "40.4637", lng: "-3.7492", zoom: 6, continent_id: europe.id)
-sri_lanka = Country.create!(name: "Sri Lanka", lat: "7.8731", lng: "80.7718", zoom: 7, continent_id: asia.id)
-sudan = Country.create!(name: "Sudan", lat: "12.8628", lng: "30.2176", zoom: 5, continent_id: africa.id)
-suriname = Country.create!(name: "Suriname", lat: "3.9193", lng: "-56.0278", zoom: 6, continent_id: south_america.id)
-sweden = Country.create!(name: "Sweden", lat: "62.7282", lng: "18.6435", zoom: 5, continent_id: europe.id)
-switzerland = Country.create!(name: "Switzerland", lat: "46.8182", lng: "8.2275", zoom: 7, continent_id: europe.id)
-syria = Country.create!(name: "Syria", lat: "34.8021", lng: "38.9968", zoom: 6, continent_id: asia.id)
-tajikistan = Country.create!(name: "Tajikistan", lat: "38.8610", lng: "71.2761", zoom: 6, continent_id: asia.id)
-tanzania = Country.create!(name: "Tanzania", lat: "-6.3690", lng: "34.8888", zoom: 6, continent_id: africa.id)
-thailand = Country.create!(name: "Thailand", lat: "15.8700", lng: "100.9925", zoom: 6, continent_id: asia.id)
-timor_leste = Country.create!(name: "Timor-Leste", lat: "-8.8742", lng: "125.7275", zoom: 7, continent_id: asia.id)
-togo = Country.create!(name: "Togo", lat: "8.6195", lng: "0.8248", zoom: 6, continent_id: africa.id)
-tonga = Country.create!(name: "Tonga", lat: "-21.1790", lng: "-175.1982", zoom: 8, continent_id: oceania.id)
-trinidad_tobago = Country.create!(name: "Trinidad and Tobago", lat: "10.6918", lng: "-61.2225", zoom: 7, continent_id: north_america.id)
-tunisia = Country.create!(name: "Tunisia", lat: "33.8869", lng: "9.5375", zoom: 6, continent_id: africa.id)
-turkey = Country.create!(name: "Turkey", lat: "38.9637", lng: "35.2433", zoom: 6, continent_id: asia.id)
-turkmenistan = Country.create!(name: "Turkmenistan", lat: "38.9697", lng: "59.5563", zoom: 6, continent_id: asia.id)
-tuvalu = Country.create!(name: "Tuvalu", lat: "-7.1095", lng: "177.6493", zoom: 8, continent_id: oceania.id)
-uganda = Country.create!(name: "Uganda", lat: "1.3733", lng: "32.2903", zoom: 6, continent_id: africa.id)
-ukraine = Country.create!(name: "Ukraine", lat: "48.3794", lng: "31.1656", zoom: 6, continent_id: europe.id)
-united_arab_emirates = Country.create!(name: "United Arab Emirates", lat: "23.4241", lng: "53.8478", zoom: 6, continent_id: asia.id)
-united_kingdom = Country.create!(name: "United Kingdom", lat: "55.3781", lng: "-3.4360", zoom: 6, continent_id: europe.id)
-united_states_of_america = Country.create!(name: "United States of America", lat: "37.0902", lng: "-95.7129", zoom: 4, continent_id: north_america.id)
-uruguay = Country.create!(name: "Uruguay", lat: "-32.5228", lng: "-55.7658", zoom: 6, continent_id: south_america.id)
-uzbekistan = Country.create!(name: "Uzbekistan", lat: "41.3775", lng: "64.5853", zoom: 6, continent_id: asia.id)
-vanuatu = Country.create!(name: "Vanuatu", lat: "-15.3767", lng: "166.9592", zoom: 7, continent_id: oceania.id)
-venezuela = Country.create!(name: "Venezuela", lat: "6.4238", lng: "-66.5897", zoom: 6, continent_id: south_america.id)
-vietnam = Country.create!(name: "Vietnam", lat: "16.0583", lng: "108.2772", zoom: 6, continent_id: asia.id)
-yemen = Country.create!(name: "Yemen", lat: "15.5527", lng: "48.5164", zoom: 6, continent_id: asia.id)
-zambia = Country.create!(name: "Zambia", lat: "-13.1339", lng: "27.8493", zoom: 6, continent_id: africa.id)
-zimbabwe = Country.create!(name: "Zimbabwe", lat: "-19.0154", lng: "29.1549", zoom: 6, continent_id: africa.id)
+afghanistan = Country.create!(name: "Afghanistan", lat: 33.9391, lng: 67.7100, zoom: 6, continent_id: asia.id)
+albania = Country.create!(name: "Albania", lat: 41.1533, lng: 20.1683, zoom: 7, continent_id: europe.id)
+algeria = Country.create!(name: "Algeria", lat: 28.0339, lng: 1.6596, zoom: 5, continent_id: africa.id)
+andorra = Country.create!(name: "Andorra", lat: 42.5063, lng: 1.5218, zoom: 7, continent_id: europe.id)
+angola = Country.create!(name: "Angola", lat: -11.2027, lng: 17.8739, zoom: 6, continent_id: africa.id)
+antigua_barbuda = Country.create!(name: "Antigua and Barbuda", lat: 17.0608, lng: -61.7964, zoom: 8, continent_id: north_america.id)
+argentina = Country.create!(name: "Argentina", lat: -38.4161, lng: -63.6167, zoom: 4, continent_id: south_america.id)
+armenia = Country.create!(name: "Armenia", lat: 40.0691, lng: 45.0382, zoom: 8, continent_id: asia.id)
+australia = Country.create!(name: "Australia", lat: -25.2744, lng: 133.7751, zoom: 5, continent_id: oceania.id)
+austria = Country.create!(name: "Austria", lat: 47.5162, lng: 14.5501, zoom: 7, continent_id: europe.id)
+azerbaijan = Country.create!(name: "Azerbaijan", lat: 40.1431, lng: 47.5769, zoom: 7,continent_id: asia.id)
+bahamas = Country.create!(name: "Bahamas", lat: 25.0343, lng: -77.3963, zoom: 8, continent_id: north_america.id)
+bahrain = Country.create!(name: "Bahrain", lat: 26.0667, lng: 50.5577, zoom: 8, continent_id: asia.id)
+bangladesh = Country.create!(name: "Bangladesh", lat: 23.6850, lng: 90.3563, zoom: 7,continent_id: asia.id)
+barbados = Country.create!(name: "Barbados", lat: 13.1939, lng: -59.5432, zoom: 8, continent_id: north_america.id)
+belarus = Country.create!(name: "Belarus", lat: 53.7098, lng: 27.9534, zoom: 6, continent_id: europe.id)
+belgium = Country.create!(name: "Belgium", lat: 50.5039, lng: 4.4699, zoom: 7, continent_id: europe.id)
+belize = Country.create!(name: "Belize", lat: 17.1899, lng: -88.4976, zoom: 7, continent_id: north_america.id)
+benin = Country.create!(name: "Benin", lat: 9.3077, lng: 2.3158, zoom: 7, continent_id: africa.id)
+bhutan = Country.create!(name: "Bhutan", lat: 27.5142, lng: 90.4336, zoom: 7, continent_id: asia.id)
+bolivia = Country.create!(name: "Bolivia", lat: -16.2902, lng: -63.5887, zoom: 6, continent_id: south_america.id)
+bosnia_herzegovina = Country.create!(name: "Bosnia and Herzegovina", lat: 43.9159, lng: 17.6791, zoom: 7, continent_id: europe.id)
+botswana = Country.create!(name: "Botswana", lat: -22.3285, lng: 24.6849, zoom: 6, continent_id: africa.id)
+brazil = Country.create!(name: "Brazil", lat: -14.2350, lng: -51.9253, zoom: 5, continent_id: south_america.id)
+brunei = Country.create!(name: "Brunei", lat: 4.5353, lng: 114.7277, zoom: 7, continent_id: asia.id)
+bulgaria = Country.create!(name: "Bulgaria", lat: 42.7339, lng: 25.4858, zoom: 6, continent_id: europe.id)
+burkina_faso = Country.create!(name: "Burkina Faso", lat: 12.2383, lng: -1.5616, zoom: 7,continent_id: africa.id)
+burundi = Country.create!(name: "Burundi", lat: -3.3731, lng: 29.9189, zoom: 7, continent_id: africa.id)
+cote_d_ivoire = Country.create!(name: "Côte d'Ivoire", lat: 7.5400, lng: -5.5471, zoom: 7, continent_id: africa.id)
+cabo_verde = Country.create!(name: "Cabo Verde", lat: 16.5388, lng: -23.0418, zoom: 7, continent_id: africa.id)
+cambodia = Country.create!(name: "Cambodia", lat: 12.5657, lng: 104.9910, zoom: 6, continent_id: asia.id)
+cameroon = Country.create!(name: "Cameroon", lat: 7.3697, lng: 12.3547, zoom: 6, continent_id: africa.id)
+canada = Country.create!(name: "Canada", lat: 56.1304, lng: -106.3468, zoom: 4, continent_id: north_america.id)
+central_africa_republic = Country.create!(name: "Central Africa Republic", lat: 6.6111, lng: 20.9394, zoom: 6, continent_id: africa.id)
+chad = Country.create!(name: "Chad", lat: 15.4542, lng: 18.7322, zoom: 6, continent_id: africa.id)
+chile = Country.create!(name: "Chile", lat: -35.6751, lng: -71.5430, zoom: 4, continent_id: south_america.id)
+china = Country.create!(name: "China", lat: 35.8617, lng: 104.1954, zoom: 4, continent_id: asia.id)
+colombia = Country.create!(name: "Colombia", lat: 4.5709, lng: -74.2973, zoom: 6, continent_id: south_america.id)
+comoros = Country.create!(name: "Comoros", lat: -11.6455, lng: 43.3333, zoom: 8, continent_id: africa.id)
+congo = Country.create!(name: "Congo", lat: -0.2280, lng: 15.8277, zoom: 6, continent_id: africa.id)
+costa_rica = Country.create!(name: "Costa Rica", lat: 9.7489, lng: -83.7534, zoom: 7, continent_id: north_america.id)
+croatia = Country.create!(name: "Croatia", lat: 45.1000, lng: 15.2000, zoom: 7, continent_id: europe.id)
+cuba = Country.create!(name: "Cuba", lat: 21.5218, lng: -77.7812, zoom: 6, continent_id: north_america.id)
+cyprus = Country.create!(name: "Cyprus", lat: 35.1264, lng: 33.4299, zoom: 8, continent_id: asia.id)
+czech_republic = Country.create!(name: "Czech Republic", lat: 49.8175, lng: 15.4730, zoom: 7,continent_id: europe.id)
+democratic_republic_of_the_congo = Country.create!(name: "Democratic Republic of the Congo", lat: 4.0383, lng: 21.7587, zoom: 5, continent_id: africa.id)
+denmark = Country.create!(name: "Denmark", lat: 56.2639, lng: 9.5018, zoom: 7, continent_id: europe.id)
+djibouti = Country.create!(name: "Djibouti", lat: 11.8251, lng: 42.5903, zoom: 7, continent_id: africa.id)
+dominica = Country.create!(name: "Dominica", lat: 15.4150, lng: -61.3710, zoom: 8, continent_id: north_america.id)
+dominican_republic = Country.create!(name: "Dominican Republic", lat: 18.7357, lng: -70.1627, zoom: 7, continent_id: north_america.id)
+ecuador = Country.create!(name: "Ecuador", lat: -1.8312, lng: -78.1834, zoom: 7, continent_id: south_america.id)
+egypt = Country.create!(name: "Egypt", lat: 26.8206, lng: 30.8025, zoom: 6, continent_id: africa.id)
+el_salvador = Country.create!(name: "El Salvador", lat: 13.7942, lng: -88.8965, zoom: 7, continent_id: north_america.id)
+equatorial_guinea = Country.create!(name: "Equatorial Guinea", lat: 1.6508, lng: 10.2679, zoom: 7, continent_id: africa.id)
+eritrea = Country.create!(name: "Eritrea", lat: 15.1794, lng: 39.7823, zoom: 7, continent_id: africa.id)
+estonia = Country.create!(name: "Estonia", lat: 58.5953, lng: 25.0136, zoom: 7, continent_id: europe.id)
+eswatini = Country.create!(name: "Eswatini", lat: -26.5225, lng: 31.4659, zoom: 7, continent_id: africa.id)
+ethiopia = Country.create!(name: "Ethiopia", lat: 9.1450, lng: 40.4897, zoom: 6, continent_id: africa.id)
+fiji = Country.create!(name: "Fiji", lat: -17.7134, lng: 178.0650, zoom: 7, continent_id: oceania.id)
+finland = Country.create!(name: "Finland", lat: 65.9241, lng: 25.7482, zoom: 5, continent_id: europe.id)
+france = Country.create!(name: "France", lat: 46.2276, lng: 2.2137, zoom: 6, continent_id: europe.id)
+gabon = Country.create!(name: "Gabon", lat: -0.8037, lng: 11.6094, zoom: 6, continent_id: africa.id)
+gambia = Country.create!(name: "Gambia", lat: 13.4432, lng: -15.3101, zoom: 7, continent_id: africa.id)
+georgia = Country.create!(name: "Georgia", lat: 42.3154, lng: 43.3569, zoom: 7, continent_id: asia.id)
+germany = Country.create!(name: "Germany", lat: 51.1657, lng: 10.4515, zoom: 6, continent_id: europe.id)
+ghana = Country.create!(name: "Ghana", lat: 7.9465, lng: 1.0232, zoom: 6, continent_id: africa.id)
+greece = Country.create!(name: "Greece", lat: 39.0742, lng: 21.8243, zoom: 6, continent_id: europe.id)
+grenada = Country.create!(name: "Grenada", lat: 12.1165, lng: -61.6790, zoom: 8, continent_id: north_america.id)
+guatemala = Country.create!(name: "Guatemala", lat: 15.7835, lng: -90.2308, zoom: 6, continent_id: north_america.id)
+guinea = Country.create!(name: "Guinea", lat: 9.9456, lng: -9.6966, zoom: 7, continent_id: africa.id)
+guinea_bissau = Country.create!(name: "Guinea Bissau", lat: 11.8037, lng: -15.1804, zoom: 7, continent_id: africa.id)
+guyana = Country.create!(name: "Guyana", lat: 4.8604, lng: -58.9302, zoom: 6, continent_id: south_america.id)
+haiti = Country.create!(name: "Haiti", lat: 18.9712, lng: -72.2852, zoom: 7, continent_id: north_america.id)
+holy_see = Country.create!(name: "Holy See", lat: 41.903757, lng: 12.452926, zoom: 8, continent_id: europe.id)
+honduras = Country.create!(name: "Honduras", lat: 15.2000, lng: -86.2419, zoom: 6, continent_id: north_america.id)
+hungary = Country.create!(name: "Hungary", lat: 47.1625, lng: 19.5033, zoom: 6, continent_id: europe.id)
+iceland = Country.create!(name: "Iceland", lat: 64.9631, lng: -19.0208, zoom: 6, continent_id: europe.id)
+india = Country.create!(name: "India", lat: 20.5937, lng: 78.9629, zoom: 5, continent_id: asia.id)
+indonesia = Country.create!(name: "Indonesia", lat: -0.7893, lng: 113.9213, zoom: 5, continent_id: asia.id)
+iran = Country.create!(name: "Iran", lat: 32.4279, lng: 53.6880, zoom: 6, continent_id: asia.id)
+iraq = Country.create!(name: "Iraq", lat: 33.2232, lng: 43.6793, zoom: 6, continent_id: asia.id)
+ireland = Country.create!(name: "Ireland", lat: 53.1424, lng: -7.6921, zoom: 6, continent_id: europe.id)
+israel = Country.create!(name: "Israel", lat: 31.0461, lng: 34.8516, zoom: 6, continent_id: asia.id)
+italy = Country.create!(name: "Italy", lat: 41.8719, lng: 12.5674, zoom: 6, continent_id: europe.id)
+jamaica = Country.create!(name: "Jamaica", lat: 18.1096, lng: -77.2975, continent_id: north_america.id)
+japan = Country.create!(name: "Japan", lat: 36.2048, lng: 138.2529, zoom: 5, continent_id: asia.id)
+jordan = Country.create!(name: "Jordan", lat: 30.5852, lng: 36.2384, zoom: 6, continent_id: asia.id)
+kazakhstan = Country.create!(name: "Kazakhstan", lat: 48.0196, lng: 66.9237, zoom: 5, continent_id: asia.id)
+kenya = Country.create!(name: "Kenya", lat: -0.0236, lng: 37.9062, zoom: 6, continent_id: africa.id)
+kiribati = Country.create!(name: "Kiribati", lat: 1.8369, lng: -157.3768, zoom: 8, continent_id: oceania.id)
+kuwait = Country.create!(name: "Kuwait", lat: 29.3117, lng: 47.4818, zoom: 7, continent_id: asia.id)
+kyrgyzstan = Country.create!(name: "Kyrgyzstan", lat: 41.2044, lng: 74.7661, zoom: 6, continent_id: asia.id)
+laos = Country.create!(name: "Laos", lat: 19.8563, lng: 102.4955, zoom: 6, continent_id: asia.id)
+latvia = Country.create!(name: "Latvia", lat: 56.8796, lng: 24.6032, zoom: 6, continent_id: europe.id)
+lebanon = Country.create!(name: "Lebanon", lat: 33.8547, lng: 35.8623, zoom: 7, continent_id: asia.id)
+lesotho = Country.create!(name: "Lesotho", lat: -29.6100, lng: 28.2336, zoom: 7, continent_id: africa.id)
+liberia = Country.create!(name: "Liberia", lat: 6.4281, lng: -9.4295, zoom: 7, continent_id: africa.id)
+libya = Country.create!(name: "Libya", lat: 26.3351, lng: 17.2283, zoom: 6, continent_id: africa.id)
+liechtenstein = Country.create!(name: "Liechtenstein", lat: 47.1410, lng: 9.5209, zoom: 8, continent_id: europe.id)
+lithuania = Country.create!(name: "Lithuania", lat: 55.1694, lng: 23.8813, zoom: 6, continent_id: europe.id)
+luxembourg = Country.create!(name: "Luxembourg", lat: 49.8153, lng: 6.1296, zoom: 7, continent_id: europe.id)
+madagascar = Country.create!(name: "Madagascar", lat: -18.7669, lng: 46.8691, zoom: 6, continent_id: africa.id)
+malawi = Country.create!(name: "Malawi", lat: -13.2543, lng: 34.3015, zoom: 7, continent_id: africa.id)
+malaysia = Country.create!(name: "Malaysia", lat: 4.2105, lng: 101.9758, zoom: 6, continent_id: asia.id)
+maldives = Country.create!(name: "Maldives", lat: 3.2028, lng: 73.2207, zoom: 7, continent_id: asia.id)
+mali = Country.create!(name: "Mali", lat: 17.5707, lng: -3.9962, zoom: 6, continent_id: africa.id)
+malta = Country.create!(name: "Malta", lat: 35.9375, lng: 14.3754, zoom: 8, continent_id: europe.id)
+marshall_islands = Country.create!(name: "Marshall Islands", lat: 7.1315, lng: 171.1845, zoom: 7, continent_id: oceania.id)
+mauritania = Country.create!(name: "Mauritania", lat: 21.0079, lng: -10.9408, zoom: 6, continent_id: africa.id)
+mauritius = Country.create!(name: "Mauritius", lat: -20.3484, lng: 57.5522, zoom: 7, continent_id: africa.id)
+mexico = Country.create!(name: "Mexico", lat: 23.6345, lng: -102.5528, zoom: 5, continent_id: north_america.id)
+micronesia = Country.create!(name: "Micronesia", lat: 7.4256, lng: 150.5508, zoom: 6, continent_id: oceania.id)
+moldova = Country.create!(name: "Moldova", lat: 47.4116, lng: 28.3699, zoom: 7, continent_id: europe.id)
+monaco = Country.create!(name: "Monaco", lat: 43.7384, lng: 7.4246, zoom: 7, continent_id: europe.id)
+mongolia = Country.create!(name: "Mongolia", lat: 46.8625, lng: 103.8467, zoom: 6, continent_id: asia.id)
+montenegro = Country.create!(name: "Montenegro", lat: 42.7087, lng: 19.3744, zoom: 7, continent_id: europe.id)
+morocco = Country.create!(name: "Morocco", lat: 31.7917, lng: -7.0926, zoom: 6, continent_id: africa.id)
+mozambique = Country.create!(name: "Mozambique", lat: -18.6657, lng: 35.5296, zoom: 6, continent_id: africa.id)
+myanmar = Country.create!(name: "Myanmar", lat: 21.9162, lng: 95.9560, zoom: 5, continent_id: asia.id)
+namibia = Country.create!(name: "Namibia", lat: -22.9576, lng: 18.4904, zoom: 6, continent_id: africa.id)
+nauru = Country.create!(name: "Nauru", lat: -0.5228, lng: 166.9315, zoom: 8, continent_id: oceania.id)
+nepal = Country.create!(name: "Nepal", lat: 28.3949, lng: 84.1240, zoom: 6, continent_id: asia.id)
+netherlands = Country.create!(name: "Netherlands", lat: 52.1326, lng: 5.2913, zoom: 7, continent_id: europe.id)
+new_zealand = Country.create!(name: "New Zealand", lat: -40.9006, lng: 174.8860, zoom: 6, continent_id: oceania.id)
+nicaragua = Country.create!(name: "Nicaragua", lat: 12.8654, lng: -85.2072, zoom: 7, continent_id: north_america.id)
+niger = Country.create!(name: "Niger", lat: 17.6078, lng: 8.0817, zoom: 6, continent_id: africa.id)
+nigeria = Country.create!(name: "Nigeria", lat: 9.0820, lng: 8.6753, zoom: 6, continent_id: africa.id)
+north_korea = Country.create!(name: "North Korea", lat: 40.3399, lng: 127.5101, zoom: 6, continent_id: asia.id)
+north_macedonia = Country.create!(name: "North Macedonia", lat: 41.6086, lng: 21.7453, zoom: 7, continent_id: europe.id)
+norway = Country.create!(name: "Norway", lat: 65.4720, lng: 12.4689, zoom: 5, continent_id: europe.id)
+oman = Country.create!(name: "Oman", lat: 21.4735, lng: 55.9754, zoom: 6, continent_id: asia.id)
+pakistan = Country.create!(name: "Pakistan", lat: 30.3753, lng: 69.3451, zoom: 6, continent_id: asia.id)
+palau = Country.create!(name: "Palau", lat: 7.5150, lng: 134.5825, zoom: 8, continent_id: oceania.id)
+palestine = Country.create!(name: "Palestine", lat: 31.9522, lng: 35.2332, zoom: 6, continent_id: asia.id)
+panama = Country.create!(name: "Panama", lat: 8.5380, lng: -80.7821, zoom: 7, continent_id: north_america.id)
+papua_new_guinea = Country.create!(name: "Papua New Guinea", lat: -6.3150, lng: 143.9555, zoom: 6, continent_id: oceania.id)
+paraguay = Country.create!(name: "Paraguay", lat: -23.4425, lng: -58.4438, zoom: 6, continent_id: south_america.id)
+peru = Country.create!(name: "Peru", lat: -9.1900, lng: -75.0152, zoom: 5, continent_id: south_america.id)
+philippines = Country.create!(name: "Philippines", lat: 12.8797, lng: 121.7740, zoom: 6, continent_id: asia.id)
+poland = Country.create!(name: "Poland", lat: 51.9194, lng: 19.1451, zoom: 6, continent_id: europe.id)
+portugal = Country.create!(name: "Portugal", lat: 39.3999, lng: -8.2245, zoom: 6, continent_id: europe.id)
+qatar = Country.create!(name: "Qatar", lat: 25.3548, lng: 51.1839, zoom: 7, continent_id: asia.id)
+romania = Country.create!(name: "Romania", lat: 45.9432, lng: 24.9668, zoom: 6, continent_id: europe.id)
+russia = Country.create!(name: "Russia", lat: 61.5240, lng: 105.3188, zoom: 3, continent_id: europe.id)
+rwanda = Country.create!(name: "Rwanda", lat: -1.9403, lng: 29.8739, zoom: 7, continent_id: africa.id)
+saint_kitts_nevis = Country.create!(name: "Saint Kitts and Nevis", lat: 17.3578, lng: -62.7830, zoom: 8, continent_id: north_america.id)
+saint_lucia = Country.create!(name: "Saint Lucia", lat: 13.9094, lng: -60.9789, zoom: 8, continent_id: north_america.id)
+saint_vincent_grenadines = Country.create!(name: "Saint Vincent and the Grenadines", lat: 12.9843, lng: -61.2872, zoom: 8, continent_id: north_america.id)
+samoa = Country.create!(name: "Samoa", lat: -13.7590, lng: -172.1046, zoom: 8, continent_id: oceania.id)
+san_marino = Country.create!(name: "San Marino", lat: 43.9424, lng: 12.4578, zoom: 8, continent_id: europe.id)
+sao_tome_principe = Country.create!(name: "Sao Tome and Principe", lat: 0.1864, lng: 6.6131, zoom: 8, continent_id: africa.id)
+saudi_arabia = Country.create!(name: "Saudi Arabia", lat: 23.8859, lng: 45.0792, zoom: 5, continent_id: asia.id)
+senegal = Country.create!(name: "Senegal", lat: 14.4974, lng: -14.4524, zoom: 6, continent_id: africa.id)
+serbia = Country.create!(name: "Serbia", lat: 44.0165, lng: 21.0059, zoom: 7, continent_id: europe.id)
+seychelles = Country.create!(name: "Seychelles", lat: -4.6796, lng: 55.4920, zoom: 7, continent_id: africa.id)
+sierra_leone = Country.create!(name: "Sierra Leone", lat: 8.4606, lng: -11.7799, zoom: 7, continent_id: africa.id)
+singapore = Country.create!(name: "Singapore", lat: 1.3521, lng: 103.8198, zoom: 8, continent_id: asia.id)
+slovakia = Country.create!(name: "Slovakia", lat: 48.6690, lng: 19.6990, zoom: 7, continent_id: europe.id)
+slovenia = Country.create!(name: "Slovenia", lat: 46.1512, lng: 14.9955, zoom: 7, continent_id: europe.id)
+solomon_islands = Country.create!(name: "Solomon Islands", lat: -9.6457, lng: 160.1562, zoom: 7, continent_id: oceania.id)
+somalia = Country.create!(name: "Somalia", lat: 5.1521, lng: 46.1996, zoom: 6, continent_id: africa.id)
+south_africa = Country.create!(name: "South Africa", lat: -30.5595, lng: 22.9375, zoom: 5, continent_id: africa.id)
+south_korea = Country.create!(name: "South Korea", lat: 35.9078, lng: 127.7669, zoom: 6, continent_id: asia.id)
+south_sudan = Country.create!(name: "South Sudan", lat: 6.8770, lng: 31.3070, zoom: 6, continent_id: africa.id)
+spain = Country.create!(name: "Spain", lat: 40.4637, lng: -3.7492, zoom: 6, continent_id: europe.id)
+sri_lanka = Country.create!(name: "Sri Lanka", lat: 7.8731, lng: 80.7718, zoom: 7, continent_id: asia.id)
+sudan = Country.create!(name: "Sudan", lat: 12.8628, lng: 30.2176, zoom: 5, continent_id: africa.id)
+suriname = Country.create!(name: "Suriname", lat: 3.9193, lng: -56.0278, zoom: 6, continent_id: south_america.id)
+sweden = Country.create!(name: "Sweden", lat: 62.7282, lng: 18.6435, zoom: 5, continent_id: europe.id)
+switzerland = Country.create!(name: "Switzerland", lat: 46.8182, lng: 8.2275, zoom: 7, continent_id: europe.id)
+syria = Country.create!(name: "Syria", lat: 34.8021, lng: 38.9968, zoom: 6, continent_id: asia.id)
+tajikistan = Country.create!(name: "Tajikistan", lat: 38.8610, lng: 71.2761, zoom: 6, continent_id: asia.id)
+tanzania = Country.create!(name: "Tanzania", lat: -6.3690, lng: 34.8888, zoom: 6, continent_id: africa.id)
+thailand = Country.create!(name: "Thailand", lat: 15.8700, lng: 100.9925, zoom: 6, continent_id: asia.id)
+timor_leste = Country.create!(name: "Timor-Leste", lat: -8.8742, lng: 125.7275, zoom: 7, continent_id: asia.id)
+togo = Country.create!(name: "Togo", lat: 8.6195, lng: 0.8248, zoom: 6, continent_id: africa.id)
+tonga = Country.create!(name: "Tonga", lat: -21.1790, lng: -175.1982, zoom: 8, continent_id: oceania.id)
+trinidad_tobago = Country.create!(name: "Trinidad and Tobago", lat: 10.6918, lng: -61.2225, zoom: 7, continent_id: north_america.id)
+tunisia = Country.create!(name: "Tunisia", lat: 33.8869, lng: 9.5375, zoom: 6, continent_id: africa.id)
+turkey = Country.create!(name: "Turkey", lat: 38.9637, lng: 35.2433, zoom: 6, continent_id: asia.id)
+turkmenistan = Country.create!(name: "Turkmenistan", lat: 38.9697, lng: 59.5563, zoom: 6, continent_id: asia.id)
+tuvalu = Country.create!(name: "Tuvalu", lat: -7.1095, lng: 177.6493, zoom: 8, continent_id: oceania.id)
+uganda = Country.create!(name: "Uganda", lat: 1.3733, lng: 32.2903, zoom: 6, continent_id: africa.id)
+ukraine = Country.create!(name: "Ukraine", lat: 48.3794, lng: 31.1656, zoom: 6, continent_id: europe.id)
+united_arab_emirates = Country.create!(name: "United Arab Emirates", lat: 23.4241, lng: 53.8478, zoom: 6, continent_id: asia.id)
+united_kingdom = Country.create!(name: "United Kingdom", lat: 55.3781, lng: -3.4360, zoom: 6, continent_id: europe.id)
+united_states_of_america = Country.create!(name: "United States of America", lat: 37.0902, lng: -95.7129, zoom: 4, continent_id: north_america.id)
+uruguay = Country.create!(name: "Uruguay", lat: -32.5228, lng: -55.7658, zoom: 6, continent_id: south_america.id)
+uzbekistan = Country.create!(name: "Uzbekistan", lat: 41.3775, lng: 64.5853, zoom: 6, continent_id: asia.id)
+vanuatu = Country.create!(name: "Vanuatu", lat: -15.3767, lng: 166.9592, zoom: 7, continent_id: oceania.id)
+venezuela = Country.create!(name: "Venezuela", lat: 6.4238, lng: -66.5897, zoom: 6, continent_id: south_america.id)
+vietnam = Country.create!(name: "Vietnam", lat: 16.0583, lng: 108.2772, zoom: 6, continent_id: asia.id)
+yemen = Country.create!(name: "Yemen", lat: 15.5527, lng: 48.5164, zoom: 6, continent_id: asia.id)
+zambia = Country.create!(name: "Zambia", lat: -13.1339, lng: 27.8493, zoom: 6, continent_id: africa.id)
+zimbabwe = Country.create!(name: "Zimbabwe", lat: -19.0154, lng: 29.1549, zoom: 6, continent_id: africa.id)
 
 puts "Done seeding countries..."
 
@@ -444,79 +444,78 @@ golden_rock = Destination.create!(name: "Golden Rock", country_name: "Myanmar", 
 
 #Laos
 
-kuang_si_caves = Destination.create!(name: "Kuang Si Caves", country_name: "Laos", image: "https://templesandtreehouses.com/wp-content/uploads/2018/02/Kuang-Si-1-1.jpg", country_id: laos.id)
-elephant_village = Destination.create!(name: "Elephant Village Sanctuary", country_name: "Laos", image: "https://laostravel.indochinacharm.com/wp-content/uploads/2017/11/MandaLao-Elephant-Sanctuary-Luang-Prabang.jpg", country_id: laos.id)
-four_thousand_islands = Destination.create!(name: "4000 Islands", country_name: "Laos", image: "https://www.travel4history.com/wp-content/uploads/2021/07/Laos-si-phan-don-travel-guide.jpg", country_id: laos.id)
+kuang_si_caves = Destination.create!(name: "Kuang Si Caves", country_name: "Laos", image: "https://templesandtreehouses.com/wp-content/uploads/2018/02/Kuang-Si-1-1.jpg", lat: 19.74917, lng: 101.99167, country_id: laos.id)
+elephant_village = Destination.create!(name: "Elephant Village Sanctuary", country_name: "Laos", image: "https://laostravel.indochinacharm.com/wp-content/uploads/2017/11/MandaLao-Elephant-Sanctuary-Luang-Prabang.jpg", lat: 19.8921, lng: 102.1372, country_id: laos.id)
+four_thousand_islands = Destination.create!(name: "4000 Islands", country_name: "Laos", image: "https://www.travel4history.com/wp-content/uploads/2021/07/Laos-si-phan-don-travel-guide.jpg", lat: 15.1167, lng: 105.7833, country_id: laos.id)
 
 #Cambodia
 
-angkor_wat = Destination.create!(name: "Angkor Wat", country_name: "Cambodia", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Ankor_Wat_temple.jpg/1200px-Ankor_Wat_temple.jpg", country_id: cambodia.id)
-phnom_penh = Destination.create!(name: "Phnom Penh", country_name: "Cambodia", image: "https://media.nomadicmatt.com/2021/PhnomPenh.jpg", country_id: cambodia.id)
+angkor_wat = Destination.create!(name: "Angkor Wat", country_name: "Cambodia", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Ankor_Wat_temple.jpg/1200px-Ankor_Wat_temple.jpg", lat: 13.4125, lng: 103.8670, country_id: cambodia.id)
+phnom_penh = Destination.create!(name: "Phnom Penh", country_name: "Cambodia", image: "https://media.nomadicmatt.com/2021/PhnomPenh.jpg", lat: 11.5564, lng: 104.9282, country_id: cambodia.id)
 
 #Malaysia
 
-batu_caves = Destination.create!(name: "Batu Caves", country_name: "Malaysia", image: "https://upload.wikimedia.org/wikipedia/commons/8/8f/Batu_Caves_stairs_2022-05.jpg", country_id: malaysia.id)
+batu_caves = Destination.create!(name: "Batu Caves", country_name: "Malaysia", image: "https://upload.wikimedia.org/wikipedia/commons/8/8f/Batu_Caves_stairs_2022-05.jpg", lat: 3.2379, lng: 101.6840, country_id: malaysia.id)
 
 #Nepal
 
-mt_everest = Destination.create!(name: "Mt. Everest", country_name: "Nepal", image: "https://i.insider.com/62b220554245600018ddcf74?width=1136&format=jpeg", country_id: nepal.id)
-kathmandu = Destination.create!(name: "Kathmandu", country_name: "Nepal", image: "https://www.holidify.com/images/bgImages/KATHMANDU.jpg", country_id: nepal.id)
+mt_everest = Destination.create!(name: "Mt. Everest", country_name: "Nepal", image: "https://i.insider.com/62b220554245600018ddcf74?width=1136&format=jpeg", lat: 27.9881, lng: 86.9250, country_id: nepal.id)
+kathmandu = Destination.create!(name: "Kathmandu", country_name: "Nepal", image: "https://www.holidify.com/images/bgImages/KATHMANDU.jpg", lat: 27.7172, lng: 85.3240, country_id: nepal.id)
 
 #Bhutan
 
-paro = Destination.create!(name: "Paro", country_name: "Bhutan", image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/a1/42/75/photo4jpg.jpg?w=700&h=500&s=1", country_id: bhutan.id)
+paro = Destination.create!(name: "Paro", country_name: "Bhutan", image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/a1/42/75/photo4jpg.jpg?w=700&h=500&s=1", lat: 27.4287, lng: 89.4164, country_id: bhutan.id)
 
 #Jordan
 
-petra = Destination.create!(name: "Petra", country_name: "Jordan", image: "https://cdn.britannica.com/88/189788-050-9B5DB3A4/Al-Dayr-Petra-Jordan.jpg", country_id: jordan.id)
-dead_sea = Destination.create!(name: "Dead Sea", country_name: "Jordan", image: "https://static.toiimg.com/thumb/msid-79608505,width-748,height-499,resizemode=4,imgsize-1624884/.jpg", country_id: jordan.id)
+petra = Destination.create!(name: "Petra", country_name: "Jordan", image: "https://cdn.britannica.com/88/189788-050-9B5DB3A4/Al-Dayr-Petra-Jordan.jpg", lat: 30.3285, lng: 35.4444, country_id: jordan.id)
+dead_sea = Destination.create!(name: "Dead Sea", country_name: "Jordan", image: "https://static.toiimg.com/thumb/msid-79608505,width-748,height-499,resizemode=4,imgsize-1624884/.jpg", lat: 31.5590, lng: 35.4732, country_id: jordan.id)
 
 #Canada
 
-niagara_falls = Destination.create!(name: "Niagara Falls", country_name: "Canada", image: "https://cdn.britannica.com/30/94430-050-D0FC51CD/Niagara-Falls.jpg", country_id: canada.id)
-banff = Destination.create!(name: "Banff National Park", country_name: "Canada", image: "https://cdn.britannica.com/71/94371-050-293AE931/Mountains-region-Ten-Peaks-Moraine-Lake-Alberta.jpg", country_id: canada.id)
-whistler = Destination.create!(name: "Whistler", country_name: "Canada", image: "https://www.momondo.com/discover/wp-content/uploads/sites/260/2016/10/6f3f2699-7a56-3181-962b-12e668c27320.jpg", country_id: canada.id)
+niagara_falls = Destination.create!(name: "Niagara Falls", country_name: "Canada", image: "https://cdn.britannica.com/30/94430-050-D0FC51CD/Niagara-Falls.jpg", lat: 43.0896, lng: -79.0849, country_id: canada.id)
+banff = Destination.create!(name: "Banff National Park", country_name: "Canada", image: "https://cdn.britannica.com/71/94371-050-293AE931/Mountains-region-Ten-Peaks-Moraine-Lake-Alberta.jpg", lat: 51.1784, lng: -115.5708, country_id: canada.id)
+whistler = Destination.create!(name: "Whistler", country_name: "Canada", image: "https://www.momondo.com/discover/wp-content/uploads/sites/260/2016/10/6f3f2699-7a56-3181-962b-12e668c27320.jpg", lat: 50.1162, lng: -122.9535, country_id: canada.id)
 
 #Mexico
 
-chichen_itza = Destination.create!(name: "Chichen Itza", country_name: "Mexico", image: "https://cdn.britannica.com/86/179586-138-8B763D72/Overview-Chichen-Itza-Yucatan-Mexico.jpg?w=800&h=450&c=crop", country_id: mexico.id)
-tulum = Destination.create!(name: "Tulum", country_name: "Mexico", image: "https://www.senatorrivieracancunsparesort.com/wp-content/uploads/2019/11/tulum2.jpg", country_id: mexico.id)
-cozumel = Destination.create!(name: "Cozumel", country_name: "Mexico", image: "https://cdn.mexperience.com/wp-content/uploads/Cozumel-Beach-Resort-Aerial-NBS.jpg", country_id: mexico.id)
+chichen_itza = Destination.create!(name: "Chichen Itza", country_name: "Mexico", image: "https://cdn.britannica.com/86/179586-138-8B763D72/Overview-Chichen-Itza-Yucatan-Mexico.jpg?w=800&h=450&c=crop", lat: 20.6843, lng: -88.5678, country_id: mexico.id)
+tulum = Destination.create!(name: "Tulum", country_name: "Mexico", image: "https://www.senatorrivieracancunsparesort.com/wp-content/uploads/2019/11/tulum2.jpg", lat: 20.2114, lng: -87.4654, country_id: mexico.id)
+cozumel = Destination.create!(name: "Cozumel", country_name: "Mexico", image: "https://cdn.mexperience.com/wp-content/uploads/Cozumel-Beach-Resort-Aerial-NBS.jpg", lat: 20.4230, lng: -86.9223, country_id: mexico.id)
 
 #Belize
 
-blue_hole = Destination.create!(name: "Blue Hole", country_name: "Belize", image: "https://upload.wikimedia.org/wikipedia/commons/6/61/Great_Blue_Hole.jpg", country_id: belize.id)
+blue_hole = Destination.create!(name: "Blue Hole", country_name: "Belize", image: "https://upload.wikimedia.org/wikipedia/commons/6/61/Great_Blue_Hole.jpg", lat: 17.3160, lng: -87.5347, country_id: belize.id)
 
 #Brazil
 
-rio = Destination.create!(name: "Rio de Janeiro", country_name: "Brazil", image: "https://upload.wikimedia.org/wikipedia/commons/9/98/Cidade_Maravilhosa.jpg", country_id: brazil.id)
-iguacu_falls = Destination.create!(name: "Iguaçu Falls", country_name: "Brazil", image: "https://www.tripsavvy.com/thmb/gsvNYW6xREKJL0nqQHpAOImQHHQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/iguazu-falls--iguazu-national-park--brazil-argentina-paraguay-border--1171077586-0c0af92a39e24d179bfa236d3248b2db.jpg", country_id: brazil.id)
-amazon = Destination.create!(name: "Amazon Rainforest", country_name: "Brazil", image: "https://mediaproxy.salon.com/width/1200/https://media.salon.com/2021/05/brazil-amazon-rainforest-0503211.jpg", country_id: brazil.id)
-sao_paulo = Destination.create!(name: "São Paulo", country_name: "Brazil", image: "https://lp-cms-production.imgix.net/image_browser/shutterstockRF_153080222.jpg", country_id: brazil.id)
+rio = Destination.create!(name: "Rio de Janeiro", country_name: "Brazil", image: "https://upload.wikimedia.org/wikipedia/commons/9/98/Cidade_Maravilhosa.jpg", lat: -22.9068, lng: -43.1729, country_id: brazil.id)
+amazon = Destination.create!(name: "Amazon Rainforest", country_name: "Brazil", image: "https://mediaproxy.salon.com/width/1200/https://media.salon.com/2021/05/brazil-amazon-rainforest-0503211.jpg", lat: -3.4653, lng: -62.2159, country_id: brazil.id)
+sao_paulo = Destination.create!(name: "São Paulo", country_name: "Brazil", image: "https://lp-cms-production.imgix.net/image_browser/shutterstockRF_153080222.jpg", lat: -23.5558, lng: -46.6396, country_id: brazil.id)
 
 #Chile
 
-patagonia = Destination.create!(name: "Patagonia", country_name: "Chile", image: "https://www.rei.com/blog/wp-content/uploads/sites/4/2018/12/PAL_051316_39744-1.jpg?resize=1024%2C681", country_id: chile.id)
-valle_de_la_luna = Destination.create!(name: "Valle de la Luna", country_name: "Chile", image: "https://www.wanderlustchloe.com/wp-content/uploads/2016/04/Lunar-Valley-Atacama-Chile-1.jpg", country_id: chile.id)
-easter_island = Destination.create!(name: "Easter Island", country_name: "Chile", image: "https://th-thumbnailer.cdn-si-edu.com/8KneWAkhaEcgvqASa-xZO6IPMx4=/fit-in/1600x0/filters:focal(2304x1536:2305x1537)/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer_public/81/22/8122e662-681b-4370-a20a-a82e936c3711/gettyimages-921707628.jpg", country_id: chile.id)
+patagonia = Destination.create!(name: "Patagonia", country_name: "Chile", image: "https://www.rei.com/blog/wp-content/uploads/sites/4/2018/12/PAL_051316_39744-1.jpg?resize=1024%2C681", lat: -41.8101, lng: -68.9063, country_id: chile.id)
+valle_de_la_luna = Destination.create!(name: "Valle de la Luna", country_name: "Chile", image: "https://www.wanderlustchloe.com/wp-content/uploads/2016/04/Lunar-Valley-Atacama-Chile-1.jpg", lat: -22.9258, lng: -68.2880, country_id: chile.id)
+easter_island = Destination.create!(name: "Easter Island", country_name: "Chile", image: "https://th-thumbnailer.cdn-si-edu.com/8KneWAkhaEcgvqASa-xZO6IPMx4=/fit-in/1600x0/filters:focal(2304x1536:2305x1537)/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer_public/81/22/8122e662-681b-4370-a20a-a82e936c3711/gettyimages-921707628.jpg", lat: -27.1127, lng: -109.3497, country_id: chile.id)
 
 #Argentina
 
-iguazu_falls = Destination.create!(name: "Iguazú Falls", country_name: "Argentina", image: "https://www.tripsavvy.com/thmb/gsvNYW6xREKJL0nqQHpAOImQHHQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/iguazu-falls--iguazu-national-park--brazil-argentina-paraguay-border--1171077586-0c0af92a39e24d179bfa236d3248b2db.jpg", country_id: argentina.id)
-la_boca = Destination.create!(name: "La Boca", country_name: "Argentina", image: "https://www.fodors.com/wp-content/uploads/2018/08/HERO-BA-Instagrammable-Neighborhood-La-Boca-18.jpg", country_id: argentina.id)
+iguazu_falls = Destination.create!(name: "Iguazú Falls", country_name: "Argentina", image: "https://www.tripsavvy.com/thmb/gsvNYW6xREKJL0nqQHpAOImQHHQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/iguazu-falls--iguazu-national-park--brazil-argentina-paraguay-border--1171077586-0c0af92a39e24d179bfa236d3248b2db.jpg", lat: -25.6953, lng: -54.4367, country_id: argentina.id)
+la_boca = Destination.create!(name: "La Boca", country_name: "Argentina", image: "https://www.fodors.com/wp-content/uploads/2018/08/HERO-BA-Instagrammable-Neighborhood-La-Boca-18.jpg", lat: -34.6345, lng: -58.3631, country_id: argentina.id)
 
 #Peru
 
-machu_picchu = Destination.create!(name: "Machu Picchu", country_name: "Peru", image: "https://www.peru.travel/Contenido/Atractivo/Imagen/en/172/1.1/Principal/machu-picchu.jpg", country_id: peru.id)
+machu_picchu = Destination.create!(name: "Machu Picchu", country_name: "Peru", image: "https://www.peru.travel/Contenido/Atractivo/Imagen/en/172/1.1/Principal/machu-picchu.jpg", lat: -13.1631, lng: -72.5450, country_id: peru.id)
 
 
 #Costa Rica
 
-manuel_antonio = Destination.create!(name: "Manuel Antonio National Park", country_name: "Costa Rica", image: "https://manuelantoniopark.com/wp-content/uploads/2020/03/landing-page-4-scaled.jpg", country_id: costa_rica.id)
+manuel_antonio = Destination.create!(name: "Manuel Antonio National Park", country_name: "Costa Rica", image: "https://manuelantoniopark.com/wp-content/uploads/2020/03/landing-page-4-scaled.jpg", lat: 9.3923, lng: -84.1370, country_id: costa_rica.id)
 
 #Venezuela
 
-angel_falls = Destination.create!(name: "Angel Falls", country_name: "Venezuela", image: "https://www.beautifulworld.com/wp-content/uploads/2016/09/Angel-Falls.jpg", country_id: venezuela.id)
+angel_falls = Destination.create!(name: "Angel Falls", country_name: "Venezuela", image: "https://www.beautifulworld.com/wp-content/uploads/2016/09/Angel-Falls.jpg", lat: 5.9701, lng: -62.5362, country_id: venezuela.id)
 
 puts "Done seeding destinations..."
 
@@ -728,7 +727,7 @@ puts "Done seeding forums..."
 
 puts "Seeding posts..."
 
-Post.create!(title: "Transportation", 
+transportation = Post.create!(title: "Transportation", 
 body: "I live in a suburb in the US where I drive to everywhere. Trying to understand passes/options for transportation is overwhelming.
 There will be 6-8 of us. From the Narita airport I think it's cheaper to hire a minivan vs purchasing train tickets.
 A week in Tokyo, then a week in Kyoto. Based on someone's suggestion, we decided to stay in Kyoto and take day trips to Osaka vs packing/unpacking and checking in/out.
@@ -813,6 +812,182 @@ topic: "Bangkok",
 forum_id: thailand_forum.id)
 
 puts "Done seeding posts..."
+
+puts "Seeding forum comments..."
+
+ForumComment.create!(body: "In at Tokyo and out at Osaka, you don’t need a JR pass. JR trains are Shinkansen. https://www.japan-guide.com/e/e2019.html
+
+After you’ve decided on an itinerary = https://www.japan-guide.com/railpass/
+
+Get a stored value IC card for your local subway travel = https://www.japan-guide.com/e/e2359_003.html", date: "Dec 13, 2022, 7:43 PM", likes: 6, post_id: transportation.id)
+
+ForumComment.create!(body: "I think the first week in Tokyo, I just need to get the IC card.
+
+I think it makes sense to get a 7 day JR pass while in Kyoto....", likes: 5, post_id: transportation.id)
+
+ForumComment.create!(body: "Are you return back to Tokyo? If not, there are regional passes for the Kansai area.", likes: 3, post_id: transportation.id)
+
+puts "Done seeding forum comments..."
+
+puts "Seeding shop items..."
+
+ShopItem.create!(name: "Australia", image: "https://i.imgur.com/GlLNu4K.png", description: "Lonely Planet’s Australia is your passport to the most relevant, up-to-date advice on what to see and skip, and what hidden discoveries await you. Dive in the Great Barrier Reef, marvel at the unique wildlife, and hit the beach at Byron Bay; all with your trusted travel companion. Get to the heart of Australia and begin your journey now!", continent_id: oceania.id, price: 19.99, country_id: australia.id)
+
+ShopItem.create!(name: "Austria", image: "https://i.imgur.com/5vSt0Ma.png", description: "Lonely Planet’s Austria is our most comprehensive guide that extensively covers all the country has to offer, with recommendations for both popular and lesser-known experiences. Ski in the Alps, explore Vienna’s imperial palaces, and drive the Grossglockner Road; all with your trusted travel companion.", continent_id: europe.id, price: 19.99, country_id: austria.id)
+
+ShopItem.create!(name: "Bangladesh", image: "https://i.imgur.com/aiK450Y.png", description: "Lonely Planet Bangladesh is your passport to the most relevant, up-to-date advice on what to see and skip, and what hidden discoveries await you.
+
+Cruise the Sundarbans spotting deer and tigers; stand amid the chaos of old Dhaka; or visit the lush Chittagong Hill Tracts, all with your trusted travel companion. Get to the heart of Bangladesh and begin your journey now!", continent_id: asia.id, price: 19.99, country_id: bangladesh.id)
+
+ShopItem.create!(name: "Belize", image: "https://i.imgur.com/PowhsDN.png", description: "Lonely Planet’s Belize is your passport to the most relevant, up-to-date advice on what to see and skip, and what hidden discoveries await you. Dive the Blue Hole, explore Maya villages, and discover Garifuna culture; all with your trusted travel companion. Get to the heart of Belize and begin your journey now!", continent_id: north_america.id, price: 19.99, country_id: belize.id)
+
+ShopItem.create!(name: "Bhutan", image: "https://i.imgur.com/UcmYh5M.png", description: "Bhutan is no ordinary place. It is the last great Himalayan kingdom, shrouded in mystery and magic, where a traditional Buddhist culture carefully embraces global developments. Lonely Planet is your passport to Bhutan, with amazing travel experiences and the best planning advice.
+
+Ascend the steep path the Taktshang Goemba, trek through fabled Himalayan vallyes, and get a blessing from a wooden phallus at the tsechu; all with your trusted travel companion. Get to the heart of Bhutan and begin your journey now!", continent_id: asia.id, price: 19.99, country_id: bhutan.id)
+
+ShopItem.create!(name: "Bolivia", image: "https://i.imgur.com/nW87c6g.png", description: "Superlative in its natural beauty, rugged, vexing, complex and slightly nerve-racking, Bolivia is one of South America’s most diverse and intriguing nations. Lonely Planet is your passport to Bolivia, with amazing travel experiences and the best planning advice.
+
+Tour the epic salt flats of Salar de Uyuni, wake to the sounds of the rainforest in the Parque Nacional Madidi, or walk in the path of the Incas in the Cordillera Real; all with your trusted travel companion. Get to the heart of Bolivia and begin your journey now!", continent_id: south_america.id, price: 19.99, country_id: bolivia.id)
+
+ShopItem.create!(name: "Brazil", image: "https://i.imgur.com/Q1eLaE4.png", description: "Lonely Planet’s Brazil is your passport to the most relevant, up-to-date advice on what to see and skip, and what hidden discoveries await you. Marvel at Iguacu Falls, take a jungle trip, and frolick in the waves at Ipanema Beach; all with your trusted travel companion. Get to the heart of Brazil and begin your journey now!", continent_id: south_america.id, price: 19.99, country_id: brazil.id)
+
+ShopItem.create!(name: "Cambodia", image: "https://i.imgur.com/crQf9DW.png", description: "Lonely Planet's Cambodia is your passport to the most relevant, up-to-date advice on what to see and skip, and what hidden discoveries await you. Explore Khmer history at the National Museum of Cambodia, marvel at the Cambodian Circus, and explore majestic temples in Angkor; all with your trusted travel companion. Begin your journey now!", continent_id: asia.id, price: 19.99, country_id: cambodia.id)
+
+ShopItem.create!(name: "Canada", image: "https://i.imgur.com/MuXUQ94.png", description: "Lonely Planet’s Canada is your passport to the most relevant, up-to-date advice on what to see and skip, and what hidden discoveries await you. Savor culture in Quebec City, marvel at Niagara Falls, and hike in the Rockies; all with your trusted travel companion. Get to the heart of Canada and begin your journey now!", continent_id: north_america.id, price: 19.99, country_id: canada.id)
+
+ShopItem.create!(name: "Chile", image: "https://i.imgur.com/QsgB5gS.png", description: "Lonely Planet’s Chile & Easter Island is your passport to the most relevant, up-to-date advice on what to see and skip, and what hidden discoveries await you. Strap on your pack and hike through winding forests to behold the granite mountain spires of Las Torres; watch sunset turn the Valle de la Luna intense purple, gold, pink and yellow; and puzzle over the giant statues of Easter Island. All with your trusted travel companion. Get to the heart of Chile & Easter Island and begin your journey now!", continent_id: south_america.id, price: 19.99, country_id: chile.id)
+
+ShopItem.create!(name: "China", image: "https://i.imgur.com/8IJoQEX.png", description: "Lonely Planet’s China is your passport to the most relevant, up-to-date advice on what to see and skip, and what hidden discoveries await you. Explore Beijing’s Forbidden City, climb the Great Wall, and discover sacred Lhasa; all with your trusted travel companion. Get to the heart of China and begin your journey now!", continent_id: asia.id, price: 19.99, country_id: china.id)
+
+ShopItem.create!(name: "Cuba", image: "https://i.imgur.com/j0wCqXc.png", description: "Lonely Planet’s Cuba is your passport to the most relevant, up-to-date advice on what to see and skip, and what hidden discoveries await you. Enjoy the live music scene in Havana, explore historic Habana Vieja, and trek up Pico Turquino; all with your trusted travel companion. Get to the heart of Cuba and begin your journey now!", continent_id: north_america.id, price: 19.99, country_id: cuba.id)
+
+ShopItem.create!(name: "Cyprus", image: "https://i.imgur.com/TyvUp5Q.png", description: "Strike out beyond the sun-soaked stretches of sand to discover an island of compelling culture and landscapes, steeped in myth and riddled with ancient riches. Lonely Planet will get you to the heart of Cyprus, with amazing travel experiences and the best planning advice.
+
+Lonely Planet Cyprus is your passport to the most relevant, up-to-date advice on what to see and skip, and what hidden discoveries await you. Stroll through ancient history in Pafos, dive to haunting shipwrecks off Larnaka, or take a road trip through the Troödos Mountains, all with your trusted travel companion. Get to the heart of Cyprus and begin your journey now!", continent_id: asia.id, price: 19.99, country_id: cyprus.id)
+
+ShopItem.create!(name: "Czech Republic", image: "https://i.imgur.com/jnvCtR4.png", description: "Since the fall of communism in 1989, the Czech Republic – and its capital in particular – has evolved into one of Europe’s most popular travel destinations. Lonely Planet will get you to the heart of Prague & the Czech Republic, with amazing travel experiences and the best planning advice.
+
+
+Lonely Planet Prague & the Czech Republic is your passport to the most relevant, up-to-date advice on what to see and skip, and what hidden discoveries await you. Count statues on Charles Bridge, gawk at Prague Castle or enjoy the spectacle of the Old Town Square; all with your trusted travel companion. Get to the heart of Prague and begin your journey now!", continent_id: europe.id, price: 19.99, country_id: czech_republic.id)
+
+ShopItem.create!(name: "Denmark", image: "https://i.imgur.com/E4oSawN.png", description: "Chart-topping contentment and quality of life, blockbuster dining and design, and a cheerful emphasis on hygge (cosiness) – explore (and envy) what makes Denmark tick. Lonely Planet will get you to the heart of Denmark, with amazing travel experiences and the best planning advice.
+
+Sample the freshest and best Danish food, immerse yourself in Viking history, and make a pilgrimage to the home of Lego; all with your trusted travel companion. Get to the heart of Denmark and begin your journey now!", continent_id: europe.id, price: 19.99, country_id: denmark.id)
+
+ShopItem.create!(name: "Dominican Republic", image: "https://i.imgur.com/4KMD2JC.png", description: "The Dominican Republic is one of the Caribbean’s most geographically diverse countries, with stunning mountain scenery, desert scrublands, evocative colonial architecture and beaches galore. Lonely Planet will get you to the heart of Dominican Republic, with amazing travel experiences and the best planning advice.
+
+Lonely Planet Dominican Republic is your passport to the most relevant, up-to-date advice on what to see and skip, and what hidden discoveries await you. Watch humpback whales from Peninsula de Samana, descend the 27 waterfalls of Damajagua or chill on the beach at Playa Rincon; all with your trusted travel companion. Get to the heart of the Dominican Republic and begin your journey now!", continent_id: north_america.id, price: 19.99, country_id: dominican_republic.id)
+
+ShopItem.create!(name: "Egypt", image: "https://i.imgur.com/ymksgsy.png", description: "Lonely Planet’s Egypt is your passport to the most relevant, up-to-date advice on what to see and skip, and what hidden discoveries await you. Discover the pyramids of Giza, cruise the Nile, and dive in the Red Sea; all with your trusted travel companion. Get to the heart of Egypt and begin your journey now!", continent_id: africa.id, price: 19.99, country_id: egypt.id)
+
+ShopItem.create!(name: "Fiji", image: "https://i.imgur.com/Qv4hbt4.png", description: "Set your internal clock to ‘Fiji time’: exploring the archipelago’s exquisite beaches, undersea marvels, lush interiors and fascinating culture shouldn’t be rushed. Lonely Planet will get you to the heart of Fiji, with amazing travel experiences and the best planning advice.
+
+
+Lonely Planet Fiji is your passport to the most relevant, up-to-date advice on what to see and skip, and what hidden discoveries await you. Say bula to the locals at a dance ceremony; trek to hidden waterfalls on 'Garden Island' Taveuni or ride a bamboo raft through the Namosi Highlands; all with your trusted travel companion. Get to the heart of Fiji and begin your journey now!", continent_id: oceania.id, price: 19.99, country_id: fiji.id)
+
+ShopItem.create!(name: "Finland", image: "https://i.imgur.com/Z3LbkVw.png", description: "Inspired design, technology and epicurean scenes meet epic stretches of wilderness here in Europe’s deep north, where summer’s endless light balances winter’s eerie frozen magic. Lonely Planet will get you to the heart of Finland, with amazing travel experiences and the best planning advice.
+
+Shop for the best in Scandinavian design, fizz across Lapland behind a team of huskies, and warm up in a traditional sauna; all with your trusted travel companion. Get to the heart of Finland and begin your journey now!", continent_id: europe.id, price: 19.99, country_id: finland.id)
+
+ShopItem.create!(name: "Germany", image: "https://i.imgur.com/2df8cjK.png", description: "Lonely Planet’s Germany is your passport to the most relevant, up-to-date advice on what to see and skip, and what hidden discoveries await you. Explore the beautiful Black Forest, marvel at Cologne’s cathedral, and cruise along the Rhine; all with your trusted travel companion. Get to the heart of Germany and begin your journey now!", continent_id: europe.id, price: 19.99, country_id: germany.id)
+
+ShopItem.create!(name: "Great Britain", image: "https://i.imgur.com/jJCfzit.png", description: "Lonely Planet's Great Britain is your passport to the most relevant, up-to-date advice on what to see and skip, and what hidden discoveries await you. Puzzle the mysteries of Stonehenge, sip whisky in Scotland, and hike the mountains of Wales; all with your trusted travel companion. Get to the heart of Great Britain and begin your journey now!", continent_id: europe.id, price: 19.99, country_id: united_kingdom.id)
+
+ShopItem.create!(name: "Guatemala", image: "https://i.imgur.com/zfeGUl0.png", description: "Central America’s most diverse country captivates travelers with its extraordinary landscapes and a civilization-spanning culture that reaches back centuries. Lonely Planet is your passport to Guatemala, with amazing travel experiences and the best planning advice.
+
+Stroll around the restored Maya temples of Tikal, brush up on your Spanish in Antigua, hike along the shore of Lago de Atitlán; all with your trusted travel companion. Get to the heart of Guatemala and begin your journey now!", continent_id: north_america.id, price: 19.99, country_id: guatemala.id)
+
+ShopItem.create!(name: "Hungary", image: "https://i.imgur.com/iPcfwd7.png", description: "Stunning architecture, vital folk art, thermal spas and Europe’s most exciting city after dark are the major drawcards of Hungary and its capital, Budapest. Lonely Planet will get you to the heart of Budapest & Hungary, with amazing travel experiences and the best planning advice.
+
+Lonely Planet Budapest & Hungary is your passport to the most relevant, up-to-date advice on what to see and skip, and what hidden discoveries await you.Take the waters at one of the country’s 300 public thermal hot springs, step back in time in Sopron, or explore the limestone plateau of Castle Hill; all with your trusted travel companion. Get to the heart of Budapest & Hungary and begin your journey now!", continent_id: europe.id, price: 19.99, country_id: hungary.id)
+
+ShopItem.create!(name: "India", image: "https://i.imgur.com/SrVaYSQ.png", description: "Lonely Planet’s India is your passport to the most relevant, up-to-date advice on what to see and skip, and what hidden discoveries await you. Explore the magnificent monument to love that is the Taj Mahal, climb into the high Himalaya and Ladakh’s moonscapes, and experience the dramatic rock-cut grottoes in the caves of Ajanta; all with your trusted travel companion. Get to the heart of India and begin your journey now!", continent_id: asia.id, price: 19.99, country_id: india.id)
+
+ShopItem.create!(name: "Indonesia", image: "https://i.imgur.com/ISZIB54.png", description: "Lonely Planet’s Indonesia is your passport to the most relevant, up-to-date advice on what to see and skip, and what hidden discoveries await you. Explore Komodo National Park, patrolled by the world’s largest lizard, unwind on the sugar-white sand and turquoise waters of the Gili Islands, and experience a Balinese dance performance on Indonesia’s most famous holiday island; all with your trusted travel companion. Get to the heart of Indonesia and begin your journey now!", continent_id: asia.id, price: 19.99, country_id: indonesia.id)
+
+ShopItem.create!(name: "Iran", image: "https://i.imgur.com/FRP6qxe.png", description: "Welcome to what could be the friendliest country on earth. Iran is the jewel in Islam’s crown, combining glorious architecture with a warm-hearted welcome. Lonely Planet will get you to the heart of Iran, with amazing travel experiences and the best planning advice.
+
+
+Lonely Planet Iran is your passport to the most relevant, up-to-date advice on what to see and skip, and what hidden discoveries await you. Hike among the Castles of the Assassins in Alamut Valley, Lose yourself in Esfahan’s historic bazaar, or ski in the Alborz Mountains; all with your trusted travel companion. Get to the heart of Iran and begin your journey now!", continent_id: asia.id, price: 19.99, country_id: iran.id)
+
+ShopItem.create!(name: "Jamaica", image: "https://i.imgur.com/1y2PIRg.png", description: "Jamaica is the Caribbean country that comes with its own soundtrack. Groove to its singular rhythm as you explore beyond the beaches and all-inclusives. Lonely Planet will get you to the heart of Jamaica, with amazing travel experiences and the best planning advice.
+
+Lonely Planet Jamaica is your passport to the most relevant, up-to-date advice on what to see and skip, and what hidden discoveries await you. Enjoy a night hike to reach Jamaica’s highest point by sunrise, spot crocodiles in the Black River Great Morass or escape to Brighton’s empty, quiet beaches; all with your trusted travel companion. Get to the heart of Jamaica and begin your journey now!", continent_id: north_america.id, price: 19.99, country_id: jamaica.id)
+
+ShopItem.create!(name: "Jordan", image: "https://i.imgur.com/mVWW8ko.png", description: "Lonely Planet’s Jordan is your passport to the most relevant, up-to-date advice on what to see and skip, and what hidden discoveries await you. Dive the Red Sea, wonder at the spectacular ancient city of Petra, and ride through Wadi Rum at sunset; all with your trusted travel companion. Get to the heart of Jordan and begin your journey now!", continent_id: asia.id, price: 19.99, country_id: jordan.id)
+
+ShopItem.create!(name: "Kenya", image: "https://i.imgur.com/2luMAQW.png", description: "Vast savannahs peppered with immense herds of wildlife. Snow-capped equatorial mountains. Traditional peoples who bring soul and colour to the earth. Welcome to Kenya. Lonely Planet will get you to the heart of Kenya, with amazing travel experiences and the best planning advice.
+
+Gape at a million wildebeest migrating across the rolling savannah of the Masai Mara; try to calm your breath as you get close to big cats and mighty elephants; take your pick from national parks for mountain hiking, wildlife spotting or snorkelling; all with your trusted travel companion. Get to the heart of Kenya and begin your journey now!", continent_id: africa.id, price: 19.99, country_id: kenya.id)
+
+ShopItem.create!(name: "Laos", image: "https://i.imgur.com/ThQv4Ym.png", description: "Vivid nature, voluptuous landscapes and a vibrant culture collide with a painful past and optimistic future to make Laos an enigmatic experience for the adventurous. Lonely Planet is your passport to Laos, with amazing travel experiences and the best planning advice.
+
+Explore the backstreets of Luang Prabang by bike, soak up sun or grab a kayak on Si Phan Don, or embark on a community-based trek with a traditional homestay; all with your trusted travel companion. Get to the heart of Laos and begin your journey now!", continent_id: asia.id, price: 19.99, country_id: laos.id)
+
+ShopItem.create!(name: "Madagascar", image: "https://i.imgur.com/LToupr2.png", description: "Lemurs, baobabs, rainforest, desert, hiking and diving: Madagascar is a dream destination for outdoors enthusiasts – half the fun is getting to all these incredible attractions. Lonely Planet is your passport to Madagascar, with amazing travel experiences and the best planning advice.
+
+Hike through the epic desert landscapes of Parc National Isalo, see lemurs in the wild, and watch baobabs cast long shadows from the setting sun; all with your trusted travel companion. Get to the heart of Madagascar and begin your journey now!", continent_id: africa.id, price: 19.99, country_id: madagascar.id)
+
+ShopItem.create!(name: "Maldives", image: "https://i.imgur.com/m8HA4w7.png", description: "Lonely Planet's Maldives is your passport to the most relevant, up-to-date advice on what to see and skip, and what hidden discoveries await you. Encounter hammerhead sharks on a dawn dive, find your perfect luxury beach resort or family-run guesthouse, and hop around by seaplane for a view of coral atolls, blue lagoons and tiny desert islands – all with your trusted travel companion. Get to the heart of Maldives and begin your journey now!", continent_id: asia.id, price: 19.99, country_id: maldives.id)
+
+ShopItem.create!(name: "Mongolia", image: "https://i.imgur.com/VvkSMxk.png", description: "Rugged Mongolia is an adventure destination where travellers can experience nomadic cul-ture and vast, untouched landscapes. Lonely Planet will get you to the heart of Mongolia, with amazing travel experiences and the best planning advice.
+
+Lonely Planet’s Mongolia is your passport to the most relevant, up-to-date advice on what to see and skip, and what hidden discoveries await you. Visit monasteries for a slice of Buddhist history and whispered mantras; hike through the rugged mountains, serene river valleys and fields of wild flowers in the Mongolian back country; travel by camel across the Gobi Desert in the footsteps of Marco Polo; all with your trusted travel companion. Get to the heart of Mongolia and begin your journey now!", continent_id: asia.id, price: 19.99, country_id: mongolia.id)
+
+ShopItem.create!(name: "Montenegro", image: "https://i.imgur.com/Dhmkc7E.png", description: "Lonely Planet’s Montenegro is our most comprehensive guide that extensively covers all the country has to offer, with recommendations for both popular and lesser-known experiences. Roam Kotor’s atmospheric old town, raft the Tara River, and hike the Prokletije mountains; all with your trusted travel companion.", continent_id: europe.id, price: 19.99, country_id: montenegro.id)
+
+ShopItem.create!(name: "Myanmar", image: "https://i.imgur.com/cJYeYqa.png", description: "It’s the dawn of a more democratic era in this extraordinary land, where the landscape is scattered with gilded pagodas and the traditional ways of Asia endure. Lonely Planet will get you to the heart of Myanmar, with amazing travel experiences and the best planning advice.
+
+
+Lonely Planet Myanmar (Burma) is your passport to the most relevant, up-to-date advice on what to see and skip, and what hidden discoveries await you. Be dazzled by Buddhist architecture in Yangon, explore Bagan’s amazing plain of ancient temples, or hike to the floating gardens and markets of Inle Lake; all with your trusted travel companion. Get to the heart of Myanmar and begin your journey now!", continent_id: asia.id, price: 19.99, country_id: myanmar.id)
+
+ShopItem.create!(name: "Nepal", image: "https://i.imgur.com/3bPWYRS.png", description: "A trekkers’ paradise, Nepal combines Himalayan views, golden temples, charming hill villag-es and jungle wildlife-watching to offer one of the world’s great travel destinations. Lonely Planet will get you to the heart of Nepal, with amazing travel experiences and the best planning advice.
+
+Lonely Planet’s Nepal is your passport to the most relevant, up-to-date advice on what to see and skip, and what hidden discoveries await you. Explore the historic temples of old Kathmandu, search for rhinos and tigers in the dawn mist of Chitwan National Park, and trek in the shadow of the world’s highest mountain on an Everest Base Camp expedition – all with your trusted travel companion. Get to the heart of Nepal and begin your journey now!", continent_id: asia.id, price: 19.99, country_id: nepal.id)
+
+ShopItem.create!(name: "Netherlands", image: "https://i.imgur.com/HfMsLIG.png", description: "Lonely Planet’s The Netherlands is your passport to the most relevant, up-to-date advice on what to see and skip, and what hidden discoveries await you. Marvel at Rotterdam’s architecture, sample Dutch cheese, and explore Amsterdam’s Canal Ring; all with your trusted travel companion. Get to the heart of the Netherlands and begin your journey now!", continent_id: europe.id, price: 19.99, country_id: netherlands.id)
+
+ShopItem.create!(name: "Nicaragua", image: "https://i.imgur.com/NQnZAoE.png", description: "An affable all-rounder, Nicaragua embraces travelers with diverse offerings of volcanic landscapes, colonial architecture, sensational beaches, remote, idyllic islands, wave-battered Pacific beaches and pristine forests. Lonely Planet is your passport to Nicaragua, with amazing travel experiences and the best planning advice.
+
+Wander the cobblestone streets of Granada, laze on the white-sand beaches of Little Corn Island, or hike around the paradise of Isla de Ometepe; all with your trusted travel companion. Get to the heart of Nicaragua and begin your journey now!", continent_id: north_america.id, price: 19.99, country_id: nicaragua.id)
+
+ShopItem.create!(name: "Panama", image: "https://i.imgur.com/ZAh9Zlj.png", description: "Lonely Planet’s Panama is your passport to the most relevant, up-to-date advice on what to see and skip, and what hidden discoveries await you. Explore Panama City, surf at Santa Catalina, and dive at Parque Nacional Coiba; all with your trusted travel companion. Get to the heart of Panama and begin your journey now!", continent_id: north_america.id, price: 19.99, country_id: panama.id)
+
+ShopItem.create!(name: "Philippines", image: "https://i.imgur.com/Xgt8WCU.png", description: "Lonely Planet’s Philippines is your passport to the most relevant, up-to-date advice on what to see and skip, and what hidden discoveries await you. Cruise past the secluded beaches, pristine lagoons and rocky islets of the Bacuit Archipelago, join the adrenaline junkies wakeboarding, surfing, climbing and snorkelling on the Bicol peninsula, and choose which stretch of pearly white sand on which to escape the crowds; all with your trusted travel companion. Get to the heart of the Philippines and begin your journey now!", continent_id: asia.id, price: 19.99, country_id: philippines.id)
+
+ShopItem.create!(name: "Poland", image: "https://i.imgur.com/RPTDKBy.png", description: "Picturesque cities such as Kraków and Gdańsk vie with energetic Warsaw for your urban attention. Elsewhere, woods, rivers, lakes and hills beckon for some fresh-air fun. Lonely Planet is your passport to Poland, with amazing travel experiences and the best planning advice.
+
+Explore the nightlife of Kraków’s Kazimierz, learn about the country’s history in Warsaw’s museums; and stroll Gdańsk’s medieval lanes all with your trusted travel companion. Get to the heart of Poland and begin your journey now!", continent_id: europe.id, price: 19.99, country_id: poland.id)
+
+ShopItem.create!(name: "Portugal", image: "https://i.imgur.com/Po5rsZC.png", description: "Lonely Planet’s Portugal is your passport to the most relevant, up-to-date advice on what to see and skip, and what hidden discoveries await you. Lose yourself in the labyrinthine alleyways of the Alfama district in Lisbon, explore the mysterious, fairytale setting of Sintra, and sip the world’s best port in the centuries-old wineries of Porto; all with your trusted travel companion. Get to the heart of Portugal and begin your journey now!", continent_id: europe.id, price: 19.99, country_id: portugal.id)
+
+ShopItem.create!(name: "Russia", image: "https://i.imgur.com/r6DRE2O.png", description: "Lonely Planet Russia is your passport to the most relevant, up-to-date advice on what to see and skip, and what hidden discoveries await you. Brush up on your Soviet and imperial history in Moscow and St Petersburg, explore European Russia and its gingerbread cottages and golden domes, or lose yourself in the wilds of Siberia and the east; all with your trusted travel companion. Get to the heart of Russia and begin your journey now!", continent_id: europe.id, price: 19.99, country_id: russia.id)
+
+ShopItem.create!(name: "Slovenia", image: "https://i.imgur.com/9Xk3O2v.png", description: "Lonely Planet’s Slovenia is your passport to the most relevant, up-to-date advice on what to see and skip, and what hidden discoveries await you. Discover buzzy Ljubljana, dip a toe in the electric-blue water of Lake Bled, be stunned by natural beauty; all with your trusted travel companion. Get to the heart of Slovenia and begin your journey now!", continent_id: europe.id, price: 19.99, country_id: slovenia.id)
+
+ShopItem.create!(name: "South Korea", image: "https://i.imgur.com/m05iKCA.png", description: "Lonely Planet’s Korea is your passport to the most relevant, up-to-date advice on what to see and skip, and what hidden discoveries await you. Explore the dramatic landscape of Jeju-do, feast on bibimbap in Jeonju, and wander the streets of Bukchon; all with your trusted travel companion. Get to the heart of Korea and begin your journey now!", continent_id: asia.id, price: 19.99, country_id: south_korea.id)
+
+ShopItem.create!(name: "Sri Lanka", image: "https://i.imgur.com/n2UqhtS.png", description: "Lonely Planet's Sri Lanka is your passport to the most relevant, up-to-date advice on what to see and skip, and what hidden discoveries await you. Laze on a gorgeous beach, surf at Arugam Bay, and watch for whales at Marissa; all with your trusted travel companion. Get to the heart of Sri Lanka and begin your journey now!", continent_id: asia.id, price: 19.99, country_id: sri_lanka.id)
+
+ShopItem.create!(name: "Sweden", image: "https://i.imgur.com/4jHRQbu.png", description: "Frozen wastelands, cosy cottages, virgin forest, rocky islands, reindeer herders and Viking lore – Sweden has all that plus impeccable style and to-die-for dining. Lonely Planet will get you to the heart of Sweden, with amazing travel experiences and the best planning advice.
+
+Visit the beautiful, stylish capital of Stockholm; hike, ski or dogsled Arctic wasteland; or curl up by the fire in a cosy cottage; all with your trusted travel companion. Get to the heart of Sweden and begin your journey now!", continent_id: europe.id, price: 19.99, country_id: sweden.id)
+
+ShopItem.create!(name: "Switzerland", image: "https://i.imgur.com/E5T33SA.png", description: "Lonely Planet’s Switzerland is our most comprehensive guide that extensively covers all the country has to offer, with recommendations for both popular and lesser-known experiences. Hop aboard the Glacier Express, hike in the Swiss National Park, and wander the medieval cobbled streets of Bern; all with your trusted travel companion.", continent_id: europe.id, price: 19.99, country_id: switzerland.id)
+
+ShopItem.create!(name: "Tanzania", image: "https://i.imgur.com/kC1lARZ.png", description: "Wildlife, beaches, ruins, Mt Kilimanjaro, friendly people, fascinating cultures – Tanzania has all these and more wrapped up in one adventurous, welcoming package. Lonely Planet will get you to the heart of Tanzania, with amazing travel experiences and the best planning advice.
+
+Listen to the sound of pounding hooves as wildebeest stampede across the Serengeti; pick your beach from over 100km of Indian Ocean coastline; track chimpanzees in Tanzania’s remote western parks; all with your trusted travel companion. Get to the heart of Tanzania and begin your journey now!", continent_id: africa.id, price: 19.99, country_id: tanzania.id)
+
+ShopItem.create!(name: "Ukraine", image: "https://i.imgur.com/EJAUbs2.png", description: "Big, diverse and largely undiscovered, Ukraine is one of Europe’s last genuine travel fron-tiers, a nation rich in colourful tradition, warm-hearted people and off-the-map experiences. Lonely Planet will get you to the heart of Ukraine, with amazing travel experiences and the best planning advice.
+
+Lonely Planet’s Ukraine is your passport to the most relevant, up-to-date advice on what to see and skip, and what hidden discoveries await you. Sip coffee in cosy cafes in Lviv; hike the flower-filled upland pastures and wide, snaking valleys of the Carpathian Mountains; take a guided tour of Chernobyl; all with your trusted travel companion. Get to the heart of Ukraine and begin your journey now!", continent_id: europe.id, price: 19.99, country_id: ukraine.id)
+
+ShopItem.create!(name: "USA", image: "https://i.imgur.com/hq5LO68.png", description: "Lonely Planet’s USA is your passport to the most relevant, up-to-date advice on what to see and skip, and what hidden discoveries await you. Catch a Broadway show in New York, marvel at the Grand Canyon, and drive the Pacific Coast Highway; all with your trusted travel companion. Get to the heart of the USA and begin your journey now!", continent_id: north_america.id, price: 19.99, country_id: united_states_of_america.id)
+
+ShopItem.create!(name: "Vietnam", image: "https://i.imgur.com/wysI0oI.png", description: "Lonely Planet's Vietnam is your passport to the most relevant, up-to-date advice on what to see and skip, and what hidden discoveries await you. Experience Hanoi’s labyrinth-like Old Quarter, kayak in Halong Bay, and wander through historic Hoi An; all with your trusted travel companion. Get to the heart of Vietnam and begin your journey now!", continent_id: asia.id, price: 19.99, country_id: vietnam.id)
+
+puts "Done seeding shop items..."
 
 puts "Seeding blogs..."
 

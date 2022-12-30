@@ -8,6 +8,9 @@ import AddNewBlog from "./AddNewBlog";
 export default function BlogPage({ blogs, setBlogs, setSearch, user }) {
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage, setPostsPerPage] = useState(5);
+  const [filteredBlogs, setFilteredBlogs] = useState();
+
+  // const { data: blogs, isLoading: blogsLoading } = useQuery(["blogs"], () => getBlogs());
 
   const lastPostIndex = currentPage * postsPerPage;
   const firstPostIndex = lastPostIndex - postsPerPage;
