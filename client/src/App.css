@@ -79,13 +79,15 @@ body {
   }
 
   .mapImg {
-    max-height: 150px;
-    max-width: 150px;
+    height: 150px;
+    width: 200px;
+    object-fit: cover;
     margin-bottom: 5px;
+    border-radius: 10px;
   }
 
   .mapH {
-    font-size: 24px;
+    font-size: 20px;
     color: #1c1c1e;
     font-weight: bold;
     font-family: 'Roboto', sans-serif;

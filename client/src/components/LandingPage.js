@@ -1,4 +1,6 @@
-import QuizApp from "./QuizApp";
+import QuizAppOne from "./quizzes/quizOne/QuizAppOne";
+import QuizAppTwo from "./quizzes/quizTwo/QuizAppTwo";
+import QuizAppThree from "./quizzes/quizThree/QuizAppThree";
 import LandingPageImages from "./LandingPageImages";
 import AutosuggestPage from "./AutosuggestPage";
 import Carousel from "./Carousel";
@@ -18,27 +20,15 @@ export default function LandingPage() {
   let slides = [
     {
       key: uuidv4(),
-      content: (
-        <div style={{ width: "45vw" }}>
-          <QuizApp />
-        </div>
-      ),
+      content: <QuizAppOne />,
     },
     {
       key: uuidv4(),
-      content: (
-        <div style={{ width: "45vw" }}>
-          <QuizApp />
-        </div>
-      ),
+      content: <QuizAppTwo />,
     },
     {
       key: uuidv4(),
-      content: (
-        <div style={{ width: "45vw" }}>
-          <QuizApp />
-        </div>
-      ),
+      content: <QuizAppThree />,
     },
   ];
 
@@ -47,7 +37,7 @@ export default function LandingPage() {
   }
 
   return (
-    <div style={{ minHeight: "150vh" }}>
+    <>
       <div>
         <div
           style={{
@@ -66,24 +56,17 @@ export default function LandingPage() {
         <LandingPageImages />
       </div>
       <div
-        style={{ width: "100vw", display: "flex", justifyContent: "center" }}
+        style={{
+          width: "100vw",
+          height: "80vh",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
       >
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            background: "#1C1C1E",
-            width: "100vw",
-            height: "80vh",
-          }}
-        >
-          <div style={{ width: "50vw", marginTop: "65vh" }}>
-            <Carousel slides={slides} />
-          </div>
-        </div>
+        <Carousel slides={slides} />
       </div>
       <WhereToNext />
-    </div>
+    </>
   );
 }

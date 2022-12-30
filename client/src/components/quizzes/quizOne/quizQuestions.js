@@ -7,21 +7,21 @@ const quizQuestions = [
     ),
     answers: [
       {
-        type: "India",
+        type: "Mumbai",
         content: <div style={{ fontSize: "18px" }}>Visit Temples 🛕</div>,
       },
       {
-        type: "Switzerland",
+        type: "Zurich",
         content: (
           <div style={{ fontSize: "18px" }}>Trek in the mountains ⛰️</div>
         ),
       },
       {
-        type: "Maldives",
+        type: "Castaway Island",
         content: <div style={{ fontSize: "18px" }}>Sunbathe on a beach 🏖️</div>,
       },
       {
-        type: "Japan",
+        type: "Tokyo",
         content: <div style={{ fontSize: "18px" }}>Explore the city 🏙️</div>,
       },
     ],
@@ -34,27 +34,19 @@ const quizQuestions = [
     ),
     answers: [
       {
-        type: (
-          <div>
-            Switzerland
-            <img
-              src="https://cdn.pixabay.com/animation/2022/09/13/17/55/17-55-51-8_512.gif"
-              alt="Switzerland Flag GIF"
-            />
-          </div>
-        ),
+        type: "Zurich",
         content: <div style={{ fontSize: "18px" }}>Tarts 🥧</div>,
       },
       {
-        type: "India",
+        type: "Mumbai",
         content: <div style={{ fontSize: "18px" }}>Curry 🍛</div>,
       },
       {
-        type: "Maldives",
+        type: "Castaway Island",
         content: <div style={{ fontSize: "18px" }}>Tuna 🐟</div>,
       },
       {
-        type: "Japan",
+        type: "Tokyo",
         content: <div style={{ fontSize: "18px" }}>Sushi 🍣</div>,
       },
     ],
@@ -67,7 +59,7 @@ const quizQuestions = [
     ),
     answers: [
       {
-        type: "India",
+        type: "Mumbai",
         content: (
           <div style={{ fontSize: "18px" }}>
             Educational, cultural, and amusing
@@ -75,15 +67,7 @@ const quizQuestions = [
         ),
       },
       {
-        type: (
-          <div>
-            Switzerland
-            <img
-              src="https://cdn.pixabay.com/animation/2022/09/13/17/55/17-55-51-8_512.gif"
-              alt="Switzerland Flag GIF"
-            />
-          </div>
-        ),
+        type: "Zurich",
         content: (
           <div style={{ fontSize: "18px" }}>
             Luxurious, slow-paced, and beautiful
@@ -91,13 +75,13 @@ const quizQuestions = [
         ),
       },
       {
-        type: "Maldives",
+        type: "Castaway Island",
         content: (
           <div style={{ fontSize: "18px" }}>Exotic, surprising, and serene</div>
         ),
       },
       {
-        type: "Japan",
+        type: "Tokyo",
         content: (
           <div style={{ fontSize: "18px" }}>
             Adventurous, fun, and undiscovered
@@ -114,27 +98,19 @@ const quizQuestions = [
     ),
     answers: [
       {
-        type: "Maldives",
+        type: "Castaway Island",
         content: <div style={{ fontSize: "18px" }}>Mai Tai cocktail 🍹</div>,
       },
       {
-        type: (
-          <div>
-            Switzerland
-            <img
-              src="https://cdn.pixabay.com/animation/2022/09/13/17/55/17-55-51-8_512.gif"
-              alt="Switzerland Flag GIF"
-            />
-          </div>
-        ),
+        type: "Zurich",
         content: <div style={{ fontSize: "18px" }}>Glass of wine 🍷</div>,
       },
       {
-        type: "India",
+        type: "Mumbai",
         content: <div style={{ fontSize: "18px" }}>Pint of beer 🍺</div>,
       },
       {
-        type: "Japan",
+        type: "Tokyo",
         content: <div style={{ fontSize: "18px" }}>Cup of tea 🍵</div>,
       },
     ],
@@ -147,27 +123,19 @@ const quizQuestions = [
     ),
     answers: [
       {
-        type: (
-          <div>
-            Switzerland
-            <img
-              src="https://cdn.pixabay.com/animation/2022/09/13/17/55/17-55-51-8_512.gif"
-              alt="Switzerland Flag GIF"
-            />
-          </div>
-        ),
+        type: "Zurich",
         content: <div style={{ fontSize: "18px" }}>Train 🚆</div>,
       },
       {
-        type: "Maldives",
+        type: "Castaway Island",
         content: <div style={{ fontSize: "18px" }}>Boat ⛴️</div>,
       },
       {
-        type: "Japan",
+        type: "Tokyo",
         content: <div style={{ fontSize: "18px" }}>Subway 🚇</div>,
       },
       {
-        type: "India",
+        type: "Mumbai",
         content: <div style={{ fontSize: "18px" }}>Car 🚘</div>,
       },
     ],

@@ -9,7 +9,7 @@ export default function WhereToNext() {
   const navigate = useNavigate();
 
   const { data: destinations, isLoading } = useQuery(["destination"], () => {
-    return Axios.get(`http://localhost:3000/destinations`).then(
+    return Axios.get(`http://localhost:3000/randomdestinations`).then(
       (res) => res.data
     );
   });

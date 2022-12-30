@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import quizQuestions from "./quizQuestions";
 import Quiz from "./Quiz";
 import Result from "./Result";
-import "../App.css";
+import "../../../App.css";
 
-class QuizApp extends Component {
+class QuizAppOne extends Component {
   constructor(props) {
     super(props);
 
@@ -99,7 +99,7 @@ class QuizApp extends Component {
     if (result.length === 1) {
       this.setState({ result: result[0] });
     } else {
-      this.setState({ result: "Japan" });
+      this.setState({ result: "Tokyo" });
     }
   }
 
@@ -122,20 +122,11 @@ class QuizApp extends Component {
 
   render() {
     return (
-      <div style={{ cursor: "pointer" }}>
-        <div>
-          <h2
-            style={{
-              visibility: "hidden",
-            }}
-          >
-            hidden
-          </h2>
-        </div>
+      <div style={{ cursor: "pointer", margin: "40vw" }}>
         {this.state.result ? this.renderResult() : this.renderQuiz()}
       </div>
     );
   }
 }
 
-export default QuizApp;
+export default QuizAppOne;

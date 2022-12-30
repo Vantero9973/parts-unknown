@@ -49,33 +49,15 @@ function App() {
     });
   }, []);
 
+  // const { data, isLoading } = useQuery(["country"], () => {
+  //   return Axios.get("http://localhost:3000/countries").then((res) => res.data);
+  // });
+
   // function getBlogs() {
   //   return Axios.get("http://localhost:3000/blogs").then((res) => res.data);
   // }
 
   // const { data, isLoading: blogsLoading } = useQuery(["blogs"], () => getBlogs());
-
-  // const { data, isLoading } = useQuery(
-  //   ["countries"],
-  //   {
-  //     onSuccess: () => {
-  //       setCountries(data);
-  //     },
-  //   },
-  //   () => {
-  //     return Axios.get("http://localhost:3000/countries").then(
-  //       (res) => res.data
-  //     );
-  //   }
-  // );
-
-  // useEffect(() => {
-  //   setCountries(data);
-  // }, [data]);
-
-  // if (isLoading) {
-  //   return <h1>Loading...</h1>;
-  // }
 
   const searchStoriesByName = blogs.filter(
     (blog) =>
@@ -86,6 +68,10 @@ function App() {
   const searchForumsByCountry = countries.filter((country) =>
     country.name.toLowerCase().includes(search.toLowerCase())
   );
+
+  // if (isLoading) {
+  //   return <h1>Loading...</h1>;
+  // }
 
   return (
     <QueryClientProvider client={client}>

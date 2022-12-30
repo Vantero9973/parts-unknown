@@ -2,10 +2,17 @@ import { useState } from "react";
 import Pagination from "./Pagination";
 import ForumSelector from "./ForumSelector";
 import ForumSearch from "./ForumSearch";
+// import { useQuery } from "@tanstack/react-query";
+// import Axios from "axios";
 
 export default function ForumCountry({ countries, setCountries, setSearch }) {
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage, setPostsPerPage] = useState(16);
+  // const [countriesSort, setCountriesSort] = useState([]);
+
+  // const { data: countries, isLoading } = useQuery(["country"], () => {
+  //   return Axios.get("http://localhost:3000/countries").then((res) => res.data);
+  // });
 
   const lastPostIndex = currentPage * postsPerPage;
   const firstPostIndex = lastPostIndex - postsPerPage;
@@ -24,6 +31,10 @@ export default function ForumCountry({ countries, setCountries, setSearch }) {
     });
     setCountries(sortedData);
   }
+
+  // if (isLoading) {
+  //   return <h1>Loading...</h1>;
+  // }
 
   return (
     <div style={{ padding: "2vw" }}>

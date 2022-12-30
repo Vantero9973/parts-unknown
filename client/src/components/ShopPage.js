@@ -1,45 +1,93 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { ScrollMenu } from "react-horizontal-scrolling-menu";
 import ShopCard from "./ShopCard";
 import { useQuery } from "@tanstack/react-query";
 import Axios from "axios";
 
-const getItems = () =>
-  Array(1)
-    .fill(0)
-    .map((_, ind) => ({ id: `element-${ind}` }));
-
 export default function ShopPage() {
-  const [items, setItems] = React.useState(getItems);
-  const [selected, setSelected] = React.useState([]);
   const navigate = useNavigate();
 
-  const isItemSelected = (id) => !!selected.find((el) => el === id);
+  const { data: continents, isLoading: continentsLoading } = useQuery(
+    ["continent"],
+    () => {
+      return Axios.get("http://localhost:3000/continents").then(
+        (res) => res.data
+      );
+    }
+  );
 
-  const { data: continents, isLoading } = useQuery(["continent"], () => {
-    return Axios.get("http://localhost:3000/continents").then(
+  const { data: items, isLoading: itemsLoading } = useQuery(["item"], () => {
+    return Axios.get("http://localhost:3000/shop_items").then(
       (res) => res.data
     );
   });
 
-  if (isLoading) {
+  if (continentsLoading || itemsLoading) {
     return <h1>Loading...</h1>;
   }
 
   return (
-    <>
-      <div style={{ marginTop: "10vh", marginBottom: "10vh" }}>
-        <ScrollMenu>
-          {items.map(({ id }) => (
-            <ShopCard
-              itemId={id} // NOTE: itemId is required for track items
-              title={id}
-              key={id}
-              selected={isItemSelected(id)}
-            />
-          ))}
-        </ScrollMenu>
+    <div
+      style={{
+        width: "100vw",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        flexDirection: "column",
+      }}
+    >
+      <div
+        class="overflow-scroll"
+        style={{
+          width: "80vw",
+          height: "80vh",
+          display: "flex",
+          flexWrap: "wrap",
+          justifyContent: "center",
+          alignItems: "center",
+          background: "#2c2c2e",
+          margin: "10vh",
+        }}
+      >
+        {items.map((item) => {
+          console.log(item);
+          return (
+            <div
+              style={{
+                height: "35vh",
+                width: "20vh",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "center",
+                marginLeft: "5px",
+                marginRight: "5px",
+                cursor: "pointer",
+              }}
+              onClick={() => navigate(`/shop/${item.id}`)}
+            >
+              <img
+                src={item.image}
+                alt=""
+                style={{ height: "25vh", width: "20vh" }}
+              />
+              <h1
+                style={{
+                  color: "#dadada",
+                  fontSize: "18px",
+                  fontWeight: "bold",
+                }}
+              >
+                {item.name}
+              </h1>
+              <h1
+                style={{ fontSize: "12px", fontWeight: "bold", color: "gray" }}
+              >
+                TRAVEL GUIDE
+              </h1>
+            </div>
+          );
+        })}
       </div>
       <div
         style={{
@@ -92,6 +140,6 @@ export default function ShopPage() {
           })}
         </div>
       </div>
-    </>
+    </div>
   );
 }

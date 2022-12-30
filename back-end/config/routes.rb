@@ -16,5 +16,6 @@ Rails.application.routes.draw do
   get "/me", to: "users#show"
   get "/landingimages", to: "blogs#landing_images"
   get "/postpage/:id", to: "posts#show_post"
+  get "/randomdestinations", to: "destinations#index_three"
   # get "/countrymap", to: "countries#show_map"
 end

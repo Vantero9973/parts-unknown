@@ -222,6 +222,10 @@ tsushima = Destination.create!(name: "Tsushima Island", country_name: "Japan", i
 great_wall_of_china = Destination.create!(name: "Great Wall of China", country_name: "China", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/The_Great_Wall_of_China_at_Jinshanling-edit.jpg/1200px-The_Great_Wall_of_China_at_Jinshanling-edit.jpg", lat: 40.4319, lng: 116.5704, country_id: china.id)
 terracotta_army = Destination.create!(name: "Terracotta Army", country_name: "China", image: "https://www.archaeology.wiki/wp-content/uploads/2022/03/Terracotta_army_2.jpg", lat: 34.3841, lng: 109.2785, country_id: china.id)
 
+#Fiji
+
+castaway_island = Destination.create!(name: "Castaway Island", country_name: "Fiji", image: "https://www.outrigger.com/AdaptiveImages/optimizely/e553734f-c2c5-4208-8328-f965b27422da/castaway-island-fiji-aerial-14.jpg?quality=70&width=1400&height=788&stamp=2d56ae281c432a0c466f56243ec526a86bd9d0ac", lat: -17.7332, lng: 177.1342, country_id: fiji.id)
+
 #United States
 
 denver = Destination.create!(name: "Denver, CO", country_name: "USA", image: "https://i.natgeofe.com/n/2f26e117-08d9-4364-a76b-817421bfc5d6/denver-travel_4x3.jpg", lat: 39.7392, lng: -104.9903, country_id: united_states_of_america.id)
@@ -237,6 +241,10 @@ jackson = Destination.create!(name: "Jackson, WY", country_name: "USA", image: "
 #North Korea
 
 dont_go_here = Destination.create!(name: "Don't go here", image: "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/325/prohibited_1f6ab.png", lat: 40.3399, lng: 127.5101, country_id: north_korea.id)
+
+#Switzerland
+
+zurich = Destination.create!(name: "Zurich", image: "https://assets.ey.com/content/dam/ey-sites/ey-com/en_ch/topics/sustainability/ey-zurich-old-town-hero.jpg", lat: 47.3769, lng: 8.5417, country_id: switzerland.id)
 
 #Spain
 
@@ -298,6 +306,7 @@ hamburg = Destination.create!(name: "Hamburg", country_name: "Germany", image: "
 #Italy
 
 rome = Destination.create!(name: "Rome", country_name: "Italy", image: "https://rome.com/wp-content/uploads/2017/04/London-Bridge-and-Big-Ben-at-Night-1-1-2.jpg", lat: 41.9028, lng: 12.4964, country_id: italy.id)
+naples = Destination.create!(name: "Naples", country_name: "Italy", image: "https://www.worldtravelguide.net/wp-content/uploads/2018/06/shu-Europe-Italy-Naples-284756078-ronnybas-1440x823.jpg", lat: 40.8518, lng: 14.2681, country_id: italy.id)
 florence = Destination.create!(name: "Florence", country_name: "Italy", image: "https://media.timeout.com/images/105879414/image.jpg", lat: 43.7696, lng: 11.2558, country_id: italy.id)
 venice = Destination.create!(name: "Venice", country_name: "Italy", image: "https://cdn.britannica.com/62/153462-050-3D4F41AF/Grand-Canal-Venice.jpg", lat: 45.4408, lng: 12.3155, country_id: italy.id)
 leaning_tower = Destination.create!(name: "Leaning Tower of Pisa", country_name: "Italy", image: "https://www.thoughtco.com/thmb/zlvu5Ci1rPgaoXmmbsNN3YJz8eA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/towers-Pisa-522003327-58d9cb3b5f9b58468357d3a7.jpg", lat: 43.7230, lng: 10.3966, country_id: italy.id)
@@ -389,7 +398,7 @@ sugba_lagoon = Destination.create!(name: "Sugba Lagoon", country_name: "Philippi
 railay_beach = Destination.create!(name: "Railay Beach", country_name: "Thailand", image: "https://lp-cms-production.imgix.net/2019-06/128074626_high.jpg", lat: 8.0117, lng: 98.8378, country_id: thailand.id)
 koh_phi_phi = Destination.create!(name: "Koh Phi Phi", country_name: "Thailand", image: "https://theworldtravelguy.com/wp-content/uploads/2022/09/DJI_0858_1200.jpg", lat: 7.7407, lng: 98.7784, country_id: thailand.id)
 bangkok = Destination.create!(name: "Bangkok", country_name: "Thailand", image: "https://imageio.forbes.com/specials-images/imageserve/62baf0bb91f8ba58ef4a638a/Sunrise-with-Grand-Palace-of-Bangkok--Thailand/960x0.jpg?format=jpg&width=960", lat: 13.7563, lng: 100.5018, country_id: thailand.id)
-chaing_mai = Destination.create!(name: "Chaing Mai", country_name: "Thailand", image: "https://a.cdn-hotels.com/gdcs/production9/d679/184d7edf-5c3a-470c-8529-b0085d6d5b0e.jpg?impolicy=fcrop&w=800&h=533&q=medium", lat: 18.7883, lng: 98.9853, country_id: thailand.id)
+chaing_mai = Destination.create!(name: "Chiang Mai", country_name: "Thailand", image: "https://a.cdn-hotels.com/gdcs/production9/d679/184d7edf-5c3a-470c-8529-b0085d6d5b0e.jpg?impolicy=fcrop&w=800&h=533&q=medium", lat: 18.7883, lng: 98.9853, country_id: thailand.id)
 pai = Destination.create!(name: "Pai", country_name: "Thailand", image: "https://www.nomadasaurus.com/wp-content/uploads/2019/04/Things-To-Do-In-Pai-Thailand.jpg", lat: 19.3582, lng: 98.4405, country_id: thailand.id)
 koh_samui = Destination.create!(name: "Koh Samui", country_name: "Thailand", image: "https://a.cdn-hotels.com/gdcs/production152/d1240/fc640491-6c35-45a9-a649-3c176d63d94c.jpg", lat: 9.5120, lng: 100.0136, country_id: thailand.id)
 tonsai_beach = Destination.create!(name: "Tonsai Beach", country_name: "Thailand", image: "https://www.adventureinyou.com/wp-content/uploads/2016/05/everything-need-to-know-Ton-Sai_LEAD.jpg", lat: 8.0117, lng: 98.8378, country_id: thailand.id)
@@ -486,6 +495,7 @@ whistler = Destination.create!(name: "Whistler", country_name: "Canada", image: 
 chichen_itza = Destination.create!(name: "Chichen Itza", country_name: "Mexico", image: "https://cdn.britannica.com/86/179586-138-8B763D72/Overview-Chichen-Itza-Yucatan-Mexico.jpg?w=800&h=450&c=crop", lat: 20.6843, lng: -88.5678, country_id: mexico.id)
 tulum = Destination.create!(name: "Tulum", country_name: "Mexico", image: "https://www.senatorrivieracancunsparesort.com/wp-content/uploads/2019/11/tulum2.jpg", lat: 20.2114, lng: -87.4654, country_id: mexico.id)
 cozumel = Destination.create!(name: "Cozumel", country_name: "Mexico", image: "https://cdn.mexperience.com/wp-content/uploads/Cozumel-Beach-Resort-Aerial-NBS.jpg", lat: 20.4230, lng: -86.9223, country_id: mexico.id)
+cancun = Destination.create!(name: "Cancun", country_name: "Mexico", image: "https://www.travelandleisure.com/thmb/HNJGaBI61yQvoP5oJXJb6p_rtJg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/header-cancun-hotel-zone-CANCUNALLIN0117-6ed309db327e4a639f9e002fdfc7f658.jpg", lat: 21.1619, lng: -86.8515, country_id: mexico.id)
 
 #Belize
 

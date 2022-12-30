@@ -101,187 +101,219 @@ export default function ({ user }) {
     });
   }
 
+  function myAlert() {
+    alert("Please log in");
+  }
+
   if (status === "pending") return <h1>Loading...</h1>;
   if (status === "rejected") return <h1>Error: {error.error}</h1>;
 
-  return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        gap: "45vw",
-      }}
-    >
-      <Popup
+  if (user) {
+    return (
+      <div
         style={{
           display: "flex",
-          alignItems: "center",
           justifyContent: "center",
+          alignItems: "center",
+          gap: "45vw",
         }}
-        trigger={
-          <Button
-            className="addNewPopup"
-            style={{
-              height: "44px",
-              fontWeight: "bold",
-              background: "#2c2c2e",
-              color: "#a6adba",
-              borderColor: "#dadada",
-              borderRadius: "5px",
-            }}
-          >
-            Add New Blog Post
-          </Button>
-        }
-        modal
-        nested
       >
-        <div
+        <Popup
           style={{
-            background: "#1C1C1E",
             display: "flex",
-            width: "50vw",
-            height: "80vh",
-            borderRadius: "50px",
-            border: "1px solid #dadada",
+            alignItems: "center",
+            justifyContent: "center",
           }}
+          trigger={
+            <Button
+              className="addNewPopup"
+              style={{
+                height: "44px",
+                fontWeight: "bold",
+                background: "#2c2c2e",
+                color: "#a6adba",
+                borderColor: "#dadada",
+                borderRadius: "5px",
+              }}
+            >
+              Add New Blog Post
+            </Button>
+          }
+          modal
+          nested
         >
           <div
             style={{
+              background: "#1C1C1E",
               display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-              alignItems: "center",
-              gap: "10px",
-              marginTop: "2vh",
+              width: "50vw",
+              height: "80vh",
+              borderRadius: "50px",
+              border: "1px solid #dadada",
             }}
           >
-            <form onSubmit={handleSubmit} style={{ marginLeft: "5vw" }}>
-              <input
-                style={{
-                  width: "40vw",
-                  height: "5vh",
-                  fontSize: "24px",
-                  display: "flex",
-                  marginBottom: "10px",
-                  padding: "10px",
-                }}
-                type="text"
-                name="name"
-                placeholder="Title"
-                value={title}
-                onChange={(e) => setTitle(e.target.value)}
-              />
-              <input
-                style={{
-                  width: "40vw",
-                  height: "5vh",
-                  fontSize: "24px",
-                  display: "flex",
-                  marginBottom: "10px",
-                  padding: "10px",
-                }}
-                type="text"
-                name="id"
-                placeholder="Body"
-                value={body}
-                onChange={(e) => setBody(e.target.value)}
-              />
-              <input
-                style={{
-                  width: "40vw",
-                  height: "5vh",
-                  fontSize: "24px",
-                  display: "flex",
-                  marginBottom: "10px",
-                  padding: "10px",
-                }}
-                type="text"
-                name="description"
-                placeholder="Description"
-                value={description}
-                onChange={(e) => setDescription(e.target.value)}
-              />
-              <input
-                style={{
-                  width: "40vw",
-                  height: "5vh",
-                  fontSize: "24px",
-                  display: "flex",
-                  marginBottom: "10px",
-                  padding: "10px",
-                }}
-                type="text"
-                name="image"
-                placeholder="Image URL"
-                value={image}
-                onChange={(e) => setImage(e.target.value)}
-              />
-              <input
-                style={{
-                  width: "40vw",
-                  height: "5vh",
-                  fontSize: "24px",
-                  display: "flex",
-                  marginBottom: "10px",
-                  padding: "10px",
-                }}
-                type="text"
-                name="read_time"
-                placeholder="Read Time"
-                value={read_time}
-                onChange={(e) => setReadTime(e.target.value)}
-              />
-              <input
-                style={{
-                  width: "40vw",
-                  height: "5vh",
-                  fontSize: "24px",
-                  display: "flex",
-                  marginBottom: "10px",
-                  padding: "10px",
-                }}
-                type="text"
-                name="category_one"
-                placeholder="Category One"
-                value={category_one}
-                onChange={(e) => setCategoryOne(e.target.value)}
-              />
-              <input
-                style={{
-                  width: "40vw",
-                  height: "5vh",
-                  fontSize: "24px",
-                  display: "flex",
-                  marginBottom: "10px",
-                  padding: "10px",
-                }}
-                type="text"
-                name="category_two"
-                placeholder="Category Two"
-                value={category_two}
-                onChange={(e) => setCategoryTwo(e.target.value)}
-              />
-              <Button
-                variant="outlined"
-                type="submit"
-                style={{
-                  fontSize: "16px",
-                  fontWeight: "bolder",
-                  color: "#1C1C1E",
-                  background: "#dadada",
-                  marginLeft: "15vw",
-                  marginTop: "2vh",
-                  width: "10vw",
-                }}
-              >
-                Post
-              </Button>
-            </form>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "center",
+                gap: "10px",
+                marginTop: "2vh",
+              }}
+            >
+              <form onSubmit={handleSubmit} style={{ marginLeft: "5vw" }}>
+                <input
+                  style={{
+                    width: "40vw",
+                    height: "5vh",
+                    fontSize: "24px",
+                    display: "flex",
+                    marginBottom: "10px",
+                    padding: "10px",
+                  }}
+                  type="text"
+                  name="name"
+                  placeholder="Title"
+                  value={title}
+                  onChange={(e) => setTitle(e.target.value)}
+                />
+                <input
+                  style={{
+                    width: "40vw",
+                    height: "5vh",
+                    fontSize: "24px",
+                    display: "flex",
+                    marginBottom: "10px",
+                    padding: "10px",
+                  }}
+                  type="text"
+                  name="id"
+                  placeholder="Body"
+                  value={body}
+                  onChange={(e) => setBody(e.target.value)}
+                />
+                <input
+                  style={{
+                    width: "40vw",
+                    height: "5vh",
+                    fontSize: "24px",
+                    display: "flex",
+                    marginBottom: "10px",
+                    padding: "10px",
+                  }}
+                  type="text"
+                  name="description"
+                  placeholder="Description"
+                  value={description}
+                  onChange={(e) => setDescription(e.target.value)}
+                />
+                <input
+                  style={{
+                    width: "40vw",
+                    height: "5vh",
+                    fontSize: "24px",
+                    display: "flex",
+                    marginBottom: "10px",
+                    padding: "10px",
+                  }}
+                  type="text"
+                  name="image"
+                  placeholder="Image URL"
+                  value={image}
+                  onChange={(e) => setImage(e.target.value)}
+                />
+                <input
+                  style={{
+                    width: "40vw",
+                    height: "5vh",
+                    fontSize: "24px",
+                    display: "flex",
+                    marginBottom: "10px",
+                    padding: "10px",
+                  }}
+                  type="text"
+                  name="read_time"
+                  placeholder="Read Time"
+                  value={read_time}
+                  onChange={(e) => setReadTime(e.target.value)}
+                />
+                <input
+                  style={{
+                    width: "40vw",
+                    height: "5vh",
+                    fontSize: "24px",
+                    display: "flex",
+                    marginBottom: "10px",
+                    padding: "10px",
+                  }}
+                  type="text"
+                  name="category_one"
+                  placeholder="Category One"
+                  value={category_one}
+                  onChange={(e) => setCategoryOne(e.target.value)}
+                />
+                <input
+                  style={{
+                    width: "40vw",
+                    height: "5vh",
+                    fontSize: "24px",
+                    display: "flex",
+                    marginBottom: "10px",
+                    padding: "10px",
+                  }}
+                  type="text"
+                  name="category_two"
+                  placeholder="Category Two"
+                  value={category_two}
+                  onChange={(e) => setCategoryTwo(e.target.value)}
+                />
+                <Button
+                  variant="outlined"
+                  type="submit"
+                  style={{
+                    fontSize: "16px",
+                    fontWeight: "bolder",
+                    color: "#1C1C1E",
+                    background: "#dadada",
+                    marginLeft: "15vw",
+                    marginTop: "2vh",
+                    width: "10vw",
+                  }}
+                >
+                  Post
+                </Button>
+              </form>
+            </div>
           </div>
-        </div>
-      </Popup>
-    </div>
-  );
+        </Popup>
+      </div>
+    );
+  } else {
+    return (
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          gap: "45vw",
+        }}
+      >
+        <Button
+          onClick={myAlert}
+          className="addNewPopup"
+          style={{
+            height: "44px",
+            fontWeight: "bold",
+            background: "#2c2c2e",
+            color: "#a6adba",
+            borderColor: "#dadada",
+            borderRadius: "5px",
+          }}
+        >
+          Add New Blog Post
+        </Button>
+      </div>
+    );
+  }
 }

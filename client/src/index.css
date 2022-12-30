@@ -22,11 +22,12 @@ body, html {
 
 .container {
   position: relative;
-  max-width: 500px;
+  width: 45vw;
   margin: 5rem auto;
   background: #2C2C2E;
   border: 1px solid #dadada;
   border-radius: 25px;
+  z-index: 500;
 }
 
 @media (min-width: 469px) {
@@ -45,6 +46,7 @@ body, html {
   margin: 0;
   padding: 0;
   list-style: none;
+  width: 45vw;
 }
 
 /* QuestionCount Component */

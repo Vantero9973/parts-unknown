@@ -13,13 +13,13 @@ import "aos/dist/aos.css";
 AOS.init();
 
 export default function BlogPosts({ blogs }) {
-  const [button, setButton] = useState(<ThumbUpOffAltIcon />);
+  // const [button, setButton] = useState(<ThumbUpOffAltIcon />);
   const navigate = useNavigate();
   // const { id } = useParams();
 
-  function handleClick() {
-    setButton(<ThumbUpAltIcon />);
-  }
+  // function handleClick() {
+  //   setButton(<ThumbUpAltIcon />);
+  // }
 
   // const { data: blogLikes, isLoading } = useQuery(["blog"], () => {
   //   return Axios.get(`http://localhost:3000/blogs/${id}`).then(
@@ -142,9 +142,10 @@ export default function BlogPosts({ blogs }) {
                         alignItems: "center",
                         gap: "5px",
                       }}
-                      onClick={handleClick}
+                      // onClick={handleClick}
                     >
-                      {button}
+                      {/* {button} */}
+                      <ThumbUpAltIcon />
                       {blog.likes}
                     </div>
                   </Typography>
