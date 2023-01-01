@@ -77,7 +77,7 @@ export default function ShopItemCard() {
                     margin: "2vh",
                   }}
                 >
-                  <h1>Book</h1>
+                  <h1 style={{ fontSize: "18px", fontWeight: "bold" }}>Book</h1>
                   <h1>${item.price}</h1>
                   <Button
                     variant="outlined"
@@ -100,8 +100,10 @@ export default function ShopItemCard() {
                     margin: "2vh",
                   }}
                 >
-                  <h1>E-Book</h1>
-                  <h1>${item.price - 5}</h1>
+                  <h1 style={{ fontSize: "18px", fontWeight: "bold" }}>
+                    e-Book
+                  </h1>
+                  <h1>${Math.round(item.price - 6)}.99</h1>
                   <Button
                     variant="outlined"
                     style={{

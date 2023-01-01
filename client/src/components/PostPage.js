@@ -33,6 +33,7 @@ export default function PostPage() {
         alignItems: "center",
         width: "100vw",
         minHeight: "92vh",
+        padding: "10vh",
       }}
     >
       {posts.map((post) => {
@@ -46,6 +47,7 @@ export default function PostPage() {
               background: "#2c2c2e",
               padding: "5vh",
               gap: "5rem",
+              // marginTop: "10vh",
             }}
           >
             <div
@@ -63,7 +65,7 @@ export default function PostPage() {
                 alt=""
                 style={{ height: "10vw", maxWidth: "10vw" }}
               />
-              <p>Alex Van Vleet</p>
+              <p>username</p>
             </div>
             <div
               style={{
@@ -92,9 +94,8 @@ export default function PostPage() {
         style={{
           display: "flex",
           flexDirection: "column",
-          width: "50vw",
-          background: "#2c2c2e",
-          padding: "5vh",
+          alignItems: "center",
+          // padding: "5vh",
         }}
       >
         {comments.map((comment) => {
@@ -103,6 +104,9 @@ export default function PostPage() {
               style={{
                 display: "flex",
                 alignItems: "center",
+                background: "#2c2c2e",
+                width: "50vw",
+                borderBottom: "1px solid #2c2c2e",
               }}
             >
               <div
@@ -110,6 +114,9 @@ export default function PostPage() {
                   padding: "5vh",
                   display: "flex",
                   flexDirection: "column",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  textAlign: "center",
                 }}
               >
                 <img
@@ -117,10 +124,22 @@ export default function PostPage() {
                   alt=""
                   style={{ height: "5vw", maxWidth: "5vw" }}
                 />
-                <p>{comment.date}</p>
+                <h1>username</h1>
               </div>
               <div>
-                <p>{comment.body}</p>
+                <div
+                  style={{
+                    padding: "5vh",
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "1vw",
+                  }}
+                >
+                  <p style={{ fontSize: "14px", color: "gray" }}>
+                    {comment.date}
+                  </p>
+                  <p>{comment.body}</p>
+                </div>
               </div>
             </div>
           );

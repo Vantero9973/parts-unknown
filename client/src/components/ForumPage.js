@@ -1,6 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import Axios from "axios";
 import { useParams, useNavigate } from "react-router-dom";
+import { Vortex } from "react-loader-spinner";
 
 export default function ForumPage() {
   const { id } = useParams();
@@ -18,20 +19,32 @@ export default function ForumPage() {
     );
   });
 
-  const { data: postsLink, isLoading: postsLinkLoading } = useQuery(
-    ["postLink"],
-    () => {
-      return Axios.get("http://localhost:3000/posts").then((res) => res.data);
-    }
-  );
+  // const { data: postsLink, isLoading: postsLinkLoading } = useQuery(
+  //   ["postLink"],
+  //   () => {
+  //     return Axios.get("http://localhost:3000/posts").then((res) => res.data);
+  //   }
+  // );
 
-  if ((forumsLoading, postsLoading, postsLinkLoading)) {
-    return <h1>Loading...</h1>;
+  if (forumsLoading || postsLoading) {
+    return (
+      <div
+        style={{
+          height: "100vh",
+          width: "100vw",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <h1 style={{ fontSize: "24px" }}>Loading...</h1>
+      </div>
+    );
   }
 
   return (
     <>
-      <div>
+      <div style={{ marginTop: "5vh" }}>
         {forums.map((forum) => {
           return (
             <div

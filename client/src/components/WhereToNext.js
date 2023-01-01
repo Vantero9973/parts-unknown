@@ -25,12 +25,22 @@ export default function WhereToNext() {
         width: "100vw",
         paddingLeft: "8vw",
         paddingRight: "8vw",
-        paddingTop: "5vw",
         background: "lightgray",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
       }}
     >
-      <div style={{ display: "flex", justifyContent: "space-between" }}>
-        <div style={{ marginLeft: "1vw" }}>
+      <div
+        style={{
+          width: "80vw",
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "space-between",
+        }}
+      >
+        <div>
           <h1 style={{ fontWeight: "bold", color: "gray" }}>PLAN YOUR TRIP</h1>
           <h1
             style={{
@@ -45,9 +55,7 @@ export default function WhereToNext() {
         <div
           style={{
             display: "flex",
-            alignItems: "flex-end",
-            marginBottom: "2vh",
-            marginRight: "2vw",
+            alignItems: "center",
           }}
         >
           <Button
@@ -55,6 +63,7 @@ export default function WhereToNext() {
             onClick={() => navigate("/destinations")}
             style={{
               height: "fit-content",
+              width: "fit-content",
               background: "#dadada",
               color: "#1c1c1e",
               borderColor: "#1c1c1e",
@@ -70,9 +79,10 @@ export default function WhereToNext() {
         style={{
           display: "flex",
           flexWrap: "wrap",
-          justifyContent: "space-between",
+          justifyContent: "center",
           alignItems: "center",
           marginTop: "10vh",
+          gap: "2rem",
         }}
       >
         {destinations.map((destination) => {

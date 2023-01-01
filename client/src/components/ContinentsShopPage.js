@@ -1,10 +1,11 @@
 import { useQuery } from "@tanstack/react-query";
 import Axios from "axios";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 // import { useState } from "react";
 
 export default function ContinentsShopPage() {
   const { id } = useParams();
+  const navigate = useNavigate();
   console.log(id);
 
   const { data: items, isLoading: itemsLoading } = useQuery(["item"], () => {
@@ -12,6 +13,29 @@ export default function ContinentsShopPage() {
       (res) => res.data
     );
   });
+
+  const { data: continents, isLoading: continentsLoading } = useQuery(
+    ["continent"],
+    () => {
+      return Axios.get(`http://localhost:3000/continents/${id}`).then(
+        (res) => res.data
+      );
+    }
+  );
+
+  const continentName = (
+    <div>
+      {continents?.map((continent) => {
+        return (
+          <div>
+            <h1 style={{ fontSize: "32px", fontWeight: "bold" }}>
+              {continent.name}
+            </h1>
+          </div>
+        );
+      })}
+    </div>
+  );
 
   //   const { data: continents, isLoading: continentsLoading } = useQuery(
   //     ["continent"],
@@ -22,7 +46,7 @@ export default function ContinentsShopPage() {
   //     }
   //   );
 
-  if (itemsLoading) {
+  if (itemsLoading || continentsLoading) {
     return <h1>Loading...</h1>;
   }
 
@@ -31,27 +55,40 @@ export default function ContinentsShopPage() {
   );
 
   return (
-    <>
+    <div
+      style={{
+        padding: "5vh",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
+      {continentName}
       <div
         style={{
           display: "flex",
           flexWrap: "wrap",
           justifyContent: "center",
+          padding: "5vh",
         }}
       >
         {filteredShop.map((item) => {
           return (
-            <div>
+            <div
+              style={{ cursor: "pointer" }}
+              onClick={() => navigate(`/shop/${item.id}`)}
+            >
               <img
                 src={item.image}
                 alt=""
-                style={{ height: "30vh", width: "30vh" }}
+                style={{ maxHeight: "30vh", maxWidth: "30vh" }}
               />
               <h1>{item.name}</h1>
             </div>
           );
         })}
       </div>
-    </>
+    </div>
   );
 }

@@ -44,6 +44,7 @@ function Result(props) {
           background: "#2c2c2e",
           borderRadius: "40px",
           color: "#dadada",
+          width: "45vw",
         }}
       >
         You got
