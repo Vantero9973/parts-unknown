@@ -1,20 +1,18 @@
-import { React, useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import Axios from "axios";
 import ItemSearch from "./ItemSearch";
+import ShopItems from "./ShopItems";
+import Pagination from "./Pagination.js";
 import { PacmanLoader } from "react-spinners";
 
 export default function ShopPage() {
+  const [currentPage, setCurrentPage] = useState(1);
+  const [postsPerPage, setPostsPerPage] = useState(21);
   const [search, setSearch] = useState("");
-  const [sortedItems, setSortedItems] = useState([]);
+  // const [sortedItems, setSortedItems] = useState([]);
   const navigate = useNavigate();
-
-  const { data: items, isLoading: itemsLoading } = useQuery(["item"], () => {
-    return Axios.get("http://localhost:3000/shop_items").then(
-      (res) => res.data
-    );
-  });
 
   const { data: continents, isLoading: continentsLoading } = useQuery(
     ["continent"],
@@ -25,9 +23,15 @@ export default function ShopPage() {
     }
   );
 
-  const searchItems = items?.filter((country) =>
-    country.name.toLowerCase().includes(search.toLowerCase())
-  );
+  const { data: items, isLoading: itemsLoading } = useQuery(["item"], () => {
+    return Axios.get("http://localhost:3000/shop_items").then(
+      (res) => res.data
+    );
+  });
+
+  const lastPostIndex = currentPage * postsPerPage;
+  const firstPostIndex = lastPostIndex - postsPerPage;
+  const currentPosts = items?.slice(firstPostIndex, lastPostIndex);
 
   // function handleSort() {
   //   const sortedData = [...searchItems].sort((a, b) => {
@@ -43,7 +47,11 @@ export default function ShopPage() {
   //   setSortedItems(sortedData);
   // }
 
-  if (itemsLoading || continentsLoading) {
+  if (continentsLoading) {
+    return <h1>Loading...</h1>;
+  }
+
+  if (itemsLoading) {
     return (
       <div
         style={{
@@ -126,93 +134,15 @@ export default function ShopPage() {
             })}
           </div>
         </div>
-        <div
-          style={{ height: "2px", width: "90vw", background: "#3c3c3e" }}
-        ></div>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            gap: "5rem",
-          }}
-        >
-          {/* <div className="dropdown dropdown-hover">
-            <label
-              tabIndex={0}
-              className="btn m-1"
-              style={{ background: "#2C2C2E", display: "flex", gap: "1vh" }}
-            >
-              Sort By <div>▼</div>
-            </label>
-            <ul
-              tabIndex={0}
-              className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52"
-              style={{ background: "#2C2C2E" }}
-            >
-              <li onClick={handleSort}>
-                <a>A-Z</a>
-              </li>
-              <li onClick={handleSortReverse}>
-                <a>Z-A</a>
-              </li>
-            </ul>
-          </div> */}
-        </div>
-        <div
-          style={{
-            width: "90vw",
-            display: "flex",
-            flexWrap: "wrap",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          {searchItems.map((item) => {
-            console.log(item);
-            return (
-              <div
-                style={{
-                  height: "35vh",
-                  width: "20vh",
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  marginLeft: "5px",
-                  marginRight: "5px",
-                  cursor: "pointer",
-                }}
-                onClick={() => navigate(`/shop/${item.id}`)}
-              >
-                <img
-                  src={item.image}
-                  alt=""
-                  style={{ height: "25vh", width: "20vh" }}
-                />
-                <h1
-                  style={{
-                    color: "#dadada",
-                    fontSize: "18px",
-                    fontWeight: "bold",
-                  }}
-                >
-                  {item.name}
-                </h1>
-                <h1
-                  style={{
-                    fontSize: "12px",
-                    fontWeight: "bold",
-                    color: "gray",
-                  }}
-                >
-                  TRAVEL GUIDE
-                </h1>
-              </div>
-            );
-          })}
-        </div>
+        <div style={{ height: "2px", width: "90vw", background: "#3c3c3e" }} />
+        <ShopItems items={currentPosts} search={search} />
       </div>
+      <Pagination
+        totalPosts={items.length}
+        postsPerPage={postsPerPage}
+        setCurrentPage={setCurrentPage}
+        currentPage={currentPage}
+      />
     </div>
   );
 }

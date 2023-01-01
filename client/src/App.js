@@ -14,8 +14,10 @@ import ShopPage from "./components/ShopPage";
 import ContinentsShopPage from "./components/ContinentsShopPage";
 import ShopItemCard from "./components/ShopItemCard";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { useQuery } from "@tanstack/react-query";
-import Axios from "axios";
+import Payment from "./components/Payment";
+import Completion from "./components/Completion";
+// import { useQuery } from "@tanstack/react-query";
+// import Axios from "axios";
 
 function App() {
   const [blogs, setBlogs] = useState([]);
@@ -108,6 +110,8 @@ function App() {
           <Route path="/blogs/:id" element={<FullBlogPost user={user} />} />
           <Route path="/continents/:id" element={<ContinentsShopPage />} />
           <Route path="/shop/:id" element={<ShopItemCard />} />
+          <Route path="/payment" element={<Payment />} />
+          <Route path="/completion" element={<Completion />} />
         </Routes>
       </div>
     </QueryClientProvider>
