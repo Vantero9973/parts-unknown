@@ -5,7 +5,7 @@ import defaultProfilePic from "../avatar_default.png";
 export default function SignUp({ setUser }) {
   const [first_name, setFirstName] = useState("");
   const [last_name, setLastName] = useState("");
-  const [image, setImage] = useState();
+  const [image, setImage] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [passwordConfirmation, setPasswordConfirmation] = useState("");

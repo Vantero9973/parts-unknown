@@ -122,7 +122,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_14_012650) do
     t.string "username"
     t.string "first_name"
     t.string "last_name"
-    t.string "password"
     t.string "password_digest"
     t.string "image"
     t.boolean "admin"

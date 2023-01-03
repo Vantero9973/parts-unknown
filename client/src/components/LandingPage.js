@@ -8,11 +8,8 @@ import { v4 as uuidv4 } from "uuid";
 import WhereToNext from "./WhereToNext";
 import { useQuery } from "@tanstack/react-query";
 import Axios from "axios";
-import { useNavigate } from "react-router";
 
 export default function LandingPage() {
-  const navigate = useNavigate();
-
   const { data: countries, isLoading } = useQuery(["country"], () => {
     return Axios.get("http://localhost:3000/countries").then((res) => res.data);
   });
@@ -40,6 +37,7 @@ export default function LandingPage() {
     <>
       <div>
         <div
+          className="autoSuggest"
           style={{
             position: "absolute",
             marginTop: "35vh",
@@ -48,16 +46,13 @@ export default function LandingPage() {
             fontSize: "32px",
           }}
         >
-          <AutosuggestPage
-            countries={countries}
-            onClick={() => navigate("http://localhost:3000/destinations")}
-          />
+          <AutosuggestPage countries={countries} />
         </div>
         <LandingPageImages />
       </div>
       <div
         style={{
-          width: "100vw",
+          // width: "100vw",
           height: "80vh",
           display: "flex",
           alignItems: "center",

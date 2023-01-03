@@ -531,7 +531,7 @@ puts "Done seeding destinations..."
 
 puts "Seeding users..."
 
-alex = User.create!(username: "alex", first_name: "Alex", last_name: "Van Vleet", password: "123", image: "https://ca.slack-edge.com/T02MD9XTF-U042DH4D9UH-9e92754d578d-512", admin: true)
+alex = User.create!(username: "alex", first_name: "Alex", last_name: "Van Vleet", password: "123", image: "https://ca.slack-edge.com/T02MD9XTF-U042DH4D9UH-9e92754d578d-512")
 
 puts "Done seeding users..."
 
@@ -974,8 +974,6 @@ ShopItem.create!(name: "Portugal", image: "https://i.imgur.com/Po5rsZC.png", des
 ShopItem.create!(name: "Russia", image: "https://i.imgur.com/r6DRE2O.png", description: "Lonely Planet Russia is your passport to the most relevant, up-to-date advice on what to see and skip, and what hidden discoveries await you. Brush up on your Soviet and imperial history in Moscow and St Petersburg, explore European Russia and its gingerbread cottages and golden domes, or lose yourself in the wilds of Siberia and the east; all with your trusted travel companion. Get to the heart of Russia and begin your journey now!", continent_id: europe.id, price: 19.99, country_id: russia.id)
 
 ShopItem.create!(name: "Slovenia", image: "https://i.imgur.com/9Xk3O2v.png", description: "Lonely Planet’s Slovenia is your passport to the most relevant, up-to-date advice on what to see and skip, and what hidden discoveries await you. Discover buzzy Ljubljana, dip a toe in the electric-blue water of Lake Bled, be stunned by natural beauty; all with your trusted travel companion. Get to the heart of Slovenia and begin your journey now!", continent_id: europe.id, price: 17.99, country_id: slovenia.id)
-
-ShopItem.create!(name: "South Korea", image: "https://i.imgur.com/m05iKCA.png", description: "Lonely Planet’s Korea is your passport to the most relevant, up-to-date advice on what to see and skip, and what hidden discoveries await you. Explore the dramatic landscape of Jeju-do, feast on bibimbap in Jeonju, and wander the streets of Bukchon; all with your trusted travel companion. Get to the heart of Korea and begin your journey now!", continent_id: asia.id, price: 22.99, country_id: south_korea.id)
 
 ShopItem.create!(name: "Sri Lanka", image: "https://i.imgur.com/n2UqhtS.png", description: "Lonely Planet's Sri Lanka is your passport to the most relevant, up-to-date advice on what to see and skip, and what hidden discoveries await you. Laze on a gorgeous beach, surf at Arugam Bay, and watch for whales at Marissa; all with your trusted travel companion. Get to the heart of Sri Lanka and begin your journey now!", continent_id: asia.id, price: 18.99, country_id: sri_lanka.id)
 

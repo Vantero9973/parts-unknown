@@ -22,7 +22,6 @@ export default function WhereToNext() {
     <div
       style={{
         height: "100vh",
-        width: "100vw",
         paddingLeft: "8vw",
         paddingRight: "8vw",
         background: "lightgray",
@@ -91,6 +90,7 @@ export default function WhereToNext() {
               style={{
                 display: "flex",
                 flexDirection: "column",
+                flexWrap: "wrap",
                 justifyContent: "center",
                 alignItems: "center",
                 margin: "1vh",
@@ -101,7 +101,10 @@ export default function WhereToNext() {
                 sx={{ width: "25vw" }}
                 style={{ borderRadius: "40px", cursor: "pointer" }}
               >
-                <CardMedia sx={{ height: "20vw" }} image={destination.image} />
+                <CardMedia
+                  sx={{ height: "20vw", minHeight: "200px", minWidth: "200px" }}
+                  image={destination.image}
+                />
               </Card>
               <div
                 style={{
@@ -111,8 +114,9 @@ export default function WhereToNext() {
                 }}
               >
                 <h1
+                  className="whereToNext"
                   style={{
-                    fontSize: "24px",
+                    fontSize: "clamp(1rem, 2.5vw, 24px)",
                     fontWeight: "bold",
                     color: "#1c1c1e",
                     marginTop: "1vh",

@@ -1,11 +1,10 @@
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { useQuery } from "@tanstack/react-query";
 import Axios from "axios";
-import { useParams, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export default function LandingPageImages() {
   const navigate = useNavigate();
-  const { id } = useParams();
 
   const { data: landingImages, isLoading } = useQuery(["landingImage"], () => {
     return Axios.get("http://localhost:3000/landingimages").then(
@@ -42,6 +41,7 @@ export default function LandingPageImages() {
                   }}
                 >
                   <span
+                    className="notHiddenImage"
                     style={{
                       color: "white",
                       fontSize: "30px",
@@ -65,6 +65,7 @@ export default function LandingPageImages() {
                     }}
                   >
                     <div
+                      className="notHiddenImage"
                       onClick={() => navigate(`/blogs/${landingImage.id}`)}
                       style={{ zIndex: "3" }}
                     >
@@ -82,6 +83,7 @@ export default function LandingPageImages() {
                 </div>
               </div>
               <div
+                className="notHiddenImage"
                 style={{
                   height: "80vh",
                   width: "33.33vw",
@@ -109,6 +111,84 @@ export default function LandingPageImages() {
           </>
         );
       })}
+      <div
+        style={{
+          display: "flex",
+          height: "80vh",
+          width: "100vw",
+          position: "absolute",
+        }}
+      >
+        <div
+          style={{
+            height: "80vh",
+            width: "100vw",
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "flex-end",
+            fontFamily: "'Roboto', sans-serif",
+          }}
+        >
+          <span
+            className="hiddenTitle"
+            style={{
+              color: "white",
+              fontSize: "36px",
+              fontWeight: "600",
+              fontFamily: "'Roboto', sans-serif",
+              width: "80vw",
+              margin: "10px",
+              textShadow: "#000 1px 0 5px",
+              zIndex: "3",
+            }}
+          >
+            {landingImages[0].title}
+          </span>
+          <span
+            style={{
+              display: "flex",
+              justifyContent: "right",
+              color: "white",
+              width: "5vw",
+              margin: "10px",
+            }}
+          >
+            <div
+              className="hiddenTitle"
+              onClick={() => navigate(`/blogs/${landingImages[0].id}`)}
+              style={{ zIndex: "3" }}
+            >
+              <ArrowForwardIcon
+                className="arrowIcon"
+                style={{
+                  height: "60px",
+                  width: "60px",
+                  fontWeight: "bolder",
+                  cursor: "pointer",
+                }}
+              />
+            </div>
+          </span>
+        </div>
+      </div>
+      <div className="hiddenImage">
+        <a
+          onClick={() => navigate(`/blogs/${landingImages[0].id}`)}
+          className="landingImage"
+          style={{
+            width: "100vw",
+            height: "80vh",
+            float: "left",
+            backgroundImage: `url(${landingImages[0].image})`,
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
+            overflow: "hidden",
+            cursor: "pointer",
+            zIndex: "1",
+          }}
+        />
+      </div>
     </div>
   );
 }

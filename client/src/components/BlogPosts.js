@@ -59,7 +59,7 @@ export default function BlogPosts({ blogs }) {
         alignItems: "center",
       }}
     >
-      <div style={{ width: "82vw" }}>
+      <div className="blogContainer">
         {blogs.map((blog) => {
           return (
             <div
@@ -91,6 +91,7 @@ export default function BlogPosts({ blogs }) {
               >
                 <CardContent sx={{ flex: "1 0 auto" }}>
                   <Typography
+                    className="blogDescription"
                     component="div"
                     style={{
                       margin: "10px",
@@ -120,6 +121,7 @@ export default function BlogPosts({ blogs }) {
                     {blog.read_time} • {blog.date}
                   </Typography>
                   <Typography
+                    className="blogDescription"
                     variant="subtitle1"
                     color="text.secondary"
                     component="div"

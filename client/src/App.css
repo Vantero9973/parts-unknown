@@ -1,6 +1,10 @@
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
+
+html {
+  width: 100vw;
+}
 
 body {
     background: #1c1c1e;
@@ -93,10 +97,64 @@ body {
     font-family: 'Roboto', sans-serif;
   }
 
-  main {
+  @media (min-width: 1000px) {
+    .hiddenImage {
+      display: none;
+      height: 80vh;
+      width: 100vw;
+      float: left;
+      overflow: hidden;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    .hiddenImage {
+      display: flex;
+      overflow: hidden;
+      z-index: 2;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    .notHiddenImage {
+      display: none;
+    }
+  }
+
+  @media (min-width: 1000px) {
+    .hiddenTitle {
+      display: none;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    .autoSuggest {
+      display: none;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    .blogDescription {
+      display: none;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    .blogContainer {
+      width: 100vw;
+    }
+  }
+
+  @media (min-width: 1000px) {
+    .blogContainer {
+      width: 82vw;
+    }
+  }
+
+  /* main {
     width: 480px;
   }
-  
+
   form > * {
     margin: 10px 0;
   }
@@ -129,8 +187,7 @@ body {
     cursor: none;
   }
   
-  input,
-  select {
+  input, select {
     display: block;
     font-size: 1.1em;
     width: 100%;
@@ -147,32 +204,29 @@ body {
   }
   
   small {
-    font-size: 0.6em;
+    font-size: .6em;
   }
   
-  fieldset,
-  input,
-  select {
+  fieldset, input, select {
     border: 1px solid #efefef;
-  }
+  } */
   
   #payment-form {
-    border: #f6f9fc solid 1px;
+    border: #F6F9FC solid 1px;
     border-radius: var(--radius);
     padding: 20px;
     margin: 20px 0;
-    box-shadow: 0 30px 50px -20px rgb(50 50 93 / 25%),
-      0 30px 60px -30px rgb(0 0 0 / 30%);
+    box-shadow: 0 30px 50px -20px rgb(50 50 93 / 25%), 0 30px 60px -30px rgb(0 0 0 / 30%);
   }
   
   #messages {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New";
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New';
     display: none; /* hide initially, then show once the first message arrives */
-    background-color: #0a253c;
-    color: #00d924;
+    background-color: #0A253C;
+    color: #00D924;
     padding: 20px;
     margin: 20px 0;
     border-radius: var(--radius);
-    font-size: 0.7em;
+    font-size:0.7em;
   }
   
