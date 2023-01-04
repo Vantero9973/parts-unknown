@@ -1,26 +1,32 @@
 import { Card, Button, Form, Row, Col } from "react-bootstrap";
 import { CartContext } from "./CartContext";
 import { useContext } from "react";
+import { useNavigate } from "react-router-dom";
 
 function ProductCard(props) {
   // props.product is the product we are selling
+  const navigate = useNavigate();
   const product = props.product;
   const cart = useContext(CartContext);
   const productQuantity = cart.getProductQuantity(product.id);
   console.log(cart.items);
+
   return (
-    <Card
+    <div
       style={{
         display: "flex",
-        flexDirection: "column",
+        flexWrap: "wrap",
+        // flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
         background: "#1c1c1e",
-        width: "20vw",
-        height: "25vw",
+        // maxWidth: "10vw",
+        height: "fit-content",
+        border: "none",
+        margin: "25px",
       }}
     >
-      <Card.Body
+      <div
         style={{
           display: "flex",
           flexDirection: "column",
@@ -29,11 +35,16 @@ function ProductCard(props) {
         }}
       >
         <img
+          onClick={() => navigate(`/shop/${product.link}`)}
           src={product.image}
           alt=""
-          style={{ height: "25vh", width: "20vh" }}
+          style={{
+            maxHeight: "225px",
+            maxWidth: "225px",
+            cursor: "pointer",
+          }}
         />
-        <Card.Title
+        <div
           style={{
             color: "#dadada",
             fontSize: "18px",
@@ -41,7 +52,7 @@ function ProductCard(props) {
           }}
         >
           {product.title}
-        </Card.Title>
+        </div>
         <h1
           style={{
             fontSize: "12px",
@@ -51,18 +62,35 @@ function ProductCard(props) {
         >
           TRAVEL GUIDE
         </h1>
-        <Card.Text>${product.price}</Card.Text>
+        <div style={{ color: "#dadada", fontWeight: "bold" }}>
+          ${product.price}
+        </div>
         {productQuantity > 0 ? (
           <>
-            <Form as={Row}>
-              <Form.Label column="true" sm="6">
+            <Form as={Row} style={{ margin: "1vh" }}>
+              <Form.Label column="true" sm="6" style={{ color: "#dadada" }}>
                 In Cart: {productQuantity}
               </Form.Label>
-              <Col sm="6">
+              <Col
+                sm="6"
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
                 <Button
                   sm="6"
                   onClick={() => cart.addOneToCart(product.id)}
                   className="mx-2"
+                  style={{
+                    maxHeight: "30px",
+                    maxWidth: "30px",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
                 >
                   +
                 </Button>
@@ -70,6 +98,13 @@ function ProductCard(props) {
                   sm="6"
                   onClick={() => cart.removeOneFromCart(product.id)}
                   className="mx-2"
+                  style={{
+                    maxHeight: "30px",
+                    maxWidth: "30px",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
                 >
                   -
                 </Button>
@@ -85,14 +120,15 @@ function ProductCard(props) {
           </>
         ) : (
           <Button
+            style={{ margin: "1vh", background: "#006699", border: "none" }}
             variant="primary"
             onClick={() => cart.addOneToCart(product.id)}
           >
             Add To Cart
           </Button>
         )}
-      </Card.Body>
-    </Card>
+      </div>
+    </div>
   );
 }
 

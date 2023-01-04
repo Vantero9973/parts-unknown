@@ -44,7 +44,7 @@ export default function ForumPage() {
 
   return (
     <>
-      <div style={{ marginTop: "5vh" }}>
+      <div style={{ marginTop: "5vh", color: "#dadada" }}>
         {forums.map((forum) => {
           return (
             <div

@@ -2,6 +2,7 @@ import { useState } from "react";
 import Pagination from "./Pagination";
 import ForumSelector from "./ForumSelector";
 import ForumSearch from "./ForumSearch";
+import Dropdown from "react-bootstrap/Dropdown";
 // import { useQuery } from "@tanstack/react-query";
 // import Axios from "axios";
 
@@ -55,27 +56,41 @@ export default function ForumCountry({ countries, setCountries, setSearch }) {
             justifyContent: "center",
           }}
         >
-          <div className="dropdown dropdown-hover">
-            <label
-              tabIndex={0}
-              className="btn m-1"
-              style={{ background: "#2C2C2E", display: "flex", gap: "1vh" }}
+          <Dropdown
+            title={
+              <h1
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  fontSize: "16px",
+                  fontWeight: "bold",
+                  color: "#dadada",
+                  background: "#2c2c2e",
+                  padding: "10px",
+                }}
+                id="basic-nav-dropdown"
+              >
+                SORT BY
+              </h1>
+            }
+          >
+            <Dropdown.Toggle
+              id="dropdown-basic"
+              style={{
+                background: "#2c2c2e",
+                border: "none",
+                fontWeight: "bold",
+                color: "#dadada",
+              }}
             >
-              Sort By <div>▼</div>
-            </label>
-            <ul
-              tabIndex={0}
-              className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52"
-              style={{ background: "#2C2C2E" }}
-            >
-              <li onClick={handleSort}>
-                <a>A-Z</a>
-              </li>
-              <li onClick={handleSortReverse}>
-                <a>Z-A</a>
-              </li>
-            </ul>
-          </div>
+              SORT BY
+            </Dropdown.Toggle>
+            <Dropdown.Menu>
+              <Dropdown.Item onClick={handleSort}>A-Z</Dropdown.Item>
+              <Dropdown.Item onClick={handleSortReverse}>Z-A</Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
         </div>
       </div>
       <div style={{ marginTop: "5vh" }}>

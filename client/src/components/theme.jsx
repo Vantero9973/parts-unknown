@@ -7,10 +7,12 @@ const theme = {
     input: {
       width: "40vw",
       height: "8vh",
-      border: "2px solid #3b3b3b",
+      border: "2px solid #1c1c1e",
       borderRadius: "50px",
       fontSize: "32px",
       padding: "25px",
+      background: "#2c2c2e",
+      color: "#dadada"
     },
     
     inputFocused: {

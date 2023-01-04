@@ -40,7 +40,9 @@ export default function WhereToNext() {
         }}
       >
         <div>
-          <h1 style={{ fontWeight: "bold", color: "gray" }}>PLAN YOUR TRIP</h1>
+          <h1 style={{ fontSize: "24px", fontWeight: "bold", color: "gray" }}>
+            PLAN YOUR TRIP
+          </h1>
           <h1
             style={{
               fontSize: "50px",

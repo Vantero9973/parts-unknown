@@ -85,7 +85,7 @@ function App() {
       <CartProvider>
         <div style={{ minHeight: "100vh", background: "#1C1C1E" }}>
           {/* <NavBar user={user} setUser={setUser} /> */}
-          <NavbarComponent />
+          <NavbarComponent user={user} setUser={setUser} />
           <Routes>
             <Route path="/" element={<LandingPage />} />
             <Route path="/destinations" element={<DestinationsPage />} />

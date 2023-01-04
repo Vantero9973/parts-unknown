@@ -34,6 +34,7 @@ export default function PostPage() {
         width: "100vw",
         minHeight: "92vh",
         padding: "10vh",
+        color: "#dadada",
       }}
     >
       {posts.map((post) => {
@@ -124,7 +125,7 @@ export default function PostPage() {
                   alt=""
                   style={{ height: "5vw", maxWidth: "5vw" }}
                 />
-                <h1>username</h1>
+                <h1 style={{ fontSize: "16px" }}>username</h1>
               </div>
               <div>
                 <div

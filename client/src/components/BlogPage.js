@@ -4,6 +4,7 @@ import Search from "./Search";
 import BlogPosts from "./BlogPosts";
 import Pagination from "./Pagination.js";
 import AddNewBlog from "./AddNewBlog";
+import Dropdown from "react-bootstrap/Dropdown";
 
 export default function BlogPage({ blogs, setBlogs, setSearch, user }) {
   const [currentPage, setCurrentPage] = useState(1);
@@ -86,30 +87,44 @@ export default function BlogPage({ blogs, setBlogs, setSearch, user }) {
               gap: "1rem",
             }}
           >
-            <div className="dropdown dropdown-hover">
-              <label
-                tabIndex={0}
-                className="btn m-1"
-                style={{ background: "#2C2C2E", display: "flex", gap: "1vh" }}
+            <Dropdown
+              title={
+                <h1
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    fontSize: "16px",
+                    fontWeight: "bold",
+                    color: "#dadada",
+                    background: "#2c2c2e",
+                    padding: "10px",
+                  }}
+                  id="basic-nav-dropdown"
+                >
+                  SORT BY
+                </h1>
+              }
+            >
+              <Dropdown.Toggle
+                id="dropdown-basic"
+                style={{
+                  background: "#2c2c2e",
+                  border: "none",
+                  fontWeight: "bold",
+                  color: "#dadada",
+                }}
               >
-                Sort By <div>▼</div>
-              </label>
-              <ul
-                tabIndex={0}
-                className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52"
-                style={{ background: "#2C2C2E" }}
-              >
-                <li onClick={handleSortByLikes}>
-                  <a>Most Popular</a>
-                </li>
-                <li onClick={handleSort}>
-                  <a>A-Z</a>
-                </li>
-                <li onClick={handleSortReverse}>
-                  <a>Z-A</a>
-                </li>
-              </ul>
-            </div>
+                SORT BY
+              </Dropdown.Toggle>
+              <Dropdown.Menu>
+                <Dropdown.Item onClick={handleSortByLikes}>
+                  Most Popular
+                </Dropdown.Item>
+                <Dropdown.Item onClick={handleSort}>A-Z</Dropdown.Item>
+                <Dropdown.Item onClick={handleSortReverse}>Z-A</Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
             <Search setSearch={setSearch} />
             <AddNewBlog user={user} />
           </div>

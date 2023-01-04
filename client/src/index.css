@@ -29,6 +29,7 @@ body, html {
   border: 1px solid #dadada;
   border-radius: 25px;
   z-index: 500;
+  color: #dadada;
 }
 
 @media (min-width: 469px) {

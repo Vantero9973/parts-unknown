@@ -41,7 +41,7 @@ export default function FullBlogPost({ user }) {
 
   if (user) {
     return (
-      <div>
+      <div style={{ color: "#dadada" }}>
         {blogs.map((blog) => {
           console.log(blog);
           console.log(user);
@@ -54,6 +54,7 @@ export default function FullBlogPost({ user }) {
                   alignItems: "center",
                   justifyContent: "center",
                   marginTop: "10vh",
+                  color: "#dadada",
                 }}
               >
                 <div
@@ -66,7 +67,12 @@ export default function FullBlogPost({ user }) {
                     paddingRight: "12vw",
                   }}
                 >
-                  <h1 style={{ fontSize: "36px", fontWeight: "bold" }}>
+                  <h1
+                    style={{
+                      fontSize: "36px",
+                      fontWeight: "bold",
+                    }}
+                  >
                     {blog.title}
                   </h1>
                   <div
@@ -75,7 +81,7 @@ export default function FullBlogPost({ user }) {
                       alignItems: "center",
                       justifyContent: "space-between",
                       flexDirection: "row",
-                      gap: "1vh",
+                      gap: "1vw",
                     }}
                   >
                     <img
@@ -102,7 +108,7 @@ export default function FullBlogPost({ user }) {
                       >
                         {blog.username}
                       </h1>
-                      <hr class="solid"></hr>
+                      <hr class="solid" style={{ margin: "2px" }}></hr>
                       <h1
                         style={{
                           fontSize: "16px",
@@ -172,6 +178,7 @@ export default function FullBlogPost({ user }) {
                   alignItems: "center",
                   justifyContent: "center",
                   marginTop: "10vh",
+                  color: "#dadada",
                 }}
               >
                 <div
@@ -184,7 +191,13 @@ export default function FullBlogPost({ user }) {
                     paddingRight: "12vw",
                   }}
                 >
-                  <h1 style={{ fontSize: "36px", fontWeight: "bold" }}>
+                  <h1
+                    style={{
+                      fontSize: "36px",
+                      fontWeight: "bold",
+                      color: "#dadada",
+                    }}
+                  >
                     {blog.title}
                   </h1>
                   <div
@@ -193,7 +206,7 @@ export default function FullBlogPost({ user }) {
                       alignItems: "center",
                       justifyContent: "space-between",
                       flexDirection: "row",
-                      gap: "1vh",
+                      gap: "1vw",
                     }}
                   >
                     <img
@@ -278,6 +291,7 @@ export default function FullBlogPost({ user }) {
                 alignItems: "center",
                 justifyContent: "center",
                 marginTop: "10vh",
+                color: "#dadada",
               }}
             >
               <div
@@ -299,7 +313,7 @@ export default function FullBlogPost({ user }) {
                     alignItems: "center",
                     justifyContent: "space-between",
                     flexDirection: "row",
-                    gap: "1vh",
+                    gap: "1vw",
                   }}
                 >
                   <img
@@ -309,6 +323,8 @@ export default function FullBlogPost({ user }) {
                       height: "50px",
                       width: "50px",
                       borderRadius: "50%",
+                      display: "flex",
+                      alignItems: "center",
                     }}
                   />
                   <div
@@ -326,7 +342,7 @@ export default function FullBlogPost({ user }) {
                     >
                       {blog.username}
                     </h1>
-                    <hr class="solid"></hr>
+                    <hr class="solid" style={{ margin: "2px" }}></hr>
                     <h1
                       style={{
                         fontSize: "16px",

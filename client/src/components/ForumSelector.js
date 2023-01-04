@@ -34,6 +34,7 @@ export default function ForumSelector({ countries }) {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
+        color: "#dadada",
       }}
     >
       <div>

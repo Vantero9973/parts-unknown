@@ -17,101 +17,9 @@ export default function LandingPageImages() {
   }
 
   return (
-    <div style={{ display: "flex" }}>
-      {landingImages.map((landingImage) => {
-        return (
-          <>
-            <div style={{ height: "80vh", overflow: "hidden" }}>
-              <div
-                style={{
-                  display: "flex",
-                  height: "80vh",
-                  width: "33.33vw",
-                  position: "absolute",
-                }}
-              >
-                <div
-                  style={{
-                    height: "80vh",
-                    width: "33.33vw",
-                    display: "flex",
-                    alignItems: "flex-end",
-                    fontFamily: "'Roboto', sans-serif",
-                    float: "left",
-                  }}
-                >
-                  <span
-                    className="notHiddenImage"
-                    style={{
-                      color: "white",
-                      fontSize: "30px",
-                      fontWeight: "600",
-                      fontFamily: "'Roboto', sans-serif",
-                      width: "28vw",
-                      margin: "10px",
-                      textShadow: "#000 1px 0 5px",
-                      zIndex: "3",
-                    }}
-                  >
-                    {landingImage.title}
-                  </span>
-                  <span
-                    style={{
-                      display: "flex",
-                      justifyContent: "right",
-                      color: "white",
-                      width: "5vw",
-                      margin: "10px",
-                    }}
-                  >
-                    <div
-                      className="notHiddenImage"
-                      onClick={() => navigate(`/blogs/${landingImage.id}`)}
-                      style={{ zIndex: "3" }}
-                    >
-                      <ArrowForwardIcon
-                        className="arrowIcon"
-                        style={{
-                          height: "60px",
-                          width: "60px",
-                          fontWeight: "bolder",
-                          cursor: "pointer",
-                        }}
-                      />
-                    </div>
-                  </span>
-                </div>
-              </div>
-              <div
-                className="notHiddenImage"
-                style={{
-                  height: "80vh",
-                  width: "33.33vw",
-                  float: "left",
-                  overflow: "hidden",
-                }}
-              >
-                <a
-                  onClick={() => navigate(`/blogs/${landingImage.id}`)}
-                  className="landingImage"
-                  style={{
-                    width: "33.33vw",
-                    height: "80vh",
-                    float: "left",
-                    backgroundImage: `url(${landingImage.image})`,
-                    backgroundSize: "cover",
-                    backgroundRepeat: "no-repeat",
-                    backgroundPosition: "center",
-                    overflow: "hidden",
-                    cursor: "pointer",
-                  }}
-                />
-              </div>
-            </div>
-          </>
-        );
-      })}
+    <>
       <div
+        className="absoluteContainer"
         style={{
           display: "flex",
           height: "80vh",
@@ -174,7 +82,6 @@ export default function LandingPageImages() {
       <div className="hiddenImage">
         <a
           onClick={() => navigate(`/blogs/${landingImages[0].id}`)}
-          className="landingImage"
           style={{
             width: "100vw",
             height: "80vh",
@@ -186,9 +93,106 @@ export default function LandingPageImages() {
             overflow: "hidden",
             cursor: "pointer",
             zIndex: "1",
+            webkitFilter: "brightness(80%)",
+            filter: "brightness(80%)",
           }}
         />
       </div>
-    </div>
+      <div style={{ display: "flex" }}>
+        {landingImages.map((landingImage) => {
+          return (
+            <>
+              <div style={{ height: "80vh", overflow: "hidden" }}>
+                <div
+                  style={{
+                    display: "flex",
+                    height: "80vh",
+                    width: "33.33vw",
+                    position: "absolute",
+                  }}
+                >
+                  <div
+                    style={{
+                      height: "80vh",
+                      width: "33.33vw",
+                      display: "flex",
+                      alignItems: "flex-end",
+                      fontFamily: "'Roboto', sans-serif",
+                      float: "left",
+                    }}
+                  >
+                    <span
+                      className="notHiddenImage"
+                      style={{
+                        color: "white",
+                        fontSize: "30px",
+                        fontWeight: "600",
+                        fontFamily: "'Roboto', sans-serif",
+                        width: "28vw",
+                        margin: "10px",
+                        textShadow: "#000 1px 0 5px",
+                        zIndex: "3",
+                      }}
+                    >
+                      {landingImage.title}
+                    </span>
+                    <span
+                      style={{
+                        display: "flex",
+                        justifyContent: "right",
+                        color: "white",
+                        width: "5vw",
+                        margin: "10px",
+                      }}
+                    >
+                      <div
+                        className="notHiddenImage"
+                        onClick={() => navigate(`/blogs/${landingImage.id}`)}
+                        style={{ zIndex: "3" }}
+                      >
+                        <ArrowForwardIcon
+                          className="arrowIcon"
+                          style={{
+                            height: "60px",
+                            width: "60px",
+                            fontWeight: "bolder",
+                            cursor: "pointer",
+                          }}
+                        />
+                      </div>
+                    </span>
+                  </div>
+                </div>
+                <div
+                  className="notHiddenImage"
+                  style={{
+                    height: "80vh",
+                    width: "33.33vw",
+                    float: "left",
+                    overflow: "hidden",
+                  }}
+                >
+                  <a
+                    onClick={() => navigate(`/blogs/${landingImage.id}`)}
+                    className="landingImage"
+                    style={{
+                      width: "33.33vw",
+                      height: "80vh",
+                      float: "left",
+                      backgroundImage: `url(${landingImage.image})`,
+                      backgroundSize: "cover",
+                      backgroundRepeat: "no-repeat",
+                      backgroundPosition: "center",
+                      overflow: "hidden",
+                      cursor: "pointer",
+                    }}
+                  />
+                </div>
+              </div>
+            </>
+          );
+        })}
+      </div>
+    </>
   );
 }

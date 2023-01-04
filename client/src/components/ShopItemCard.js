@@ -23,6 +23,7 @@ export default function ShopItemCard() {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
+        color: "#dadada",
       }}
     >
       {items.map((item) => {
@@ -78,8 +79,8 @@ export default function ShopItemCard() {
                   }}
                 >
                   <h1 style={{ fontSize: "18px", fontWeight: "bold" }}>Book</h1>
-                  <h1>${item.price}</h1>
-                  <Button
+                  <h1 style={{ fontSize: "24px" }}>${item.price}</h1>
+                  {/* <Button
                     variant="outlined"
                     style={{
                       background: "#297cbb",
@@ -89,10 +90,10 @@ export default function ShopItemCard() {
                     }}
                   >
                     Add To Cart
-                  </Button>
+                  </Button> */}
                 </div>
                 <hr></hr>
-                <div
+                {/* <div
                   style={{
                     display: "flex",
                     justifyContent: "space-between",
@@ -103,8 +104,8 @@ export default function ShopItemCard() {
                   <h1 style={{ fontSize: "18px", fontWeight: "bold" }}>
                     e-Book
                   </h1>
-                  <h1>${Math.round(item.price - 6)}.99</h1>
-                  <Button
+                  <h1>${Math.round(item.price - 6)}.99</h1> */}
+                {/* <Button
                     variant="outlined"
                     style={{
                       background: "#297cbb",
@@ -114,9 +115,9 @@ export default function ShopItemCard() {
                     }}
                   >
                     Add To Cart
-                  </Button>
-                </div>
-                <hr></hr>
+                  </Button> */}
+                {/* </div> */}
+                {/* <hr></hr> */}
               </div>
               <div
                 style={{
