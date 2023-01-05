@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import Axios from "axios";
 import Button from "@mui/material/Button";
@@ -8,6 +8,7 @@ import DeleteIcon from "@mui/icons-material/Delete";
 export default function FullBlogPost({ user }) {
   const [deleteBlogs, setDeleteBlogs] = useState();
   const { id } = useParams();
+  const navigate = useNavigate();
 
   const { data: blogs, isLoading: blogsLoading } = useQuery(["blog"], () => {
     return Axios.get(`http://localhost:3000/blogs/${id}`).then(
@@ -33,6 +34,8 @@ export default function FullBlogPost({ user }) {
         );
       }
     });
+    navigate("/stories");
+    window.location.reload(true);
   }
 
   if (blogsLoading) {

@@ -30,6 +30,7 @@ export default function Login({ setUser }) {
         padding: "5vw",
         background: "#1C1C1E",
         borderRadius: "50px",
+        color: "#dadada",
       }}
     >
       <form

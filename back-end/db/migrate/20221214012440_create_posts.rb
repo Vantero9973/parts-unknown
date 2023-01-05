@@ -6,6 +6,9 @@ class CreatePosts < ActiveRecord::Migration[7.0]
       t.string :date
       t.integer :likes
       t.string :topic
+      t.string :username
+      t.string :profile_pic
+      t.references :user, null: false, foreign_key: true
       t.references :forum, null: false, foreign_key: true
 
       t.timestamps

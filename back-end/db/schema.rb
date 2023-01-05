@@ -63,10 +63,10 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_14_012650) do
   create_table "destinations", force: :cascade do |t|
     t.string "name"
     t.string "image"
-    t.string "country_name"
     t.string "description"
     t.float "lat"
     t.float "lng"
+    t.string "country_name"
     t.integer "country_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -77,10 +77,14 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_14_012650) do
     t.string "body"
     t.string "date"
     t.integer "likes"
+    t.string "username"
+    t.string "profile_pic"
+    t.integer "user_id", null: false
     t.integer "post_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["post_id"], name: "index_forum_comments_on_post_id"
+    t.index ["user_id"], name: "index_forum_comments_on_user_id"
   end
 
   create_table "forums", force: :cascade do |t|
@@ -100,10 +104,14 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_14_012650) do
     t.string "date"
     t.integer "likes"
     t.string "topic"
+    t.string "username"
+    t.string "profile_pic"
+    t.integer "user_id", null: false
     t.integer "forum_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["forum_id"], name: "index_posts_on_forum_id"
+    t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
   create_table "shop_items", force: :cascade do |t|
@@ -124,7 +132,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_14_012650) do
     t.string "last_name"
     t.string "password_digest"
     t.string "image"
-    t.boolean "admin"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -134,8 +141,10 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_14_012650) do
   add_foreign_key "countries", "continents"
   add_foreign_key "destinations", "countries"
   add_foreign_key "forum_comments", "posts"
+  add_foreign_key "forum_comments", "users"
   add_foreign_key "forums", "countries"
   add_foreign_key "forums", "users"
   add_foreign_key "posts", "forums"
+  add_foreign_key "posts", "users"
   add_foreign_key "shop_items", "countries"
 end

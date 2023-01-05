@@ -533,6 +533,16 @@ puts "Seeding users..."
 
 alex = User.create!(username: "alex", first_name: "Alex", last_name: "Van Vleet", password: "123", image: "https://ca.slack-edge.com/T02MD9XTF-U042DH4D9UH-9e92754d578d-512")
 
+paolo = User.create!(username: "paolo", first_name: "Paolo", last_name: "Garcia", password: "123", image: "https://ca.slack-edge.com/T02MD9XTF-U042AK20JHF-4054289dfb6f-192")
+
+chuck = User.create!(username: "chuck", first_name: "Charles", last_name: "Shrout", password: "123", image: "https://ca.slack-edge.com/T02MD9XTF-U0422JGBW9H-8ed761596b8c-192")
+
+mason = User.create!(username: "mason", first_name: "Mason", last_name: "White", password: "123", image: "https://media.licdn.com/dms/image/C4E03AQGb-6dA6-dORg/profile-displayphoto-shrink_100_100/0/1566876970979?e=1678320000&v=beta&t=MCLybOF4P5dy6ZPrGjdaG_Rme75BRIuSm8_DOP55Ess")
+
+andy = User.create!(username: "andy", first_name: "Andy", last_name: "McLean", password: "123", image: "https://ca.slack-edge.com/T02MD9XTF-U041H98GB27-020f7a151554-192")
+
+sam = User.create!(username: "sam", first_name: "Sam", last_name: "Waters", password: "123", image: "https://ca.slack-edge.com/T02MD9XTF-U03S7QG8J5A-cf35624449d2-192")
+
 puts "Done seeding users..."
 
 puts "Seeding forums..."
@@ -748,6 +758,7 @@ I can use advices on what transportation passes/tickets to purchase. I'm getting
 date: "Dec 13, 2022", 
 likes: 8, 
 topic: "Japan",
+username: sam.username, profile_pic: sam.image, user_id: sam.id,
 forum_id: japan_forum.id)
 
 Post.create!(title: "Best day trip from Tokyo on Jan 1st", 
@@ -758,6 +769,7 @@ Thank you!",
 date: "Dec 14, 2022", 
 likes: 6, 
 topic: "Japan",
+username: sam.username, profile_pic: sam.image, user_id: sam.id,
 forum_id: japan_forum.id)
 
 Post.create!(title: "Foodie Advice!?", 
@@ -789,6 +801,7 @@ Let me know your other must-eats also!",
 date: "Dec 13, 2022", 
 likes: 15, 
 topic: "Japan",
+username: sam.username, profile_pic: sam.image, user_id: sam.id,
 forum_id: japan_forum.id)
 
 Post.create!(title: "First time to Osaka!", 
@@ -810,6 +823,7 @@ Many thanks! Am so excited about this trip because after years and years of drea
 date: "Dec 15, 2022", 
 likes: 20, 
 topic: "Osaka",
+username: sam.username, profile_pic: sam.image, user_id: sam.id,
 forum_id: japan_forum.id)
 
 Post.create!(title: "Patpong Market", 
@@ -819,6 +833,7 @@ Thank you",
 date: "Dec 16, 2022", 
 likes: 22, 
 topic: "Bangkok",
+username: sam.username, profile_pic: sam.image, user_id: sam.id,
 forum_id: thailand_forum.id)
 
 puts "Done seeding posts..."
@@ -829,13 +844,13 @@ ForumComment.create!(body: "In at Tokyo and out at Osaka, you don’t need a JR 
 
 After you’ve decided on an itinerary = https://www.japan-guide.com/railpass/
 
-Get a stored value IC card for your local subway travel = https://www.japan-guide.com/e/e2359_003.html", date: "Dec 13, 2022, 7:43 PM", likes: 6, post_id: transportation.id)
+Get a stored value IC card for your local subway travel = https://www.japan-guide.com/e/e2359_003.html", date: "Dec 13, 2022, 7:43 PM", likes: 6, username: alex.username, profile_pic: alex.image, user_id: alex.id, post_id: transportation.id)
 
 ForumComment.create!(body: "I think the first week in Tokyo, I just need to get the IC card.
 
-I think it makes sense to get a 7 day JR pass while in Kyoto....", date: "Dec 13, 2022, 9:31 PM", likes: 5, post_id: transportation.id)
+I think it makes sense to get a 7 day JR pass while in Kyoto....", date: "Dec 13, 2022, 9:31 PM", likes: 5, username: mason.username, profile_pic: mason.image, user_id: mason.id, post_id: transportation.id)
 
-ForumComment.create!(body: "Are you return back to Tokyo? If not, there are regional passes for the Kansai area.", date: "Dec 13, 2022, 10:22 PM", likes: 3, post_id: transportation.id)
+ForumComment.create!(body: "Are you return back to Tokyo? If not, there are regional passes for the Kansai area.", date: "Dec 13, 2022, 10:22 PM", likes: 3, username: chuck.username, profile_pic: chuck.image, user_id: chuck.id, post_id: transportation.id)
 
 puts "Done seeding forum comments..."
 

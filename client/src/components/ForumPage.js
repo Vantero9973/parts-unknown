@@ -1,9 +1,11 @@
 import { useQuery } from "@tanstack/react-query";
 import Axios from "axios";
+import { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { Vortex } from "react-loader-spinner";
+import AddNewPost from "./AddNewPost";
 
-export default function ForumPage() {
+export default function ForumPage({ user }) {
+  const [deletePosts, setDeletePosts] = useState();
   const { id } = useParams();
   const navigate = useNavigate();
 
@@ -25,6 +27,20 @@ export default function ForumPage() {
   //     return Axios.get("http://localhost:3000/posts").then((res) => res.data);
   //   }
   // );
+
+  function handleDelete(id) {
+    fetch(`http://localhost:3000/posts/${id}`, {
+      method: "DELETE",
+    }).then((r) => {
+      if (r.ok) {
+        setDeletePosts((deletePosts) =>
+          deletePosts.filter((deletePost) => deletePost.id !== id)
+        );
+      }
+    });
+    navigate("/stories");
+    window.location.reload(true);
+  }
 
   if (forumsLoading || postsLoading) {
     return (
@@ -67,6 +83,7 @@ export default function ForumPage() {
                 alt="flag"
                 style={{ maxHeight: "50px", maxWidth: "100px" }}
               />
+              <AddNewPost user={user} />
             </div>
           );
         })}
@@ -78,6 +95,7 @@ export default function ForumPage() {
           alignItems: "center",
           flexDirection: "column",
           marginTop: "5vh",
+          color: "#dadada",
         }}
       >
         <table
@@ -133,6 +151,7 @@ export default function ForumPage() {
                 background: "#dadada",
                 color: "#2C2C2E",
                 padding: "5px",
+                borderTop: "1px solid #2c2c2e",
               }}
             >
               <tr
@@ -167,6 +186,7 @@ export default function ForumPage() {
                   display: "flex",
                   alignItems: "center",
                   fontSize: "14px",
+                  fontWeight: "bold",
                   width: "20vw",
                 }}
               >

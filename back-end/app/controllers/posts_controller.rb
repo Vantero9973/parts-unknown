@@ -21,4 +21,24 @@ class PostsController < ApplicationController
         end
     end
 
+    def create
+        post = Post.create!(post_params)
+        render json: post, status: :created
+    end
+
+    def destroy
+        find_post.destroy
+        head :no_content
+    end
+
+    private
+
+    def find_post
+        Post.find(params[:id])
+    end
+
+    def post_params
+        params.require(:post).permit(:title, :body, :date, :likes, :topic, :profile_pic, :username, :forum_id, :user_id)
+    end
+
 end

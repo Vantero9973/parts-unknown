@@ -1,39 +1,22 @@
 import { useState, useEffect } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import Popup from "reactjs-popup";
 import Button from "@mui/material/Button";
 import moment from "moment";
 
-export default function AddNewBlog({ user }) {
-  const [blogs, setBlogs] = useState([]);
+export default function AddNewPost({ user }) {
+  const [posts, setPosts] = useState([]);
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
-  const [description, setDescription] = useState("");
-  const [image, setImage] = useState("");
-  const [read_time, setReadTime] = useState("");
-  const [category_one, setCategoryOne] = useState("");
-  const [category_two, setCategoryTwo] = useState("");
+  const [topic, setTopic] = useState("");
   const [formErrors, setFormErrors] = useState([]);
-  const navigate = useNavigate();
-
-  console.log(user);
-  // function getCurrentDate(separator = "") {
-  //   let newDate = new Date();
-  //   let date = newDate.getDate();
-  //   let month = newDate.getMonth() + 1;
-  //   let year = newDate.getFullYear();
-
-  //   return `${year}${separator}${
-  //     month < 10 ? `0${month}` : `${month}`
-  //   }${separator}${date}`;
-  // }
 
   const today = moment();
 
   useEffect(() => {
-    fetch("http://localhost:3000/blogs")
+    fetch("http://localhost:3000/posts")
       .then((r) => r.json())
-      .then(setBlogs);
+      .then(setPosts);
   }, []);
 
   function handleSubmit(e) {
@@ -41,18 +24,15 @@ export default function AddNewBlog({ user }) {
     const formData = {
       title: title,
       body: body,
-      description: description,
-      image: image,
+      topic: topic,
       date: today.format("MMM D, YYYY"),
       likes: 0,
-      read_time: read_time,
-      category_one: category_one,
-      category_two: category_two,
-      username: `${user.first_name} ${user.last_name}`,
+      username: `${user.username}`,
       profile_pic: `${user.image}`,
       user_id: parseInt(user.id),
+      forum_id: parseInt(id),
     };
-    fetch("http://localhost:3000/blogs", {
+    fetch("http://localhost:3000/posts", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -60,8 +40,8 @@ export default function AddNewBlog({ user }) {
       body: JSON.stringify(formData),
     }).then((r) => {
       if (r.ok) {
-        r.json().then((newBlogs) => {
-          handleAddBlog(newBlogs);
+        r.json().then((newPosts) => {
+          handleAddPost(newPosts);
           setFormErrors([]);
         });
       } else {
@@ -70,7 +50,7 @@ export default function AddNewBlog({ user }) {
     });
   }
 
-  const [{ data: blog, error, status }, setBlog] = useState({
+  const [{ data: post, error, status }, setPost] = useState({
     data: null,
     error: null,
     status: "pending",
@@ -78,24 +58,24 @@ export default function AddNewBlog({ user }) {
   const { id } = useParams();
 
   useEffect(() => {
-    fetch(`http://localhost:3000/blogs/${id}`).then((r) => {
+    fetch(`http://localhost:3000/posts/${id}`).then((r) => {
       if (r.ok) {
-        r.json().then((blog) =>
-          setBlog({ data: blog, error: null, status: "resolved" })
+        r.json().then((post) =>
+          setPost({ data: post, error: null, status: "resolved" })
         );
       } else {
         r.json().then((err) =>
-          setBlog({ data: null, error: err.error, status: "rejected" })
+          setPost({ data: null, error: err.error, status: "rejected" })
         );
       }
     });
   }, [id]);
 
-  function handleAddBlog(newBlog) {
-    setBlog({
+  function handleAddPost(newPost) {
+    setPost({
       data: {
-        ...blog,
-        blogs: [...blog, newBlog],
+        ...post,
+        posts: [...post, newPost],
       },
       error: null,
       status: "resolved",
@@ -138,7 +118,7 @@ export default function AddNewBlog({ user }) {
                 borderRadius: "5px",
               }}
             >
-              Add New Blog Post
+              Ask a Question
             </Button>
           }
           modal
@@ -181,11 +161,15 @@ export default function AddNewBlog({ user }) {
                   onChange={(e) => setTitle(e.target.value)}
                 />
                 <input
+                  class="overflow-scroll"
                   style={{
                     width: "40vw",
-                    height: "5vh",
+                    height: "20vh",
                     fontSize: "24px",
                     display: "flex",
+                    alignItems: "flex-start",
+                    justifyContent: "flex-start",
+                    flexWrap: "wrap",
                     marginBottom: "10px",
                     padding: "10px",
                   }}
@@ -205,70 +189,10 @@ export default function AddNewBlog({ user }) {
                     padding: "10px",
                   }}
                   type="text"
-                  name="description"
-                  placeholder="Description"
-                  value={description}
-                  onChange={(e) => setDescription(e.target.value)}
-                />
-                <input
-                  style={{
-                    width: "40vw",
-                    height: "5vh",
-                    fontSize: "24px",
-                    display: "flex",
-                    marginBottom: "10px",
-                    padding: "10px",
-                  }}
-                  type="text"
-                  name="image"
-                  placeholder="Image URL"
-                  value={image}
-                  onChange={(e) => setImage(e.target.value)}
-                />
-                <input
-                  style={{
-                    width: "40vw",
-                    height: "5vh",
-                    fontSize: "24px",
-                    display: "flex",
-                    marginBottom: "10px",
-                    padding: "10px",
-                  }}
-                  type="text"
-                  name="read_time"
-                  placeholder="Read Time"
-                  value={read_time}
-                  onChange={(e) => setReadTime(e.target.value)}
-                />
-                <input
-                  style={{
-                    width: "40vw",
-                    height: "5vh",
-                    fontSize: "24px",
-                    display: "flex",
-                    marginBottom: "10px",
-                    padding: "10px",
-                  }}
-                  type="text"
-                  name="category_one"
-                  placeholder="Category One"
-                  value={category_one}
-                  onChange={(e) => setCategoryOne(e.target.value)}
-                />
-                <input
-                  style={{
-                    width: "40vw",
-                    height: "5vh",
-                    fontSize: "24px",
-                    display: "flex",
-                    marginBottom: "10px",
-                    padding: "10px",
-                  }}
-                  type="text"
-                  name="category_two"
-                  placeholder="Category Two"
-                  value={category_two}
-                  onChange={(e) => setCategoryTwo(e.target.value)}
+                  name="topic"
+                  placeholder="Topic"
+                  value={topic}
+                  onChange={(e) => setTopic(e.target.value)}
                 />
                 <Button
                   variant="outlined"
@@ -313,7 +237,7 @@ export default function AddNewBlog({ user }) {
             borderRadius: "5px",
           }}
         >
-          Add New Blog Post
+          Ask a Question
         </Button>
       </div>
     );

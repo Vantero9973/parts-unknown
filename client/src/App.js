@@ -112,8 +112,8 @@ function App() {
             />
             <Route path="/shop" element={<ShopPage />} />
             <Route path="/countries/:id" element={<CountryPage />} />
-            <Route path="/forums/:id" element={<ForumPage />} />
-            <Route path="/posts/:id" element={<PostPage />} />
+            <Route path="/forums/:id" element={<ForumPage user={user} />} />
+            <Route path="/posts/:id" element={<PostPage user={user} />} />
             <Route path="/blogs/:id" element={<FullBlogPost user={user} />} />
             <Route path="/continents/:id" element={<ContinentsShopPage />} />
             <Route path="/shop/:id" element={<ShopItemCard />} />

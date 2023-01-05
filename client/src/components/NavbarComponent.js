@@ -138,14 +138,14 @@ function NavbarComponent({ user, setUser }) {
               }
               id="basic-nav-dropdown"
             >
-              <NavDropdown.Item style={{ color: "#dadada" }}>
+              <NavDropdown.Item style={{ color: "#1c1c1e" }}>
                 <Popup trigger={<div>Login</div>} modal nested>
                   <a>
                     <Login user={user} setUser={setUser} />
                   </a>
                 </Popup>
               </NavDropdown.Item>
-              <NavDropdown.Item style={{ color: "#dadada" }}>
+              <NavDropdown.Item style={{ color: "#1c1c1e" }}>
                 <Popup trigger={<div>Sign Up</div>} modal nested>
                   <SignUp user={user} setUser={setUser} />
                 </Popup>
