@@ -124,7 +124,7 @@ export default function ShopItemCard() {
                   width: "25vw",
                 }}
               >
-                <p>{item.description}</p>
+                <p style={{ whiteSpace: "pre-line" }}>{item.description}</p>
               </div>
             </div>
           </div>

@@ -104,7 +104,7 @@ export default function AddNewComment({ user }) {
               className="addNewPopup"
               style={{
                 height: "44px",
-                background: "#2c2c2e",
+                background: "#1c1c1e",
                 color: "#006699",
                 borderColor: "#dadada",
                 borderRadius: "5px",
@@ -190,7 +190,7 @@ export default function AddNewComment({ user }) {
           className="addNewPopup"
           style={{
             height: "44px",
-            background: "#2c2c2e",
+            background: "#1c1c1e",
             color: "#006699",
             borderColor: "#dadada",
             borderRadius: "5px",

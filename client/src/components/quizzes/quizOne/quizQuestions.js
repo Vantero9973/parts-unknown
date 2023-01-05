@@ -118,7 +118,7 @@ const quizQuestions = [
   {
     question: (
       <strong style={{ fontSize: "20px" }}>
-        If you had the whole day to yourself, you would roam...
+        What is your preferred mode of transportation?
       </strong>
     ),
     answers: [

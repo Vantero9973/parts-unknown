@@ -67,8 +67,8 @@ export default function PostPage({ user }) {
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
-                width: "50vw",
-                background: "#2c2c2e",
+                width: "75vw",
+                background: "#1c1c1e",
                 padding: "5vh",
                 gap: "5rem",
                 // marginTop: "10vh",
@@ -112,7 +112,9 @@ export default function PostPage({ user }) {
                   {post.title}
                 </h1>
                 <p style={{ fontSize: "14px", color: "gray" }}>{post.date}</p>
-                <p style={{ marginTop: "2vh" }}>{post.body}</p>
+                <p style={{ marginTop: "2vh", whiteSpace: "pre-line" }}>
+                  {post.body}
+                </p>
                 <AddNewComment user={user} />
               </div>
             </div>
@@ -133,8 +135,8 @@ export default function PostPage({ user }) {
                 style={{
                   display: "flex",
                   alignItems: "center",
-                  background: "#2c2c2e",
-                  width: "50vw",
+                  background: "#1c1c1e",
+                  width: "75vw",
                   borderTop: "1px solid #4c4c4e",
                 }}
               >
@@ -151,9 +153,13 @@ export default function PostPage({ user }) {
                   <img
                     src={comment.profile_pic}
                     alt=""
-                    style={{ height: "5vw", maxWidth: "5vw" }}
+                    style={{
+                      height: "5vw",
+                      maxWidth: "5vw",
+                      borderRadius: "50%",
+                    }}
                   />
-                  <h1 style={{ fontSize: "16px" }}>username</h1>
+                  <h1 style={{ fontSize: "16px" }}>{comment.username}</h1>
                 </div>
                 <div>
                   <div
@@ -167,7 +173,7 @@ export default function PostPage({ user }) {
                     <p style={{ fontSize: "14px", color: "gray" }}>
                       {comment.date}
                     </p>
-                    <p>{comment.body}</p>
+                    <p style={{ whiteSpace: "pre-line" }}>{comment.body}</p>
                     {/* <Button
                       variant="outlined"
                       onClick={() => handleDelete(comment.id)}
@@ -215,8 +221,8 @@ export default function PostPage({ user }) {
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
-                width: "50vw",
-                background: "#2c2c2e",
+                width: "75vw",
+                background: "#1c1c1e",
                 padding: "5vh",
                 gap: "5rem",
                 // marginTop: "10vh",
@@ -260,7 +266,9 @@ export default function PostPage({ user }) {
                   {post.title}
                 </h1>
                 <p style={{ fontSize: "14px", color: "gray" }}>{post.date}</p>
-                <p style={{ marginTop: "2vh" }}>{post.body}</p>
+                <p style={{ marginTop: "2vh", whiteSpace: "pre-line" }}>
+                  {post.body}
+                </p>
                 <AddNewComment user={user} />
               </div>
             </div>
@@ -281,8 +289,8 @@ export default function PostPage({ user }) {
                 style={{
                   display: "flex",
                   alignItems: "center",
-                  background: "#2c2c2e",
-                  width: "50vw",
+                  background: "#1c1c1e",
+                  width: "75vw",
                   borderTop: "1px solid #4c4c4e",
                 }}
               >
@@ -319,7 +327,7 @@ export default function PostPage({ user }) {
                     <p style={{ fontSize: "14px", color: "gray" }}>
                       {comment.date}
                     </p>
-                    <p>{comment.body}</p>
+                    <p style={{ whiteSpace: "pre-line" }}>{comment.body}</p>
                   </div>
                 </div>
               </div>

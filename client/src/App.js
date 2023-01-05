@@ -29,11 +29,12 @@ function App() {
   const [countries, setCountries] = useState([]);
   const [user, setUser] = useState(null);
   const [search, setSearch] = useState("");
+  const [count, setCount] = useState(0);
 
   const client = new QueryClient();
 
   useEffect(() => {
-    fetch("http://localhost:3000/me").then((r) => {
+    fetch("/me").then((r) => {
       if (r.ok) {
         r.json().then((user) => setUser(user));
       }
@@ -41,7 +42,7 @@ function App() {
   }, []);
 
   useEffect(() => {
-    fetch("http://localhost:3000/blogs")
+    fetch("/blogs")
       .then((res) => res.json())
       .then((data) => {
         setBlogs(data);
@@ -49,7 +50,7 @@ function App() {
   }, []);
 
   useEffect(() => {
-    fetch("http://localhost:3000/countries")
+    fetch("/countries")
       .then((res) => res.json())
       .then((data) => {
         setCountries(data);
@@ -76,6 +77,17 @@ function App() {
     country.name.toLowerCase().includes(search.toLowerCase())
   );
 
+  // useEffect(() => {
+  //   fetch("/hello", {
+  //     method: "GET",
+  //     headers: {
+  //       withCredentials: true,
+  //     },
+  //   })
+  //     .then((r) => r.json())
+  //     .then((data) => setCount(data.count));
+  // }, []);
+
   // if (isLoading) {
   //   return <h1>Loading...</h1>;
   // }
@@ -83,6 +95,9 @@ function App() {
   return (
     <QueryClientProvider client={client}>
       <CartProvider>
+        {/* <div className="App">
+          <h1>Page Count: {count}</h1>
+        </div> */}
         <div style={{ minHeight: "100vh", background: "#1C1C1E" }}>
           {/* <NavBar user={user} setUser={setUser} /> */}
           <NavbarComponent user={user} setUser={setUser} />

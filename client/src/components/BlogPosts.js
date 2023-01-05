@@ -15,7 +15,6 @@ AOS.init();
 export default function BlogPosts({ blogs }) {
   // const [button, setButton] = useState(<ThumbUpOffAltIcon />);
   const navigate = useNavigate();
-  // const { id } = useParams();
 
   // function handleClick() {
   //   setButton(<ThumbUpAltIcon />);
@@ -147,7 +146,7 @@ export default function BlogPosts({ blogs }) {
                       // onClick={handleClick}
                     >
                       {/* {button} */}
-                      <ThumbUpAltIcon />
+                      <ThumbUpOffAltIcon />
                       {blog.likes}
                     </div>
                   </Typography>

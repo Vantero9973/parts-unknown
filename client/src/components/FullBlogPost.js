@@ -149,7 +149,7 @@ export default function FullBlogPost({ user }) {
                     fontSize: "20px",
                   }}
                 >
-                  <p style={{ margin: "5vh" }}>{blog.body}</p>
+                  <p style={{ whiteSpace: "pre-line" }}>{blog.body}</p>
                 </div>
                 <Button
                   variant="outlined"
