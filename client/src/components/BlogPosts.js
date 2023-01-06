@@ -21,7 +21,7 @@ export default function BlogPosts({ blogs }) {
   // }
 
   // const { data: blogLikes, isLoading } = useQuery(["blog"], () => {
-  //   return Axios.get(`http://localhost:3000/blogs/${id}`).then(
+  //   return Axios.get(`/api/blogs/${id}`).then(
   //     (res) => res.data
   //   );
   // });

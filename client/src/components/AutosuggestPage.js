@@ -22,7 +22,7 @@ function AutosuggestPage() {
   const navigate = useNavigate();
 
   const { data: countries, isLoading } = useQuery(["country"], () => {
-    return Axios.get("http://localhost:3000/countries").then((res) => res.data);
+    return Axios.get("/api/countries").then((res) => res.data);
   });
 
   if (isLoading) {

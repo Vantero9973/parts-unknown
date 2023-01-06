@@ -13,7 +13,7 @@ export default function PostPage({ user }) {
   const navigate = useNavigate();
 
   const { data: posts, isLoading: postsLoading } = useQuery(["post"], () => {
-    return Axios.get(`http://localhost:3000/postpage/${id}`).then(
+    return Axios.get(`/api/postpage/${id}`).then(
       (res) => res.data
     );
   });
@@ -21,14 +21,14 @@ export default function PostPage({ user }) {
   const { data: comments, isLoading: commentsLoading } = useQuery(
     ["comment"],
     () => {
-      return Axios.get(`http://localhost:3000/forum_comments/${id}`).then(
+      return Axios.get(`/api/forum_comments/${id}`).then(
         (res) => res.data
       );
     }
   );
 
   function handleDelete(id) {
-    fetch(`http://localhost:3000/forum_comments/${id}`, {
+    fetch(`/api/forum_comments/${id}`, {
       method: "DELETE",
     }).then((r) => {
       if (r.ok) {

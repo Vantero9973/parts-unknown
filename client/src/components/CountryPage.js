@@ -16,7 +16,7 @@ export default function CountryPage() {
   const { data: destinations, isLoading: destinationsLoading } = useQuery(
     ["destination"],
     () => {
-      return Axios.get(`http://localhost:3000/destinations/${id}`).then(
+      return Axios.get(`/api/destinations/${id}`).then(
         (res) => res.data
       );
     }
@@ -25,7 +25,7 @@ export default function CountryPage() {
   const { data: coordinates, isLoading: coordinatesLoading } = useQuery(
     ["coordinate"],
     () => {
-      return Axios.get(`http://localhost:3000/destinations`).then(
+      return Axios.get(`/api/destinations`).then(
         (res) => res.data
       );
     }
@@ -34,7 +34,7 @@ export default function CountryPage() {
   const { data: countries, isLoading: countriesLoading } = useQuery(
     ["country"],
     () => {
-      return Axios.get(`http://localhost:3000/countries/${id}`).then(
+      return Axios.get(`/api/countries/${id}`).then(
         (res) => res.data
       );
     }

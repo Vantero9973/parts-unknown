@@ -3,10 +3,11 @@ import Popup from "reactjs-popup";
 import Login from "./Login";
 import SignUp from "./SignUp";
 import profPic from "../avatar_default.png";
+import { Link } from "react-router-dom";
 
 export default function NavBar({ user, setUser }) {
   function handleLogoutClick() {
-    fetch("http://localhost:3000/logout", { method: "DELETE" }).then((r) => {
+    fetch("/api/logout", { method: "DELETE" }).then((r) => {
       if (r.ok) {
         setUser(null);
       }
@@ -29,8 +30,8 @@ export default function NavBar({ user, setUser }) {
           }}
         >
           <div>
-            <a
-              href="/"
+            <Link
+              to="/"
               style={{
                 marginRight: "10vw",
                 fontSize: "24px",
@@ -43,45 +44,45 @@ export default function NavBar({ user, setUser }) {
                 style={{ height: "50px", width: "50px", padding: "5px" }}
               />
               Undefined
-            </a>
+            </Link>
           </div>
           <div style={{ display: "flex", alignItems: "center" }}>
             <ul className="menu menu-horizontal px-5">
               <li>
-                <a
-                  href="/destinations"
+                <Link
+                  to="/destinations"
                   style={{ fontSize: "16px" }}
                   className="btn btn-ghost normal-case"
                 >
                   Destinations
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="/stories"
+                <Link
+                  to="/stories"
                   style={{ fontSize: "16px" }}
                   className="btn btn-ghost normal-case"
                 >
                   Stories
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="/forum"
+                <Link
+                  to="/forum"
                   style={{ fontSize: "16px" }}
                   className="btn btn-ghost normal-case"
                 >
                   Forum
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="/shop"
+                <Link
+                  to="/shop"
                   style={{ fontSize: "16px" }}
                   className="btn btn-ghost normal-case"
                 >
                   Shop
-                </a>
+                </Link>
               </li>
             </ul>
             <div className="dropdown dropdown-end">
@@ -103,9 +104,9 @@ export default function NavBar({ user, setUser }) {
               </li> */}
                 <li>
                   <Popup trigger={<div>Login</div>} modal nested>
-                    <a>
+                    <div>
                       <Login user={user} setUser={setUser} />
-                    </a>
+                    </div>
                   </Popup>
                 </li>
                 <li>
@@ -135,8 +136,8 @@ export default function NavBar({ user, setUser }) {
           }}
         >
           <div>
-            <a
-              href="/"
+            <Link
+              to="/"
               style={{
                 marginRight: "10vw",
                 fontSize: "24px",
@@ -149,45 +150,45 @@ export default function NavBar({ user, setUser }) {
                 style={{ height: "50px", width: "50px", padding: "5px" }}
               />
               Undefined
-            </a>
+            </Link>
           </div>
           <div style={{ display: "flex", alignItems: "center" }}>
             <ul className="menu menu-horizontal px-5">
               <li>
-                <a
-                  href="/destinations"
+                <Link
+                  to="/destinations"
                   style={{ fontSize: "16px" }}
                   className="btn btn-ghost normal-case"
                 >
                   Destinations
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="/stories"
+                <Link
+                  to="/stories"
                   style={{ fontSize: "16px" }}
                   className="btn btn-ghost normal-case"
                 >
                   Stories
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="/forum"
+                <Link
+                  to="/forum"
                   style={{ fontSize: "16px" }}
                   className="btn btn-ghost normal-case"
                 >
                   Forum
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="/shop"
+                <Link
+                  to="/shop"
                   style={{ fontSize: "16px" }}
                   className="btn btn-ghost normal-case"
                 >
                   Shop
-                </a>
+                </Link>
               </li>
             </ul>
             <div className="dropdown dropdown-end">
@@ -213,7 +214,7 @@ export default function NavBar({ user, setUser }) {
                   <h1>Welcome, {user.first_name}!</h1>
                 </div>
                 <li>
-                  <a onClick={handleLogoutClick}>Logout</a>
+                  <div onClick={handleLogoutClick}>Logout</div>
                 </li>
               </ul>
             </div>

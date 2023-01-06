@@ -11,13 +11,13 @@ export default function FullBlogPost({ user }) {
   const navigate = useNavigate();
 
   const { data: blogs, isLoading: blogsLoading } = useQuery(["blog"], () => {
-    return Axios.get(`http://localhost:3000/blogs/${id}`).then(
+    return Axios.get(`/api/blogs/${id}`).then(
       (res) => res.data
     );
   });
 
   useEffect(() => {
-    fetch(`http://localhost:3000/blogs/${id}`)
+    fetch(`/api/blogs/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setDeleteBlogs(data);
@@ -25,7 +25,7 @@ export default function FullBlogPost({ user }) {
   }, [id]);
 
   function handleDelete(id) {
-    fetch(`http://localhost:3000/blogs/${id}`, {
+    fetch(`/api/blogs/${id}`, {
       method: "DELETE",
     }).then((r) => {
       if (r.ok) {

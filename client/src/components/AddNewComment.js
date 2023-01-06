@@ -12,7 +12,7 @@ export default function AddNewComment({ user }) {
   const today = moment();
 
   useEffect(() => {
-    fetch("http://localhost:3000/forum_comments")
+    fetch("/api/forum_comments")
       .then((r) => r.json())
       .then(setComments);
   }, []);
@@ -28,7 +28,7 @@ export default function AddNewComment({ user }) {
       user_id: parseInt(user.id),
       post_id: parseInt(id),
     };
-    fetch("http://localhost:3000/forum_comments", {
+    fetch("/api/forum_comments", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -54,7 +54,7 @@ export default function AddNewComment({ user }) {
   const { id } = useParams();
 
   useEffect(() => {
-    fetch(`http://localhost:3000/forum_comments/${id}`).then((r) => {
+    fetch(`/api/forum_comments/${id}`).then((r) => {
       if (r.ok) {
         r.json().then((comment) =>
           setComment({ data: comment, error: null, status: "resolved" })

@@ -7,7 +7,7 @@ export default function ForumSelector({ countries }) {
   const navigate = useNavigate();
 
   // useEffect(() => {
-  //   fetch(`http://localhost:3000/forums/${id}`)
+  //   fetch(`/api/forums/${id}`)
   //     .then((res) => res.json())
   //     .then((data) => {
   //       setForums(data);

@@ -34,7 +34,7 @@ function App() {
   const client = new QueryClient();
 
   useEffect(() => {
-    fetch("/me").then((r) => {
+    fetch("/api/me").then((r) => {
       if (r.ok) {
         r.json().then((user) => setUser(user));
       }
@@ -42,7 +42,7 @@ function App() {
   }, []);
 
   useEffect(() => {
-    fetch("/blogs")
+    fetch("/api/blogs")
       .then((res) => res.json())
       .then((data) => {
         setBlogs(data);
@@ -50,7 +50,7 @@ function App() {
   }, []);
 
   useEffect(() => {
-    fetch("/countries")
+    fetch("/api/countries")
       .then((res) => res.json())
       .then((data) => {
         setCountries(data);
@@ -58,11 +58,11 @@ function App() {
   }, []);
 
   // const { data, isLoading } = useQuery(["country"], () => {
-  //   return Axios.get("http://localhost:3000/countries").then((res) => res.data);
+  //   return Axios.get("/api/countries").then((res) => res.data);
   // });
 
   // function getBlogs() {
-  //   return Axios.get("http://localhost:3000/blogs").then((res) => res.data);
+  //   return Axios.get("/api/blogs").then((res) => res.data);
   // }
 
   // const { data, isLoading: blogsLoading } = useQuery(["blogs"], () => getBlogs());
@@ -78,7 +78,7 @@ function App() {
   );
 
   // useEffect(() => {
-  //   fetch("/hello", {
+  //   fetch("/api/hello", {
   //     method: "GET",
   //     headers: {
   //       withCredentials: true,

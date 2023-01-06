@@ -14,7 +14,7 @@ export default function AddNewPost({ user }) {
   const today = moment();
 
   useEffect(() => {
-    fetch("http://localhost:3000/posts")
+    fetch("/api/posts")
       .then((r) => r.json())
       .then(setPosts);
   }, []);
@@ -32,7 +32,7 @@ export default function AddNewPost({ user }) {
       user_id: parseInt(user.id),
       forum_id: parseInt(id),
     };
-    fetch("http://localhost:3000/posts", {
+    fetch("/api/posts", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -58,7 +58,7 @@ export default function AddNewPost({ user }) {
   const { id } = useParams();
 
   useEffect(() => {
-    fetch(`http://localhost:3000/posts/${id}`).then((r) => {
+    fetch(`/api/posts/${id}`).then((r) => {
       if (r.ok) {
         r.json().then((post) =>
           setPost({ data: post, error: null, status: "resolved" })

@@ -10,13 +10,13 @@ export default function ForumPage({ user }) {
   const navigate = useNavigate();
 
   const { data: forums, isLoading: forumsLoading } = useQuery(["forum"], () => {
-    return Axios.get(`http://localhost:3000/forums/${id}`).then(
+    return Axios.get(`/api/forums/${id}`).then(
       (res) => res.data
     );
   });
 
   const { data: posts, isLoading: postsLoading } = useQuery(["post"], () => {
-    return Axios.get(`http://localhost:3000/posts/${id}`).then(
+    return Axios.get(`/api/posts/${id}`).then(
       (res) => res.data
     );
   });
@@ -24,12 +24,12 @@ export default function ForumPage({ user }) {
   // const { data: postsLink, isLoading: postsLinkLoading } = useQuery(
   //   ["postLink"],
   //   () => {
-  //     return Axios.get("http://localhost:3000/posts").then((res) => res.data);
+  //     return Axios.get("/api/posts").then((res) => res.data);
   //   }
   // );
 
   function handleDelete(id) {
-    fetch(`http://localhost:3000/posts/${id}`, {
+    fetch(`/api/posts/${id}`, {
       method: "DELETE",
     }).then((r) => {
       if (r.ok) {

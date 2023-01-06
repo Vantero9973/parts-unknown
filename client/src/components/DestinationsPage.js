@@ -22,7 +22,7 @@ export default function DestinationsPage() {
   const { data: countries, isLoading: countriesLoading } = useQuery(
     ["country"],
     () => {
-      return Axios.get("http://localhost:3000/countries").then(
+      return Axios.get("/api/countries").then(
         (res) => res.data
       );
     }
@@ -31,7 +31,7 @@ export default function DestinationsPage() {
   const { data: continents, isLoading: continentsLoading } = useQuery(
     ["continent"],
     () => {
-      return Axios.get("http://localhost:3000/continents").then(
+      return Axios.get("/api/continents").then(
         (res) => res.data
       );
     }

@@ -7,9 +7,8 @@ import Popup from "reactjs-popup";
 import Login from "./Login";
 import SignUp from "./SignUp";
 import profPic from "../avatar_default.png";
-import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
+import { Link } from "react-router-dom";
 
 function NavbarComponent({ user, setUser }) {
   const cart = useContext(CartContext);
@@ -19,7 +18,7 @@ function NavbarComponent({ user, setUser }) {
   const handleShow = () => setShow(true);
 
   function handleLogoutClick() {
-    fetch("/logout", { method: "DELETE" }).then((r) => {
+    fetch("/api/logout", { method: "DELETE" }).then((r) => {
       if (r.ok) {
         setUser(null);
       }
@@ -65,8 +64,8 @@ function NavbarComponent({ user, setUser }) {
             borderBottom: "1px solid #3c3c3e",
           }}
         >
-          <a
-            href="/"
+          <Link
+            to="/"
             style={{
               marginRight: "10vw",
               fontSize: "24px",
@@ -86,7 +85,7 @@ function NavbarComponent({ user, setUser }) {
               }}
             />
             Undefined
-          </a>
+          </Link>
           {/* <Navbar.Toggle aria-controls="basic-navbar-nav" /> */}
           <div
             style={{
@@ -96,8 +95,8 @@ function NavbarComponent({ user, setUser }) {
               gap: "1rem",
             }}
           >
-            <Nav.Link
-              href="/destinations"
+            <Link
+              to="/destinations"
               style={{
                 color: "#dadada",
                 padding: "1vh",
@@ -105,25 +104,25 @@ function NavbarComponent({ user, setUser }) {
               }}
             >
               Destinations
-            </Nav.Link>
-            <Nav.Link
-              href="/stories"
+            </Link>
+            <Link
+              to="/stories"
               style={{ color: "#dadada", padding: "1vh", fontSize: "18px" }}
             >
               Stories
-            </Nav.Link>
-            <Nav.Link
-              href="/forum"
+            </Link>
+            <Link
+              to="/forum"
               style={{ color: "#dadada", padding: "1vh", fontSize: "18px" }}
             >
               Forum
-            </Nav.Link>
-            <Nav.Link
-              href="/store"
+            </Link>
+            <Link
+              to="/store"
               style={{ color: "#dadada", padding: "1vh", fontSize: "18px" }}
             >
               Store
-            </Nav.Link>
+            </Link>
             <NavDropdown
               title={
                 <img
@@ -140,9 +139,9 @@ function NavbarComponent({ user, setUser }) {
             >
               <NavDropdown.Item style={{ color: "#1c1c1e" }}>
                 <Popup trigger={<div>Login</div>} modal nested>
-                  <a>
+                  <div>
                     <Login user={user} setUser={setUser} />
-                  </a>
+                  </div>
                 </Popup>
               </NavDropdown.Item>
               <NavDropdown.Item style={{ color: "#1c1c1e" }}>
@@ -207,8 +206,8 @@ function NavbarComponent({ user, setUser }) {
             borderBottom: "1px solid #3c3c3e",
           }}
         >
-          <a
-            href="/"
+          <Link
+            to="/"
             style={{
               marginRight: "10vw",
               fontSize: "24px",
@@ -228,7 +227,7 @@ function NavbarComponent({ user, setUser }) {
               }}
             />
             Undefined
-          </a>
+          </Link>
           {/* <Navbar.Toggle aria-controls="basic-navbar-nav" /> */}
           <div
             style={{
@@ -238,8 +237,8 @@ function NavbarComponent({ user, setUser }) {
               gap: "1rem",
             }}
           >
-            <Nav.Link
-              href="/destinations"
+            <Link
+              to="/destinations"
               style={{
                 color: "#dadada",
                 padding: "1vh",
@@ -247,25 +246,25 @@ function NavbarComponent({ user, setUser }) {
               }}
             >
               Destinations
-            </Nav.Link>
-            <Nav.Link
-              href="/stories"
+            </Link>
+            <Link
+              to="/stories"
               style={{ color: "#dadada", padding: "1vh", fontSize: "18px" }}
             >
               Stories
-            </Nav.Link>
-            <Nav.Link
-              href="/forum"
+            </Link>
+            <Link
+              to="/forum"
               style={{ color: "#dadada", padding: "1vh", fontSize: "18px" }}
             >
               Forum
-            </Nav.Link>
-            <Nav.Link
-              href="/store"
+            </Link>
+            <Link
+              to="/store"
               style={{ color: "#dadada", padding: "1vh", fontSize: "18px" }}
             >
               Store
-            </Nav.Link>
+            </Link>
             <NavDropdown
               title={
                 <img
@@ -327,155 +326,10 @@ function NavbarComponent({ user, setUser }) {
           </Modal.Body>
         </Modal>
       </>
-      // <>
-      //   <Navbar bg="#1c1c1e" expand="lg">
-      //     <Navbar.Brand href="/">
-      //       <div>
-      //         <a
-      //           href="/"
-      //           style={{
-      //             marginRight: "10vw",
-      //             fontSize: "24px",
-      //             fontWeight: "bold",
-      //             color: "#dadada",
-      //           }}
-      //           className="btn btn-ghost normal-case text-xl"
-      //         >
-      //           Parts
-      //           <PublicIcon
-      //             style={{ height: "50px", width: "50px", padding: "5px" }}
-      //           />
-      //           Undefined
-      //         </a>
-      //       </div>
-      //     </Navbar.Brand>
-      //     {/* <Navbar.Toggle aria-controls="basic-navbar-nav" /> */}
-      //     <Navbar.Collapse id="basic-navbar-nav">
-      //       <Nav className="me-auto">
-      //         <Nav.Link href="/destinations" style={{ color: "#dadada" }}>
-      //           Destinations
-      //         </Nav.Link>
-      //         <Nav.Link href="/stories" style={{ color: "#dadada" }}>
-      //           Stories
-      //         </Nav.Link>
-      //         <Nav.Link href="/forum" style={{ color: "#dadada" }}>
-      //           Forum
-      //         </Nav.Link>
-      //         <Nav.Link href="/store" style={{ color: "#dadada" }}>
-      //           Store
-      //         </Nav.Link>
-      //         <NavDropdown
-      //           title={
-      //             <img
-      //               src={user.image}
-      //               alt=""
-      //               style={{
-      //                 borderRadius: "50%",
-      //                 maxWidth: "50px",
-      //                 maxHeight: "50px",
-      //               }}
-      //             />
-      //           }
-      //           id="basic-nav-dropdown"
-      //         >
-      //           <NavDropdown.Item>
-      //             <h1 style={{ fontSize: "20px", fontWeight: "bold" }}>
-      //               Welcome, {user.first_name}!
-      //             </h1>
-      //           </NavDropdown.Item>
-      //           <NavDropdown.Item>
-      //             <div onClick={handleLogoutClick}>Logout</div>
-      //           </NavDropdown.Item>
-      //         </NavDropdown>
-      //       </Nav>
-      //     </Navbar.Collapse>
-      //     <Navbar.Toggle />
-      //     <Navbar.Collapse className="justify-content-end">
-      //       <Button onClick={handleShow}>Cart ({productsCount} Items)</Button>
-      //     </Navbar.Collapse>
-      //   </Navbar>
-      //   <Modal show={show} onHide={handleClose}>
-      //     <Modal.Header closeButton>
-      //       <Modal.Title>Shopping Cart</Modal.Title>
-      //     </Modal.Header>
-      //     <Modal.Body>
-      //       {productsCount > 0 ? (
-      //         <>
-      //           <p>Items in your cart:</p>
-      //           {cart.items.map((currentProduct, idx) => (
-      //             <CartProduct
-      //               key={idx}
-      //               id={currentProduct.id}
-      //               quantity={currentProduct.quantity}
-      //             ></CartProduct>
-      //           ))}
-
-      //           <h1>Total: {cart.getTotalCost().toFixed(2)}</h1>
-
-      //           <Button variant="success" onClick={checkout}>
-      //             Purchase items!
-      //           </Button>
-      //         </>
-      //       ) : (
-      //         <h1>There are no items in your cart!</h1>
-      //       )}
-      //     </Modal.Body>
-      //   </Modal>
-      // </>
     );
   }
 }
 
 export default NavbarComponent;
 
-{
-  /* <div style={{ display: "flex", alignItems: "center" }}>
-<div className="dropdown dropdown-end">
-  <label tabIndex={0} className="btn btn-ghost btn-circle">
-    <div>
-      <img
-        src={profPic}
-        alt=""
-        style={{ maxHeight: "50px", maxWidth: "50px" }}
-      />
-    </div>
-  </label>
-</div>
-</div> */
-}
 
-{
-  /* <Navbar expand="sm">
-        <Navbar.Toggle />
-        <Navbar.Collapse className="justify-content-end">
-          <Button onClick={handleShow}>Cart ({productsCount} Items)</Button>
-        </Navbar.Collapse>
-      </Navbar>
-      <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>Shopping Cart</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          {productsCount > 0 ? (
-            <>
-              <p>Items in your cart:</p>
-              {cart.items.map((currentProduct, idx) => (
-                <CartProduct
-                  key={idx}
-                  id={currentProduct.id}
-                  quantity={currentProduct.quantity}
-                ></CartProduct>
-              ))}
-
-              <h1>Total: {cart.getTotalCost().toFixed(2)}</h1>
-
-              <Button variant="success" onClick={checkout}>
-                Purchase items!
-              </Button>
-            </>
-          ) : (
-            <h1>There are no items in your cart!</h1>
-          )}
-        </Modal.Body>
-      </Modal> */
-}

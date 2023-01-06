@@ -31,7 +31,7 @@ export default function AddNewBlog({ user }) {
   const today = moment();
 
   useEffect(() => {
-    fetch("http://localhost:3000/blogs")
+    fetch("/api/blogs")
       .then((r) => r.json())
       .then(setBlogs);
   }, []);
@@ -52,7 +52,7 @@ export default function AddNewBlog({ user }) {
       profile_pic: `${user.image}`,
       user_id: parseInt(user.id),
     };
-    fetch("http://localhost:3000/blogs", {
+    fetch("/api/blogs", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -78,7 +78,7 @@ export default function AddNewBlog({ user }) {
   const { id } = useParams();
 
   useEffect(() => {
-    fetch(`http://localhost:3000/blogs/${id}`).then((r) => {
+    fetch(`/api/blogs/${id}`).then((r) => {
       if (r.ok) {
         r.json().then((blog) =>
           setBlog({ data: blog, error: null, status: "resolved" })
