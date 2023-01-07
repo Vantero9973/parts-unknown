@@ -45,7 +45,7 @@ export default function SignUp({ setUser }) {
       style={{
         display: "flex",
         alignItems: "center",
-        height: "50vh",
+        height: "60vh",
         width: "30vw",
         padding: "5vw",
         background: "#1C1C1E",

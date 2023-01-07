@@ -171,14 +171,13 @@ export default function CountryPage() {
                     {destination.name}
                   </Typography>
                   <Typography
+                    // class="overflow-scroll"
                     variant="subtitle1"
                     color="text.secondary"
                     component="div"
+                    // style={{ maxHeight: "12vh", fontSize: "16px" }}
                   >
                     {destination.description}
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
                   </Typography>
                 </CardContent>
               </Box>

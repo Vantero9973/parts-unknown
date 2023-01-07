@@ -160,11 +160,11 @@ export default function AddNewPost({ user }) {
                   value={title}
                   onChange={(e) => setTitle(e.target.value)}
                 />
-                <input
+                <textarea
                   class="overflow-scroll"
                   style={{
                     width: "40vw",
-                    height: "20vh",
+                    height: "40vh",
                     fontSize: "24px",
                     display: "flex",
                     alignItems: "flex-start",

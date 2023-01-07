@@ -138,11 +138,11 @@ export default function AddNewComment({ user }) {
               }}
             >
               <form onSubmit={handleSubmit} style={{ marginLeft: "5vw" }}>
-                <input
+                <textarea
                   class="overflow-scroll"
                   style={{
                     width: "40vw",
-                    height: "20vh",
+                    height: "50vh",
                     fontSize: "24px",
                     display: "flex",
                     alignItems: "flex-start",
