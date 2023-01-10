@@ -155,7 +155,12 @@ function NavbarComponent({ user, setUser }) {
           <Navbar.Toggle />
           <div className="justify-content-end" style={{ width: "fit-content" }}>
             <Button
-              style={{ background: "#006699", border: "none" }}
+              style={{
+                background: "#2c2c2e",
+                color: "#dadada",
+                fontWeight: "bold",
+                border: "1px solid #dadada",
+              }}
               onClick={handleShow}
             >
               Cart ({productsCount} Items)
@@ -295,8 +300,23 @@ function NavbarComponent({ user, setUser }) {
             </NavDropdown>
           </div>
           <Navbar.Toggle />
-          <div className="justify-content-end" style={{ width: "fit-content" }}>
-            <Button onClick={handleShow}>Cart ({productsCount} Items)</Button>
+          <div
+            className="justify-content-end"
+            style={{
+              width: "fit-content",
+            }}
+          >
+            <Button
+              onClick={handleShow}
+              style={{
+                background: "#2c2c2e",
+                color: "#dadada",
+                fontWeight: "bold",
+                border: "1px solid #dadada",
+              }}
+            >
+              Cart ({productsCount} Items)
+            </Button>
           </div>
         </nav>
         <Modal show={show} onHide={handleClose}>
