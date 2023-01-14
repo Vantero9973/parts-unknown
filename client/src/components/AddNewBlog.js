@@ -10,7 +10,6 @@ export default function AddNewBlog({ user }) {
   const [body, setBody] = useState("");
   const [description, setDescription] = useState("");
   const [image, setImage] = useState("");
-  const [read_time, setReadTime] = useState("");
   const [category_one, setCategoryOne] = useState("");
   const [category_two, setCategoryTwo] = useState("");
   const [formErrors, setFormErrors] = useState([]);
@@ -45,7 +44,7 @@ export default function AddNewBlog({ user }) {
       image: image,
       date: today.format("MMM D, YYYY"),
       likes: 0,
-      read_time: read_time,
+      read_time: "5 min read",
       category_one: category_one,
       category_two: category_two,
       username: `${user.first_name} ${user.last_name}`,
@@ -133,7 +132,7 @@ export default function AddNewBlog({ user }) {
                 height: "44px",
                 fontWeight: "bold",
                 background: "#2c2c2e",
-                color: "#a6adba",
+                color: "#dadada",
                 borderColor: "#dadada",
                 borderRadius: "5px",
               }}
@@ -149,7 +148,7 @@ export default function AddNewBlog({ user }) {
               background: "#1C1C1E",
               display: "flex",
               width: "50vw",
-              height: "80vh",
+              height: "90vh",
               borderRadius: "50px",
               border: "1px solid #dadada",
             }}
@@ -180,10 +179,11 @@ export default function AddNewBlog({ user }) {
                   value={title}
                   onChange={(e) => setTitle(e.target.value)}
                 />
-                <input
+                <textarea
+                  class="overflow-scroll"
                   style={{
                     width: "40vw",
-                    height: "5vh",
+                    height: "40vh",
                     fontSize: "24px",
                     display: "flex",
                     marginBottom: "10px",
@@ -224,21 +224,6 @@ export default function AddNewBlog({ user }) {
                   placeholder="Image URL"
                   value={image}
                   onChange={(e) => setImage(e.target.value)}
-                />
-                <input
-                  style={{
-                    width: "40vw",
-                    height: "5vh",
-                    fontSize: "24px",
-                    display: "flex",
-                    marginBottom: "10px",
-                    padding: "10px",
-                  }}
-                  type="text"
-                  name="read_time"
-                  placeholder="Read Time"
-                  value={read_time}
-                  onChange={(e) => setReadTime(e.target.value)}
                 />
                 <input
                   style={{
@@ -308,7 +293,7 @@ export default function AddNewBlog({ user }) {
             height: "44px",
             fontWeight: "bold",
             background: "#2c2c2e",
-            color: "#a6adba",
+            color: "#dadada",
             borderColor: "#dadada",
             borderRadius: "5px",
           }}

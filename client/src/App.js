@@ -132,7 +132,7 @@ function App() {
             <Route path="/blogs/:id" element={<FullBlogPost user={user} />} />
             <Route path="/continents/:id" element={<ContinentsShopPage />} />
             <Route path="/shop/:id" element={<ShopItemCard />} />
-            <Route path="/store" element={<Store />} />
+            <Route path="/store" element={<Store user={user} />} />
             <Route path="success" element={<Success />} />
             <Route path="cancel" element={<Cancel />} />
           </Routes>

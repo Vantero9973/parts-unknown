@@ -147,9 +147,12 @@ export default function FullBlogPost({ user }) {
                     paddingLeft: "20vw",
                     paddingRight: "20vw",
                     fontSize: "20px",
+                    width: "100vw",
                   }}
                 >
-                  <p style={{ whiteSpace: "pre-line" }}>{blog.body}</p>
+                  <p style={{ whiteSpace: "pre-line", wordWrap: "break-word" }}>
+                    {blog.body}
+                  </p>
                 </div>
                 <Button
                   variant="outlined"
@@ -236,7 +239,7 @@ export default function FullBlogPost({ user }) {
                       >
                         {blog.username}
                       </h1>
-                      <hr class="solid"></hr>
+                      <hr class="solid" style={{ margin: "2px" }}></hr>
                       <h1
                         style={{
                           fontSize: "16px",
@@ -274,7 +277,15 @@ export default function FullBlogPost({ user }) {
                     fontSize: "20px",
                   }}
                 >
-                  <p style={{ margin: "5vh" }}>{blog.body}</p>
+                  <p
+                    style={{
+                      margin: "5vh",
+                      whiteSpace: "pre-line",
+                      wordWrap: "break-word",
+                    }}
+                  >
+                    {blog.body}
+                  </p>
                 </div>
               </div>
             );
@@ -383,7 +394,15 @@ export default function FullBlogPost({ user }) {
                   fontSize: "20px",
                 }}
               >
-                <p style={{ margin: "5vh" }}>{blog.body}</p>
+                <p
+                  style={{
+                    margin: "5vh",
+                    whiteSpace: "pre-line",
+                    wordWrap: "break-word",
+                  }}
+                >
+                  {blog.body}
+                </p>
               </div>
             </div>
           );

@@ -100,6 +100,7 @@ export default function PostPage({ user }) {
                   display: "flex",
                   flexDirection: "column",
                   justifyContent: "center",
+                  width: "60vw",
                 }}
               >
                 <h1
@@ -112,7 +113,13 @@ export default function PostPage({ user }) {
                   {post.title}
                 </h1>
                 <p style={{ fontSize: "14px", color: "gray" }}>{post.date}</p>
-                <p style={{ marginTop: "2vh", whiteSpace: "pre-line" }}>
+                <p
+                  style={{
+                    marginTop: "2vh",
+                    whiteSpace: "pre-line",
+                    wordWrap: "break-word",
+                  }}
+                >
                   {post.body}
                 </p>
                 <AddNewComment user={user} />
@@ -161,19 +168,32 @@ export default function PostPage({ user }) {
                   />
                   <h1 style={{ fontSize: "16px" }}>{comment.username}</h1>
                 </div>
-                <div>
+                <div
+                  style={{
+                    display: "flex",
+                  }}
+                >
                   <div
                     style={{
                       padding: "5vh",
                       display: "flex",
                       flexDirection: "column",
                       gap: "1vw",
+                      width: "60vw",
                     }}
                   >
                     <p style={{ fontSize: "14px", color: "gray" }}>
                       {comment.date}
                     </p>
-                    <p style={{ whiteSpace: "pre-line" }}>{comment.body}</p>
+                    <p
+                      style={{
+                        whiteSpace: "pre-line",
+                        flexWrap: "wrap",
+                        wordWrap: "break-word",
+                      }}
+                    >
+                      {comment.body}
+                    </p>
                     {/* <Button
                       variant="outlined"
                       onClick={() => handleDelete(comment.id)}
@@ -189,6 +209,7 @@ export default function PostPage({ user }) {
                         alignItems: "center",
                         justifyContent: "center",
                         gap: "1vh",
+                        width: "fit-content",
                       }}
                     >
                       Delete <DeleteIcon style={{ marginBottom: "2px" }} />
@@ -254,6 +275,7 @@ export default function PostPage({ user }) {
                   display: "flex",
                   flexDirection: "column",
                   justifyContent: "center",
+                  width: "60vw",
                 }}
               >
                 <h1
@@ -266,7 +288,13 @@ export default function PostPage({ user }) {
                   {post.title}
                 </h1>
                 <p style={{ fontSize: "14px", color: "gray" }}>{post.date}</p>
-                <p style={{ marginTop: "2vh", whiteSpace: "pre-line" }}>
+                <p
+                  style={{
+                    marginTop: "2vh",
+                    whiteSpace: "pre-line",
+                    wordWrap: "break-word",
+                  }}
+                >
                   {post.body}
                 </p>
                 <AddNewComment user={user} />
@@ -322,12 +350,17 @@ export default function PostPage({ user }) {
                       display: "flex",
                       flexDirection: "column",
                       gap: "1vw",
+                      width: "60vw",
                     }}
                   >
                     <p style={{ fontSize: "14px", color: "gray" }}>
                       {comment.date}
                     </p>
-                    <p style={{ whiteSpace: "pre-line" }}>{comment.body}</p>
+                    <p
+                      style={{ whiteSpace: "pre-line", wordWrap: "break-word" }}
+                    >
+                      {comment.body}
+                    </p>
                   </div>
                 </div>
               </div>
