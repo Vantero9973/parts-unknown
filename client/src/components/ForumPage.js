@@ -1,11 +1,9 @@
 import { useQuery } from "@tanstack/react-query";
 import Axios from "axios";
-import { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import AddNewPost from "./AddNewPost";
 
 export default function ForumPage({ user }) {
-  const [deletePosts, setDeletePosts] = useState();
   const { id } = useParams();
   const navigate = useNavigate();
 
@@ -20,27 +18,6 @@ export default function ForumPage({ user }) {
       (res) => res.data
     );
   });
-
-  // const { data: postsLink, isLoading: postsLinkLoading } = useQuery(
-  //   ["postLink"],
-  //   () => {
-  //     return Axios.get("/api/posts").then((res) => res.data);
-  //   }
-  // );
-
-  function handleDelete(id) {
-    fetch(`/api/posts/${id}`, {
-      method: "DELETE",
-    }).then((r) => {
-      if (r.ok) {
-        setDeletePosts((deletePosts) =>
-          deletePosts.filter((deletePost) => deletePost.id !== id)
-        );
-      }
-    });
-    navigate("/stories");
-    window.location.reload(true);
-  }
 
   if (forumsLoading || postsLoading) {
     return (

@@ -5,17 +5,9 @@ import Button from "@mui/material/Button";
 import moment from "moment";
 
 export default function AddNewComment({ user }) {
-  const [comments, setComments] = useState([]);
   const [body, setBody] = useState("");
-  const [formErrors, setFormErrors] = useState([]);
 
   const today = moment();
-
-  useEffect(() => {
-    fetch("/api/forum_comments")
-      .then((r) => r.json())
-      .then(setComments);
-  }, []);
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -38,10 +30,7 @@ export default function AddNewComment({ user }) {
       if (r.ok) {
         r.json().then((newComments) => {
           handleAddComment(newComments);
-          setFormErrors([]);
         });
-      } else {
-        r.json().then((err) => setFormErrors(err.errors));
       }
     });
   }

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Button from "@mui/material/Button";
-import defaultProfilePic from "../avatar_default.png";
 
 export default function SignUp({ setUser }) {
   const [first_name, setFirstName] = useState("");

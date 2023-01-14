@@ -48,5 +48,6 @@ COPY --from=build /build/build/ public/
 RUN rails db:migrate db:seed
 
 COPY entrypoint.sh .
+RUN chmod +x entrypoint.sh
 
 ENTRYPOINT [ "./entrypoint.sh" ]

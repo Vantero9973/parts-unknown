@@ -1,7 +1,6 @@
 import "./App.css";
 import { useState, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
-// import NavBar from "./components/NavBar.js";
 import LandingPage from "./components/LandingPage";
 import DestinationsPage from "./components/DestinationsPage";
 import BlogPage from "./components/BlogPage";
@@ -18,18 +17,14 @@ import Store from "./components/Store";
 import Success from "./components/Success";
 import Cancel from "./components/Cancel";
 import NavbarComponent from "./components/NavbarComponent";
-import { Container } from "react-bootstrap";
 import CartProvider from "./components/CartContext";
 import "bootstrap/dist/css/bootstrap.min.css";
-// import { useQuery } from "@tanstack/react-query";
-// import Axios from "axios";
 
 function App() {
   const [blogs, setBlogs] = useState([]);
   const [countries, setCountries] = useState([]);
   const [user, setUser] = useState(null);
   const [search, setSearch] = useState("");
-  const [count, setCount] = useState(0);
 
   const client = new QueryClient();
 

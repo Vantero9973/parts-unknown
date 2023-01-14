@@ -5,19 +5,11 @@ import Button from "@mui/material/Button";
 import moment from "moment";
 
 export default function AddNewPost({ user }) {
-  const [posts, setPosts] = useState([]);
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
   const [topic, setTopic] = useState("");
-  const [formErrors, setFormErrors] = useState([]);
 
   const today = moment();
-
-  useEffect(() => {
-    fetch("/api/posts")
-      .then((r) => r.json())
-      .then(setPosts);
-  }, []);
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -42,10 +34,7 @@ export default function AddNewPost({ user }) {
       if (r.ok) {
         r.json().then((newPosts) => {
           handleAddPost(newPosts);
-          setFormErrors([]);
         });
-      } else {
-        r.json().then((err) => setFormErrors(err.errors));
       }
     });
   }
