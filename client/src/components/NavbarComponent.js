@@ -9,6 +9,7 @@ import SignUp from "./SignUp";
 import profPic from "../avatar_default.png";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { Link } from "react-router-dom";
+import { stripeUrl } from '../config'
 
 function NavbarComponent({ user, setUser }) {
   const cart = useContext(CartContext);
@@ -26,7 +27,7 @@ function NavbarComponent({ user, setUser }) {
   }
 
   const checkout = async () => {
-    await fetch("http://localhost:6900/checkout", {
+    await fetch(`${stripeUrl}/checkout`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
