@@ -1,39 +1,18 @@
 import { useState, useEffect } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import Popup from "reactjs-popup";
 import Button from "@mui/material/Button";
 import moment from "moment";
 
 export default function AddNewBlog({ user }) {
-  const [blogs, setBlogs] = useState([]);
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
   const [description, setDescription] = useState("");
   const [image, setImage] = useState("");
   const [category_one, setCategoryOne] = useState("");
   const [category_two, setCategoryTwo] = useState("");
-  const [formErrors, setFormErrors] = useState([]);
-  const navigate = useNavigate();
-
-  console.log(user);
-  // function getCurrentDate(separator = "") {
-  //   let newDate = new Date();
-  //   let date = newDate.getDate();
-  //   let month = newDate.getMonth() + 1;
-  //   let year = newDate.getFullYear();
-
-  //   return `${year}${separator}${
-  //     month < 10 ? `0${month}` : `${month}`
-  //   }${separator}${date}`;
-  // }
 
   const today = moment();
-
-  useEffect(() => {
-    fetch("http://localhost:3000/blogs")
-      .then((r) => r.json())
-      .then(setBlogs);
-  }, []);
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -51,7 +30,7 @@ export default function AddNewBlog({ user }) {
       profile_pic: `${user.image}`,
       user_id: parseInt(user.id),
     };
-    fetch("http://localhost:3000/blogs", {
+    fetch("/api/blogs", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -61,10 +40,7 @@ export default function AddNewBlog({ user }) {
       if (r.ok) {
         r.json().then((newBlogs) => {
           handleAddBlog(newBlogs);
-          setFormErrors([]);
         });
-      } else {
-        r.json().then((err) => setFormErrors(err.errors));
       }
     });
   }
@@ -77,7 +53,7 @@ export default function AddNewBlog({ user }) {
   const { id } = useParams();
 
   useEffect(() => {
-    fetch(`http://localhost:3000/blogs/${id}`).then((r) => {
+    fetch(`/api/blogs/${id}`).then((r) => {
       if (r.ok) {
         r.json().then((blog) =>
           setBlog({ data: blog, error: null, status: "resolved" })

@@ -11,8 +11,8 @@ import Select from "@mui/material/Select";
 export default function DestinationsPage() {
   const [filteredContinent, setFilteredContinent] = useState([]);
   const [filteredCoordinates, setFilteredCoordinates] = useState({
-    lat: "40",
-    lng: "-100",
+    lat: 40,
+    lng: -100,
     zoom: 4,
   });
   const [continent, setContinent] = useState("");
@@ -22,7 +22,7 @@ export default function DestinationsPage() {
   const { data: countries, isLoading: countriesLoading } = useQuery(
     ["country"],
     () => {
-      return Axios.get("http://localhost:3000/countries").then(
+      return Axios.get("/api/countries").then(
         (res) => res.data
       );
     }
@@ -31,7 +31,7 @@ export default function DestinationsPage() {
   const { data: continents, isLoading: continentsLoading } = useQuery(
     ["continent"],
     () => {
-      return Axios.get("http://localhost:3000/continents").then(
+      return Axios.get("/api/continents").then(
         (res) => res.data
       );
     }
@@ -112,6 +112,7 @@ export default function DestinationsPage() {
               >
                 {continents?.map((continent) => (
                   <MenuItem
+                    key={continent.id}
                     value={continent.name}
                     style={{
                       color: "#1c1c1e",
@@ -125,7 +126,7 @@ export default function DestinationsPage() {
             </FormControl>
           </div>
           <div
-            class="overflow-scroll"
+            className="overflow-scroll"
             style={{
               display: "flex",
               flexDirection: "column",
@@ -141,6 +142,7 @@ export default function DestinationsPage() {
               filteredContinent.map((country) => {
                 return (
                   <div
+                    key={country.id}
                     style={{
                       display: "flex",
                       justifyContent: "center",

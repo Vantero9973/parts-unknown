@@ -7,7 +7,7 @@ export default function ShopItemCard() {
   const { id } = useParams();
 
   const { data: items, isLoading: itemsLoading } = useQuery(["item"], () => {
-    return Axios.get(`http://localhost:3000/shop_items/${id}`).then(
+    return Axios.get(`/api/shop_items/${id}`).then(
       (res) => res.data
     );
   });

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Button from "@mui/material/Button";
-import defaultProfilePic from "../avatar_default.png";
 
 export default function SignUp({ setUser }) {
   const [first_name, setFirstName] = useState("");
@@ -12,7 +11,7 @@ export default function SignUp({ setUser }) {
 
   function handleSubmit(e) {
     e.preventDefault();
-    fetch("/signup", {
+    fetch("/api/signup", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

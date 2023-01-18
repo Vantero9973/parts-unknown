@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import Axios from "axios";
@@ -10,22 +9,21 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 
 export default function CountryPage() {
-  const [markerCoordinates, setMarkerCoordinates] = useState([]);
   const { id } = useParams();
 
   const { data: destinations, isLoading: destinationsLoading } = useQuery(
     ["destination"],
     () => {
-      return Axios.get(`http://localhost:3000/destinations/${id}`).then(
+      return Axios.get(`/api/destinations/${id}`).then(
         (res) => res.data
       );
     }
   );
 
-  const { data: coordinates, isLoading: coordinatesLoading } = useQuery(
+  const { isLoading: coordinatesLoading } = useQuery(
     ["coordinate"],
     () => {
-      return Axios.get(`http://localhost:3000/destinations`).then(
+      return Axios.get(`/api/destinations`).then(
         (res) => res.data
       );
     }
@@ -34,7 +32,7 @@ export default function CountryPage() {
   const { data: countries, isLoading: countriesLoading } = useQuery(
     ["country"],
     () => {
-      return Axios.get(`http://localhost:3000/countries/${id}`).then(
+      return Axios.get(`/api/countries/${id}`).then(
         (res) => res.data
       );
     }

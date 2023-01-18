@@ -5,19 +5,11 @@ import Button from "@mui/material/Button";
 import moment from "moment";
 
 export default function AddNewPost({ user }) {
-  const [posts, setPosts] = useState([]);
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
   const [topic, setTopic] = useState("");
-  const [formErrors, setFormErrors] = useState([]);
 
   const today = moment();
-
-  useEffect(() => {
-    fetch("http://localhost:3000/posts")
-      .then((r) => r.json())
-      .then(setPosts);
-  }, []);
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -32,7 +24,7 @@ export default function AddNewPost({ user }) {
       user_id: parseInt(user.id),
       forum_id: parseInt(id),
     };
-    fetch("http://localhost:3000/posts", {
+    fetch("/api/posts", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -42,10 +34,7 @@ export default function AddNewPost({ user }) {
       if (r.ok) {
         r.json().then((newPosts) => {
           handleAddPost(newPosts);
-          setFormErrors([]);
         });
-      } else {
-        r.json().then((err) => setFormErrors(err.errors));
       }
     });
   }
@@ -58,7 +47,7 @@ export default function AddNewPost({ user }) {
   const { id } = useParams();
 
   useEffect(() => {
-    fetch(`http://localhost:3000/posts/${id}`).then((r) => {
+    fetch(`/api/posts/${id}`).then((r) => {
       if (r.ok) {
         r.json().then((post) =>
           setPost({ data: post, error: null, status: "resolved" })

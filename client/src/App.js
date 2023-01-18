@@ -1,7 +1,6 @@
 import "./App.css";
 import { useState, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
-// import NavBar from "./components/NavBar.js";
 import LandingPage from "./components/LandingPage";
 import DestinationsPage from "./components/DestinationsPage";
 import BlogPage from "./components/BlogPage";
@@ -18,23 +17,19 @@ import Store from "./components/Store";
 import Success from "./components/Success";
 import Cancel from "./components/Cancel";
 import NavbarComponent from "./components/NavbarComponent";
-import { Container } from "react-bootstrap";
 import CartProvider from "./components/CartContext";
 import "bootstrap/dist/css/bootstrap.min.css";
-// import { useQuery } from "@tanstack/react-query";
-// import Axios from "axios";
 
 function App() {
   const [blogs, setBlogs] = useState([]);
   const [countries, setCountries] = useState([]);
   const [user, setUser] = useState(null);
   const [search, setSearch] = useState("");
-  const [count, setCount] = useState(0);
 
   const client = new QueryClient();
 
   useEffect(() => {
-    fetch("/me").then((r) => {
+    fetch("/api/me").then((r) => {
       if (r.ok) {
         r.json().then((user) => setUser(user));
       }
@@ -42,7 +37,7 @@ function App() {
   }, []);
 
   useEffect(() => {
-    fetch("/blogs")
+    fetch("/api/blogs")
       .then((res) => res.json())
       .then((data) => {
         setBlogs(data);
@@ -50,7 +45,7 @@ function App() {
   }, []);
 
   useEffect(() => {
-    fetch("/countries")
+    fetch("/api/countries")
       .then((res) => res.json())
       .then((data) => {
         setCountries(data);
@@ -58,11 +53,11 @@ function App() {
   }, []);
 
   // const { data, isLoading } = useQuery(["country"], () => {
-  //   return Axios.get("http://localhost:3000/countries").then((res) => res.data);
+  //   return Axios.get("/api/countries").then((res) => res.data);
   // });
 
   // function getBlogs() {
-  //   return Axios.get("http://localhost:3000/blogs").then((res) => res.data);
+  //   return Axios.get("/api/blogs").then((res) => res.data);
   // }
 
   // const { data, isLoading: blogsLoading } = useQuery(["blogs"], () => getBlogs());
@@ -78,7 +73,7 @@ function App() {
   );
 
   // useEffect(() => {
-  //   fetch("/hello", {
+  //   fetch("/api/hello", {
   //     method: "GET",
   //     headers: {
   //       withCredentials: true,

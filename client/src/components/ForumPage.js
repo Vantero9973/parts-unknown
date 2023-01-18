@@ -1,46 +1,23 @@
 import { useQuery } from "@tanstack/react-query";
 import Axios from "axios";
-import { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import AddNewPost from "./AddNewPost";
 
 export default function ForumPage({ user }) {
-  const [deletePosts, setDeletePosts] = useState();
   const { id } = useParams();
   const navigate = useNavigate();
 
   const { data: forums, isLoading: forumsLoading } = useQuery(["forum"], () => {
-    return Axios.get(`http://localhost:3000/forums/${id}`).then(
+    return Axios.get(`/api/forums/${id}`).then(
       (res) => res.data
     );
   });
 
   const { data: posts, isLoading: postsLoading } = useQuery(["post"], () => {
-    return Axios.get(`http://localhost:3000/posts/${id}`).then(
+    return Axios.get(`/api/posts/${id}`).then(
       (res) => res.data
     );
   });
-
-  // const { data: postsLink, isLoading: postsLinkLoading } = useQuery(
-  //   ["postLink"],
-  //   () => {
-  //     return Axios.get("http://localhost:3000/posts").then((res) => res.data);
-  //   }
-  // );
-
-  function handleDelete(id) {
-    fetch(`http://localhost:3000/posts/${id}`, {
-      method: "DELETE",
-    }).then((r) => {
-      if (r.ok) {
-        setDeletePosts((deletePosts) =>
-          deletePosts.filter((deletePost) => deletePost.id !== id)
-        );
-      }
-    });
-    navigate("/stories");
-    window.location.reload(true);
-  }
 
   if (forumsLoading || postsLoading) {
     return (

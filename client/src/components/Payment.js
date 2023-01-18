@@ -1,22 +1,23 @@
 import { useEffect, useState } from "react";
 
 import { Elements } from "@stripe/react-stripe-js";
-import CheckoutForm from "./CheckoutForm";
 import { loadStripe } from "@stripe/stripe-js";
+import CheckoutForm from "./CheckoutForm";
+import { stripeUrl } from '../config';
 
 function Payment() {
   const [stripePromise, setStripePromise] = useState(null);
   const [clientSecret, setClientSecret] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:6900/config").then(async (r) => {
+    fetch(`${stripeUrl}/config`).then(async (r) => {
       const { publishableKey } = await r.json();
       setStripePromise(loadStripe(publishableKey));
     });
   }, []);
 
   useEffect(() => {
-    fetch("http://localhost:6900/create-payment-intent", {
+    fetch(`${stripeUrl}/create-payment-intent`, {
       method: "POST",
       body: JSON.stringify({}),
     }).then(async (result) => {

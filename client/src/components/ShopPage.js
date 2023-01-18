@@ -17,14 +17,14 @@ export default function ShopPage() {
   const { data: continents, isLoading: continentsLoading } = useQuery(
     ["continent"],
     () => {
-      return Axios.get("http://localhost:3000/continents").then(
+      return Axios.get("/api/continents").then(
         (res) => res.data
       );
     }
   );
 
   const { data: items, isLoading: itemsLoading } = useQuery(["item"], () => {
-    return Axios.get("http://localhost:3000/shop_items").then(
+    return Axios.get("/api/shop_items").then(
       (res) => res.data
     );
   });

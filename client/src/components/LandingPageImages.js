@@ -7,7 +7,7 @@ export default function LandingPageImages() {
   const navigate = useNavigate();
 
   const { data: landingImages, isLoading } = useQuery(["landingImage"], () => {
-    return Axios.get("http://localhost:3000/landingimages").then(
+    return Axios.get("/api/landingimages").then(
       (res) => res.data
     );
   });
@@ -80,7 +80,7 @@ export default function LandingPageImages() {
         </div>
       </div>
       <div className="hiddenImage">
-        <a
+        <div
           onClick={() => navigate(`/blogs/${landingImages[0].id}`)}
           style={{
             width: "100vw",
@@ -172,7 +172,7 @@ export default function LandingPageImages() {
                     overflow: "hidden",
                   }}
                 >
-                  <a
+                  <div
                     onClick={() => navigate(`/blogs/${landingImage.id}`)}
                     className="landingImage"
                     style={{

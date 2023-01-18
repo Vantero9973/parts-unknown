@@ -9,7 +9,7 @@ export default function ContinentsShopPage() {
   console.log(id);
 
   const { data: items, isLoading: itemsLoading } = useQuery(["item"], () => {
-    return Axios.get("http://localhost:3000/shop_items").then(
+    return Axios.get("/api/shop_items").then(
       (res) => res.data
     );
   });
@@ -17,7 +17,7 @@ export default function ContinentsShopPage() {
   const { data: continents, isLoading: continentsLoading } = useQuery(
     ["continent"],
     () => {
-      return Axios.get(`http://localhost:3000/continents/${id}`).then(
+      return Axios.get(`/api/continents/${id}`).then(
         (res) => res.data
       );
     }
@@ -40,7 +40,7 @@ export default function ContinentsShopPage() {
   //   const { data: continents, isLoading: continentsLoading } = useQuery(
   //     ["continent"],
   //     () => {
-  //       return Axios.get(`http://localhost:3000/continents/${id}`).then(
+  //       return Axios.get(`/api/continents/${id}`).then(
   //         (res) => res.data
   //       );
   //     }

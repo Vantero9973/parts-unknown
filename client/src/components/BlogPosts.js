@@ -1,54 +1,15 @@
-import { useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
-import { useQuery } from "@tanstack/react-query";
-import Axios from "axios";
+import { useNavigate } from "react-router-dom";
 import Box from "@mui/material/Box";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import ThumbUpOffAltIcon from "@mui/icons-material/ThumbUpOffAlt";
-import ThumbUpAltIcon from "@mui/icons-material/ThumbUpAlt";
 import AOS from "aos";
 import "aos/dist/aos.css";
 AOS.init();
 
 export default function BlogPosts({ blogs }) {
-  // const [button, setButton] = useState(<ThumbUpOffAltIcon />);
   const navigate = useNavigate();
-
-  // function handleClick() {
-  //   setButton(<ThumbUpAltIcon />);
-  // }
-
-  // const { data: blogLikes, isLoading } = useQuery(["blog"], () => {
-  //   return Axios.get(`http://localhost:3000/blogs/${id}`).then(
-  //     (res) => res.data
-  //   );
-  // });
-
-  // if (isLoading) {
-  //   return <h1>Loading...</h1>;
-  // }
-
-  // const likeButton = (
-  //   <div>
-  //     {blogLikes.map((blog) => {
-  //       return (
-  //         <div
-  //           style={{
-  //             display: "flex",
-  //             alignItems: "center",
-  //             gap: "5px",
-  //           }}
-  //           onClick={handleClick}
-  //         >
-  //           {button}
-  //           {blog.likes}
-  //         </div>
-  //       );
-  //     })}
-  //   </div>
-  // );
 
   return (
     <div
@@ -73,7 +34,6 @@ export default function BlogPosts({ blogs }) {
               <CardMedia
                 component="img"
                 sx={{
-                  width: 350,
                   borderRadius: "40px",
                   height: "20vh",
                   width: "20vh",

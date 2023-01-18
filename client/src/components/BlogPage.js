@@ -8,7 +8,7 @@ import Dropdown from "react-bootstrap/Dropdown";
 
 export default function BlogPage({ blogs, setBlogs, setSearch, user }) {
   const [currentPage, setCurrentPage] = useState(1);
-  const [postsPerPage, setPostsPerPage] = useState(5);
+  const postsPerPage = 5;
 
   const lastPostIndex = currentPage * postsPerPage;
   const firstPostIndex = lastPostIndex - postsPerPage;
