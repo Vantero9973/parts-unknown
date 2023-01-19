@@ -9,7 +9,7 @@ import SignUp from "./SignUp";
 import profPic from "../avatar_default.png";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { Link } from "react-router-dom";
-import { stripeUrl } from '../config'
+import { stripeUrl } from "../config";
 
 function NavbarComponent({ user, setUser }) {
   const cart = useContext(CartContext);
@@ -269,7 +269,7 @@ function NavbarComponent({ user, setUser }) {
               to="/store"
               style={{ color: "#dadada", padding: "1vh", fontSize: "18px" }}
             >
-              Store
+              Shop
             </Link>
             <NavDropdown
               title={
@@ -352,5 +352,3 @@ function NavbarComponent({ user, setUser }) {
 }
 
 export default NavbarComponent;
-
-
