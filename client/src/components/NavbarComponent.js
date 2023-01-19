@@ -269,7 +269,7 @@ function NavbarComponent({ user, setUser }) {
               to="/store"
               style={{ color: "#dadada", padding: "1vh", fontSize: "18px" }}
             >
-              Shop
+              Store
             </Link>
             <NavDropdown
               title={
