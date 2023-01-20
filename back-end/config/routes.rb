@@ -22,5 +22,9 @@ Rails.application.routes.draw do
   end
 
   get "/destinations", :to => redirect('/')
+  get "/success", :to => redirect('/')
+  get "/stories", :to => redirect('/')
+  get "/forum", :to => redirect('/')
+  get "/store", :to => redirect('/')
   root 'home#index'
 end
