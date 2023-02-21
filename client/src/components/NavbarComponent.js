@@ -102,25 +102,41 @@ function NavbarComponent({ user, setUser }) {
                 color: "#dadada",
                 padding: "1vh",
                 fontSize: "18px",
+                textDecoration: "none",
               }}
             >
               Destinations
             </Link>
             <Link
               to="/stories"
-              style={{ color: "#dadada", padding: "1vh", fontSize: "18px" }}
+              style={{
+                color: "#dadada",
+                padding: "1vh",
+                fontSize: "18px",
+                textDecoration: "none",
+              }}
             >
               Stories
             </Link>
             <Link
               to="/forum"
-              style={{ color: "#dadada", padding: "1vh", fontSize: "18px" }}
+              style={{
+                color: "#dadada",
+                padding: "1vh",
+                fontSize: "18px",
+                textDecoration: "none",
+              }}
             >
               Forum
             </Link>
             <Link
               to="/store"
-              style={{ color: "#dadada", padding: "1vh", fontSize: "18px" }}
+              style={{
+                color: "#dadada",
+                padding: "1vh",
+                fontSize: "18px",
+                textDecoration: "none",
+              }}
             >
               Store
             </Link>
@@ -249,25 +265,41 @@ function NavbarComponent({ user, setUser }) {
                 color: "#dadada",
                 padding: "1vh",
                 fontSize: "18px",
+                textDecoration: "none",
               }}
             >
               Destinations
             </Link>
             <Link
               to="/stories"
-              style={{ color: "#dadada", padding: "1vh", fontSize: "18px" }}
+              style={{
+                color: "#dadada",
+                padding: "1vh",
+                fontSize: "18px",
+                textDecoration: "none",
+              }}
             >
               Stories
             </Link>
             <Link
               to="/forum"
-              style={{ color: "#dadada", padding: "1vh", fontSize: "18px" }}
+              style={{
+                color: "#dadada",
+                padding: "1vh",
+                fontSize: "18px",
+                textDecoration: "none",
+              }}
             >
               Forum
             </Link>
             <Link
               to="/store"
-              style={{ color: "#dadada", padding: "1vh", fontSize: "18px" }}
+              style={{
+                color: "#dadada",
+                padding: "1vh",
+                fontSize: "18px",
+                textDecoration: "none",
+              }}
             >
               Store
             </Link>

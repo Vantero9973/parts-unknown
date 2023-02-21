@@ -52,7 +52,6 @@ export default function LandingPage() {
       </div>
       <div
         style={{
-          // width: "100vw",
           height: "80vh",
           display: "flex",
           alignItems: "center",

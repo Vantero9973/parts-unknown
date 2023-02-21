@@ -103,9 +103,7 @@ export default function BlogPosts({ blogs }) {
                         alignItems: "center",
                         gap: "5px",
                       }}
-                      // onClick={handleClick}
                     >
-                      {/* {button} */}
                       <ThumbUpOffAltIcon />
                       {blog.likes}
                     </div>

@@ -14,41 +14,24 @@ export default function CountryPage() {
   const { data: destinations, isLoading: destinationsLoading } = useQuery(
     ["destination"],
     () => {
-      return Axios.get(`/api/destinations/${id}`).then(
-        (res) => res.data
-      );
+      return Axios.get(`/api/destinations/${id}`).then((res) => res.data);
     }
   );
 
-  const { isLoading: coordinatesLoading } = useQuery(
-    ["coordinate"],
-    () => {
-      return Axios.get(`/api/destinations`).then(
-        (res) => res.data
-      );
-    }
-  );
+  const { isLoading: coordinatesLoading } = useQuery(["coordinate"], () => {
+    return Axios.get(`/api/destinations`).then((res) => res.data);
+  });
 
   const { data: countries, isLoading: countriesLoading } = useQuery(
     ["country"],
     () => {
-      return Axios.get(`/api/countries/${id}`).then(
-        (res) => res.data
-      );
+      return Axios.get(`/api/countries/${id}`).then((res) => res.data);
     }
   );
 
   if (destinationsLoading || countriesLoading || coordinatesLoading) {
     return <h1>Loading...</h1>;
   }
-
-  //   function setMarkers() {
-  //     {
-  //       coordinates.map((coordinate) => {
-  //         return coordinate.lat;
-  //       });
-  //     }
-  //   }
 
   const lat = countries.lat;
   const lng = countries.lng;
@@ -169,11 +152,9 @@ export default function CountryPage() {
                     {destination.name}
                   </Typography>
                   <Typography
-                    // class="overflow-scroll"
                     variant="subtitle1"
                     color="text.secondary"
                     component="div"
-                    // style={{ maxHeight: "12vh", fontSize: "16px" }}
                   >
                     {destination.description}
                   </Typography>

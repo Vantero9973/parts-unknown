@@ -9,55 +9,51 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 
 export default function DestinationsPage() {
-  const [filteredContinent, setFilteredContinent] = useState([]);
+  const [continent, setContinent] = useState("");
+  const [filteredCountries, setFilteredCountries] = useState([]);
   const [filteredCoordinates, setFilteredCoordinates] = useState({
     lat: 40,
     lng: -100,
     zoom: 4,
   });
-  const [continent, setContinent] = useState("");
 
   const navigate = useNavigate();
 
   const { data: countries, isLoading: countriesLoading } = useQuery(
     ["country"],
     () => {
-      return Axios.get("/api/countries").then(
-        (res) => res.data
-      );
+      return Axios.get("/api/countries").then((res) => res.data);
     }
   );
 
   const { data: continents, isLoading: continentsLoading } = useQuery(
     ["continent"],
     () => {
-      return Axios.get("/api/continents").then(
-        (res) => res.data
-      );
+      return Axios.get("/api/continents").then((res) => res.data);
     }
   );
 
-  const handleChange = (e) => {
-    setContinent(e.target.value);
-  };
-
   const handleContinentClick = (continent) => {
-    const filteredCountries = countries.filter(
+    const filteredCountryList = countries.filter(
       (country) => country.continent_id === continent.id
     );
-    setFilteredContinent(filteredCountries);
+    setFilteredCountries(filteredCountryList);
 
     const filteredCoor = continents.find((c) => c.id === continent.id);
     setFilteredCoordinates(filteredCoor);
   };
 
-  if (countriesLoading || continentsLoading) {
-    return <h1>Loading...</h1>;
-  }
+  const handleChange = (e) => {
+    setContinent(e.target.value);
+  };
 
   const lat = filteredCoordinates.lat;
   const lng = filteredCoordinates.lng;
   const zoom = filteredCoordinates.zoom;
+
+  if (countriesLoading || continentsLoading) {
+    return <h1>Loading...</h1>;
+  }
 
   return (
     <div
@@ -138,8 +134,8 @@ export default function DestinationsPage() {
               marginBottom: "2vh",
             }}
           >
-            {filteredContinent.length > 0 &&
-              filteredContinent.map((country) => {
+            {filteredCountries.length > 0 &&
+              filteredCountries.map((country) => {
                 return (
                   <div
                     key={country.id}

@@ -1,32 +1,7 @@
-// import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function ForumSelector({ countries }) {
-  // const [forums, setForums] = useState([]);
-  // const { id } = useParams();
   const navigate = useNavigate();
-
-  // useEffect(() => {
-  //   fetch(`/api/forums/${id}`)
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       setForums(data);
-  //     });
-  // }, [id]);
-
-  // const flags = (
-  //   <div>
-  //     {forums.map((forum) => {
-  //       return (
-  //         <img
-  //           src={forum.flag}
-  //           alt="flag"
-  //           style={{ maxHeight: "100px", maxWidth: "100px" }}
-  //         />
-  //       );
-  //     })}
-  //   </div>
-  // );
 
   return (
     <div

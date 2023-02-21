@@ -11,41 +11,22 @@ export default function ShopPage() {
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage, setPostsPerPage] = useState(21);
   const [search, setSearch] = useState("");
-  // const [sortedItems, setSortedItems] = useState([]);
   const navigate = useNavigate();
 
   const { data: continents, isLoading: continentsLoading } = useQuery(
     ["continent"],
     () => {
-      return Axios.get("/api/continents").then(
-        (res) => res.data
-      );
+      return Axios.get("/api/continents").then((res) => res.data);
     }
   );
 
   const { data: items, isLoading: itemsLoading } = useQuery(["item"], () => {
-    return Axios.get("/api/shop_items").then(
-      (res) => res.data
-    );
+    return Axios.get("/api/shop_items").then((res) => res.data);
   });
 
   const lastPostIndex = currentPage * postsPerPage;
   const firstPostIndex = lastPostIndex - postsPerPage;
   const currentPosts = items?.slice(firstPostIndex, lastPostIndex);
-
-  // function handleSort() {
-  //   const sortedData = [...searchItems].sort((a, b) => {
-  //     return a.name > b.name ? 1 : -1;
-  //   });
-  //   setSortedItems(sortedData);
-  // }
-
-  // function handleSortReverse() {
-  //   const sortedData = [...searchItems].sort((a, b) => {
-  //     return b.name > a.name ? 1 : -1;
-  //   });
-  //   setSortedItems(sortedData);
-  // }
 
   if (continentsLoading) {
     return <h1>Loading...</h1>;
@@ -88,9 +69,6 @@ export default function ShopPage() {
             alignItems: "center",
           }}
         >
-          {/* <h1 style={{ fontSize: "24px", fontWeight: "bold" }}>
-            Browse by Continent
-          </h1> */}
           <div
             style={{
               display: "flex",
@@ -145,64 +123,4 @@ export default function ShopPage() {
       />
     </div>
   );
-}
-
-// Other shop page layout
-
-// import InputLabel from "@mui/material/InputLabel";
-// import MenuItem from "@mui/material/MenuItem";
-// import FormControl from "@mui/material/FormControl";
-// import Select from "@mui/material/Select";
-// const handleChange = (e) => {
-//   setContinent(e.target.value);
-// };
-
-// const [filteredContinent, setFilteredContinent] = useState([]);
-// const [continent, setContinent] = useState("");
-
-// const handleContinentClick = (continent) => {
-//   const filteredItems = items.filter(
-//     (item) => item.continent_id === continent.id
-//   );
-//   setFilteredContinent(filteredItems);
-// };
-
-{
-  /* <div>
-        <FormControl
-          variant="filled"
-          sx={{
-            m: 2,
-            width: "28vw",
-            background: "#dadada",
-            borderRadius: "10px",
-            color: "#1c1c1e",
-          }}
-        >
-          <InputLabel
-            id="demo-simple-select-filled-label"
-            style={{ fontSize: "20px", color: "#1c1c1e" }}
-          >
-            Select Continent
-          </InputLabel>
-          <Select
-            labelId="demo-simple-select-filled-label"
-            id="demo-simple-select-filled"
-            value={continent}
-            onChange={handleChange}
-          >
-            {continents?.map((continent) => (
-              <MenuItem
-                value={continent.name}
-                style={{
-                  color: "#1c1c1e",
-                }}
-                onClick={() => handleContinentClick(continent)}
-              >
-                {continent.name}
-              </MenuItem>
-            ))}
-          </Select>
-        </FormControl>
-      </div> */
 }

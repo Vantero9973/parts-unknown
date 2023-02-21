@@ -4,20 +4,11 @@ import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 
 function ProductCard(props) {
-  // props.product is the product we are selling
   const navigate = useNavigate();
   const product = props.product;
   const cart = useContext(CartContext);
   const productQuantity = cart.getProductQuantity(product.id);
   console.log(cart.items);
-
-  // useEffect(() => {
-  //   fetch("/me").then((r) => {
-  //     if (r.ok) {
-  //       r.json().then((user) => setUser(user));
-  //     }
-  //   });
-  // }, []);
 
   function myAlert() {
     alert("Please log in");
@@ -29,14 +20,11 @@ function ProductCard(props) {
         style={{
           display: "flex",
           flexWrap: "wrap",
-          // flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
           background: "#1c1c1e",
-          // maxWidth: "10vw",
           height: "fit-content",
           border: "none",
-          // margin: "25px",
           width: "15vw",
           height: "50vh",
         }}
@@ -151,14 +139,11 @@ function ProductCard(props) {
         style={{
           display: "flex",
           flexWrap: "wrap",
-          // flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
           background: "#1c1c1e",
-          // maxWidth: "10vw",
           height: "fit-content",
           border: "none",
-          // margin: "25px",
           width: "15vw",
           height: "50vh",
         }}

@@ -4,18 +4,6 @@ import ProductCard from "./ProductCard";
 function Store({ user }) {
   return (
     <>
-      {/* <h1
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          paddingTop: "5vh",
-          color: "#dadada",
-          fontSize: "32px",
-        }}
-      >
-        Browse Travel Guides
-      </h1> */}
       <div
         style={{
           display: "flex",

@@ -5,14 +5,8 @@ import { useNavigate } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import Axios from "axios";
 
-// Teach Autosuggest how to calculate suggestions for any given input value.
-
-// When suggestion is clicked, Autosuggest needs to populate the input
-// based on the clicked suggestion. Teach Autosuggest how to calculate the
-// input value for every given suggestion.
 const getSuggestionValue = (suggestion) => suggestion.id;
 
-// Use your imagination to render suggestions.
 const renderSuggestion = (suggestion) => <div>{suggestion.name}</div>;
 
 function AutosuggestPage() {
@@ -48,25 +42,20 @@ function AutosuggestPage() {
     navigate(`/countries/${suggestionValue}`);
   };
 
-  // Autosuggest will call this function every time you need to update suggestions.
-  // You already implemented this logic above, so just use it.
   const onSuggestionsFetchRequested = ({ value }) => {
     setSuggestions(getSuggestions(value));
   };
 
-  // Autosuggest will call this function every time you need to clear suggestions.
   const onSuggestionsClearRequested = () => {
     setSuggestions([]);
   };
 
-  // Autosuggest will pass through all these props to the input.
   const inputProps = {
     placeholder: "Where do you want to go next?",
     value,
     onChange,
   };
 
-  // Finally, render it!
   return (
     <Autosuggest
       theme={theme}

@@ -1,7 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import Axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
-// import { useState } from "react";
 
 export default function ContinentsShopPage() {
   const { id } = useParams();
@@ -9,17 +8,13 @@ export default function ContinentsShopPage() {
   console.log(id);
 
   const { data: items, isLoading: itemsLoading } = useQuery(["item"], () => {
-    return Axios.get("/api/shop_items").then(
-      (res) => res.data
-    );
+    return Axios.get("/api/shop_items").then((res) => res.data);
   });
 
   const { data: continents, isLoading: continentsLoading } = useQuery(
     ["continent"],
     () => {
-      return Axios.get(`/api/continents/${id}`).then(
-        (res) => res.data
-      );
+      return Axios.get(`/api/continents/${id}`).then((res) => res.data);
     }
   );
 
@@ -36,15 +31,6 @@ export default function ContinentsShopPage() {
       })}
     </div>
   );
-
-  //   const { data: continents, isLoading: continentsLoading } = useQuery(
-  //     ["continent"],
-  //     () => {
-  //       return Axios.get(`/api/continents/${id}`).then(
-  //         (res) => res.data
-  //       );
-  //     }
-  //   );
 
   if (itemsLoading || continentsLoading) {
     return <h1>Loading...</h1>;

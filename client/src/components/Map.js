@@ -1,4 +1,4 @@
-import { React, useCallback, useState } from "react";
+import { React, useState } from "react";
 import {
   GoogleMap,
   useJsApiLoader,
@@ -79,15 +79,8 @@ export default function Map({
 
   return isLoaded ? (
     <>
-      <GoogleMap
-        mapContainerStyle={containerStyle}
-        center={center}
-        zoom={zoom}
-      // onLoad={onLoad}
-      // onUnmount={onUnmount}
-      // ref={mapRef}
-      >
-        {markerLat && markerLng &&
+      <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={zoom}>
+        {markerLat && markerLng && (
           <Marker
             position={{
               lat: markerLat,
@@ -116,8 +109,8 @@ export default function Map({
               </InfoWindow>
             )}
           </Marker>
-        }
-        {markerTwoLat && markerTwoLng &&
+        )}
+        {markerTwoLat && markerTwoLng && (
           <Marker
             position={{
               lat: markerTwoLat,
@@ -146,8 +139,8 @@ export default function Map({
               </InfoWindow>
             )}
           </Marker>
-        }
-        {markerThreeLat && markerThreeLng &&
+        )}
+        {markerThreeLat && markerThreeLng && (
           <Marker
             position={{
               lat: markerThreeLat,
@@ -179,8 +172,8 @@ export default function Map({
               </InfoWindow>
             )}
           </Marker>
-        }
-        {markerFourLat && markerFourLng &&
+        )}
+        {markerFourLat && markerFourLng && (
           <Marker
             position={{
               lat: markerFourLat,
@@ -209,8 +202,8 @@ export default function Map({
               </InfoWindow>
             )}
           </Marker>
-        }
-        {markerFiveLat && markerFiveLng &&
+        )}
+        {markerFiveLat && markerFiveLng && (
           <Marker
             position={{
               lat: markerFiveLat,
@@ -239,8 +232,8 @@ export default function Map({
               </InfoWindow>
             )}
           </Marker>
-        }
-        {markerSixLat && markerSixLng &&
+        )}
+        {markerSixLat && markerSixLng && (
           <Marker
             position={{
               lat: markerSixLat,
@@ -269,8 +262,8 @@ export default function Map({
               </InfoWindow>
             )}
           </Marker>
-        }
-        {markerSevenLat && markerSevenLng &&
+        )}
+        {markerSevenLat && markerSevenLng && (
           <Marker
             position={{
               lat: markerSevenLat,
@@ -302,8 +295,8 @@ export default function Map({
               </InfoWindow>
             )}
           </Marker>
-        }
-        {markerEightLat && markerEightLng &&
+        )}
+        {markerEightLat && markerEightLng && (
           <Marker
             position={{
               lat: markerEightLat,
@@ -335,8 +328,8 @@ export default function Map({
               </InfoWindow>
             )}
           </Marker>
-        }
-        {markerNineLat && markerNineLng &&
+        )}
+        {markerNineLat && markerNineLng && (
           <Marker
             position={{
               lat: markerNineLat,
@@ -365,8 +358,8 @@ export default function Map({
               </InfoWindow>
             )}
           </Marker>
-        }
-        {markerTenLat && markerTenLng &&
+        )}
+        {markerTenLat && markerTenLng && (
           <Marker
             position={{
               lat: markerTenLat,
@@ -395,7 +388,7 @@ export default function Map({
               </InfoWindow>
             )}
           </Marker>
-        }
+        )}
         <></>
       </GoogleMap>
     </>
