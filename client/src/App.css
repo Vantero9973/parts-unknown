@@ -69,6 +69,15 @@ body {
     /* border: 1px solid #dadada; */
   }
 
+  .countryList {
+      display: flex;
+      color: #dadada;
+      width: 15vw;
+      font-size: 18px;
+      padding-left: 10px;
+      cursor: pointer;
+  }
+
   .countryList:hover {
     background: #1c1c1e;
     font-weight: bold;
@@ -165,4 +174,61 @@ body {
     border-radius: var(--radius);
     font-size:0.7em;
   }
-  
+
+  .destinationsPageContainer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      height: 92vh;
+      gap: 1vw;
+    }
+
+.destinationsListContainer {
+      height: 88vh;
+      width: 30vw;
+      background: #2c2c2e;
+      display: flex;
+      justify-content: center;
+      border-radius: 20px;
+    }
+
+.destinationsListSecondaryContainer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+#destinationsCountryBox {
+      display: flex;
+      flex-direction: column;
+      justify-content: left;
+      align-items: flex-start;
+      width: 20vw;
+      height: 78vh;
+      background: #2c2c2e;
+      margin-bottom: 2vh;
+    }
+
+.destinationsListBox {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+.destinationsSecondaryListBox {
+      display: flex;
+      flex-wrap: wrap;
+      height: fit-content;
+      width: fit-content;
+      margin: 3px;
+    }
+
+.destinationsInputLabel {
+  font-size: 20px;
+  color: #1c1c1e;
+}
+
+.destinationsMenuItem {
+    color: #1c1c1e;
+}

@@ -56,33 +56,9 @@ export default function DestinationsPage() {
   }
 
   return (
-    <div
-      style={{
-        display: "flex",
-        flexWrap: "wrap",
-        justifyContent: "center",
-        alignItems: "center",
-        height: "92vh",
-        gap: "1vw",
-      }}
-    >
-      <div
-        style={{
-          height: "88vh",
-          width: "30vw",
-          background: "#2c2c2e",
-          display: "flex",
-          justifyContent: "center",
-          borderRadius: "20px",
-        }}
-      >
-        <div
-          style={{
-            display: "flex",
-            flexWrap: "wrap",
-            justifyContent: "center",
-          }}
-        >
+    <div className="destinationsPageContainer">
+      <div className="destinationsListContainer">
+        <div className="destinationsListSecondaryContainer">
           <div>
             <FormControl
               variant="filled"
@@ -96,7 +72,7 @@ export default function DestinationsPage() {
             >
               <InputLabel
                 id="demo-simple-select-filled-label"
-                style={{ fontSize: "20px", color: "#1c1c1e" }}
+                className="destinationsInputLabel"
               >
                 Select Continent
               </InputLabel>
@@ -108,11 +84,9 @@ export default function DestinationsPage() {
               >
                 {continents?.map((continent) => (
                   <MenuItem
+                    className="destinationsMenuItem"
                     key={continent.id}
                     value={continent.name}
-                    style={{
-                      color: "#1c1c1e",
-                    }}
                     onClick={() => handleContinentClick(continent)}
                   >
                     {continent.name}
@@ -121,50 +95,15 @@ export default function DestinationsPage() {
               </Select>
             </FormControl>
           </div>
-          <div
-            className="overflow-scroll"
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "left",
-              alignItems: "flex-start",
-              width: "20vw",
-              height: "78vh",
-              background: "#2c2c2e",
-              marginBottom: "2vh",
-            }}
-          >
+          <div className="overflow-scroll" id="destinationsCountryBox">
             {filteredCountries.length > 0 &&
               filteredCountries.map((country) => {
                 return (
-                  <div
-                    key={country.id}
-                    style={{
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                    }}
-                  >
-                    <div
-                      style={{
-                        display: "flex",
-                        flexWrap: "wrap",
-                        height: "fit-content",
-                        width: "fit-content",
-                        margin: "3px",
-                      }}
-                    >
+                  <div key={country.id} className="destinationsListBox">
+                    <div className="destinationsSecondaryListBox">
                       <li
                         className="countryList"
                         variant="outlined"
-                        style={{
-                          display: "flex",
-                          color: "#dadada",
-                          width: "15vw",
-                          fontSize: "18px",
-                          paddingLeft: "10px",
-                          cursor: "pointer",
-                        }}
                         onClick={() => navigate(`/countries/${country.id}`)}
                       >
                         {country.name}
