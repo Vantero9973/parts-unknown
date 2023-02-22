@@ -81,68 +81,18 @@ export default function AddNewPost({ user }) {
 
   if (user) {
     return (
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          gap: "45vw",
-        }}
-      >
+      <div className="addNewPostContainer">
         <Popup
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-          trigger={
-            <Button
-              className="addNewPopup"
-              style={{
-                height: "44px",
-                fontWeight: "bold",
-                background: "#2c2c2e",
-                color: "#a6adba",
-                borderColor: "#dadada",
-                borderRadius: "5px",
-              }}
-            >
-              Ask a Question
-            </Button>
-          }
+          className="destinationsListBox"
+          trigger={<Button className="addNewPostButton">Ask a Question</Button>}
           modal
           nested
         >
-          <div
-            style={{
-              background: "#1C1C1E",
-              display: "flex",
-              width: "50vw",
-              height: "80vh",
-              borderRadius: "50px",
-              border: "1px solid #dadada",
-            }}
-          >
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
-                alignItems: "center",
-                gap: "10px",
-                marginTop: "2vh",
-              }}
-            >
-              <form onSubmit={handleSubmit} style={{ marginLeft: "5vw" }}>
+          <div className="addNewPostDiv">
+            <div className="addNewPostSecondaryDiv">
+              <form className="addNewPostForm" onSubmit={handleSubmit}>
                 <input
-                  style={{
-                    width: "40vw",
-                    height: "5vh",
-                    fontSize: "24px",
-                    display: "flex",
-                    marginBottom: "10px",
-                    padding: "10px",
-                  }}
+                  className="addNewBlogInput"
                   type="text"
                   name="name"
                   placeholder="Title"
@@ -151,17 +101,7 @@ export default function AddNewPost({ user }) {
                 />
                 <textarea
                   class="overflow-scroll"
-                  style={{
-                    width: "40vw",
-                    height: "40vh",
-                    fontSize: "24px",
-                    display: "flex",
-                    alignItems: "flex-start",
-                    justifyContent: "flex-start",
-                    flexWrap: "wrap",
-                    marginBottom: "10px",
-                    padding: "10px",
-                  }}
+                  id="addNewPostTextArea"
                   type="text"
                   name="id"
                   placeholder="Body"
@@ -169,14 +109,7 @@ export default function AddNewPost({ user }) {
                   onChange={(e) => setBody(e.target.value)}
                 />
                 <input
-                  style={{
-                    width: "40vw",
-                    height: "5vh",
-                    fontSize: "24px",
-                    display: "flex",
-                    marginBottom: "10px",
-                    padding: "10px",
-                  }}
+                  className="addNewBlogInput"
                   type="text"
                   name="topic"
                   placeholder="Topic"
@@ -186,15 +119,7 @@ export default function AddNewPost({ user }) {
                 <Button
                   variant="outlined"
                   type="submit"
-                  style={{
-                    fontSize: "16px",
-                    fontWeight: "bolder",
-                    color: "#1C1C1E",
-                    background: "#dadada",
-                    marginLeft: "15vw",
-                    marginTop: "2vh",
-                    width: "10vw",
-                  }}
+                  className="addNewPostSecondaryButton"
                 >
                   Post
                 </Button>
@@ -206,26 +131,8 @@ export default function AddNewPost({ user }) {
     );
   } else {
     return (
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          gap: "45vw",
-        }}
-      >
-        <Button
-          onClick={myAlert}
-          className="addNewPopup"
-          style={{
-            height: "44px",
-            fontWeight: "bold",
-            background: "#2c2c2e",
-            color: "#a6adba",
-            borderColor: "#dadada",
-            borderRadius: "5px",
-          }}
-        >
+      <div className="addNewPostContainer">
+        <Button onClick={myAlert} className="addNewPostButton">
           Ask a Question
         </Button>
       </div>

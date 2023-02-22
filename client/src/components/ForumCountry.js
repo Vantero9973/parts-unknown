@@ -26,56 +26,21 @@ export default function ForumCountry({ countries, setCountries, setSearch }) {
     setCountries(sortedData);
   }
 
-  // if (isLoading) {
-  //   return <h1>Loading...</h1>;
-  // }
-
   return (
-    <div style={{ padding: "2vw" }}>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          justifyContent: "center",
-          alignItems: "center",
-          gap: "2rem",
-        }}
-      >
+    <div className="forumCountryContainer">
+      <div className="forumCountryDiv">
         <ForumSearch setSearch={setSearch} />
-        <div
-          style={{
-            display: "flex",
-            alignItems: "flex-end",
-            justifyContent: "center",
-          }}
-        >
+        <div className="forumCountrySecondaryDiv">
           <Dropdown
             title={
-              <h1
-                style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  fontSize: "16px",
-                  fontWeight: "bold",
-                  color: "#dadada",
-                  background: "#2c2c2e",
-                  padding: "10px",
-                }}
-                id="basic-nav-dropdown"
-              >
+              <h1 className="forumCountryTitle" id="basic-nav-dropdown">
                 SORT BY
               </h1>
             }
           >
             <Dropdown.Toggle
               id="dropdown-basic"
-              style={{
-                background: "#2c2c2e",
-                border: "none",
-                fontWeight: "bold",
-                color: "#dadada",
-              }}
+              className="forumCountryDropdownToggle"
             >
               SORT BY
             </Dropdown.Toggle>
@@ -86,10 +51,10 @@ export default function ForumCountry({ countries, setCountries, setSearch }) {
           </Dropdown>
         </div>
       </div>
-      <div style={{ marginTop: "5vh" }}>
+      <div className="forumCountryMargin">
         <ForumSelector countries={currentPosts} />
       </div>
-      <div style={{ marginTop: "5vh" }}>
+      <div className="forumCountryMargin">
         <Pagination
           totalPosts={countries.length}
           postsPerPage={postsPerPage}

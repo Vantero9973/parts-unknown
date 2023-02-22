@@ -37,83 +37,23 @@ export default function BlogPage({ blogs, setBlogs, setSearch, user }) {
 
   return (
     <>
-      <div
-        style={{
-          position: "absolute",
-          height: "80vh",
-          width: "100vw",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <h5
-          style={{
-            width: "55vw",
-            zIndex: "1",
-            fontSize: "75px",
-            fontWeight: "bold",
-            color: "white",
-            textAlign: "center",
-            textShadow: "#000 2px 0 3px",
-            lineHeight: "90%",
-          }}
-        >
-          Discover story-worthy travel moments
-        </h5>
+      <div className="blogPageContainer">
+        <h5 className="blogPageTitle">Discover story-worthy travel moments</h5>
       </div>
       <LandingPageImages />
-      <div
-        style={{
-          minHeight: "100vh",
-          paddingBottom: "5vh",
-        }}
-      >
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "center",
-            alignItems: "center",
-            gap: "2rem",
-            marginTop: "10vh",
-          }}
-        >
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              gap: "1rem",
-            }}
-          >
+      <div className="blogPageDiv">
+        <div className="blogPageSecondaryDiv">
+          <div className="blogPageDropdownContainer">
             <Dropdown
               title={
-                <h1
-                  style={{
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    fontSize: "16px",
-                    fontWeight: "bold",
-                    color: "#dadada",
-                    background: "#2c2c2e",
-                    padding: "10px",
-                  }}
-                  id="basic-nav-dropdown"
-                >
+                <h1 className="blogPageDropdown" id="basic-nav-dropdown">
                   SORT BY
                 </h1>
               }
             >
               <Dropdown.Toggle
                 id="dropdown-basic"
-                style={{
-                  background: "#2c2c2e",
-                  border: "none",
-                  fontWeight: "bold",
-                  color: "#dadada",
-                }}
+                className="blogPageDropdownToggle"
               >
                 SORT BY
               </Dropdown.Toggle>

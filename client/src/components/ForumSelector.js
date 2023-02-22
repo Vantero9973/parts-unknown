@@ -4,101 +4,28 @@ export default function ForumSelector({ countries }) {
   const navigate = useNavigate();
 
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        color: "#dadada",
-      }}
-    >
+    <div className="forumSelectorContainer">
       <div>
-        <table style={{ display: "flex", flexDirection: "row" }}>
-          <tr
-            style={{
-              width: "30vw",
-              fontWeight: "bold",
-              fontSize: "20px",
-              marginBottom: "10px",
-            }}
-          >
-            Countries:
-          </tr>
-          <tr
-            style={{
-              width: "8vw",
-              fontWeight: "bold",
-              fontSize: "20px",
-              marginBottom: "10px",
-              display: "flex",
-              justifyContent: "center",
-            }}
-          >
-            # Topics
-          </tr>
-          <tr
-            style={{
-              width: "8vw",
-              fontWeight: "bold",
-              fontSize: "20px",
-              marginBottom: "10px",
-              display: "flex",
-              justifyContent: "center",
-            }}
-          >
-            # Posts
-          </tr>
+        <table className="forumSelectorTable">
+          <tr className="forumSelectorTableRow">Countries:</tr>
+          <tr className="forumSelectorTopicsTableRow"># Topics</tr>
+          <tr className="forumSelectorPostsTableRow"># Posts</tr>
         </table>
         {countries.map((country) => {
           return (
-            <table
-              style={{
-                display: "flex",
-                flexDirection: "row",
-              }}
-            >
-              <tr
-                style={{
-                  display: "flex",
-                  alignItems: "flex-start",
-                  borderBottom: "1px solid white",
-                  width: "30vw",
-                }}
-              >
+            <table className="forumSelectorTable">
+              <tr className="forumSelectorSecondaryTableRow">
                 <td
-                  style={{
-                    cursor: "pointer",
-                    color: "#006699",
-                    fontSize: "18px",
-                    fontWeight: "bold",
-                  }}
+                  className="forumSelectorTableData"
                   onClick={() => navigate(`/forums/${country.id}`)}
                 >
                   {country.name}
                 </td>
               </tr>
-              <tr
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  cursor: "pointer",
-                  borderBottom: "1px solid white",
-                  width: "8vw",
-                }}
-              >
+              <tr className="forumSelectorTableRowContainer">
                 <td>0</td>
               </tr>
-              <tr
-                style={{
-                  display: "flex",
-                  alignItems: "flex-start",
-                  cursor: "pointer",
-                  borderBottom: "1px solid white",
-                  width: "8vw",
-                  justifyContent: "center",
-                }}
-              >
+              <tr className="forumSelectorTableRowSecondaryContainer">
                 <td>0</td>
               </tr>
             </table>

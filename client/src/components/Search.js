@@ -4,23 +4,9 @@ function Search({ setSearch }) {
   };
 
   return (
-    <div
-      style={{
-        background: "#1C1C1E",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
+    <div className="searchContainer">
       <input
-        style={{
-          height: "5vh",
-          width: "25vw",
-          fontSize: "20px",
-          border: "1px solid #dadada",
-          borderRadius: "20px",
-          padding: "20px",
-        }}
+        id="searchInput"
         className="prompt"
         placeholder="Search Stories"
         onChange={handleChange}

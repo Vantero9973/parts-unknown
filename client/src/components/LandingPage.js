@@ -36,28 +36,12 @@ export default function LandingPage() {
   return (
     <>
       <div>
-        <div
-          className="autoSuggest"
-          style={{
-            position: "absolute",
-            marginTop: "35vh",
-            marginLeft: "30vw",
-            zIndex: "10",
-            fontSize: "32px",
-          }}
-        >
+        <div className="autoSuggest">
           <AutosuggestPage countries={countries} />
         </div>
         <LandingPageImages />
       </div>
-      <div
-        style={{
-          height: "80vh",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
+      <div className="landingPageDiv">
         <Carousel slides={slides} />
       </div>
       <WhereToNext />

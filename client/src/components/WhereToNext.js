@@ -9,9 +9,7 @@ export default function WhereToNext() {
   const navigate = useNavigate();
 
   const { data: destinations, isLoading } = useQuery(["destination"], () => {
-    return Axios.get(`/api/randomdestinations`).then(
-      (res) => res.data
-    );
+    return Axios.get(`/api/randomdestinations`).then((res) => res.data);
   });
 
   if (isLoading) {
@@ -19,112 +17,38 @@ export default function WhereToNext() {
   }
 
   return (
-    <div
-      style={{
-        height: "100vh",
-        paddingLeft: "8vw",
-        paddingRight: "8vw",
-        background: "lightgray",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "center",
-      }}
-    >
-      <div
-        style={{
-          width: "80vw",
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "space-between",
-        }}
-      >
+    <div className="whereToNextContainer">
+      <div className="whereToNextSecondaryContainer">
         <div>
-          <h1 style={{ fontSize: "24px", fontWeight: "bold", color: "gray" }}>
-            PLAN YOUR TRIP
-          </h1>
-          <h1
-            style={{
-              fontSize: "50px",
-              fontWeight: "bold",
-              color: "#1c1c1e",
-            }}
-          >
-            Where to next?
-          </h1>
+          <h1 className="whereToNextTitle">PLAN YOUR TRIP</h1>
+          <h1 className="whereToNextSecondaryTitle">Where to next?</h1>
         </div>
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-          }}
-        >
+        <div className="whereToNextDiv">
           <Button
             variant="outlined"
             onClick={() => navigate("/destinations")}
-            style={{
-              height: "fit-content",
-              width: "fit-content",
-              background: "#dadada",
-              color: "#1c1c1e",
-              borderColor: "#1c1c1e",
-              borderRadius: "20px",
-              fontWeight: "bold",
-            }}
+            className="whereToNextButton"
           >
             View all destinations
           </Button>
         </div>
       </div>
-      <div
-        style={{
-          display: "flex",
-          flexWrap: "wrap",
-          justifyContent: "center",
-          alignItems: "center",
-          marginTop: "10vh",
-          gap: "2rem",
-        }}
-      >
+      <div className="whereToNextSecondaryDiv">
         {destinations.map((destination) => {
           return (
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                flexWrap: "wrap",
-                justifyContent: "center",
-                alignItems: "center",
-                margin: "1vh",
-              }}
-            >
+            <div className="whereToNextDestinationsContainer">
               <Card
                 onClick={() => navigate(`/countries/${destination.country_id}`)}
                 sx={{ width: "25vw" }}
-                style={{ borderRadius: "40px", cursor: "pointer" }}
+                className="whereToNextCard"
               >
                 <CardMedia
                   sx={{ height: "20vw", minHeight: "200px", minWidth: "200px" }}
                   image={destination.image}
                 />
               </Card>
-              <div
-                style={{
-                  display: "flex",
-                  width: "25vw",
-                  justifyContent: "left",
-                }}
-              >
-                <h1
-                  className="whereToNext"
-                  style={{
-                    fontSize: "clamp(1rem, 2.5vw, 24px)",
-                    fontWeight: "bold",
-                    color: "#1c1c1e",
-                    marginTop: "1vh",
-                    marginLeft: "1vw",
-                  }}
-                >
+              <div className="whereToNextDestinationsDiv">
+                <h1 className="whereToNextName">
                   {destination.name}, {destination.country_name}
                 </h1>
               </div>

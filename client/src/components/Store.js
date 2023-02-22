@@ -4,15 +4,7 @@ import ProductCard from "./ProductCard";
 function Store({ user }) {
   return (
     <>
-      <div
-        style={{
-          display: "flex",
-          flexWrap: "wrap",
-          justifyContent: "center",
-          alignItems: "center",
-          paddingBottom: "5vh",
-        }}
-      >
+      <div className="storeContainer">
         {productsArray.map((product, idx) => (
           <div key={idx}>
             <ProductCard product={product} user={user} />

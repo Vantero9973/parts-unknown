@@ -87,68 +87,18 @@ export default function AddNewBlog({ user }) {
 
   if (user) {
     return (
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          gap: "45vw",
-        }}
-      >
+      <div className="addNewBlogContainer">
         <Popup
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-          trigger={
-            <Button
-              className="addNewPopup"
-              style={{
-                height: "44px",
-                fontWeight: "bold",
-                background: "#2c2c2e",
-                color: "#dadada",
-                borderColor: "#dadada",
-                borderRadius: "5px",
-              }}
-            >
-              Add New Blog Post
-            </Button>
-          }
+          className="destinationsListBox"
+          trigger={<Button className="addNewPopup">Add New Blog Post</Button>}
           modal
           nested
         >
-          <div
-            style={{
-              background: "#1C1C1E",
-              display: "flex",
-              width: "50vw",
-              height: "90vh",
-              borderRadius: "50px",
-              border: "1px solid #dadada",
-            }}
-          >
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
-                alignItems: "center",
-                gap: "10px",
-                marginTop: "2vh",
-              }}
-            >
-              <form onSubmit={handleSubmit} style={{ marginLeft: "5vw" }}>
+          <div className="addNewBlogDiv">
+            <div className="addNewBlogSecondaryDiv">
+              <form className="addNewBlogForm" onSubmit={handleSubmit}>
                 <input
-                  style={{
-                    width: "40vw",
-                    height: "5vh",
-                    fontSize: "24px",
-                    display: "flex",
-                    marginBottom: "10px",
-                    padding: "10px",
-                  }}
+                  className="addNewBlogInput"
                   type="text"
                   name="name"
                   placeholder="Title"
@@ -157,14 +107,7 @@ export default function AddNewBlog({ user }) {
                 />
                 <textarea
                   class="overflow-scroll"
-                  style={{
-                    width: "40vw",
-                    height: "40vh",
-                    fontSize: "24px",
-                    display: "flex",
-                    marginBottom: "10px",
-                    padding: "10px",
-                  }}
+                  id="addNewBlogTextArea"
                   type="text"
                   name="id"
                   placeholder="Body"
@@ -172,14 +115,7 @@ export default function AddNewBlog({ user }) {
                   onChange={(e) => setBody(e.target.value)}
                 />
                 <input
-                  style={{
-                    width: "40vw",
-                    height: "5vh",
-                    fontSize: "24px",
-                    display: "flex",
-                    marginBottom: "10px",
-                    padding: "10px",
-                  }}
+                  className="addNewBlogInput"
                   type="text"
                   name="description"
                   placeholder="Description"
@@ -187,14 +123,7 @@ export default function AddNewBlog({ user }) {
                   onChange={(e) => setDescription(e.target.value)}
                 />
                 <input
-                  style={{
-                    width: "40vw",
-                    height: "5vh",
-                    fontSize: "24px",
-                    display: "flex",
-                    marginBottom: "10px",
-                    padding: "10px",
-                  }}
+                  className="addNewBlogInput"
                   type="text"
                   name="image"
                   placeholder="Image URL"
@@ -202,14 +131,7 @@ export default function AddNewBlog({ user }) {
                   onChange={(e) => setImage(e.target.value)}
                 />
                 <input
-                  style={{
-                    width: "40vw",
-                    height: "5vh",
-                    fontSize: "24px",
-                    display: "flex",
-                    marginBottom: "10px",
-                    padding: "10px",
-                  }}
+                  className="addNewBlogInput"
                   type="text"
                   name="category_one"
                   placeholder="Category One"
@@ -217,14 +139,7 @@ export default function AddNewBlog({ user }) {
                   onChange={(e) => setCategoryOne(e.target.value)}
                 />
                 <input
-                  style={{
-                    width: "40vw",
-                    height: "5vh",
-                    fontSize: "24px",
-                    display: "flex",
-                    marginBottom: "10px",
-                    padding: "10px",
-                  }}
+                  className="addNewBlogInput"
                   type="text"
                   name="category_two"
                   placeholder="Category Two"
@@ -232,17 +147,9 @@ export default function AddNewBlog({ user }) {
                   onChange={(e) => setCategoryTwo(e.target.value)}
                 />
                 <Button
+                  className="addNewBlogButton"
                   variant="outlined"
                   type="submit"
-                  style={{
-                    fontSize: "16px",
-                    fontWeight: "bolder",
-                    color: "#1C1C1E",
-                    background: "#dadada",
-                    marginLeft: "15vw",
-                    marginTop: "2vh",
-                    width: "10vw",
-                  }}
                 >
                   Post
                 </Button>
@@ -254,26 +161,8 @@ export default function AddNewBlog({ user }) {
     );
   } else {
     return (
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          gap: "45vw",
-        }}
-      >
-        <Button
-          onClick={myAlert}
-          className="addNewPopup"
-          style={{
-            height: "44px",
-            fontWeight: "bold",
-            background: "#2c2c2e",
-            color: "#dadada",
-            borderColor: "#dadada",
-            borderRadius: "5px",
-          }}
-        >
+      <div className="addNewBlogContainer">
+        <Button onClick={myAlert} className="addNewPopup">
           Add New Blog Post
         </Button>
       </div>

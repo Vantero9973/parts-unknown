@@ -23,9 +23,7 @@ export default function ContinentsShopPage() {
       {continents?.map((continent) => {
         return (
           <div>
-            <h1 style={{ fontSize: "32px", fontWeight: "bold" }}>
-              {continent.name}
-            </h1>
+            <h1 className="continentsShopName">{continent.name}</h1>
           </div>
         );
       })}
@@ -41,35 +39,16 @@ export default function ContinentsShopPage() {
   );
 
   return (
-    <div
-      style={{
-        padding: "5vh",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
+    <div className="continentsShopContainer">
       {continentName}
-      <div
-        style={{
-          display: "flex",
-          flexWrap: "wrap",
-          justifyContent: "center",
-          padding: "5vh",
-        }}
-      >
+      <div className="continentsShopDiv">
         {filteredShop.map((item) => {
           return (
             <div
-              style={{ cursor: "pointer" }}
+              className="cursorPointer"
               onClick={() => navigate(`/shop/${item.id}`)}
             >
-              <img
-                src={item.image}
-                alt=""
-                style={{ maxHeight: "30vh", maxWidth: "30vh" }}
-              />
+              <img src={item.image} alt="" className="continentsShopImage" />
               <h1>{item.name}</h1>
             </div>
           );

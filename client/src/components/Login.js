@@ -21,67 +21,31 @@ export default function Login({ setUser }) {
   }
 
   return (
-    <div
-      style={{
-        display: "flex",
-        alignItems: "center",
-        height: "50vh",
-        width: "30vw",
-        padding: "5vw",
-        background: "#1C1C1E",
-        borderRadius: "50px",
-        color: "#dadada",
-      }}
-    >
-      <form
-        onSubmit={handleSubmit}
-        style={{ display: "flex", flexDirection: "column" }}
-      >
-        <label htmlFor="username" style={{ fontSize: "24px" }}>
+    <div className="loginContainer">
+      <form onSubmit={handleSubmit} className="loginForm">
+        <label htmlFor="username" className="loginLabel">
           Username
         </label>
         <input
-          style={{
-            width: "20vw",
-            height: "3vh",
-            fontSize: "20px",
-            padding: "1vh",
-          }}
+          className="loginInput"
           type="text"
           id="username"
           autoComplete="off"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
         />
-        <label htmlFor="password" style={{ fontSize: "24px" }}>
+        <label htmlFor="password" className="loginLabel">
           Password
         </label>
         <input
-          style={{
-            width: "20vw",
-            height: "3vh",
-            fontSize: "20px",
-            padding: "1vh",
-          }}
+          className="loginInput"
           type="password"
           id="password"
           autoComplete="current-password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <Button
-          variant="outlined"
-          type="submit"
-          style={{
-            fontSize: "16px",
-            fontWeight: "bolder",
-            color: "#1C1C1E",
-            background: "#dadada",
-            marginLeft: "5vw",
-            marginTop: "3vh",
-            width: "10vw",
-          }}
-        >
+        <Button variant="outlined" type="submit" className="loginButton">
           Login
         </Button>
       </form>

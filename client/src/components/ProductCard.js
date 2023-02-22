@@ -16,84 +16,33 @@ function ProductCard(props) {
 
   if (props.user) {
     return (
-      <div
-        style={{
-          display: "flex",
-          flexWrap: "wrap",
-          alignItems: "center",
-          justifyContent: "center",
-          background: "#1c1c1e",
-          height: "fit-content",
-          border: "none",
-          width: "15vw",
-          height: "50vh",
-        }}
-      >
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
+      <div className="productCardContainer">
+        <div className="productCardSecondaryContainer">
           <img
             onClick={() => navigate(`/shop/${product.link}`)}
             src={product.image}
             alt=""
-            style={{
-              maxHeight: "225px",
-              maxWidth: "225px",
-              cursor: "pointer",
-            }}
+            className="productCardImage"
           />
-          <div
-            style={{
-              color: "#dadada",
-              fontSize: "18px",
-              fontWeight: "bold",
-            }}
-          >
-            {product.title}
-          </div>
-          <h1
-            style={{
-              fontSize: "12px",
-              fontWeight: "bold",
-              color: "gray",
-            }}
-          >
-            TRAVEL GUIDE
-          </h1>
-          <div style={{ color: "#dadada", fontWeight: "bold" }}>
-            ${product.price}
-          </div>
+          <div className="productCardTitle">{product.title}</div>
+          <h1 className="productCardH">TRAVEL GUIDE</h1>
+          <div className="productCardPrice">${product.price}</div>
           {productQuantity > 0 ? (
             <>
-              <Form as={Row} style={{ margin: "1vh" }}>
-                <Form.Label column="true" sm="6" style={{ color: "#dadada" }}>
+              <Form as={Row} className="productCardForm">
+                <Form.Label
+                  column="true"
+                  sm="6"
+                  className="productCardFormLabel"
+                >
                   In Cart: {productQuantity}
                 </Form.Label>
-                <Col
-                  sm="6"
-                  style={{
-                    display: "flex",
-                    flexDirection: "row",
-                    justifyContent: "center",
-                    alignItems: "center",
-                  }}
-                >
+                <Col sm="6" className="productCardColumn">
                   <Button
                     sm="6"
                     onClick={() => cart.addOneToCart(product.id)}
                     className="mx-2"
-                    style={{
-                      maxHeight: "30px",
-                      maxWidth: "30px",
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                    }}
+                    id="productCardButton"
                   >
                     +
                   </Button>
@@ -101,13 +50,7 @@ function ProductCard(props) {
                     sm="6"
                     onClick={() => cart.removeOneFromCart(product.id)}
                     className="mx-2"
-                    style={{
-                      maxHeight: "30px",
-                      maxWidth: "30px",
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                    }}
+                    id="productCardButton"
                   >
                     -
                   </Button>
@@ -123,7 +66,7 @@ function ProductCard(props) {
             </>
           ) : (
             <Button
-              style={{ margin: "1vh", background: "#006699", border: "none" }}
+              className="productCardSecondaryButton"
               variant="primary"
               onClick={() => cart.addOneToCart(product.id)}
             >
@@ -135,84 +78,33 @@ function ProductCard(props) {
     );
   } else {
     return (
-      <div
-        style={{
-          display: "flex",
-          flexWrap: "wrap",
-          alignItems: "center",
-          justifyContent: "center",
-          background: "#1c1c1e",
-          height: "fit-content",
-          border: "none",
-          width: "15vw",
-          height: "50vh",
-        }}
-      >
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
+      <div className="productCardContainer">
+        <div className="productCardSecondaryContainer">
           <img
             onClick={() => navigate(`/shop/${product.link}`)}
             src={product.image}
             alt=""
-            style={{
-              maxHeight: "225px",
-              maxWidth: "225px",
-              cursor: "pointer",
-            }}
+            className="productCardImage"
           />
-          <div
-            style={{
-              color: "#dadada",
-              fontSize: "18px",
-              fontWeight: "bold",
-            }}
-          >
-            {product.title}
-          </div>
-          <h1
-            style={{
-              fontSize: "12px",
-              fontWeight: "bold",
-              color: "gray",
-            }}
-          >
-            TRAVEL GUIDE
-          </h1>
-          <div style={{ color: "#dadada", fontWeight: "bold" }}>
-            ${product.price}
-          </div>
+          <div className="productCardTitle">{product.title}</div>
+          <h1 className="productCardH">TRAVEL GUIDE</h1>
+          <div className="productCardPrice">${product.price}</div>
           {productQuantity > 0 ? (
             <>
-              <Form as={Row} style={{ margin: "1vh" }}>
-                <Form.Label column="true" sm="6" style={{ color: "#dadada" }}>
+              <Form as={Row} className="productCardForm">
+                <Form.Label
+                  column="true"
+                  sm="6"
+                  className="productCardFormLabel"
+                >
                   In Cart: {productQuantity}
                 </Form.Label>
-                <Col
-                  sm="6"
-                  style={{
-                    display: "flex",
-                    flexDirection: "row",
-                    justifyContent: "center",
-                    alignItems: "center",
-                  }}
-                >
+                <Col sm="6" className="productCardColumn">
                   <Button
                     sm="6"
                     onClick={() => cart.addOneToCart(product.id)}
                     className="mx-2"
-                    style={{
-                      maxHeight: "30px",
-                      maxWidth: "30px",
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                    }}
+                    id="productCardButton"
                   >
                     +
                   </Button>
@@ -220,13 +112,7 @@ function ProductCard(props) {
                     sm="6"
                     onClick={() => cart.removeOneFromCart(product.id)}
                     className="mx-2"
-                    style={{
-                      maxHeight: "30px",
-                      maxWidth: "30px",
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                    }}
+                    id="productCardButton"
                   >
                     -
                   </Button>
@@ -242,7 +128,7 @@ function ProductCard(props) {
             </>
           ) : (
             <Button
-              style={{ margin: "1vh", background: "#006699", border: "none" }}
+              className="productCardSecondaryButton"
               variant="primary"
               onClick={myAlert}
             >

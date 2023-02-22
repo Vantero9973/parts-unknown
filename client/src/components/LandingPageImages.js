@@ -7,9 +7,7 @@ export default function LandingPageImages() {
   const navigate = useNavigate();
 
   const { data: landingImages, isLoading } = useQuery(["landingImage"], () => {
-    return Axios.get("/api/landingimages").then(
-      (res) => res.data
-    );
+    return Axios.get("/api/landingimages").then((res) => res.data);
   });
 
   if (isLoading) {
@@ -18,63 +16,15 @@ export default function LandingPageImages() {
 
   return (
     <>
-      <div
-        className="absoluteContainer"
-        style={{
-          display: "flex",
-          height: "80vh",
-          width: "100vw",
-          position: "absolute",
-        }}
-      >
-        <div
-          style={{
-            height: "80vh",
-            width: "100vw",
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "flex-end",
-            fontFamily: "'Roboto', sans-serif",
-          }}
-        >
-          <span
-            className="hiddenTitle"
-            style={{
-              color: "white",
-              fontSize: "36px",
-              fontWeight: "600",
-              fontFamily: "'Roboto', sans-serif",
-              width: "80vw",
-              margin: "10px",
-              textShadow: "#000 1px 0 5px",
-              zIndex: "3",
-            }}
-          >
-            {landingImages[0].title}
-          </span>
-          <span
-            style={{
-              display: "flex",
-              justifyContent: "right",
-              color: "white",
-              width: "5vw",
-              margin: "10px",
-            }}
-          >
+      <div className="absoluteContainer">
+        <div className="landingPageImagesContainer">
+          <span className="hiddenTitle">{landingImages[0].title}</span>
+          <span className="landingPageImagesSpan">
             <div
               className="hiddenTitle"
               onClick={() => navigate(`/blogs/${landingImages[0].id}`)}
-              style={{ zIndex: "3" }}
             >
-              <ArrowForwardIcon
-                className="arrowIcon"
-                style={{
-                  height: "60px",
-                  width: "60px",
-                  fontWeight: "bolder",
-                  cursor: "pointer",
-                }}
-              />
+              <ArrowForwardIcon className="arrowIcon" />
             </div>
           </span>
         </div>
@@ -82,110 +32,31 @@ export default function LandingPageImages() {
       <div className="hiddenImage">
         <div
           onClick={() => navigate(`/blogs/${landingImages[0].id}`)}
-          style={{
-            width: "100vw",
-            height: "80vh",
-            float: "left",
-            backgroundImage: `url(${landingImages[0].image})`,
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "center",
-            overflow: "hidden",
-            cursor: "pointer",
-            zIndex: "1",
-            webkitFilter: "brightness(80%)",
-            filter: "brightness(80%)",
-          }}
+          className="landingPageImagesSecondaryDiv"
         />
       </div>
-      <div style={{ display: "flex" }}>
+      <div className="displayFlex">
         {landingImages.map((landingImage) => {
           return (
             <>
-              <div style={{ height: "80vh", overflow: "hidden" }}>
-                <div
-                  style={{
-                    display: "flex",
-                    height: "80vh",
-                    width: "33.33vw",
-                    position: "absolute",
-                  }}
-                >
-                  <div
-                    style={{
-                      height: "80vh",
-                      width: "33.33vw",
-                      display: "flex",
-                      alignItems: "flex-end",
-                      fontFamily: "'Roboto', sans-serif",
-                      float: "left",
-                    }}
-                  >
-                    <span
-                      className="notHiddenImage"
-                      style={{
-                        color: "white",
-                        fontSize: "30px",
-                        fontWeight: "600",
-                        fontFamily: "'Roboto', sans-serif",
-                        width: "28vw",
-                        margin: "10px",
-                        textShadow: "#000 1px 0 5px",
-                        zIndex: "3",
-                      }}
-                    >
-                      {landingImage.title}
-                    </span>
-                    <span
-                      style={{
-                        display: "flex",
-                        justifyContent: "right",
-                        color: "white",
-                        width: "5vw",
-                        margin: "10px",
-                      }}
-                    >
+              <div className="landingPageImagesSecondaryContainer">
+                <div className="landingPageImagesAnotherDiv">
+                  <div className="landingPageImagesSpanContainer">
+                    <span className="notHiddenImage">{landingImage.title}</span>
+                    <span className="landingPageImagesSpan">
                       <div
                         className="notHiddenImage"
                         onClick={() => navigate(`/blogs/${landingImage.id}`)}
-                        style={{ zIndex: "3" }}
                       >
-                        <ArrowForwardIcon
-                          className="arrowIcon"
-                          style={{
-                            height: "60px",
-                            width: "60px",
-                            fontWeight: "bolder",
-                            cursor: "pointer",
-                          }}
-                        />
+                        <ArrowForwardIcon className="arrowIcon" />
                       </div>
                     </span>
                   </div>
                 </div>
-                <div
-                  className="notHiddenImage"
-                  style={{
-                    height: "80vh",
-                    width: "33.33vw",
-                    float: "left",
-                    overflow: "hidden",
-                  }}
-                >
+                <div className="notHiddenImageSecondary">
                   <div
                     onClick={() => navigate(`/blogs/${landingImage.id}`)}
                     className="landingImage"
-                    style={{
-                      width: "33.33vw",
-                      height: "80vh",
-                      float: "left",
-                      backgroundImage: `url(${landingImage.image})`,
-                      backgroundSize: "cover",
-                      backgroundRepeat: "no-repeat",
-                      backgroundPosition: "center",
-                      overflow: "hidden",
-                      cursor: "pointer",
-                    }}
                   />
                 </div>
               </div>

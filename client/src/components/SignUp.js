@@ -31,133 +31,70 @@ export default function SignUp({ setUser }) {
     });
   }
 
-  //   t.string :username
-  //   t.string :first_name
-  //   t.string :last_name
-  //   t.string :password
-  //   t.string :password_digest
-  //   t.string :image
-  //   t.boolean :admin
-
   return (
-    <div
-      style={{
-        display: "flex",
-        alignItems: "center",
-        height: "60vh",
-        width: "30vw",
-        padding: "5vw",
-        background: "#1C1C1E",
-        borderRadius: "50px",
-        color: "#dadada",
-      }}
-    >
-      <form
-        onSubmit={handleSubmit}
-        style={{ display: "flex", flexDirection: "column" }}
-      >
-        <label htmlFor="username" style={{ fontSize: "24px" }}>
+    <div className="signUpContainer">
+      <form onSubmit={handleSubmit} className="signUpForm">
+        <label htmlFor="username" className="signUpLabel">
           Username:
         </label>
         <input
-          style={{
-            width: "20vw",
-            height: "3vh",
-            fontSize: "20px",
-            padding: "1vh",
-          }}
+          className="signUpInput"
           type="text"
           id="username"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
         />
-        <label htmlFor="first_name" style={{ fontSize: "24px" }}>
+        <label htmlFor="first_name" className="signUpLabel">
           First Name:
         </label>
         <input
-          style={{
-            width: "20vw",
-            height: "3vh",
-            fontSize: "20px",
-            padding: "1vh",
-          }}
+          className="signUpInput"
           type="text"
           id="first_name"
           value={first_name}
           onChange={(e) => setFirstName(e.target.value)}
         />
-        <label htmlFor="last_name" style={{ fontSize: "24px" }}>
+        <label htmlFor="last_name" className="signUpLabel">
           Last Name:
         </label>
         <input
-          style={{
-            width: "20vw",
-            height: "3vh",
-            fontSize: "20px",
-            padding: "1vh",
-          }}
+          className="signUpInput"
           type="text"
           id="last_name"
           value={last_name}
           onChange={(e) => setLastName(e.target.value)}
         />
-        <label htmlFor="image" style={{ fontSize: "24px" }}>
+        <label htmlFor="image" className="signUpLabel">
           Profile Picture:
         </label>
         <input
-          style={{
-            width: "20vw",
-            height: "3vh",
-            fontSize: "20px",
-            padding: "1vh",
-          }}
+          className="signUpInput"
           type="text"
           id="image"
           value={image}
           onChange={(e) => setImage(e.target.value)}
         />
-        <label htmlFor="password" style={{ fontSize: "24px" }}>
+        <label htmlFor="password" className="signUpLabel">
           Password:
         </label>
         <input
-          style={{
-            width: "20vw",
-            height: "3vh",
-            fontSize: "20px",
-            padding: "1vh",
-          }}
+          className="signUpInput"
           type="password"
           id="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <label htmlFor="password_confirmation" style={{ fontSize: "24px" }}>
+        <label htmlFor="password_confirmation" className="signUpLabel">
           Confirm Password:
         </label>
         <input
-          style={{
-            width: "20vw",
-            height: "3vh",
-            fontSize: "20px",
-            padding: "1vh",
-          }}
+          className="signUpInput"
           type="password"
           id="password_confirmation"
           value={passwordConfirmation}
           onChange={(e) => setPasswordConfirmation(e.target.value)}
         />
-        <Button
-          type="submit"
-          style={{
-            fontSize: "16px",
-            fontWeight: "bolder",
-            color: "#1C1C1E",
-            background: "#dadada",
-            marginLeft: "5vw",
-            marginTop: "3vh",
-            width: "10vw",
-          }}
-        >
+        <Button type="submit" className="signUpButton">
           Sign Up
         </Button>
       </form>

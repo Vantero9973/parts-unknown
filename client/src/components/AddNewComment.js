@@ -77,69 +77,19 @@ export default function AddNewComment({ user }) {
 
   if (user) {
     return (
-      <div
-        style={{
-          gap: "45vw",
-        }}
-      >
+      <div className="addNewCommentContainer">
         <Popup
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-          trigger={
-            <Button
-              className="addNewPopup"
-              style={{
-                height: "44px",
-                background: "#1c1c1e",
-                color: "#006699",
-                borderColor: "#dadada",
-                borderRadius: "5px",
-                fontSize: "16px",
-              }}
-            >
-              Reply
-            </Button>
-          }
+          className="destinationsListBox"
+          trigger={<Button className="addNewCommentButton">Reply</Button>}
           modal
           nested
         >
-          <div
-            style={{
-              background: "#1C1C1E",
-              display: "flex",
-              width: "50vw",
-              height: "80vh",
-              borderRadius: "50px",
-              border: "1px solid #dadada",
-            }}
-          >
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
-                alignItems: "center",
-                gap: "10px",
-                marginTop: "2vh",
-              }}
-            >
-              <form onSubmit={handleSubmit} style={{ marginLeft: "5vw" }}>
+          <div className="addNewCommentDiv">
+            <div className="addNewCommentSecondaryDiv">
+              <form className="addNewCommentForm" onSubmit={handleSubmit}>
                 <textarea
                   class="overflow-scroll"
-                  style={{
-                    width: "40vw",
-                    height: "50vh",
-                    fontSize: "24px",
-                    display: "flex",
-                    alignItems: "flex-start",
-                    justifyContent: "flex-start",
-                    flexWrap: "wrap",
-                    marginBottom: "10px",
-                    padding: "10px",
-                  }}
+                  id="addNewCommentTextArea"
                   type="text"
                   name="id"
                   placeholder="Body"
@@ -147,17 +97,9 @@ export default function AddNewComment({ user }) {
                   onChange={(e) => setBody(e.target.value)}
                 />
                 <Button
+                  className="addNewCommentSecondaryButton"
                   variant="outlined"
                   type="submit"
-                  style={{
-                    fontSize: "16px",
-                    fontWeight: "bolder",
-                    color: "#1C1C1E",
-                    background: "#dadada",
-                    marginLeft: "15vw",
-                    marginTop: "2vh",
-                    width: "10vw",
-                  }}
                 >
                   Post
                 </Button>
@@ -169,23 +111,8 @@ export default function AddNewComment({ user }) {
     );
   } else {
     return (
-      <div
-        style={{
-          gap: "45vw",
-        }}
-      >
-        <Button
-          onClick={myAlert}
-          className="addNewPopup"
-          style={{
-            height: "44px",
-            background: "#1c1c1e",
-            color: "#006699",
-            borderColor: "#dadada",
-            borderRadius: "5px",
-            fontSize: "16px",
-          }}
-        >
+      <div className="addNewCommentContainer">
+        <Button onClick={myAlert} className="addNewCommentButton">
           Reply
         </Button>
       </div>

@@ -12,9 +12,18 @@ body {
 
 .landingImage {
     -webkit-filter: brightness(80%);
-	filter: brightness(80%);
+	  filter: brightness(80%);
     z-index: 900;
     transition: all 0.3s ease;
+    width: 33.33vw;
+    height: 80vh;
+    float: left;
+    background-image: url(${landingImage.image});
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+    cursor: pointer;
 }
 
 .landingImage:hover { 
@@ -121,8 +130,49 @@ body {
   }
 
   @media (min-width: 1000px) {
+    .notHiddenImage {
+        color: white;
+        font-size: 30px;
+        font-weight: 600;
+        font-family: 'Roboto', sans-serif;
+        width: 28vw;
+        margin: 10px;
+        text-shadow: #000 1px 0 5px;
+        z-index: 3;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    .notHiddenImageSecondary {
+      display: none;
+    }
+  }
+
+  @media (min-width: 1000px) {
+    .notHiddenImageSecondary {
+        height: 80vh;
+        width: 33.33vw;
+        float: left;
+        overflow: hidden;
+    }
+  }
+
+  @media (min-width: 1000px) {
     .hiddenTitle {
       display: none;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    .hiddenTitle {
+        color: white;
+        font-size: 36px;
+        font-weight: 600;
+        font-family: 'Roboto', sans-serif;
+        width: 80vw;
+        margin: 10px;
+        text-shadow: #000 1px 0 5px;
+        z-index: 3;
     }
   }
 
@@ -132,15 +182,42 @@ body {
     }
   }
 
+  @media (min-width: 1000px) {
+    .absoluteContainer {
+        display: flex;
+        height: 80vh;
+        width: 100vw;
+        position: absolute;
+    }
+  }
+
   @media (max-width: 1000px) {
     .autoSuggest {
       display: none;
     }
   }
 
+  @media (min-width: 1000px) {
+    .autoSuggest {
+        position: absolute;
+        margin-top: 35vh;
+        margin-left: 30vw;
+        z-index: 10;
+        font-size: 32px;
+    }
+  }
+
   @media (max-width: 1000px) {
     .blogDescription {
       display: none;
+    }
+  }
+
+  @media (min-width: 1000px) {
+    .blogDescription {
+        margin: 10px;
+        color: darkgray;
+        font-weight: bold;
     }
   }
 
@@ -182,7 +259,7 @@ body {
       align-items: center;
       height: 92vh;
       gap: 1vw;
-    }
+  }
 
 .destinationsListContainer {
       height: 88vh;
@@ -191,13 +268,13 @@ body {
       display: flex;
       justify-content: center;
       border-radius: 20px;
-    }
+}
 
 .destinationsListSecondaryContainer {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-    }
+}
 
 #destinationsCountryBox {
       display: flex;
@@ -208,13 +285,13 @@ body {
       height: 78vh;
       background: #2c2c2e;
       margin-bottom: 2vh;
-    }
+}
 
 .destinationsListBox {
       display: flex;
       justify-content: center;
       align-items: center;
-    }
+}
 
 .destinationsSecondaryListBox {
       display: flex;
@@ -222,7 +299,7 @@ body {
       height: fit-content;
       width: fit-content;
       margin: 3px;
-    }
+}
 
 .destinationsInputLabel {
   font-size: 20px;
@@ -231,4 +308,1462 @@ body {
 
 .destinationsMenuItem {
     color: #1c1c1e;
+}
+
+.addNewBlogContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 45vw;
+}
+
+.addNewPopup {
+    height: 44px;
+    font-weight: bold;
+    background: #2c2c2e;
+    color: #dadada;
+    border-color: #dadada;
+    border-radius: 5px;
+}
+
+.addNewBlogDiv {
+    background: #1C1C1E;
+    display: flex;
+    width: 50vw;
+    height: 90vh;
+    border-radius: 50px;
+    border: 1px solid #dadada;
+}
+
+.addNewBlogSecondaryDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 2vh;
+}
+
+.addNewBlogForm {
+  margin-left: 5vw;
+}
+
+.addNewBlogInput {
+    width: 40vw;
+    height: 5vh;
+    font-size: 24px;
+    display: flex;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+#addNewBlogTextArea {
+    width: 40vw;
+    height: 40vh;
+    font-size: 24px;
+    display: flex;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.addNewBlogButton {
+    font-size: 16px;
+    font-weight: bolder;
+    color: #1C1C1E;
+    background: #dadada;
+    margin-left: 15vw;
+    margin-top: 2vh;
+    width: 10vw;
+}
+
+.addNewCommentContainer {
+    gap: 45vw;
+}
+
+.addNewCommentButton {
+    height: 44px;
+    background: #1c1c1e;
+    color: #006699;
+    border-color: #dadada;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.addNewCommentDiv {
+    background: #1C1C1E;
+    display: flex;
+    width: 50vw;
+    height: 80vh;
+    border-radius: 50px;
+    border: 1px solid #dadada;
+}
+
+.addNewCommentSecondaryDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 2vh;
+}
+
+.addNewCommentForm {
+  margin-left: 5vw;
+}
+
+#addNewCommentTextArea {
+    width: 40vw;
+    height: 50vh;
+    font-size: 24px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.addNewCommentSecondaryButton {
+    font-size: 16px;
+    font-weight: bolder;
+    color: #1C1C1E;
+    background: #dadada;
+    margin-left: 15vw;
+    margin-top: 2vh;
+    width: 10vw;
+}
+
+.addNewPostContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 45vw;
+}
+
+.addNewPostButton {
+    height: 44px;
+    font-weight: bold;
+    background: #2c2c2e;
+    color: #a6adba;
+    border-color: #dadada;
+    border-radius: 5px;
+}
+
+.addNewPostDiv {
+    background: #1C1C1E;
+    display: flex;
+    width: 50vw;
+    height: 80vh;
+    border-radius: 50px;
+    border: 1px solid #dadada;
+}
+
+.addNewPostSecondaryDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 2vh;
+}
+
+.addNewPostForm {
+  margin-left: 5vw;
+}
+
+#addNewPostTextArea {
+    width: 40vw;
+    height: 40vh;
+    font-size: 24px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.addNewPostSecondaryButton {
+    font-size: 16px;
+    font-weight: bolder;
+    color: #1C1C1E;
+    background: #dadada;
+    margin-left: 15vw;
+    margin-top: 2vh;
+    width: 10vw;
+}
+
+.blogPageContainer {
+    position: absolute;
+    height: 80vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blogPageTitle {
+    width: 55vw;
+    z-index: 1;
+    font-size: 75px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    text-shadow: #000 2px 0 3px;
+    line-height: 90%;
+}
+
+.blogPageDiv {
+    min-height: 100vh;
+    padding-bottom: 5vh;
+}
+
+.blogPageSecondaryDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 10vh;
+}
+
+.blogPageDropdownContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.blogPageDropdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: #dadada;
+    background: #2c2c2e;
+    padding: 10px;
+}
+
+.blogPageDropdownToggle {
+    background: #2c2c2e;
+    border: none;
+    font-weight: bold;
+    color: #dadada;
+}
+
+.blogPostsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.blogPostsDiv {
+    display: flex;
+    align-items: center;
+    margin: 5vh;
+}
+
+.blogPostsTypography {
+    margin: 10px;
+    color: #dadada;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.blogPostsSecondaryTypography {
+  font-size: 14px;
+  color: gray; 
+  margin: 10px;
+}
+
+.blogPostsLikesContainer {
+    color: #dadada;
+    margin: 10px;
+}
+
+.blogPostsLikesDiv {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.cancelContainer {
+    min-width: 100vw;
+    min-height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cancelTitle {
+  color: #dadada;
+  font-size: 32px;
+}
+
+.carouselContainer {
+  margin: -18vw;
+}
+
+.continentsShopContainer {
+    padding: 5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.continentsShopDiv {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 5vh;
+}
+
+.cursorPointer {
+  cursor: pointer;
+}
+
+.continentsShopImage {
+  max-height: 30vh;
+  max-width: 30vh;
+}
+
+.continentsShopName {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.countryPageContainer {
+  display: flex;
+  gap: 1rem;
+  padding: 1vw;
+}
+
+#countryPageSecondaryContainer {
+    background: #2c2c2e;
+    width: 40vw;
+    height: 88vh;
+    padding: 1vh;
+    border-radius: 25px;
+}
+
+.countryPageDiv {
+  display: flex;
+  justify-content: center;
+}
+
+.countryPageTitle {
+  font-size: 32px;
+  font-weight: bold;
+  color: #dadada;
+}
+
+.countryPageTypography {
+    color: #006699;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.forumCountryContainer {
+  padding: 2vw;
+}
+
+.forumCountryDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.forumCountrySecondaryDiv {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.forumCountryTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: #dadada;
+    background: #2c2c2e;
+    padding: 10px;
+}
+
+.forumCountryDropdownToggle {
+    background: #2c2c2e;
+    border: none;
+    font-weight: bold;
+    color: #dadada;
+}
+
+.forumCountryMargin {
+  margin-top: 5vh;
+}
+
+.isLoadingMessage {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.isLoadingTitle {
+  font-size: 24px;
+}
+
+.forumPageContainer {
+  margin-top: 5vh;
+  color: #dadada;
+}
+
+.forumPageDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.forumPageTitle {
+    font-size: 48px;
+}
+
+.forumPageImage {
+  max-height: 50px;
+  max-width: 100px;
+}
+
+.forumPageSecondaryContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 5vh;
+    color: #dadada;
+}
+
+.forumPageTable {
+    width: 50vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.forumPageTableRow {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    width: 20vw;
+    height: 2vh;
+    padding: 5px;
+}
+
+.forumPageSecondaryTableRow {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    width: 60vw;
+}
+
+.forumPageTableDateRow {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    width: 20vw;
+}
+
+.forumPageSecondaryTable {
+    display: flex;
+    flex-direction: row;
+    width: 50vw;
+    background: #dadada;
+    color: #2C2C2E;
+    padding: 5px;
+    border-top: 1px solid #2c2c2e;
+}
+
+.forumPageTableTopicRow {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    width: 20vw;
+    height: 5vh;
+    padding: 5px;
+}
+
+.forumPageTableTitleRow {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    width: 60vw;
+    cursor: pointer;
+    color: #006699;
+}
+
+.forumPageTableSecondaryDateRow {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: bold;
+    width: 20vw;
+}
+
+.forumSearchContainer {
+    background: #1C1C1E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#forumSearchInput {
+    height: 4vh;
+    width: 15vw;
+    border: 1px solid #dadada;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.forumSelectorContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #dadada;
+}
+
+.forumSelectorTable {
+  display: flex;
+  flex-direction: row;
+}
+
+.forumSelectorTableRow {
+    width: 30vw;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.forumSelectorTopicsTableRow {
+    width: 8vw;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.forumSelectorPostsTableRow {
+    width: 8vw;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.forumSelectorSecondaryTableRow {
+    display: flex;
+    align-items: flex-start;
+    border-bottom: 1px solid white;
+    width: 30vw;
+}
+
+.forumSelectorTableData {
+    cursor: pointer;
+    color: #006699;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.forumSelectorTableRowContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-bottom: 1px solid white;
+    width: 8vw;
+}
+
+.forumSelectorTableRowSecondaryContainer {
+    display: flex;
+    align-items: flex-start;
+    cursor: pointer;
+    border-bottom: 1px solid white;
+    width: 8vw;
+    justify-content: center;
+}
+
+.fullBlogPostContainer {
+  color: #dadada;
+}
+
+.fullBlogPostSecondaryContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10vh;
+    color: #dadada;
+}
+
+.fullBlogPostTitleContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 20vw;
+    padding-left: 12vw;
+    padding-right: 12vw;
+}
+
+.fullBlogPostTitle {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.fullBlogPostDiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 1vw;
+}
+
+.fullBlogPostImage {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.fullBlogPostUsernameContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.fullBlogPostUsername {
+    font-size: 20px;
+    font-weight: bold;
+    min-width: 10vw;
+}
+
+#fullBlogPostHr {
+  margin: 2px;
+}
+
+.fullBlogPostDateRead {
+    font-size: 16px;
+    line-height: 100%;
+    margin-top: 5px;
+}
+
+.fullBlogPostSecondaryDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.fullBlogPostSecondaryImage {
+    max-height: 90vh;
+    max-width: 75vw;
+    margin: 5vh;
+}
+
+.fullBlogPostBodyContainer {
+    padding-left: 20vw;
+    padding-right: 20vw;
+    font-size: 20px;
+    width: 100vw;
+}
+
+.fullBlogPostP {
+  white-space: pre-line;
+  word-wrap: break-word;
+}
+
+.fullBlogPostButton {
+    background: #dc2626;
+    color: #1c1c1e;
+    border-color: #1c1c1e;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1vh;
+}
+
+.deleteIcon {
+  margin-bottom: 2px;
+}
+
+.fullBlogPostSecondaryTitle {
+    font-size: 36px;
+    font-weight: bold;
+    color: #dadada;
+}
+
+.fullBlogPostPContainer {
+    padding-left: 20vw;
+    padding-right: 20vw;
+    font-size: 20px;
+}
+
+.fullBlogPostSecondaryP {
+    margin: 5vh;
+    white-space: pre-line;
+    word-wrap: break-word;
+}
+
+.fullBlogPostProfilePic {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.itemSearchContainer {
+    background: #1C1C1E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#itemSearchInput {
+    height: 5vh;
+    width: 25vw;
+    font-size: 20px;
+    border: 1px solid #dadada;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.landingPageDiv {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.landingPageImagesContainer {
+    height: 80vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    font-family: 'Roboto', sans-serif;
+}
+
+.landingPageImagesSpan {
+    display: flex;
+    justify-content: right;
+    color: white;
+    width: 5vw;
+    margin: 10px;
+}
+
+.arrowIcon {
+    height: 60px;
+    width: 60px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.landingPageImagesSecondaryDiv {
+    width: 100vw;
+    height: 80vh;
+    float: left;
+    background-image: url(${landingImages[0].image});
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 1;
+    -webkit-filter: brightness(80%);
+    filter: brightness(80%);
+}
+
+.displayFlex {
+  display: flex;
+}
+
+.landingPageImagesSecondaryContainer {
+  height: 80vh;
+  overflow: hidden;
+}
+
+.landingPageImagesAnotherDiv {
+    display: flex;
+    height: 80vh;
+    width: 33.33vw;
+    position: absolute;
+}
+
+.landingPageImagesSpanContainer {
+    height: 80vh;
+    width: 33.33vw;
+    display: flex;
+    align-items: flex-end;
+    font-family: 'Roboto', sans-serif;
+    float: left;
+}
+
+.loginContainer {
+    display: flex;
+    align-items: center;
+    height: 50vh;
+    width: 30vw;
+    padding: 5vw;
+    background: #1C1C1E;
+    border-radius: 50px;
+    color: #dadada;
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.loginLabel {
+  font-size: 24px;
+}
+
+.loginInput {
+    width: 20vw;
+    height: 3vh;
+    font-size: 20px;
+    padding: 1vh;
+}
+
+.loginButton {
+    font-size: 16px;
+    font-weight: bolder;
+    color: #1C1C1E;
+    background: #dadada;
+    margin-left: 5vw;
+    margin-top: 3vh;
+    width: 10vw;
+}
+
+.navbarNav {
+    padding-left: 10px;
+    padding-right: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 8vh;
+    border-bottom: 1px solid #3c3c3e;
+}
+
+#navbarLink {
+    margin-right: 10vw;
+    font-size: 24px;
+    font-weight: bold;
+    color: #dadada;
+    width: fit-content;
+}
+
+.partsUndefinedIcon {
+    height: 50px;
+    width: 50px;
+    padding: 5px;
+    color: #dadada;
+}
+
+.navbarContainer {
+    display: flex;
+    width: fit-content;
+    font-weight: bold;
+    gap: 1rem;
+}
+
+.navbarSecondaryLink {
+    color: #dadada;
+    padding: 1vh;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.navbarImage {
+    max-height: 50px;
+    max-width: 50px;
+    margin-left: 15px;
+}
+
+.navbarDropdownItem {
+  color: #1c1c1e;
+}
+
+#navbarSecondaryDiv {
+  width: fit-content;
+}
+
+.navbarButton {
+    background: #2c2c2e;
+    color: #dadada;
+    font-weight: bold;
+    border: 1px solid #dadada;
+}
+
+.navbarSecondaryImage {
+    border-radius: 50%;
+    max-width: 50px;
+    max-height: 50px;
+}
+
+.navbarWelcome {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.postPageContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    min-height: 92vh;
+    padding: 10vh;
+    color: #dadada;
+}
+
+.postPageDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75vw;
+    background: #1c1c1e;
+    padding: 5vh;
+    gap: 5rem;
+}
+
+.postPageSecondaryDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 10vw;
+    height: 10vw;
+}
+
+.postPageImage {
+    height: 10vw;
+    max-width: 10vw;
+    border-radius: 50%;
+}
+
+.postPagePostContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 60vw;
+}
+
+.postPageTitle {
+    font-size: 24px;
+    font-weight: bold;
+    color: #dadada;
+}
+
+.postPageDate {
+  font-size: 14px;
+  color: gray;
+}
+
+.postPageBody {
+    margin-top: 2vh;
+    white-space: pre-line;
+    word-wrap: break-word;
+}
+
+.postPageSecondaryContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.postPageCommentContainer {
+    display: flex;
+    align-items: center;
+    background: #1c1c1e;
+    width: 75vw;
+    border-top: 1px solid #4c4c4e;
+}
+
+.postPageCommentDiv {
+    padding: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.postPageCommentImage {
+    height: 5vw;
+    max-width: 5vw;
+    border-radius: 50%;
+}
+
+.postPageCommentUsername {
+  font-size: 16px;
+}
+
+.postPageCommentSecondaryDiv {
+    padding: 5vh;
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    width: 60vw;
+}
+
+.postPageCommentDate {
+  font-size: 14px;
+  color: gray;
+}
+
+.postPageCommentBody {
+    white-space: pre-line;
+    flex-wrap: wrap;
+    word-wrap: break-word;
+}
+
+.postPageCommentButton {
+    background: #dc2626;
+    color: #1c1c1e;
+    border-color: #1c1c1e;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1vh;
+    width: fit-content;
+}
+
+.postPageCommentP {
+  white-space: pre-line;
+  word-wrap: break-word;
+}
+
+.productCardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background: #1c1c1e;
+    height: fit-content;
+    border: none;
+    width: 15vw;
+    height: 50vh;
+}
+
+.productCardSecondaryContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.productCardImage {
+    max-height: 225px;
+    max-width: 225px;
+    cursor: pointer;
+}
+
+.productCardTitle {
+    color: #dadada;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.productCardH {
+    font-size: 12px;
+    font-weight: bold;
+    color: gray;
+}
+
+.productCardPrice {
+  color: #dadada;
+  font-weight: bold
+}
+
+.productCardForm {
+  margin: 1vh;
+}
+
+.productCardFormLabel {
+  color: #dadada;
+}
+
+.productCardColumn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#productCardButton {
+    max-height: 30px;
+    max-width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.productCardSecondaryButton {
+  margin: 1vh;
+  background: #006699;
+  border: none;
+}
+
+.searchContainer {
+    background: #1C1C1E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#searchInput {
+    height: 5vh;
+    width: 25vw;
+    font-size: 20px;
+    border: 1px solid #dadada;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.shopItemCardContainer {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #dadada;
+}
+
+.shopItemCardSecondaryContainer {
+    width: 80vw;
+    min-height: 92vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+
+.shopItemCardDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.shopItemCardImage {
+    height: 70vh;
+    max-width: 70vh;
+}
+
+.shopItemCardSecondaryDiv {
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.shopItemCardName {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.shopItemCardExtraDiv {
+  width: 30vw;
+}
+
+.shopItemCardBookContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2vh;
+}
+
+.shopItemCardTitle {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.shopItemCardPrice {
+  font-size: 24px
+}
+
+.shopItemCardDescriptionContainer {
+    width: 25vw;
+}
+
+.shopItemCardDescription {
+  white-space: pre-line;
+}
+
+.shopItemsContainer {
+    width: 90vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.shopItemsSecondaryContainer {
+    height: 35vh;
+    width: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.shopItemsImage {
+  height: 25vh;
+  width: 20vh;
+}
+
+.shopItemsName {
+    color: #dadada;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.shopItemsTitle {
+    font-size: 12px;
+    font-weight: bold;
+    color: gray;
+}
+
+.itemsLoading {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shopPageContainer {
+  padding: 5vh;
+}
+
+.shopPageSecondaryContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 4vh;
+}
+
+.shopPageDiv {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.shopPageSecondaryDiv {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5vh;
+    width: 90vw;
+}
+
+.shopPageContinentContainer {
+    width: 12vw;
+    min-width: 140px;
+    height: 12vw;
+    min-height: 140px;
+    background-image: url(${continent.image});
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-shadow: #000 1px 0 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+    margin: 1vw;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.shopPageName {
+  width: 15vh;
+  text-align: center;
+}
+
+.shopPageShopItemsContainer {
+  height: 2px;
+  width: 90vw;
+  background: #3c3c3e;
+}
+
+.signUpContainer {
+    display: flex;
+    align-items: center;
+    height: 60vh;
+    width: 30vw;
+    padding: 5vw;
+    background: #1C1C1E;
+    border-radius: 50px;
+    color: #dadada;
+}
+
+.signUpForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.signUpLabel {
+  font-size: 24px;
+}
+
+.signUpInput {
+    width: 20vw;
+    height: 3vh;
+    font-size: 20px;
+    padding: 1vh;
+}
+
+.signUpButton {
+    font-size: 16px;
+    font-weight: bolder;
+    color: #1C1C1E;
+    background: #dadada;
+    margin-left: 5vw;
+    margin-top: 3vh;
+    width: 10vw;
+}
+
+.storeContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5vh;
+}
+
+.successContainer {
+    min-width: 100vw;
+    min-height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.successMessage {
+  color: #dadada;
+  font-size: 32px;
+}
+
+.whereToNextContainer {
+    height: 100vh;
+    padding-left: 8vw;
+    padding-right: 8vw;
+    background: lightgray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.whereToNextSecondaryContainer {
+    width: 80vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: space-between;
+}
+
+.whereToNextTitle {
+  font-size: 24px;
+  font-weight: bold;
+  color: gray;
+}
+
+.whereToNextSecondaryTitle {
+    font-size: 50px;
+    font-weight: bold;
+    color: #1c1c1e;
+}
+
+.whereToNextDiv {
+    display: flex;
+    align-items: center;
+}
+
+.whereToNextButton {
+    height: fit-content;
+    width: fit-content;
+    background: #dadada;
+    color: #1c1c1e;
+    border-color: #1c1c1e;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.whereToNextSecondaryDiv {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10vh;
+    gap: 2rem;
+}
+
+.whereToNextDestinationsContainer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 1vh;
+}
+
+.whereToNextCard {
+  border-radius: 40px;
+  cursor: pointer;
+}
+
+.whereToNextDestinationsDiv {
+    display: flex;
+    width: 25vw;
+    justify-content: left;
+}
+
+.whereToNextName {
+    font-size: clamp(1rem, 2.5vw, 24px);
+    font-weight: bold;
+    color: #1c1c1e;
+    margin-top: 1vh;
+    margin-left: 1vw;
+}
+
+.appContainer {
+  min-height: 100vh;
+  background: #1C1C1E;
 }

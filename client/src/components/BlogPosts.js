@@ -12,24 +12,14 @@ export default function BlogPosts({ blogs }) {
   const navigate = useNavigate();
 
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-      }}
-    >
+    <div className="blogPostsContainer">
       <div className="blogContainer">
         {blogs.map((blog) => {
           return (
             <div
               data-aos="fade-up"
               data-aos-duration="500"
-              style={{
-                display: "flex",
-                alignItems: "center",
-                margin: "5vh",
-              }}
+              className="blogPostsDiv"
             >
               <CardMedia
                 component="img"
@@ -49,33 +39,20 @@ export default function BlogPosts({ blogs }) {
                 }}
               >
                 <CardContent sx={{ flex: "1 0 auto" }}>
-                  <Typography
-                    className="blogDescription"
-                    component="div"
-                    style={{
-                      margin: "10px",
-                      color: "darkgray",
-                      fontWeight: "bold",
-                    }}
-                  >
+                  <Typography className="blogDescription" component="div">
                     {blog.category_one} • {blog.category_two}
                   </Typography>
                   <Typography
                     component="div"
                     variant="h5"
-                    style={{
-                      margin: "10px",
-                      color: "#dadada",
-                      fontWeight: "bold",
-                      cursor: "pointer",
-                    }}
+                    className="blogPostsTypography"
                     onClick={() => navigate(`/blogs/${blog.id}`)}
                   >
                     {blog.title}
                   </Typography>
                   <Typography
                     component="div"
-                    style={{ fontSize: "14px", color: "gray", margin: "10px" }}
+                    className="blogPostsSecondaryTypography"
                   >
                     {blog.read_time} • {blog.date}
                   </Typography>
@@ -84,7 +61,6 @@ export default function BlogPosts({ blogs }) {
                     variant="subtitle1"
                     color="text.secondary"
                     component="div"
-                    style={{ color: "#dadada", margin: "10px" }}
                   >
                     {blog.description}
                   </Typography>
@@ -92,18 +68,9 @@ export default function BlogPosts({ blogs }) {
                     variant="subtitle1"
                     color="text.secondary"
                     component="div"
-                    style={{
-                      color: "#dadada",
-                      margin: "10px",
-                    }}
+                    className="blogPostsLikesContainer"
                   >
-                    <div
-                      style={{
-                        display: "flex",
-                        alignItems: "center",
-                        gap: "5px",
-                      }}
-                    >
+                    <div className="blogPostsLikesDiv">
                       <ThumbUpOffAltIcon />
                       {blog.likes}
                     </div>

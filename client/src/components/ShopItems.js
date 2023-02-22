@@ -8,55 +8,17 @@ export default function ShopItems({ items, search }) {
   );
 
   return (
-    <div
-      style={{
-        width: "90vw",
-        display: "flex",
-        flexWrap: "wrap",
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
+    <div className="shopItemsContainer">
       {searchItems.map((item) => {
         console.log(item);
         return (
           <div
-            style={{
-              height: "35vh",
-              width: "20vh",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "center",
-              marginLeft: "5px",
-              marginRight: "5px",
-              cursor: "pointer",
-            }}
+            className="shopItemsSecondaryContainer"
             onClick={() => navigate(`/shop/${item.id}`)}
           >
-            <img
-              src={item.image}
-              alt=""
-              style={{ height: "25vh", width: "20vh" }}
-            />
-            <h1
-              style={{
-                color: "#dadada",
-                fontSize: "18px",
-                fontWeight: "bold",
-              }}
-            >
-              {item.name}
-            </h1>
-            <h1
-              style={{
-                fontSize: "12px",
-                fontWeight: "bold",
-                color: "gray",
-              }}
-            >
-              TRAVEL GUIDE
-            </h1>
+            <img src={item.image} alt="" className="shopItemsImage" />
+            <h1 className="shopItemsName">{item.name}</h1>
+            <h1 className="shopItemsTitle">TRAVEL GUIDE</h1>
           </div>
         );
       })}

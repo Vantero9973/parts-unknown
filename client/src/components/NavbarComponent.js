@@ -52,116 +52,41 @@ function NavbarComponent({ user, setUser }) {
   if (!user) {
     return (
       <>
-        <nav
-          bg="#1c1c1e"
-          expand="lg"
-          style={{
-            paddingLeft: "10px",
-            paddingRight: "20px",
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            height: "8vh",
-            borderBottom: "1px solid #3c3c3e",
-          }}
-        >
+        <nav bg="#1c1c1e" expand="lg" className="navbarNav">
           <Link
             to="/"
-            style={{
-              marginRight: "10vw",
-              fontSize: "24px",
-              fontWeight: "bold",
-              color: "#dadada",
-              width: "fit-content",
-            }}
+            id="navbarLink"
             className="btn btn-ghost normal-case text-xl"
           >
             Parts
-            <PublicIcon
-              style={{
-                height: "50px",
-                width: "50px",
-                padding: "5px",
-                color: "#dadada",
-              }}
-            />
+            <PublicIcon className="partsUndefinedIcon" />
             Undefined
           </Link>
-          {/* <Navbar.Toggle aria-controls="basic-navbar-nav" /> */}
-          <div
-            style={{
-              display: "flex",
-              width: "fit-content",
-              fontWeight: "bold",
-              gap: "1rem",
-            }}
-          >
-            <Link
-              to="/destinations"
-              style={{
-                color: "#dadada",
-                padding: "1vh",
-                fontSize: "18px",
-                textDecoration: "none",
-              }}
-            >
+          <div className="navbarContainer">
+            <Link to="/destinations" className="navbarSecondaryLink">
               Destinations
             </Link>
-            <Link
-              to="/stories"
-              style={{
-                color: "#dadada",
-                padding: "1vh",
-                fontSize: "18px",
-                textDecoration: "none",
-              }}
-            >
+            <Link to="/stories" className="navbarSecondaryLink">
               Stories
             </Link>
-            <Link
-              to="/forum"
-              style={{
-                color: "#dadada",
-                padding: "1vh",
-                fontSize: "18px",
-                textDecoration: "none",
-              }}
-            >
+            <Link to="/forum" className="navbarSecondaryLink">
               Forum
             </Link>
-            <Link
-              to="/store"
-              style={{
-                color: "#dadada",
-                padding: "1vh",
-                fontSize: "18px",
-                textDecoration: "none",
-              }}
-            >
+            <Link to="/store" className="navbarSecondaryLink">
               Store
             </Link>
             <NavDropdown
-              title={
-                <img
-                  src={profPic}
-                  alt=""
-                  style={{
-                    maxHeight: "50px",
-                    maxWidth: "50px",
-                    marginLeft: "15px",
-                  }}
-                />
-              }
+              title={<img src={profPic} alt="" className="navbarImage" />}
               id="basic-nav-dropdown"
             >
-              <NavDropdown.Item style={{ color: "#1c1c1e" }}>
+              <NavDropdown.Item className="navbarDropdownItem">
                 <Popup trigger={<div>Login</div>} modal nested>
                   <div>
                     <Login user={user} setUser={setUser} />
                   </div>
                 </Popup>
               </NavDropdown.Item>
-              <NavDropdown.Item style={{ color: "#1c1c1e" }}>
+              <NavDropdown.Item className="navbarDropdownItem">
                 <Popup trigger={<div>Sign Up</div>} modal nested>
                   <SignUp user={user} setUser={setUser} />
                 </Popup>
@@ -169,16 +94,8 @@ function NavbarComponent({ user, setUser }) {
             </NavDropdown>
           </div>
           <Navbar.Toggle />
-          <div className="justify-content-end" style={{ width: "fit-content" }}>
-            <Button
-              style={{
-                background: "#2c2c2e",
-                color: "#dadada",
-                fontWeight: "bold",
-                border: "1px solid #dadada",
-              }}
-              onClick={handleShow}
-            >
+          <div className="justify-content-end" id="navbarSecondaryDiv">
+            <Button className="navbarButton" onClick={handleShow}>
               Cart ({productsCount} Items)
             </Button>
           </div>
@@ -215,138 +132,44 @@ function NavbarComponent({ user, setUser }) {
   } else {
     return (
       <>
-        <nav
-          bg="#1c1c1e"
-          expand="lg"
-          style={{
-            paddingLeft: "10px",
-            paddingRight: "20px",
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            height: "8vh",
-            borderBottom: "1px solid #3c3c3e",
-          }}
-        >
+        <nav bg="#1c1c1e" expand="lg" className="navbarNav">
           <Link
             to="/"
-            style={{
-              marginRight: "10vw",
-              fontSize: "24px",
-              fontWeight: "bold",
-              color: "#dadada",
-              width: "fit-content",
-            }}
+            id="navbarLink"
             className="btn btn-ghost normal-case text-xl"
           >
             Parts
-            <PublicIcon
-              style={{
-                height: "50px",
-                width: "50px",
-                padding: "5px",
-                color: "#dadada",
-              }}
-            />
+            <PublicIcon className="partsUndefinedIcon" />
             Undefined
           </Link>
-          {/* <Navbar.Toggle aria-controls="basic-navbar-nav" /> */}
-          <div
-            style={{
-              display: "flex",
-              width: "fit-content",
-              fontWeight: "bold",
-              gap: "1rem",
-            }}
-          >
-            <Link
-              to="/destinations"
-              style={{
-                color: "#dadada",
-                padding: "1vh",
-                fontSize: "18px",
-                textDecoration: "none",
-              }}
-            >
+          <div className="navbarContainer">
+            <Link to="/destinations" className="navbarSecondaryLink">
               Destinations
             </Link>
-            <Link
-              to="/stories"
-              style={{
-                color: "#dadada",
-                padding: "1vh",
-                fontSize: "18px",
-                textDecoration: "none",
-              }}
-            >
+            <Link to="/stories" className="navbarSecondaryLink">
               Stories
             </Link>
-            <Link
-              to="/forum"
-              style={{
-                color: "#dadada",
-                padding: "1vh",
-                fontSize: "18px",
-                textDecoration: "none",
-              }}
-            >
+            <Link to="/forum" className="navbarSecondaryLink">
               Forum
             </Link>
-            <Link
-              to="/store"
-              style={{
-                color: "#dadada",
-                padding: "1vh",
-                fontSize: "18px",
-                textDecoration: "none",
-              }}
-            >
+            <Link to="/store" className="navbarSecondaryLink">
               Store
             </Link>
             <NavDropdown
               title={
-                <img
-                  src={user.image}
-                  alt=""
-                  style={{
-                    borderRadius: "50%",
-                    maxWidth: "50px",
-                    maxHeight: "50px",
-                  }}
-                />
+                <img src={user.image} alt="" className="navbarSecondaryImage" />
               }
               id="basic-nav-dropdown"
             >
-              <h1
-                style={{
-                  fontSize: "20px",
-                  fontWeight: "bold",
-                  textAlign: "center",
-                }}
-              >
-                Welcome, {user.first_name}!
-              </h1>
+              <h1 className="navbarWelcome">Welcome, {user.first_name}!</h1>
               <NavDropdown.Item>
                 <div onClick={handleLogoutClick}>Logout</div>
               </NavDropdown.Item>
             </NavDropdown>
           </div>
           <Navbar.Toggle />
-          <div
-            className="justify-content-end"
-            style={{
-              width: "fit-content",
-            }}
-          >
-            <Button
-              onClick={handleShow}
-              style={{
-                background: "#2c2c2e",
-                color: "#dadada",
-                fontWeight: "bold",
-                border: "1px solid #dadada",
-              }}
-            >
+          <div className="justify-content-end" id="navbarSecondaryDiv">
+            <Button onClick={handleShow} className="navbarButton">
               Cart ({productsCount} Items)
             </Button>
           </div>

@@ -98,23 +98,10 @@ export default function CountryPage() {
   const markerTenLng = destinations[9]?.lng;
 
   return (
-    <div style={{ display: "flex", gap: "1rem", padding: "1vw" }}>
-      <div
-        class="overflow-scroll"
-        style={{
-          background: "#2c2c2e",
-          width: "40vw",
-          height: "88vh",
-          padding: "1vh",
-          borderRadius: "25px",
-        }}
-      >
-        <div style={{ display: "flex", justifyContent: "center" }}>
-          <h1
-            style={{ fontSize: "32px", fontWeight: "bold", color: "#dadada" }}
-          >
-            {countries.name}
-          </h1>
+    <div className="countryPageContainer">
+      <div class="overflow-scroll" id="countryPageSecondaryContainer">
+        <div className="countryPageDiv">
+          <h1 className="countryPageTitle">{countries.name}</h1>
         </div>
         {destinations.map((destination) => {
           return (
@@ -143,11 +130,7 @@ export default function CountryPage() {
                   <Typography
                     component="div"
                     variant="h5"
-                    style={{
-                      color: "#006699",
-                      fontWeight: "bold",
-                      cursor: "pointer",
-                    }}
+                    className="countryPageTypography"
                   >
                     {destination.name}
                   </Typography>

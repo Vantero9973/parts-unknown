@@ -34,85 +34,31 @@ export default function ShopPage() {
 
   if (itemsLoading) {
     return (
-      <div
-        style={{
-          height: "100vh",
-          width: "100vw",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
+      <div className="itemsLoading">
         <PacmanLoader color="yellow" size="50" />
       </div>
     );
   }
 
   return (
-    <div style={{ padding: "5vh" }}>
+    <div className="shopPageContainer">
       <ItemSearch setSearch={setSearch} />
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          flexDirection: "column",
-          padding: "4vh",
-        }}
-      >
-        <div
-          style={{
-            width: "100vw",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          <div
-            style={{
-              display: "flex",
-              flexWrap: "wrap",
-              justifyContent: "center",
-              alignItems: "center",
-              marginBottom: "5vh",
-              width: "90vw",
-            }}
-          >
+      <div className="shopPageSecondaryContainer">
+        <div className="shopPageDiv">
+          <div className="shopPageSecondaryDiv">
             {continents.map((continent) => {
               return (
                 <div
                   onClick={() => navigate(`/continents/${continent.id}`)}
-                  style={{
-                    width: "12vw",
-                    minWidth: "140px",
-                    height: "12vw",
-                    minHeight: "140px",
-                    backgroundImage: `url(${continent.image})`,
-                    backgroundSize: "cover",
-                    backgroundRepeat: "no-repeat",
-                    backgroundPosition: "center",
-                    textShadow: "#000 1px 0 5px",
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    fontSize: "24px",
-                    color: "white",
-                    fontWeight: "bold",
-                    margin: "1vw",
-                    borderRadius: "5px",
-                    cursor: "pointer",
-                  }}
+                  className="shopPageContinentContainer"
                 >
-                  <h1 style={{ width: "15vh", textAlign: "center" }}>
-                    {continent.name}
-                  </h1>
+                  <h1 className="shopPageName">{continent.name}</h1>
                 </div>
               );
             })}
           </div>
         </div>
-        <div style={{ height: "2px", width: "90vw", background: "#3c3c3e" }} />
+        <div className="shopPageShopItemsContainer" />
         <ShopItems items={currentPosts} search={search} />
       </div>
       <Pagination

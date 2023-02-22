@@ -17,7 +17,7 @@ export default function Carroussel(props) {
   }, [props.offset, props.showArrows]);
 
   return (
-    <div style={{ margin: "-18vw" }}>
+    <div className="carouselContainer">
       <Carousel
         slides={slides}
         goToSlide={goToSlide}

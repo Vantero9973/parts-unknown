@@ -4,22 +4,9 @@ export default function ForumSearch({ setSearch }) {
   };
 
   return (
-    <div
-      style={{
-        background: "#1C1C1E",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
+    <div className="forumSearchContainer">
       <input
-        style={{
-          height: "4vh",
-          width: "15vw",
-          border: "1px solid #dadada",
-          borderRadius: "20px",
-          padding: "20px",
-        }}
+        id="forumSearchInput"
         className="prompt"
         placeholder="Search Countries"
         onChange={handleChange}

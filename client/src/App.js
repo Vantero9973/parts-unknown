@@ -52,16 +52,6 @@ function App() {
       });
   }, []);
 
-  // const { data, isLoading } = useQuery(["country"], () => {
-  //   return Axios.get("/api/countries").then((res) => res.data);
-  // });
-
-  // function getBlogs() {
-  //   return Axios.get("/api/blogs").then((res) => res.data);
-  // }
-
-  // const { data, isLoading: blogsLoading } = useQuery(["blogs"], () => getBlogs());
-
   const searchStoriesByName = blogs.filter(
     (blog) =>
       blog.title.toLowerCase().includes(search.toLowerCase()) ||
@@ -72,29 +62,10 @@ function App() {
     country.name.toLowerCase().includes(search.toLowerCase())
   );
 
-  // useEffect(() => {
-  //   fetch("/api/hello", {
-  //     method: "GET",
-  //     headers: {
-  //       withCredentials: true,
-  //     },
-  //   })
-  //     .then((r) => r.json())
-  //     .then((data) => setCount(data.count));
-  // }, []);
-
-  // if (isLoading) {
-  //   return <h1>Loading...</h1>;
-  // }
-
   return (
     <QueryClientProvider client={client}>
       <CartProvider>
-        {/* <div className="App">
-          <h1>Page Count: {count}</h1>
-        </div> */}
-        <div style={{ minHeight: "100vh", background: "#1C1C1E" }}>
-          {/* <NavBar user={user} setUser={setUser} /> */}
+        <div className="appContainer">
           <NavbarComponent user={user} setUser={setUser} />
           <Routes>
             <Route path="/" element={<LandingPage />} />
